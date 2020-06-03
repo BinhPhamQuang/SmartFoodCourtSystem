@@ -121,7 +121,7 @@
             // 
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,7 +136,7 @@
             // 
             this.bntMenu.FlatAppearance.BorderSize = 0;
             this.bntMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntMenu.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntMenu.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntMenu.ForeColor = System.Drawing.Color.White;
             this.bntMenu.Image = ((System.Drawing.Image)(resources.GetObject("bntMenu.Image")));
             this.bntMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,7 +151,7 @@
             // 
             this.btnCart.FlatAppearance.BorderSize = 0;
             this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCart.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCart.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCart.ForeColor = System.Drawing.Color.White;
             this.btnCart.Image = ((System.Drawing.Image)(resources.GetObject("btnCart.Image")));
             this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,7 +175,7 @@
             // 
             this.bntPaymentMethod.FlatAppearance.BorderSize = 0;
             this.bntPaymentMethod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntPaymentMethod.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntPaymentMethod.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntPaymentMethod.ForeColor = System.Drawing.Color.White;
             this.bntPaymentMethod.Image = ((System.Drawing.Image)(resources.GetObject("bntPaymentMethod.Image")));
             this.bntPaymentMethod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -183,14 +183,14 @@
             this.bntPaymentMethod.Name = "bntPaymentMethod";
             this.bntPaymentMethod.Size = new System.Drawing.Size(187, 68);
             this.bntPaymentMethod.TabIndex = 4;
-            this.bntPaymentMethod.Text = "Payment method";
+            this.bntPaymentMethod.Text = "Payment \r\nmethod";
             this.bntPaymentMethod.UseVisualStyleBackColor = true;
             // 
             // btnDelivery
             // 
             this.btnDelivery.FlatAppearance.BorderSize = 0;
             this.btnDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelivery.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelivery.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelivery.ForeColor = System.Drawing.Color.White;
             this.btnDelivery.Image = ((System.Drawing.Image)(resources.GetObject("btnDelivery.Image")));
             this.btnDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
