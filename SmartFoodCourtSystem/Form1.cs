@@ -26,5 +26,17 @@ namespace SmartFoodCourtSystem
         {
             this.Close();
         }
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnHome.Height;
+            SidePanel.Top = btnHome.Top;
+            userControl_Home1.BringToFront();
+        }
+        private void bntMenu_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = bntMenu.Height;
+            SidePanel.Top = bntMenu.Top;
+            userControl1_Menu1.BringToFront();
+        }
     }
 }

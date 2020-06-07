@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.SidePanel = new System.Windows.Forms.Panel();
             this.btnDelivery = new System.Windows.Forms.Button();
             this.bntPaymentMethod = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,16 +46,19 @@
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
+            this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(59)))));
-            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.btnDelivery);
             this.panel1.Controls.Add(this.bntPaymentMethod);
             this.panel1.Controls.Add(this.label3);
@@ -69,13 +72,13 @@
             this.panel1.Size = new System.Drawing.Size(188, 570);
             this.panel1.TabIndex = 0;
             // 
-            // panel4
+            // SidePanel
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel4.Location = new System.Drawing.Point(178, 61);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 68);
-            this.panel4.TabIndex = 3;
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SidePanel.Location = new System.Drawing.Point(178, 61);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(10, 68);
+            this.SidePanel.TabIndex = 3;
             // 
             // btnDelivery
             // 
@@ -145,6 +148,7 @@
             this.bntMenu.TabIndex = 1;
             this.bntMenu.Text = "Menu";
             this.bntMenu.UseVisualStyleBackColor = true;
+            this.bntMenu.Click += new System.EventHandler(this.bntMenu_Click);
             // 
             // btnHome
             // 
@@ -160,10 +164,11 @@
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(188, 0);
             this.panel2.Name = "panel2";
@@ -172,13 +177,13 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(206, 5);
+            this.panel3.Location = new System.Drawing.Point(206, 7);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(106, 136);
+            this.panel3.Size = new System.Drawing.Size(106, 122);
             this.panel3.TabIndex = 2;
             // 
             // label2
@@ -229,6 +234,7 @@
             // 
             // btnSetting
             // 
+            this.btnSetting.BackColor = System.Drawing.Color.Transparent;
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -239,11 +245,12 @@
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(35, 35);
             this.btnSetting.TabIndex = 7;
-            this.btnSetting.UseVisualStyleBackColor = true;
+            this.btnSetting.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.userControl_Home1);
+            this.panel5.Controls.Add(this.userControl1_Menu1);
             this.panel5.Location = new System.Drawing.Point(211, 132);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(802, 429);
@@ -252,10 +259,28 @@
             // userControl_Home1
             // 
             this.userControl_Home1.BackColor = System.Drawing.Color.White;
-            this.userControl_Home1.Location = new System.Drawing.Point(15, 15);
+            this.userControl_Home1.Location = new System.Drawing.Point(-2, 1);
             this.userControl_Home1.Name = "userControl_Home1";
-            this.userControl_Home1.Size = new System.Drawing.Size(763, 411);
+            this.userControl_Home1.Size = new System.Drawing.Size(763, 413);
             this.userControl_Home1.TabIndex = 0;
+            // 
+            // userControl1_Menu1
+            // 
+            this.userControl1_Menu1.BackColor = System.Drawing.Color.White;
+            this.userControl1_Menu1.Location = new System.Drawing.Point(-5, 3);
+            this.userControl1_Menu1.Name = "userControl1_Menu1";
+            this.userControl1_Menu1.Size = new System.Drawing.Size(763, 411);
+            this.userControl1_Menu1.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(188, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(841, 119);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
@@ -269,6 +294,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -280,6 +306,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,11 +325,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bntPaymentMethod;
         private System.Windows.Forms.Button btnDelivery;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Panel panel5;
         private UserControl_Home userControl_Home1;
+        private UserControl1_Menu userControl1_Menu1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

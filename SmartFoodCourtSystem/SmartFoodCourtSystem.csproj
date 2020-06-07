@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl1_Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1_Menu.Designer.cs">
+      <DependentUpon>UserControl1_Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,6 +85,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControl1_Menu.resx">
+      <DependentUpon>UserControl1_Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Home.resx">
       <DependentUpon>UserControl_Home.cs</DependentUpon>
     </EmbeddedResource>

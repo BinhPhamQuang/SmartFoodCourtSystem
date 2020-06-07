@@ -8,3 +8,5 @@ C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\Smart
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UserControl_Home.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UserControl1_Menu.resources
