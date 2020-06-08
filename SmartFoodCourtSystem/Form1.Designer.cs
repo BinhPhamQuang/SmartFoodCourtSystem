@@ -288,8 +288,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1029, 570);
-            this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
