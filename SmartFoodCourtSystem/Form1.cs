@@ -13,7 +13,6 @@ namespace SmartFoodCourtSystem
 {
     public partial class Form1 : Form
     {
-        private string connectionSTR = "Data Source=database.db;Version=3;New=False;Compress=True;";
         public Form1()
         {
            InitializeComponent();

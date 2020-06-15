@@ -85,5 +85,25 @@ namespace SmartFoodCourtSystem
                 flp_menu.Controls.Add(a);
             }
         }
+
+        private void tb_searchfood_Enter(object sender, EventArgs e)
+        {
+            tb_searchfood.Text = "";
+            tb_searchfood.ForeColor = Color.Black;
+            ptb_clear.Visible = true;
+
+        }
+
+        private void tb_searchfood_Leave(object sender, EventArgs e)
+        {
+            tb_searchfood.Text = "Search food";
+            tb_searchfood.ForeColor = Color.Gray;
+            ptb_clear.Visible = false;
+        }
+
+        private void ptb_clear_Click(object sender, EventArgs e)
+        {
+            tb_searchfood.Clear();
+        }
     }
 }
