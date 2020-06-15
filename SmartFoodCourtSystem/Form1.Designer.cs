@@ -49,13 +49,11 @@
             this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
             this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
             this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -253,7 +251,6 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Controls.Add(this.userControl_Home1);
             this.panel5.Controls.Add(this.uC_cart1);
             this.panel5.Controls.Add(this.userControl1_Menu1);
@@ -296,14 +293,6 @@
             this.userControl1_Menu1.Size = new System.Drawing.Size(834, 411);
             this.userControl1_Menu1.TabIndex = 1;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(497, 232);
-            this.dataGridView1.TabIndex = 10;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,7 +318,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,7 +344,6 @@
         private UserControl1_Menu userControl1_Menu1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UC_cart uC_cart1;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
