@@ -46,6 +46,7 @@
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
+            this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
             this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -74,7 +75,7 @@
             // 
             // SidePanel
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.SidePanel.Location = new System.Drawing.Point(178, 61);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 68);
@@ -133,6 +134,7 @@
             this.btnCart.TabIndex = 2;
             this.btnCart.Text = "Cart";
             this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // bntMenu
             // 
@@ -168,7 +170,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(188, 0);
             this.panel2.Name = "panel2";
@@ -177,7 +179,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
@@ -250,6 +252,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.userControl_Home1);
+            this.panel5.Controls.Add(this.uC_cart1);
             this.panel5.Controls.Add(this.userControl1_Menu1);
             this.panel5.Location = new System.Drawing.Point(211, 132);
             this.panel5.Name = "panel5";
@@ -259,15 +262,23 @@
             // userControl_Home1
             // 
             this.userControl_Home1.BackColor = System.Drawing.Color.White;
-            this.userControl_Home1.Location = new System.Drawing.Point(-2, 1);
+            this.userControl_Home1.Location = new System.Drawing.Point(36, 3);
             this.userControl_Home1.Name = "userControl_Home1";
             this.userControl_Home1.Size = new System.Drawing.Size(763, 413);
             this.userControl_Home1.TabIndex = 0;
             // 
+            // uC_cart1
+            // 
+            this.uC_cart1.BackColor = System.Drawing.Color.White;
+            this.uC_cart1.Location = new System.Drawing.Point(36, 3);
+            this.uC_cart1.Name = "uC_cart1";
+            this.uC_cart1.Size = new System.Drawing.Size(763, 413);
+            this.uC_cart1.TabIndex = 2;
+            // 
             // userControl1_Menu1
             // 
             this.userControl1_Menu1.BackColor = System.Drawing.Color.White;
-            this.userControl1_Menu1.Location = new System.Drawing.Point(-5, 3);
+            this.userControl1_Menu1.Location = new System.Drawing.Point(36, 3);
             this.userControl1_Menu1.Name = "userControl1_Menu1";
             this.userControl1_Menu1.Size = new System.Drawing.Size(763, 411);
             this.userControl1_Menu1.TabIndex = 1;
@@ -288,12 +299,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1029, 570);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -332,6 +343,7 @@
         private UserControl_Home userControl_Home1;
         private UserControl1_Menu userControl1_Menu1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private UC_cart uC_cart1;
     }
 }
 

@@ -42,11 +42,11 @@
             // lb_price
             // 
             this.lb_price.AutoSize = true;
-            this.lb_price.Font = new System.Drawing.Font("Wide Latin", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
+            this.lb_price.Font = new System.Drawing.Font("Malgun Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_price.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lb_price.Location = new System.Drawing.Point(19, 65);
             this.lb_price.Name = "lb_price";
-            this.lb_price.Size = new System.Drawing.Size(400, 46);
+            this.lb_price.Size = new System.Drawing.Size(283, 65);
             this.lb_price.TabIndex = 0;
             this.lb_price.Text = "25.000 vnd";
             // 
@@ -64,8 +64,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(13, 29);
+            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label1.Location = new System.Drawing.Point(14, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 21);
             this.label1.TabIndex = 2;
@@ -87,9 +87,9 @@
             this.lb_resource.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_resource.Location = new System.Drawing.Point(32, 181);
             this.lb_resource.Name = "lb_resource";
-            this.lb_resource.Size = new System.Drawing.Size(255, 22);
+            this.lb_resource.Size = new System.Drawing.Size(275, 22);
             this.lb_resource.TabIndex = 4;
-            this.lb_resource.Text = "with meat and vegetables";
+            this.lb_resource.Text = "With onion,tomato and meat";
             // 
             // richTextBox_detailfoodinfo
             // 
@@ -100,15 +100,15 @@
             this.richTextBox_detailfoodinfo.Name = "richTextBox_detailfoodinfo";
             this.richTextBox_detailfoodinfo.Size = new System.Drawing.Size(292, 110);
             this.richTextBox_detailfoodinfo.TabIndex = 5;
-            this.richTextBox_detailfoodinfo.Text = "asd ba la some thingaaad\nass\nasdasd\ndien ta chi tiet mon an";
+            this.richTextBox_detailfoodinfo.Text = "The best Vietnamese sandwich";
             // 
             // btn_Ordernow
             // 
-            this.btn_Ordernow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
+            this.btn_Ordernow.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Ordernow.FlatAppearance.BorderSize = 0;
             this.btn_Ordernow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Ordernow.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Ordernow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Ordernow.ForeColor = System.Drawing.Color.White;
             this.btn_Ordernow.Location = new System.Drawing.Point(27, 326);
             this.btn_Ordernow.Name = "btn_Ordernow";
             this.btn_Ordernow.Size = new System.Drawing.Size(367, 38);

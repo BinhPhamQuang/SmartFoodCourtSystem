@@ -16,5 +16,10 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
         }
+
+        private void UserControl1_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
