@@ -45,15 +45,17 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
             this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
             this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -251,6 +253,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Controls.Add(this.userControl_Home1);
             this.panel5.Controls.Add(this.uC_cart1);
             this.panel5.Controls.Add(this.userControl1_Menu1);
@@ -258,30 +261,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(802, 429);
             this.panel5.TabIndex = 8;
-            // 
-            // userControl_Home1
-            // 
-            this.userControl_Home1.BackColor = System.Drawing.Color.White;
-            this.userControl_Home1.Location = new System.Drawing.Point(36, 3);
-            this.userControl_Home1.Name = "userControl_Home1";
-            this.userControl_Home1.Size = new System.Drawing.Size(763, 413);
-            this.userControl_Home1.TabIndex = 0;
-            // 
-            // uC_cart1
-            // 
-            this.uC_cart1.BackColor = System.Drawing.Color.White;
-            this.uC_cart1.Location = new System.Drawing.Point(36, 3);
-            this.uC_cart1.Name = "uC_cart1";
-            this.uC_cart1.Size = new System.Drawing.Size(763, 413);
-            this.uC_cart1.TabIndex = 2;
-            // 
-            // userControl1_Menu1
-            // 
-            this.userControl1_Menu1.BackColor = System.Drawing.Color.White;
-            this.userControl1_Menu1.Location = new System.Drawing.Point(36, 3);
-            this.userControl1_Menu1.Name = "userControl1_Menu1";
-            this.userControl1_Menu1.Size = new System.Drawing.Size(763, 411);
-            this.userControl1_Menu1.TabIndex = 1;
             // 
             // pictureBox2
             // 
@@ -292,6 +271,38 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+            // 
+            // userControl_Home1
+            // 
+            this.userControl_Home1.BackColor = System.Drawing.Color.White;
+            this.userControl_Home1.Location = new System.Drawing.Point(3, 5);
+            this.userControl_Home1.Name = "userControl_Home1";
+            this.userControl_Home1.Size = new System.Drawing.Size(807, 413);
+            this.userControl_Home1.TabIndex = 0;
+            // 
+            // uC_cart1
+            // 
+            this.uC_cart1.BackColor = System.Drawing.Color.White;
+            this.uC_cart1.Location = new System.Drawing.Point(-5, 3);
+            this.uC_cart1.Name = "uC_cart1";
+            this.uC_cart1.Size = new System.Drawing.Size(845, 413);
+            this.uC_cart1.TabIndex = 2;
+            // 
+            // userControl1_Menu1
+            // 
+            this.userControl1_Menu1.BackColor = System.Drawing.Color.White;
+            this.userControl1_Menu1.Location = new System.Drawing.Point(-16, 5);
+            this.userControl1_Menu1.Name = "userControl1_Menu1";
+            this.userControl1_Menu1.Size = new System.Drawing.Size(834, 411);
+            this.userControl1_Menu1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(47, 35);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(497, 232);
+            this.dataGridView1.TabIndex = 10;
             // 
             // Form1
             // 
@@ -318,6 +329,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,6 +356,7 @@
         private UserControl1_Menu userControl1_Menu1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UC_cart uC_cart1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

@@ -129,7 +129,7 @@
             this.Controls.Add(this.picturebox1);
             this.Controls.Add(this.lb_price);
             this.Name = "UserControl_Home";
-            this.Size = new System.Drawing.Size(763, 411);
+            this.Size = new System.Drawing.Size(801, 411);
             this.Load += new System.EventHandler(this.UserControl_Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picturebox1)).EndInit();
             this.ResumeLayout(false);
