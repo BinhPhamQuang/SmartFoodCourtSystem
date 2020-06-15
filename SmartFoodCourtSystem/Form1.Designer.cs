@@ -37,28 +37,32 @@
             this.btnCart = new System.Windows.Forms.Button();
             this.bntMenu = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnSetting = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
             this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
             this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnSetting = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(59)))));
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.btnDelivery);
             this.panel1.Controls.Add(this.bntPaymentMethod);
@@ -76,7 +80,7 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.SidePanel.Location = new System.Drawing.Point(178, 61);
+            this.SidePanel.Location = new System.Drawing.Point(177, 61);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 68);
             this.SidePanel.TabIndex = 3;
@@ -168,15 +172,6 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(188, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(841, 10);
-            this.panel2.TabIndex = 1;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -213,41 +208,11 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 71);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(978, 17);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(35, 35);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.BackColor = System.Drawing.Color.Transparent;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(937, 17);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(35, 35);
-            this.btnSetting.TabIndex = 7;
-            this.btnSetting.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
@@ -262,9 +227,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(188, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(188, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(841, 119);
+            this.pictureBox2.Size = new System.Drawing.Size(841, 144);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -272,7 +237,7 @@
             // userControl_Home1
             // 
             this.userControl_Home1.BackColor = System.Drawing.Color.White;
-            this.userControl_Home1.Location = new System.Drawing.Point(3, 5);
+            this.userControl_Home1.Location = new System.Drawing.Point(3, 16);
             this.userControl_Home1.Name = "userControl_Home1";
             this.userControl_Home1.Size = new System.Drawing.Size(807, 413);
             this.userControl_Home1.TabIndex = 0;
@@ -280,7 +245,7 @@
             // uC_cart1
             // 
             this.uC_cart1.BackColor = System.Drawing.Color.White;
-            this.uC_cart1.Location = new System.Drawing.Point(-5, 3);
+            this.uC_cart1.Location = new System.Drawing.Point(-5, 16);
             this.uC_cart1.Name = "uC_cart1";
             this.uC_cart1.Size = new System.Drawing.Size(845, 413);
             this.uC_cart1.TabIndex = 2;
@@ -288,10 +253,68 @@
             // userControl1_Menu1
             // 
             this.userControl1_Menu1.BackColor = System.Drawing.Color.White;
-            this.userControl1_Menu1.Location = new System.Drawing.Point(-16, 5);
+            this.userControl1_Menu1.Location = new System.Drawing.Point(-16, 18);
             this.userControl1_Menu1.Name = "userControl1_Menu1";
             this.userControl1_Menu1.Size = new System.Drawing.Size(834, 411);
             this.userControl1_Menu1.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.Transparent;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(790, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(35, 35);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetting.Location = new System.Drawing.Point(749, 3);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(35, 28);
+            this.btnSetting.TabIndex = 7;
+            this.btnSetting.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.Controls.Add(this.btnSetting);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(188, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(841, 31);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Aqua;
+            this.panel4.Location = new System.Drawing.Point(-188, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1029, 3);
+            this.panel4.TabIndex = 10;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Aqua;
+            this.panel6.Location = new System.Drawing.Point(185, -1);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(3, 570);
+            this.panel6.TabIndex = 11;
             // 
             // Form1
             // 
@@ -299,13 +322,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1029, 570);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -318,6 +339,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -325,7 +347,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
@@ -337,13 +358,16 @@
         private System.Windows.Forms.Button bntPaymentMethod;
         private System.Windows.Forms.Button btnDelivery;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Panel panel5;
         private UserControl_Home userControl_Home1;
         private UserControl1_Menu userControl1_Menu1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UC_cart uC_cart1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 

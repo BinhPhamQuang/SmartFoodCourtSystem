@@ -61,6 +61,7 @@ namespace SmartFoodCourtSystem
             btnOrder.ForeColor = Color.White;
             btnOrder.BackColor = Color.OliveDrab;
             btnOrder.FlatStyle = FlatStyle.Flat;
+            btnOrder.Click += BtnOrder_Click;
             //---
             panel.Controls.Add(lb_name);
             panel.Controls.Add(pictureBox);
@@ -68,6 +69,13 @@ namespace SmartFoodCourtSystem
             panel.Controls.Add(btnOrder);
             return panel;
         }
+
+        private void BtnOrder_Click(object sender, EventArgs e)
+        {
+            OrderDetail orderDetail = new OrderDetail();
+            orderDetail.ShowDialog();
+        }
+
         public UserControl1_Menu()
         {
             InitializeComponent();
