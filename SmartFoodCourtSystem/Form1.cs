@@ -56,6 +56,8 @@ namespace SmartFoodCourtSystem
         {
             SidePanel.Height = btnManager.Height;
             SidePanel.Top = btnManager.Top;
+            Login l = new Login();
+            l.Show();
         }
     }
 }
