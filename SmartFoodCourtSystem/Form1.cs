@@ -49,7 +49,7 @@ namespace SmartFoodCourtSystem
 
         private void userControl_Home1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnManager_Click(object sender, EventArgs e)

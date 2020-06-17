@@ -126,11 +126,12 @@
             this.btnPlus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlus.BackgroundImage")));
             this.btnPlus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlus.Location = new System.Drawing.Point(199, 101);
+            this.btnPlus.Location = new System.Drawing.Point(222, 101);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(20, 20);
             this.btnPlus.TabIndex = 20;
             this.btnPlus.UseVisualStyleBackColor = false;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // label5
             // 
@@ -153,6 +154,7 @@
             this.btnSub.Size = new System.Drawing.Size(20, 20);
             this.btnSub.TabIndex = 19;
             this.btnSub.UseVisualStyleBackColor = false;
+            this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
             // 
             // label6
             // 
@@ -170,7 +172,7 @@
             this.panel3.ForeColor = System.Drawing.SystemColors.Highlight;
             this.panel3.Location = new System.Drawing.Point(169, 119);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(24, 3);
+            this.panel3.Size = new System.Drawing.Size(49, 3);
             this.panel3.TabIndex = 6;
             // 
             // lb_price
@@ -190,11 +192,11 @@
             this.lbQuantity.AutoSize = true;
             this.lbQuantity.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuantity.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbQuantity.Location = new System.Drawing.Point(162, 90);
+            this.lbQuantity.Location = new System.Drawing.Point(189, 84);
             this.lbQuantity.Name = "lbQuantity";
-            this.lbQuantity.Size = new System.Drawing.Size(43, 32);
+            this.lbQuantity.Size = new System.Drawing.Size(29, 32);
             this.lbQuantity.TabIndex = 4;
-            this.lbQuantity.Text = "01";
+            this.lbQuantity.Text = "1";
             // 
             // btnSmall
             // 
@@ -209,6 +211,7 @@
             this.btnSmall.TabIndex = 1;
             this.btnSmall.Text = "Small";
             this.btnSmall.UseVisualStyleBackColor = false;
+            this.btnSmall.Click += new System.EventHandler(this.btnSmall_Click);
             // 
             // lbDiscount
             // 
@@ -234,6 +237,7 @@
             this.btnMedium.TabIndex = 2;
             this.btnMedium.Text = "Medium";
             this.btnMedium.UseVisualStyleBackColor = false;
+            this.btnMedium.Click += new System.EventHandler(this.btnMedium_Click);
             // 
             // label8
             // 
@@ -258,6 +262,7 @@
             this.btnLarge.TabIndex = 3;
             this.btnLarge.Text = "Large";
             this.btnLarge.UseVisualStyleBackColor = false;
+            this.btnLarge.Click += new System.EventHandler(this.btnLarge_Click);
             // 
             // pnDescription
             // 
@@ -345,7 +350,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panel6
             // 

@@ -51,9 +51,19 @@ namespace SmartFoodCourtSystem
             btnLarge.ForeColor = Color.White;
         }
 
-        private void btnCancel_Click_1(object sender, EventArgs e)
+        private void btnPlus_Click(object sender, EventArgs e)
         {
-            this.Close();
+            int quantity = int.Parse(lbQuantity.Text)+1;
+            lbQuantity.Text = quantity.ToString();
+        }
+
+        private void btnSub_Click(object sender, EventArgs e)
+        {
+            int quantity = int.Parse(lbQuantity.Text) -1;
+            if(quantity>0)
+            {
+                lbQuantity.Text = quantity.ToString();
+            }
         }
     }
 }
