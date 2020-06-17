@@ -50,5 +50,10 @@ namespace SmartFoodCourtSystem
             btnMedium.ForeColor = Color.Black;
             btnLarge.ForeColor = Color.White;
         }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

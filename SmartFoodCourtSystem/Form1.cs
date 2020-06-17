@@ -45,13 +45,17 @@ namespace SmartFoodCourtSystem
             SidePanel.Top = btnCart.Top;
             uC_cart1.BringToFront();
         }
+        #endregion
+
+        private void userControl_Home1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnManager_Click(object sender, EventArgs e)
         {
             SidePanel.Height = btnManager.Height;
             SidePanel.Top = btnManager.Top;
         }
-        #endregion
-
-
     }
 }

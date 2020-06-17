@@ -95,12 +95,6 @@
     <Compile Include="UC_cart.Designer.cs">
       <DependentUpon>UC_cart.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_orderdetails.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_orderdetails.Designer.cs">
-      <DependentUpon>UC_orderdetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl1_Menu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,9 +124,6 @@
     </Compile>
     <EmbeddedResource Include="UC_cart.resx">
       <DependentUpon>UC_cart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_orderdetails.resx">
-      <DependentUpon>UC_orderdetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1_Menu.resx">
       <DependentUpon>UserControl1_Menu.cs</DependentUpon>
