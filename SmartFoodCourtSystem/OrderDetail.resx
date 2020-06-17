@@ -1014,18 +1014,4 @@
         1OFLSSsV+Xe5yMfjWb9tlBRHJUElsnnFUJbg7ACuWJxvDYI+lO8xgOuQT0J9q7VRjFbHO5uWrZ//2Q==
 </value>
   </data>
-  <data name="btnPlus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAERJREFUSEvt
-        0TEKACAQA8H7/6e1WbAKeJBCuUyn4KawZlng6Ec/Axr9DGj0Hx3grQ3Zg3sbsj28nfrJN+hnQKOfga9U
-        bTOHLuDtZil8AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnSub.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAADlJREFUaEPt
-        zqERADAMA7Hsv3QLalQaYCIN8PcDAAAAAJ9Tlo299GqysZdeTTb20qvJBgAAAAA8Mxcv9f4QFctCNgAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
 </root>

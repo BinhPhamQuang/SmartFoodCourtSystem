@@ -1,3 +1,16 @@
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe.config
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.pdb
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Form1.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Properties.Resources.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UserControl_Home.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UserControl1_Menu.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UC_orderdetails.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UC_cart.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe.config
 C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe
 C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.pdb
@@ -12,9 +25,7 @@ C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\obj\Debu
 C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
 C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe.config
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.pdb
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csprojAssemblyReference.cache
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\EntityFramework.dll
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.dll
@@ -24,44 +35,5 @@ C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Entit
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.xml
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.dll.config
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Form1.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.OrderDetail.resources
-<<<<<<< HEAD
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Properties.Resources.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UC_cart.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UC_orderdetails.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UserControl1_Menu.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UserControl_Home.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.GenerateResource.cache
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CopyComplete
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csprojAssemblyReference.cache
-=======
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe.config
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.pdb
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\EntityFramework.dll
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.dll
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\EntityFramework.xml
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.xml
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.dll.config
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csprojAssemblyReference.cache
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Form1.resources
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.OrderDetail.resources
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Properties.Resources.resources
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UC_cart.resources
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UC_orderdetails.resources
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UserControl1_Menu.resources
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UserControl_Home.resources
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.GenerateResource.cache
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CoreCompileInputs.cache
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CopyComplete
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
-C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
->>>>>>> a7cb0b3018552465eebaf8f1df82c1342c2e0fe8
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.OrderDetail.resources

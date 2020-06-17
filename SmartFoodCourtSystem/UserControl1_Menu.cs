@@ -73,9 +73,7 @@ namespace SmartFoodCourtSystem
         private void BtnOrder_Click(object sender, EventArgs e)
         {
             OrderDetail orderDetail = new OrderDetail();
-            
             orderDetail.ShowDialog();
-           
         }
 
         public UserControl1_Menu()

@@ -62,7 +62,7 @@
             this.tb_searchfood.ForeColor = System.Drawing.Color.Gray;
             this.tb_searchfood.Location = new System.Drawing.Point(124, 21);
             this.tb_searchfood.Name = "tb_searchfood";
-            this.tb_searchfood.Size = new System.Drawing.Size(218, 20);
+            this.tb_searchfood.Size = new System.Drawing.Size(191, 20);
             this.tb_searchfood.TabIndex = 6;
             this.tb_searchfood.Text = "Seach food";
             this.tb_searchfood.Enter += new System.EventHandler(this.tb_searchfood_Enter);
@@ -73,7 +73,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel1.Location = new System.Drawing.Point(124, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 5);
+            this.panel1.Size = new System.Drawing.Size(191, 5);
             this.panel1.TabIndex = 0;
             // 
             // btn_search
@@ -81,7 +81,7 @@
             this.btn_search.FlatAppearance.BorderSize = 0;
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Image = ((System.Drawing.Image)(resources.GetObject("btn_search.Image")));
-            this.btn_search.Location = new System.Drawing.Point(339, 26);
+            this.btn_search.Location = new System.Drawing.Point(321, 26);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(36, 26);
             this.btn_search.TabIndex = 7;
@@ -92,7 +92,7 @@
             this.panel9.Controls.Add(this.button8);
             this.panel9.Controls.Add(this.button7);
             this.panel9.Controls.Add(this.label19);
-            this.panel9.Location = new System.Drawing.Point(661, 16);
+            this.panel9.Location = new System.Drawing.Point(399, 14);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(284, 36);
             this.panel9.TabIndex = 9;
@@ -138,16 +138,15 @@
             // flp_menu
             // 
             this.flp_menu.AutoScroll = true;
-            this.flp_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.flp_menu.Location = new System.Drawing.Point(60, 88);
+            this.flp_menu.Location = new System.Drawing.Point(12, 88);
             this.flp_menu.Name = "flp_menu";
-            this.flp_menu.Size = new System.Drawing.Size(830, 358);
+            this.flp_menu.Size = new System.Drawing.Size(811, 256);
             this.flp_menu.TabIndex = 10;
             // 
             // ptb_clear
             // 
             this.ptb_clear.Image = ((System.Drawing.Image)(resources.GetObject("ptb_clear.Image")));
-            this.ptb_clear.Location = new System.Drawing.Point(325, 29);
+            this.ptb_clear.Location = new System.Drawing.Point(298, 30);
             this.ptb_clear.Name = "ptb_clear";
             this.ptb_clear.Size = new System.Drawing.Size(17, 12);
             this.ptb_clear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +168,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "UserControl1_Menu";
-            this.Size = new System.Drawing.Size(960, 459);
+            this.Size = new System.Drawing.Size(850, 414);
             this.Load += new System.EventHandler(this.UserControl1_Menu_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
