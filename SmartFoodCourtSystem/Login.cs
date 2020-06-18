@@ -22,6 +22,8 @@ namespace SmartFoodCourtSystem
             if (txtUsername.Text == "admin" && txtPassword.Text == "123")
             {
                 this.Hide();
+                FManMain f = new FManMain();
+                f.ShowDialog();
             }
             else
             {
