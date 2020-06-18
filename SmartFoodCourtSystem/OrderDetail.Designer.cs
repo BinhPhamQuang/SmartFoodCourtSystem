@@ -189,14 +189,14 @@
             // 
             // lbQuantity
             // 
-            this.lbQuantity.AutoSize = true;
             this.lbQuantity.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuantity.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbQuantity.Location = new System.Drawing.Point(189, 84);
+            this.lbQuantity.Location = new System.Drawing.Point(167, 84);
             this.lbQuantity.Name = "lbQuantity";
-            this.lbQuantity.Size = new System.Drawing.Size(29, 32);
+            this.lbQuantity.Size = new System.Drawing.Size(51, 32);
             this.lbQuantity.TabIndex = 4;
             this.lbQuantity.Text = "1";
+            this.lbQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSmall
             // 
