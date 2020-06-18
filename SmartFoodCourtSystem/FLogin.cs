@@ -23,11 +23,7 @@ namespace SmartFoodCourtSystem
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
 
-        private void check_CheckedChanged(object sender, EventArgs e)
-        {
-            if (check.Checked) txtPassword.UseSystemPasswordChar = false;
-            else txtPassword.UseSystemPasswordChar = true;
-        }
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -38,7 +34,7 @@ namespace SmartFoodCourtSystem
         {
             if (txtUsername.Text == "admin" && txtPassword.Text == "123")
             {
-                this.Dispose();
+                MessageBox.Show("Login successfully!");
             }
             else
             {
@@ -59,10 +55,17 @@ namespace SmartFoodCourtSystem
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
         private void FLogin_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void check_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check.Checked) txtPassword.UseSystemPasswordChar = false;
+            else txtPassword.UseSystemPasswordChar = true;
         }
     }
 }
