@@ -41,6 +41,7 @@
             this.check = new System.Windows.Forms.CheckBox();
             this.buttonMinimize = new System.Windows.Forms.PictureBox();
             this.buttonExit = new System.Windows.Forms.PictureBox();
+            this.lbErrorMessage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonMinimize)).BeginInit();
@@ -155,7 +156,7 @@
             this.check.AutoSize = true;
             this.check.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.check.ForeColor = System.Drawing.Color.DimGray;
-            this.check.Location = new System.Drawing.Point(310, 198);
+            this.check.Location = new System.Drawing.Point(311, 198);
             this.check.Name = "check";
             this.check.Size = new System.Drawing.Size(149, 23);
             this.check.TabIndex = 13;
@@ -185,11 +186,25 @@
             this.buttonExit.TabStop = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // lbErrorMessage
+            // 
+            this.lbErrorMessage.AutoSize = true;
+            this.lbErrorMessage.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbErrorMessage.ForeColor = System.Drawing.Color.Red;
+            this.lbErrorMessage.Image = ((System.Drawing.Image)(resources.GetObject("lbErrorMessage.Image")));
+            this.lbErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbErrorMessage.Location = new System.Drawing.Point(307, 226);
+            this.lbErrorMessage.Name = "lbErrorMessage";
+            this.lbErrorMessage.Size = new System.Drawing.Size(0, 20);
+            this.lbErrorMessage.TabIndex = 18;
+            this.lbErrorMessage.Visible = false;
+            // 
             // FLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.lbErrorMessage);
             this.Controls.Add(this.buttonMinimize);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.btnLogin);
@@ -229,5 +244,6 @@
         private System.Windows.Forms.CheckBox check;
         private System.Windows.Forms.PictureBox buttonMinimize;
         private System.Windows.Forms.PictureBox buttonExit;
+        private System.Windows.Forms.Label lbErrorMessage;
     }
 }

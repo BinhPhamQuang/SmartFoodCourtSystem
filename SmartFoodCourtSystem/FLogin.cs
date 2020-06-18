@@ -34,15 +34,14 @@ namespace SmartFoodCourtSystem
         {
             if (txtUsername.Text == "admin" && txtPassword.Text == "123")
             {
+                lbErrorMessage.Visible = false;
                 MessageBox.Show("Login successfully!");
             }
             else
             {
-                DialogResult result = MessageBox.Show("Incorrect username or password!", "Failed to login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                if (result == DialogResult.Cancel)
-                {
-                    this.Dispose();
-                }
+                lbErrorMessage.Text = "";
+                lbErrorMessage.Text += "        " + "Incorrect username or password!";
+                lbErrorMessage.Visible = true;
             }
         }
 
