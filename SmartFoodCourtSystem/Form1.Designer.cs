@@ -38,20 +38,21 @@
             this.btnCart = new System.Windows.Forms.Button();
             this.bntMenu = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.btnManager = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
+            this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
+            this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
-            this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
-            this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
-            this.btnManager = new System.Windows.Forms.Button();
+            this.BtnCook = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,6 +72,7 @@
             this.panel1.Controls.Add(this.btnCart);
             this.panel1.Controls.Add(this.bntMenu);
             this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.BtnCook);
             this.panel1.Controls.Add(this.btnManager);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -103,7 +105,7 @@
             this.btnDelivery.ForeColor = System.Drawing.Color.White;
             this.btnDelivery.Image = ((System.Drawing.Image)(resources.GetObject("btnDelivery.Image")));
             this.btnDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelivery.Location = new System.Drawing.Point(0, 319);
+            this.btnDelivery.Location = new System.Drawing.Point(0, 276);
             this.btnDelivery.Name = "btnDelivery";
             this.btnDelivery.Size = new System.Drawing.Size(220, 80);
             this.btnDelivery.TabIndex = 5;
@@ -118,7 +120,7 @@
             this.bntPaymentMethod.ForeColor = System.Drawing.Color.White;
             this.bntPaymentMethod.Image = ((System.Drawing.Image)(resources.GetObject("bntPaymentMethod.Image")));
             this.bntPaymentMethod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntPaymentMethod.Location = new System.Drawing.Point(0, 405);
+            this.bntPaymentMethod.Location = new System.Drawing.Point(0, 362);
             this.bntPaymentMethod.Name = "bntPaymentMethod";
             this.bntPaymentMethod.Size = new System.Drawing.Size(220, 80);
             this.bntPaymentMethod.TabIndex = 4;
@@ -143,7 +145,7 @@
             this.btnCart.ForeColor = System.Drawing.Color.White;
             this.btnCart.Image = ((System.Drawing.Image)(resources.GetObject("btnCart.Image")));
             this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCart.Location = new System.Drawing.Point(0, 233);
+            this.btnCart.Location = new System.Drawing.Point(0, 190);
             this.btnCart.Name = "btnCart";
             this.btnCart.Size = new System.Drawing.Size(220, 80);
             this.btnCart.TabIndex = 2;
@@ -159,7 +161,7 @@
             this.bntMenu.ForeColor = System.Drawing.Color.White;
             this.bntMenu.Image = ((System.Drawing.Image)(resources.GetObject("bntMenu.Image")));
             this.bntMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntMenu.Location = new System.Drawing.Point(0, 147);
+            this.bntMenu.Location = new System.Drawing.Point(0, 104);
             this.bntMenu.Name = "bntMenu";
             this.bntMenu.Size = new System.Drawing.Size(220, 80);
             this.bntMenu.TabIndex = 1;
@@ -175,13 +177,29 @@
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 61);
+            this.btnHome.Location = new System.Drawing.Point(0, 18);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(220, 80);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnManager
+            // 
+            this.btnManager.FlatAppearance.BorderSize = 0;
+            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManager.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManager.ForeColor = System.Drawing.Color.White;
+            this.btnManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManager.Image")));
+            this.btnManager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManager.Location = new System.Drawing.Point(0, 448);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.Size = new System.Drawing.Size(220, 80);
+            this.btnManager.TabIndex = 13;
+            this.btnManager.Text = "Manager";
+            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
             // 
             // panel3
             // 
@@ -234,6 +252,31 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(960, 459);
             this.panel5.TabIndex = 8;
+            // 
+            // userControl_Home1
+            // 
+            this.userControl_Home1.BackColor = System.Drawing.Color.White;
+            this.userControl_Home1.Location = new System.Drawing.Point(0, 0);
+            this.userControl_Home1.Name = "userControl_Home1";
+            this.userControl_Home1.Size = new System.Drawing.Size(960, 459);
+            this.userControl_Home1.TabIndex = 3;
+            this.userControl_Home1.Load += new System.EventHandler(this.userControl_Home1_Load);
+            // 
+            // uC_cart1
+            // 
+            this.uC_cart1.BackColor = System.Drawing.Color.White;
+            this.uC_cart1.Location = new System.Drawing.Point(0, 0);
+            this.uC_cart1.Name = "uC_cart1";
+            this.uC_cart1.Size = new System.Drawing.Size(960, 459);
+            this.uC_cart1.TabIndex = 2;
+            // 
+            // userControl1_Menu1
+            // 
+            this.userControl1_Menu1.BackColor = System.Drawing.Color.White;
+            this.userControl1_Menu1.Location = new System.Drawing.Point(0, 0);
+            this.userControl1_Menu1.Name = "userControl1_Menu1";
+            this.userControl1_Menu1.Size = new System.Drawing.Size(960, 459);
+            this.userControl1_Menu1.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -295,46 +338,21 @@
             this.panel4.Size = new System.Drawing.Size(1208, 3);
             this.panel4.TabIndex = 10;
             // 
-            // userControl_Home1
+            // BtnCook
             // 
-            this.userControl_Home1.BackColor = System.Drawing.Color.White;
-            this.userControl_Home1.Location = new System.Drawing.Point(0, 0);
-            this.userControl_Home1.Name = "userControl_Home1";
-            this.userControl_Home1.Size = new System.Drawing.Size(960, 459);
-            this.userControl_Home1.TabIndex = 3;
-            this.userControl_Home1.Load += new System.EventHandler(this.userControl_Home1_Load);
-            // 
-            // uC_cart1
-            // 
-            this.uC_cart1.BackColor = System.Drawing.Color.White;
-            this.uC_cart1.Location = new System.Drawing.Point(0, 0);
-            this.uC_cart1.Name = "uC_cart1";
-            this.uC_cart1.Size = new System.Drawing.Size(960, 459);
-            this.uC_cart1.TabIndex = 2;
-            // 
-            // userControl1_Menu1
-            // 
-            this.userControl1_Menu1.BackColor = System.Drawing.Color.White;
-            this.userControl1_Menu1.Location = new System.Drawing.Point(0, 0);
-            this.userControl1_Menu1.Name = "userControl1_Menu1";
-            this.userControl1_Menu1.Size = new System.Drawing.Size(960, 459);
-            this.userControl1_Menu1.TabIndex = 0;
-            // 
-            // btnManager
-            // 
-            this.btnManager.FlatAppearance.BorderSize = 0;
-            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManager.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManager.ForeColor = System.Drawing.Color.White;
-            this.btnManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManager.Image")));
-            this.btnManager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManager.Location = new System.Drawing.Point(0, 491);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(220, 80);
-            this.btnManager.TabIndex = 13;
-            this.btnManager.Text = "Manager";
-            this.btnManager.UseVisualStyleBackColor = true;
-            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
+            this.BtnCook.FlatAppearance.BorderSize = 0;
+            this.BtnCook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCook.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCook.ForeColor = System.Drawing.Color.White;
+            this.BtnCook.Image = ((System.Drawing.Image)(resources.GetObject("BtnCook.Image")));
+            this.BtnCook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCook.Location = new System.Drawing.Point(0, 534);
+            this.BtnCook.Name = "BtnCook";
+            this.BtnCook.Size = new System.Drawing.Size(220, 80);
+            this.BtnCook.TabIndex = 13;
+            this.BtnCook.Text = "Cook";
+            this.BtnCook.UseVisualStyleBackColor = true;
+            this.BtnCook.Click += new System.EventHandler(this.BtnCook_Click);
             // 
             // Form1
             // 
@@ -389,6 +407,7 @@
         private UC_cart uC_cart1;
         private UserControl1_Menu userControl1_Menu1;
         private System.Windows.Forms.Button btnManager;
+        private System.Windows.Forms.Button BtnCook;
     }
 }
 

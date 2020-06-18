@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cook.Designer.cs">
+      <DependentUpon>Cook.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DTO\Food.cs" />
@@ -113,6 +119,9 @@
     <Compile Include="UserControl_Home.Designer.cs">
       <DependentUpon>UserControl_Home.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cook.resx">
+      <DependentUpon>Cook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

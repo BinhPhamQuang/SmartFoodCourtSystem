@@ -59,5 +59,15 @@ namespace SmartFoodCourtSystem
             Login l = new Login();
             l.Show();
         }
+
+        private void BtnCook_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnManager.Height;
+            SidePanel.Top = btnManager.Top;
+            this.Hide();
+            Cook cook = new Cook();
+            cook.ShowDialog();
+            this.Show();
+        }
     }
 }
