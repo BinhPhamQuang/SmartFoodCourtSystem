@@ -26,8 +26,10 @@ namespace SmartFoodCourtSystem
             lb_name.Font = new Font("Century Gothic", 14.0f, FontStyle.Bold);
             lb_name.Location = new Point(3, 0);
             lb_name.AutoSize = true;
-            PictureBox pictureBox = new PictureBox();
             //----------
+
+            PictureBox pictureBox = new PictureBox();
+           
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox.Location = new Point(3, 38);
             pictureBox.Margin = new Padding(3, 3, 3, 3);

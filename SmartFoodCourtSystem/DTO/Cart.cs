@@ -54,6 +54,10 @@ namespace SmartFoodCourtSystem.DTO
         {
             return listFood;
         }
+        public void DeleteCart()
+        {
+            listFood.Clear();
+        }
         
     }
 }

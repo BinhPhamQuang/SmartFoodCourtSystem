@@ -62,7 +62,7 @@
             this.richTextBox_detailfoodinfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.richTextBox_detailfoodinfo.Location = new System.Drawing.Point(32, 267);
             this.richTextBox_detailfoodinfo.Name = "richTextBox_detailfoodinfo";
-            this.richTextBox_detailfoodinfo.Size = new System.Drawing.Size(292, 110);
+            this.richTextBox_detailfoodinfo.Size = new System.Drawing.Size(461, 65);
             this.richTextBox_detailfoodinfo.TabIndex = 12;
             this.richTextBox_detailfoodinfo.Text = "The best Vietnamese sandwich";
             // 
