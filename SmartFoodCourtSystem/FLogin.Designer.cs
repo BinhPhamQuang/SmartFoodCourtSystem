@@ -207,9 +207,9 @@
             this.btnLoadOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadOrder.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLoadOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadOrder.Image")));
-            this.btnLoadOrder.Location = new System.Drawing.Point(51, 100);
+            this.btnLoadOrder.Location = new System.Drawing.Point(0, 0);
             this.btnLoadOrder.Name = "btnLoadOrder";
-            this.btnLoadOrder.Size = new System.Drawing.Size(146, 121);
+            this.btnLoadOrder.Size = new System.Drawing.Size(250, 330);
             this.btnLoadOrder.TabIndex = 19;
             this.btnLoadOrder.UseVisualStyleBackColor = true;
             this.btnLoadOrder.Click += new System.EventHandler(this.btnLoadOrder_Click);
