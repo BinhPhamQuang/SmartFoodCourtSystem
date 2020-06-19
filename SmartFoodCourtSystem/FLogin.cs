@@ -22,7 +22,12 @@ namespace SmartFoodCourtSystem
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+        void Alert(string msg,FAlert.emType type)
+        {
+            FAlert frm = new FAlert();
+            frm.showAlert(msg, type);
 
+        }
 
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -32,20 +37,24 @@ namespace SmartFoodCourtSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+           
+          
             if (txtUsername.Text == "admin" && txtPassword.Text == "123")
             {
                 lbErrorMessage.Visible = false;
-                MessageBox.Show("Login successfully!","Success!",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                this.Alert("Login successfully!", FAlert.emType.success);
+              
                 FManMain manMain = new FManMain();
                 this.Hide();
-                manMain.ShowDialog();
-                this.Show();
+                manMain.Show();
+               
             }
             else
             {
                 lbErrorMessage.Text = "";
                 lbErrorMessage.Text += "        " + "Incorrect username or password!";
                 lbErrorMessage.Visible = true;
+                this.Alert("Error!", FAlert.emType.error);
             }
         }
 

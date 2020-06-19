@@ -50,7 +50,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -72,10 +72,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label2.Location = new System.Drawing.Point(304, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 39);
+            this.label2.Size = new System.Drawing.Size(205, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "SFCS Manager";
             // 
@@ -83,11 +83,11 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.txtUsername.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtUsername.Location = new System.Drawing.Point(310, 100);
             this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(408, 25);
+            this.txtUsername.Size = new System.Drawing.Size(408, 20);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.Text = "admin";
             // 
@@ -105,7 +105,7 @@
             // 
             // lineShape2
             // 
-            this.lineShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.lineShape2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.lineShape2.Enabled = false;
             this.lineShape2.Name = "lineShape2";
             this.lineShape2.X1 = 311;
@@ -115,7 +115,7 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.lineShape1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.lineShape1.Enabled = false;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 309;
@@ -127,11 +127,11 @@
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtPassword.Location = new System.Drawing.Point(309, 149);
             this.txtPassword.MaxLength = 12;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(408, 25);
+            this.txtPassword.Size = new System.Drawing.Size(408, 20);
             this.txtPassword.TabIndex = 12;
             this.txtPassword.Text = "123";
             this.txtPassword.UseSystemPasswordChar = true;
@@ -155,10 +155,10 @@
             // 
             this.check.AutoSize = true;
             this.check.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.check.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.check.Location = new System.Drawing.Point(311, 189);
             this.check.Name = "check";
-            this.check.Size = new System.Drawing.Size(149, 23);
+            this.check.Size = new System.Drawing.Size(121, 20);
             this.check.TabIndex = 13;
             this.check.Text = "Unhide password";
             this.check.UseVisualStyleBackColor = true;
@@ -195,7 +195,7 @@
             this.lbErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbErrorMessage.Location = new System.Drawing.Point(305, 217);
             this.lbErrorMessage.Name = "lbErrorMessage";
-            this.lbErrorMessage.Size = new System.Drawing.Size(0, 20);
+            this.lbErrorMessage.Size = new System.Drawing.Size(0, 17);
             this.lbErrorMessage.TabIndex = 18;
             this.lbErrorMessage.Visible = false;
             // 
