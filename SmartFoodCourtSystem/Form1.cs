@@ -64,8 +64,6 @@ namespace SmartFoodCourtSystem
 
         private void BtnCook_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = btnManager.Height;
-            SidePanel.Top = btnManager.Top;
             this.Hide();
             Cook cook = new Cook();
             cook.ShowDialog();
