@@ -31,7 +31,11 @@ namespace SmartFoodCourtSystem
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            DialogResult result = MessageBox.Show("Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

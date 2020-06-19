@@ -35,10 +35,11 @@ namespace SmartFoodCourtSystem
             if (txtUsername.Text == "admin" && txtPassword.Text == "123")
             {
                 lbErrorMessage.Visible = false;
-                MessageBox.Show("Login successfully!");
+                MessageBox.Show("Login successfully!","Success!",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                 FManMain manMain = new FManMain();
                 this.Hide();
                 manMain.ShowDialog();
+                this.Show();
             }
             else
             {
