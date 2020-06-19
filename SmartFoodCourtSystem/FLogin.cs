@@ -60,9 +60,7 @@ namespace SmartFoodCourtSystem
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 form = new Form1();
-            form.ShowDialog();
+            Application.Exit();
         }
 
         private void buttonMinimize_Click(object sender, EventArgs e)
@@ -80,6 +78,13 @@ namespace SmartFoodCourtSystem
         {
             if (check.Checked) txtPassword.UseSystemPasswordChar = false;
             else txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void btnLoadOrder_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form = new Form1();
+            form.ShowDialog();
         }
     }
 }

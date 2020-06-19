@@ -42,6 +42,7 @@
             this.buttonMinimize = new System.Windows.Forms.PictureBox();
             this.buttonExit = new System.Windows.Forms.PictureBox();
             this.lbErrorMessage = new System.Windows.Forms.Label();
+            this.btnLoadOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonMinimize)).BeginInit();
@@ -51,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.btnLoadOrder);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -199,6 +201,19 @@
             this.lbErrorMessage.TabIndex = 18;
             this.lbErrorMessage.Visible = false;
             // 
+            // btnLoadOrder
+            // 
+            this.btnLoadOrder.FlatAppearance.BorderSize = 0;
+            this.btnLoadOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadOrder.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLoadOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadOrder.Image")));
+            this.btnLoadOrder.Location = new System.Drawing.Point(51, 100);
+            this.btnLoadOrder.Name = "btnLoadOrder";
+            this.btnLoadOrder.Size = new System.Drawing.Size(146, 121);
+            this.btnLoadOrder.TabIndex = 19;
+            this.btnLoadOrder.UseVisualStyleBackColor = true;
+            this.btnLoadOrder.Click += new System.EventHandler(this.btnLoadOrder_Click);
+            // 
             // FLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -245,5 +260,6 @@
         private System.Windows.Forms.PictureBox buttonMinimize;
         private System.Windows.Forms.PictureBox buttonExit;
         private System.Windows.Forms.Label lbErrorMessage;
+        private System.Windows.Forms.Button btnLoadOrder;
     }
 }

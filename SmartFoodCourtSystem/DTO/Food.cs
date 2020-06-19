@@ -8,7 +8,7 @@ namespace SmartFoodCourtSystem.DTO
 {
     class Food
     {
-        public int idFood { get; set; }
+        public int idFood { get; set; } 
         public string name { get; set; }
         public int category { get; set; }  // 0 drink 1 food
         public long  price { get; set; }
