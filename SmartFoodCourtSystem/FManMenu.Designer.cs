@@ -87,7 +87,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 16);
+            this.label2.Size = new System.Drawing.Size(209, 19);
             this.label2.TabIndex = 6;
             this.label2.Text = "nguyenvana@hcmut.edu.vn";
             // 
@@ -97,7 +97,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 19);
+            this.label1.Size = new System.Drawing.Size(153, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Nguyen Van A";
             // 
@@ -143,7 +143,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label6.Location = new System.Drawing.Point(121, 52);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 19);
+            this.label6.Size = new System.Drawing.Size(99, 21);
             this.label6.TabIndex = 9;
             this.label6.Text = "30000 VND";
             // 
@@ -153,7 +153,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(120, 57);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 16);
+            this.label5.Size = new System.Drawing.Size(0, 19);
             this.label5.TabIndex = 8;
             // 
             // label4
@@ -162,7 +162,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(121, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 16);
+            this.label4.Size = new System.Drawing.Size(144, 19);
             this.label4.TabIndex = 7;
             this.label4.Text = "Mien phi com them";
             // 
@@ -186,7 +186,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(120, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 22);
+            this.label3.Size = new System.Drawing.Size(100, 26);
             this.label3.TabIndex = 6;
             this.label3.Text = "Com ga";
             // 
@@ -244,7 +244,7 @@
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label11.Location = new System.Drawing.Point(121, 52);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 19);
+            this.label11.Size = new System.Drawing.Size(99, 21);
             this.label11.TabIndex = 9;
             this.label11.Text = "20000 VND";
             // 
@@ -254,7 +254,7 @@
             this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(120, 57);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 16);
+            this.label12.Size = new System.Drawing.Size(0, 19);
             this.label12.TabIndex = 8;
             // 
             // mon3
@@ -263,7 +263,7 @@
             this.mon3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mon3.Location = new System.Drawing.Point(121, 31);
             this.mon3.Name = "mon3";
-            this.mon3.Size = new System.Drawing.Size(113, 16);
+            this.mon3.Size = new System.Drawing.Size(144, 19);
             this.mon3.TabIndex = 7;
             this.mon3.Text = "Mien phi com them";
             // 
@@ -273,7 +273,7 @@
             this.label14.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label14.Location = new System.Drawing.Point(120, 3);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 22);
+            this.label14.Size = new System.Drawing.Size(125, 26);
             this.label14.TabIndex = 6;
             this.label14.Text = "Com chay";
             // 
@@ -317,7 +317,7 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label7.Location = new System.Drawing.Point(121, 52);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 19);
+            this.label7.Size = new System.Drawing.Size(99, 21);
             this.label7.TabIndex = 9;
             this.label7.Text = "30000 VND";
             // 
@@ -327,7 +327,7 @@
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(120, 57);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 16);
+            this.label8.Size = new System.Drawing.Size(0, 19);
             this.label8.TabIndex = 8;
             // 
             // label10
@@ -336,7 +336,7 @@
             this.label10.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(120, 3);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 22);
+            this.label10.Size = new System.Drawing.Size(120, 26);
             this.label10.TabIndex = 6;
             this.label10.Text = "Com suon";
             // 
@@ -373,7 +373,7 @@
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(121, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 16);
+            this.label9.Size = new System.Drawing.Size(144, 19);
             this.label9.TabIndex = 7;
             this.label9.Text = "Mien phi com them";
             // 
@@ -414,6 +414,7 @@
             this.Controls.Add(this.button8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FManMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FManMenu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

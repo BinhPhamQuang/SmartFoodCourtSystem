@@ -70,7 +70,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 16);
+            this.label2.Size = new System.Drawing.Size(209, 19);
             this.label2.TabIndex = 6;
             this.label2.Text = "nguyenvana@hcmut.edu.vn";
             // 
@@ -80,7 +80,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 19);
+            this.label1.Size = new System.Drawing.Size(153, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Nguyen Van A";
             // 
@@ -102,7 +102,7 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(35, 273);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 19);
+            this.label7.Size = new System.Drawing.Size(40, 26);
             this.label7.TabIndex = 19;
             this.label7.Text = "Tel";
             // 
@@ -111,7 +111,7 @@
             this.StaffTelNo.Font = new System.Drawing.Font("Century Gothic", 13F);
             this.StaffTelNo.Location = new System.Drawing.Point(105, 269);
             this.StaffTelNo.Name = "StaffTelNo";
-            this.StaffTelNo.Size = new System.Drawing.Size(213, 29);
+            this.StaffTelNo.Size = new System.Drawing.Size(213, 34);
             this.StaffTelNo.TabIndex = 18;
             // 
             // StaffBirth
@@ -119,7 +119,7 @@
             this.StaffBirth.Font = new System.Drawing.Font("Century Gothic", 13F);
             this.StaffBirth.Location = new System.Drawing.Point(105, 221);
             this.StaffBirth.Name = "StaffBirth";
-            this.StaffBirth.Size = new System.Drawing.Size(213, 29);
+            this.StaffBirth.Size = new System.Drawing.Size(213, 34);
             this.StaffBirth.TabIndex = 17;
             // 
             // StaffID
@@ -127,7 +127,7 @@
             this.StaffID.Font = new System.Drawing.Font("Century Gothic", 13F);
             this.StaffID.Location = new System.Drawing.Point(105, 171);
             this.StaffID.Name = "StaffID";
-            this.StaffID.Size = new System.Drawing.Size(213, 29);
+            this.StaffID.Size = new System.Drawing.Size(213, 34);
             this.StaffID.TabIndex = 16;
             // 
             // StaffName
@@ -135,7 +135,7 @@
             this.StaffName.Font = new System.Drawing.Font("Century Gothic", 13F);
             this.StaffName.Location = new System.Drawing.Point(105, 120);
             this.StaffName.Name = "StaffName";
-            this.StaffName.Size = new System.Drawing.Size(213, 29);
+            this.StaffName.Size = new System.Drawing.Size(213, 34);
             this.StaffName.TabIndex = 15;
             // 
             // btnSave
@@ -169,7 +169,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(35, 227);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 19);
+            this.label6.Size = new System.Drawing.Size(57, 26);
             this.label6.TabIndex = 9;
             this.label6.Text = "Birth";
             // 
@@ -179,7 +179,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(120, 57);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 16);
+            this.label5.Size = new System.Drawing.Size(0, 19);
             this.label5.TabIndex = 8;
             // 
             // label3
@@ -188,7 +188,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(35, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 22);
+            this.label3.Size = new System.Drawing.Size(78, 26);
             this.label3.TabIndex = 6;
             this.label3.Text = "Name";
             // 
@@ -227,7 +227,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(35, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 19);
+            this.label4.Size = new System.Drawing.Size(33, 26);
             this.label4.TabIndex = 7;
             this.label4.Text = "ID";
             // 
@@ -240,6 +240,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FManAddStaff";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FManAddStaff";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

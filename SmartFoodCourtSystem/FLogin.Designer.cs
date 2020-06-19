@@ -72,7 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.label2.Location = new System.Drawing.Point(304, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 39);
@@ -83,7 +83,7 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.txtUsername.Location = new System.Drawing.Point(310, 100);
             this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
@@ -105,7 +105,7 @@
             // 
             // lineShape2
             // 
-            this.lineShape2.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.lineShape2.Enabled = false;
             this.lineShape2.Name = "lineShape2";
             this.lineShape2.X1 = 311;
@@ -115,7 +115,7 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.lineShape1.Enabled = false;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 309;
@@ -127,7 +127,7 @@
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.txtPassword.Location = new System.Drawing.Point(309, 149);
             this.txtPassword.MaxLength = 12;
             this.txtPassword.Name = "txtPassword";
@@ -142,7 +142,7 @@
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.ForeColor = System.Drawing.Color.LightGray;
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnLogin.Location = new System.Drawing.Point(309, 249);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(408, 40);
@@ -155,8 +155,8 @@
             // 
             this.check.AutoSize = true;
             this.check.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check.ForeColor = System.Drawing.Color.DimGray;
-            this.check.Location = new System.Drawing.Point(311, 198);
+            this.check.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.check.Location = new System.Drawing.Point(311, 189);
             this.check.Name = "check";
             this.check.Size = new System.Drawing.Size(149, 23);
             this.check.TabIndex = 13;
@@ -193,7 +193,7 @@
             this.lbErrorMessage.ForeColor = System.Drawing.Color.Red;
             this.lbErrorMessage.Image = ((System.Drawing.Image)(resources.GetObject("lbErrorMessage.Image")));
             this.lbErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbErrorMessage.Location = new System.Drawing.Point(307, 226);
+            this.lbErrorMessage.Location = new System.Drawing.Point(305, 217);
             this.lbErrorMessage.Name = "lbErrorMessage";
             this.lbErrorMessage.Size = new System.Drawing.Size(0, 20);
             this.lbErrorMessage.TabIndex = 18;

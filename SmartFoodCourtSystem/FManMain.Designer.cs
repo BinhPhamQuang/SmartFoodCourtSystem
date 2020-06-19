@@ -71,7 +71,7 @@
             this.ManEmail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManEmail.Location = new System.Drawing.Point(12, 134);
             this.ManEmail.Name = "ManEmail";
-            this.ManEmail.Size = new System.Drawing.Size(168, 16);
+            this.ManEmail.Size = new System.Drawing.Size(209, 19);
             this.ManEmail.TabIndex = 6;
             this.ManEmail.Text = "nguyenvana@hcmut.edu.vn";
             // 
@@ -81,7 +81,7 @@
             this.ManName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManName.Location = new System.Drawing.Point(36, 115);
             this.ManName.Name = "ManName";
-            this.ManName.Size = new System.Drawing.Size(123, 19);
+            this.ManName.Size = new System.Drawing.Size(153, 23);
             this.ManName.TabIndex = 5;
             this.ManName.Text = "Nguyen Van A";
             // 
@@ -137,6 +137,7 @@
             this.Controls.Add(this.btnEditMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FManMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FManMain";
             ((System.ComponentModel.ISupportInitialize)(this.ManAva)).EndInit();
             this.panel1.ResumeLayout(false);
