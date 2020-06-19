@@ -36,6 +36,9 @@ namespace SmartFoodCourtSystem
             {
                 lbErrorMessage.Visible = false;
                 MessageBox.Show("Login successfully!");
+                FManMain manMain = new FManMain();
+                this.Hide();
+                manMain.ShowDialog();
             }
             else
             {
@@ -47,7 +50,9 @@ namespace SmartFoodCourtSystem
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Form1 form = new Form1();
+            form.ShowDialog();
         }
 
         private void buttonMinimize_Click(object sender, EventArgs e)

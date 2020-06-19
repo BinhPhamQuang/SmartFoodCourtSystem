@@ -38,6 +38,7 @@
             this.btnCart = new System.Windows.Forms.Button();
             this.bntMenu = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.BtnCook = new System.Windows.Forms.Button();
             this.btnManager = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.BtnCook = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,7 +92,7 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.SidePanel.Location = new System.Drawing.Point(206, 61);
+            this.SidePanel.Location = new System.Drawing.Point(204, 18);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 80);
             this.SidePanel.TabIndex = 3;
@@ -184,6 +184,22 @@
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // BtnCook
+            // 
+            this.BtnCook.FlatAppearance.BorderSize = 0;
+            this.BtnCook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCook.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCook.ForeColor = System.Drawing.Color.White;
+            this.BtnCook.Image = ((System.Drawing.Image)(resources.GetObject("BtnCook.Image")));
+            this.BtnCook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCook.Location = new System.Drawing.Point(0, 534);
+            this.BtnCook.Name = "BtnCook";
+            this.BtnCook.Size = new System.Drawing.Size(220, 80);
+            this.BtnCook.TabIndex = 13;
+            this.BtnCook.Text = "Cook";
+            this.BtnCook.UseVisualStyleBackColor = true;
+            this.BtnCook.Click += new System.EventHandler(this.BtnCook_Click);
             // 
             // btnManager
             // 
@@ -337,22 +353,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1208, 3);
             this.panel4.TabIndex = 10;
-            // 
-            // BtnCook
-            // 
-            this.BtnCook.FlatAppearance.BorderSize = 0;
-            this.BtnCook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCook.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCook.ForeColor = System.Drawing.Color.White;
-            this.BtnCook.Image = ((System.Drawing.Image)(resources.GetObject("BtnCook.Image")));
-            this.BtnCook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCook.Location = new System.Drawing.Point(0, 534);
-            this.BtnCook.Name = "BtnCook";
-            this.BtnCook.Size = new System.Drawing.Size(220, 80);
-            this.BtnCook.TabIndex = 13;
-            this.BtnCook.Text = "Cook";
-            this.BtnCook.UseVisualStyleBackColor = true;
-            this.BtnCook.Click += new System.EventHandler(this.BtnCook_Click);
             // 
             // Form1
             // 
