@@ -113,5 +113,21 @@ namespace SmartFoodCourtSystem
         {
             tb_searchfood.Clear();
         }
+
+        private void btnDrink_Click(object sender, EventArgs e)
+        {
+            btnDrink.BackColor = SystemColors.Highlight;
+            btnFood.BackColor = Color.White;
+            btnFood.ForeColor = Color.Black;
+            btnDrink.ForeColor = Color.White;
+        }
+
+        private void btnFood_Click(object sender, EventArgs e)
+        {
+            btnFood.BackColor = SystemColors.Highlight;
+            btnDrink.BackColor = Color.White;
+            btnFood.ForeColor = Color.White;
+            btnDrink.ForeColor = Color.Black;
+        }
     }
 }

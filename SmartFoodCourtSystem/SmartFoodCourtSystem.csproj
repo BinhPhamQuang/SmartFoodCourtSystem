@@ -83,6 +83,7 @@
     </Compile>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
+    <Compile Include="DTO\Cart.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="FAlert.cs">
       <SubType>Form</SubType>

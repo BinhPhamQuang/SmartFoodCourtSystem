@@ -59,6 +59,7 @@
             this.richTextBox_detailfoodinfo.BackColor = System.Drawing.Color.White;
             this.richTextBox_detailfoodinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox_detailfoodinfo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_detailfoodinfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.richTextBox_detailfoodinfo.Location = new System.Drawing.Point(32, 267);
             this.richTextBox_detailfoodinfo.Name = "richTextBox_detailfoodinfo";
             this.richTextBox_detailfoodinfo.Size = new System.Drawing.Size(292, 110);
@@ -69,6 +70,7 @@
             // 
             this.lb_resource.AutoSize = true;
             this.lb_resource.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_resource.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_resource.Location = new System.Drawing.Point(26, 212);
             this.lb_resource.Name = "lb_resource";
             this.lb_resource.Size = new System.Drawing.Size(399, 33);
@@ -79,6 +81,7 @@
             // 
             this.lb_namefood.AutoSize = true;
             this.lb_namefood.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_namefood.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_namefood.Location = new System.Drawing.Point(24, 165);
             this.lb_namefood.Name = "lb_namefood";
             this.lb_namefood.Size = new System.Drawing.Size(174, 47);

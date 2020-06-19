@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1_Menu));
             this.tb_searchfood = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnDrink = new System.Windows.Forms.Button();
+            this.btnFood = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,41 +57,43 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.button8);
-            this.panel9.Controls.Add(this.button7);
+            this.panel9.Controls.Add(this.btnDrink);
+            this.panel9.Controls.Add(this.btnFood);
             this.panel9.Controls.Add(this.label19);
             this.panel9.Location = new System.Drawing.Point(662, 15);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(284, 36);
             this.panel9.TabIndex = 16;
             // 
-            // button8
+            // btnDrink
             // 
-            this.button8.BackColor = System.Drawing.Color.White;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(191, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(86, 24);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Newest";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnDrink.BackColor = System.Drawing.Color.White;
+            this.btnDrink.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDrink.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDrink.ForeColor = System.Drawing.Color.Black;
+            this.btnDrink.Location = new System.Drawing.Point(191, 3);
+            this.btnDrink.Name = "btnDrink";
+            this.btnDrink.Size = new System.Drawing.Size(86, 24);
+            this.btnDrink.TabIndex = 2;
+            this.btnDrink.Text = "Drink";
+            this.btnDrink.UseVisualStyleBackColor = false;
+            this.btnDrink.Click += new System.EventHandler(this.btnDrink_Click);
             // 
-            // button7
+            // btnFood
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(99, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(86, 24);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Best-selling";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnFood.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnFood.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFood.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFood.ForeColor = System.Drawing.Color.White;
+            this.btnFood.Location = new System.Drawing.Point(99, 3);
+            this.btnFood.Name = "btnFood";
+            this.btnFood.Size = new System.Drawing.Size(86, 24);
+            this.btnFood.TabIndex = 1;
+            this.btnFood.Text = "Food";
+            this.btnFood.UseVisualStyleBackColor = false;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // label19
             // 
@@ -180,8 +182,8 @@
 
         private System.Windows.Forms.TextBox tb_searchfood;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnDrink;
+        private System.Windows.Forms.Button btnFood;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Panel panel1;
