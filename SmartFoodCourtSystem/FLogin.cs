@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using SmartFoodCourtSystem.DAO;
+using System.Text.RegularExpressions;
 
 namespace SmartFoodCourtSystem
 {
@@ -39,6 +40,13 @@ namespace SmartFoodCourtSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //bool re = false;
+            //string removableChars = Regex.Escape(@"@&'()<>#");
+            //string pattern = "[" + removableChars + "]";
+            string pattern = @"(\W|_|)";
+            //this.Alert("Unallowed characters!", FAlert.emType.regex);
+            txtUsername.Text = Regex.Replace(txtUsername.Text, pattern, "");
+            //txtPassword.Text = Regex.Replace(txtPassword.Text, pattern, "");
             bool success = false;
             string query = $"SELECT * from User";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);

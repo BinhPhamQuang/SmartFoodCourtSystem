@@ -36,9 +36,11 @@
             this.btnexit = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ptbsad = new System.Windows.Forms.PictureBox();
+            this.ptbexclamation = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbcheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbsad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbexclamation)).BeginInit();
             this.SuspendLayout();
             // 
             // ptbcheck
@@ -77,7 +79,7 @@
             this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexit.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnexit.Image = ((System.Drawing.Image)(resources.GetObject("btnexit.Image")));
-            this.btnexit.Location = new System.Drawing.Point(268, 22);
+            this.btnexit.Location = new System.Drawing.Point(268, 18);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(40, 40);
             this.btnexit.TabIndex = 2;
@@ -98,11 +100,22 @@
             this.ptbsad.TabIndex = 3;
             this.ptbsad.TabStop = false;
             // 
+            // ptbexclamation
+            // 
+            this.ptbexclamation.Image = ((System.Drawing.Image)(resources.GetObject("ptbexclamation.Image")));
+            this.ptbexclamation.Location = new System.Drawing.Point(12, 22);
+            this.ptbexclamation.Name = "ptbexclamation";
+            this.ptbexclamation.Size = new System.Drawing.Size(32, 32);
+            this.ptbexclamation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbexclamation.TabIndex = 4;
+            this.ptbexclamation.TabStop = false;
+            // 
             // FAlert
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(311, 74);
+            this.Controls.Add(this.ptbexclamation);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.lbmsg);
             this.Controls.Add(this.ptbcheck);
@@ -115,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbcheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbsad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbexclamation)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,5 +141,6 @@
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.PictureBox ptbsad;
         internal System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox ptbexclamation;
     }
 }

@@ -27,7 +27,8 @@ namespace SmartFoodCourtSystem
         public enum emType
         {
             success ,
-            error
+            error ,
+            regex
         }
         private int x, y; 
         private FAlert.emAction action;
@@ -106,6 +107,10 @@ namespace SmartFoodCourtSystem
                 case emType.error:
                     this.ptbsad.BringToFront();
                     this.BackColor = Color.Brown;
+                    break;
+                case emType.regex:
+                    this.ptbexclamation.BringToFront();
+                    this.BackColor = Color.DimGray;
                     break;
 
             }
