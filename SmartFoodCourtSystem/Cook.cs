@@ -38,13 +38,17 @@ namespace SmartFoodCourtSystem
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
-            foreach (Form oForm in Application.OpenForms)
+            DialogResult result = MessageBox.Show("Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                if (oForm is FLogin)
+                this.Close();
+                foreach (Form oForm in Application.OpenForms)
                 {
-                    oForm.Show();
-                    break;
+                    if (oForm is FLogin)
+                    {
+                        oForm.Show();
+                        break;
+                    }
                 }
             }
         }
