@@ -147,29 +147,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UCpayment.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCpayment.Designer.cs">
-      <DependentUpon>UCpayment.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_cart.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_cart.Designer.cs">
       <DependentUpon>UC_cart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_Delivery.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Delivery.Designer.cs">
-      <DependentUpon>UC_Delivery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_PayMethod.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_PayMethod.Designer.cs">
-      <DependentUpon>UC_PayMethod.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl1_Menu.cs">
       <SubType>UserControl</SubType>
@@ -218,17 +200,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCpayment.resx">
-      <DependentUpon>UCpayment.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC_cart.resx">
       <DependentUpon>UC_cart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Delivery.resx">
-      <DependentUpon>UC_Delivery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_PayMethod.resx">
-      <DependentUpon>UC_PayMethod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1_Menu.resx">
       <DependentUpon>UserControl1_Menu.cs</DependentUpon>
@@ -251,19 +224,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\minus_sign_20px.png" />
     <None Include="Resources\plus_20px.png" />
-=======
-    <None Include="Resources\return.png" />
-    <None Include="Resources\zalo-pay1.png" />
-    <None Include="Resources\zalo-pay.png" />
->>>>>>> e3b954f... Payment incompleted
     <None Include="Resources\cancel_filled_30px.png" />
-    <None Include="Resources\104479665_1126789964373134_5219131419394290619_n.jpg" />
-    <None Include="Resources\1.jpg" />
-    <None Include="Resources\1545358638753-LOGO MoMo.png" />
-    <None Include="Resources\1545358638753-LOGO MoMo1.png" />
     <Content Include="Resources\check.png" />
     <Content Include="Resources\checked.png" />
     <Content Include="Resources\checked_32px.png" />

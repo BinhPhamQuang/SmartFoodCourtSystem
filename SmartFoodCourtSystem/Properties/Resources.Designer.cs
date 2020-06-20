@@ -19,7 +19,7 @@ namespace SmartFoodCourtSystem.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,59 +63,9 @@ namespace SmartFoodCourtSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1 {
-            get {
-                object obj = ResourceManager.GetObject("1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _104479665_1126789964373134_5219131419394290619_n {
-            get {
-                object obj = ResourceManager.GetObject("104479665_1126789964373134_5219131419394290619_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1545358638753_LOGO_MoMo {
-            get {
-                object obj = ResourceManager.GetObject("1545358638753-LOGO MoMo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1545358638753_LOGO_MoMo1 {
-            get {
-                object obj = ResourceManager.GetObject("1545358638753-LOGO MoMo1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _checked {
             get {
                 object obj = ResourceManager.GetObject("checked", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _return {
-            get {
-                object obj = ResourceManager.GetObject("return", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,15 +123,9 @@ namespace SmartFoodCourtSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
         internal static System.Drawing.Bitmap minus_sign_20px {
             get {
                 object obj = ResourceManager.GetObject("minus_sign_20px", resourceCulture);
-=======
-        internal static System.Drawing.Bitmap zalo_pay {
-            get {
-                object obj = ResourceManager.GetObject("zalo-pay", resourceCulture);
->>>>>>> e3b954f... Payment incompleted
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -189,15 +133,9 @@ namespace SmartFoodCourtSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
         internal static System.Drawing.Bitmap plus_20px {
             get {
                 object obj = ResourceManager.GetObject("plus_20px", resourceCulture);
-=======
-        internal static System.Drawing.Bitmap zalo_pay1 {
-            get {
-                object obj = ResourceManager.GetObject("zalo-pay1", resourceCulture);
->>>>>>> e3b954f... Payment incompleted
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
