@@ -54,6 +54,8 @@
             this.tb_searchfood.Size = new System.Drawing.Size(218, 20);
             this.tb_searchfood.TabIndex = 14;
             this.tb_searchfood.Text = "Seach food";
+            this.tb_searchfood.Enter += new System.EventHandler(this.tb_searchfood_Enter);
+            this.tb_searchfood.Leave += new System.EventHandler(this.tb_searchfood_Leave);
             // 
             // panel9
             // 

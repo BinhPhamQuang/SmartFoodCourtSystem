@@ -16,5 +16,13 @@ namespace SmartFoodCourtSystem.DTO
         public int discount { get; set; }
         public int quantity { get; set; }
         public string image { get; set; }
+        public string size = Size.small.ToString();
+        public enum Size
+        {
+            small,
+            medium,
+            large
+        }
+        
     }
 }

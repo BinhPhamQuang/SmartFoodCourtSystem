@@ -73,6 +73,12 @@ namespace SmartFoodCourtSystem
             line.Location = new Point(3, 135);
             line.Size = new Size(411, 3);
 
+            Label lbnamesize = new Label();
+            lbnamesize.Text = food.size;
+            lbnamesize.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
+            lbnamesize.Location = new Point(148, 66);
+            lbnamesize.AutoSize = true;
+
             panel.Controls.Add(pictureBox);
             panel.Controls.Add(lbname);
             if (food.discount != 0)
@@ -101,7 +107,7 @@ namespace SmartFoodCourtSystem
             {
                 Food food = new Food();
                 food.name = "Egg Tart";
-                food.discount = 0;
+                food.discount = 10;
                 food.price = 2000;
                 food.image = @"C:\Users\Admin\Desktop\SmartFoodCourtSystem\Photos\1.jpg";
                 flp_cart.Controls.Add(RectangleItem(food));

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 namespace SmartFoodCourtSystem
 {
     public partial class FLogin : Form
@@ -26,7 +27,7 @@ namespace SmartFoodCourtSystem
         {
             FAlert frm = new FAlert();
             frm.showAlert(msg, type);
-
+            
         }
 
 
@@ -43,7 +44,6 @@ namespace SmartFoodCourtSystem
             {
                 lbErrorMessage.Visible = false;
                 this.Alert("Login successfully!", FAlert.emType.success);
-              
                 FManMain manMain = new FManMain();
                 this.Hide();
                 manMain.Show();

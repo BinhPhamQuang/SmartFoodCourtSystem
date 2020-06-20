@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SmartFoodCourtSystem.Properties;
@@ -110,6 +111,7 @@ namespace SmartFoodCourtSystem
             }
             this.lbmsg.Text = msg;
             this.Show();
+             
             this.action = emAction.start;
             this.timer1.Interval = 1;
             timer1.Start();
