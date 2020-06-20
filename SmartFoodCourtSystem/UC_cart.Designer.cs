@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_cart));
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,25 +42,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.btnApplyPromotioncode = new System.Windows.Forms.Button();
             this.flp_cart = new System.Windows.Forms.FlowLayoutPanel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.flp_cart.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -208,170 +190,11 @@
             // 
             this.flp_cart.AutoScroll = true;
             this.flp_cart.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.flp_cart.Controls.Add(this.panel5);
             this.flp_cart.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flp_cart.Location = new System.Drawing.Point(61, 68);
             this.flp_cart.Name = "flp_cart";
             this.flp_cart.Size = new System.Drawing.Size(442, 372);
             this.flp_cart.TabIndex = 24;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(148, 66);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 19);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Quantity:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(148, 43);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 19);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Size:";
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label12.Location = new System.Drawing.Point(297, 66);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 19);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "02";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(148, 91);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 19);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Price:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(149, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 23);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Egg Tart";
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label9.Location = new System.Drawing.Point(207, 89);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(159, 19);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "204.000VND";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(318, 13);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 19);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "-15%";
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label15.Location = new System.Drawing.Point(196, 43);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(170, 19);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "small";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(3, 135);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(411, 3);
-            this.panel1.TabIndex = 20;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.panel1);
-            this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(418, 146);
-            this.panel5.TabIndex = 21;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Image = global::SmartFoodCourtSystem.Properties.Resources.minus_sign_20px;
-            this.button3.Location = new System.Drawing.Point(272, 66);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(19, 19);
-            this.button3.TabIndex = 23;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Image = global::SmartFoodCourtSystem.Properties.Resources.plus_20px;
-            this.button2.Location = new System.Drawing.Point(347, 66);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(19, 19);
-            this.button2.TabIndex = 22;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Image = global::SmartFoodCourtSystem.Properties.Resources.cancel_filled_30px;
-            this.button1.Location = new System.Drawing.Point(381, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 32);
-            this.button1.TabIndex = 21;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 14);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(143, 96);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
             // 
             // UC_cart
             // 
@@ -392,10 +215,6 @@
             this.panel3.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.flp_cart.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,19 +236,5 @@
         private System.Windows.Forms.TextBox tbPromotioncode;
         private System.Windows.Forms.FlowLayoutPanel flp_cart;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
     }
 }

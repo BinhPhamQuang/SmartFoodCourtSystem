@@ -58,7 +58,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbImage = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -74,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage)).BeginInit();
             this.panel7.SuspendLayout();
             this.btn_subtract.SuspendLayout();
             this.SuspendLayout();
@@ -215,7 +215,6 @@
             // 
             // lbDiscount
             // 
-            this.lbDiscount.AutoSize = true;
             this.lbDiscount.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiscount.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbDiscount.Location = new System.Drawing.Point(415, 90);
@@ -223,6 +222,7 @@
             this.lbDiscount.Size = new System.Drawing.Size(50, 32);
             this.lbDiscount.TabIndex = 5;
             this.lbDiscount.Text = "0%";
+            this.lbDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnMedium
             // 
@@ -414,15 +414,15 @@
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox1
+            // ptbImage
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(467, 325);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptbImage.Image = ((System.Drawing.Image)(resources.GetObject("ptbImage.Image")));
+            this.ptbImage.Location = new System.Drawing.Point(0, 17);
+            this.ptbImage.Name = "ptbImage";
+            this.ptbImage.Size = new System.Drawing.Size(467, 325);
+            this.ptbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbImage.TabIndex = 0;
+            this.ptbImage.TabStop = false;
             // 
             // label1
             // 
@@ -459,7 +459,7 @@
             this.btn_subtract.Controls.Add(this.panel6);
             this.btn_subtract.Controls.Add(this.panel4);
             this.btn_subtract.Controls.Add(this.panel1);
-            this.btn_subtract.Controls.Add(this.pictureBox1);
+            this.btn_subtract.Controls.Add(this.ptbImage);
             this.btn_subtract.Controls.Add(this.panel7);
             this.btn_subtract.Location = new System.Drawing.Point(8, 8);
             this.btn_subtract.Name = "btn_subtract";
@@ -478,6 +478,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderDetail";
+            this.Load += new System.EventHandler(this.OrderDetail_Load);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -491,7 +492,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.btn_subtract.ResumeLayout(false);
@@ -530,7 +531,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbImage;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;

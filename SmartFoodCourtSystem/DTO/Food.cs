@@ -16,6 +16,7 @@ namespace SmartFoodCourtSystem.DTO
         public int discount { get; set; }
         public int quantity { get; set; }
         public string image { get; set; }
+        public string resource { get; set; }
         public long totalprice()
         {
                long total = 0;

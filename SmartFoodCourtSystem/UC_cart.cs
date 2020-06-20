@@ -188,23 +188,9 @@ namespace SmartFoodCourtSystem
         {
             
             InitializeComponent();
-            hihi();
+            
         }
-        void hihi ()
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                Food food = new Food();
-                food.idFood = i;
-                food.name = i.ToString();
-                food.discount = 10;
-                food.price = 1000;
-                food.quantity = 10;
-                food.image = @"C:\Users\Admin\Desktop\SmartFoodCourtSystem\Photos\1.jpg";
-                flp_cart.Controls.Add(RectangleItem(food));
-                Cart.Instance.addFood(food);
-            }
-        }
+         
         private long CaculatePrice()
         {
             long price = 0;

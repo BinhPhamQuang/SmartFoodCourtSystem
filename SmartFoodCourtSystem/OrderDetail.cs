@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SmartFoodCourtSystem.DTO;
 
 namespace SmartFoodCourtSystem
 {
     public partial class OrderDetail : Form
     {
+        public object getData;
+
         public OrderDetail()
         {
             InitializeComponent();
         }
+
+         
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -64,6 +70,17 @@ namespace SmartFoodCourtSystem
             {
                 lbQuantity.Text = quantity.ToString();
             }
+        }
+
+        private void OrderDetail_Load(object sender, EventArgs e)
+        {
+            Food food = (Food)getData;
+            ptbImage.Image = Image.FromFile(food.image);
+            lbName.Text = food.name;
+            lb_price.Text = food.price.ToString() + "VND";
+            lbDiscount.Text = food.discount.ToString() + "%";
+            rtb_description.Text = food.description;
+
         }
     }
 }

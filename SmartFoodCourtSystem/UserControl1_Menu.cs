@@ -14,6 +14,7 @@ namespace SmartFoodCourtSystem
 {
     public partial class UserControl1_Menu : UserControl
     {
+        private int category = 1;
         Panel RectangleFood(Food food)
         {
             Panel panel = new Panel();
@@ -64,6 +65,7 @@ namespace SmartFoodCourtSystem
             btnOrder.BackColor = Color.OliveDrab;
             btnOrder.FlatStyle = FlatStyle.Flat;
             btnOrder.Click += BtnOrder_Click;
+            btnOrder.Tag = food;
             //---
             panel.Controls.Add(lb_name);
             panel.Controls.Add(pictureBox);
@@ -74,7 +76,9 @@ namespace SmartFoodCourtSystem
 
         private void BtnOrder_Click(object sender, EventArgs e)
         {
+            Food t = (sender as Button).Tag as Food;
             OrderDetail orderDetail = new OrderDetail();
+            orderDetail.getData = t;
             orderDetail.ShowDialog();
         }
 
@@ -87,11 +91,11 @@ namespace SmartFoodCourtSystem
 
         private void UserControl1_Menu_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 20; i++)
+            flp_menu.Controls.Clear();
+            List<Food> t = FoodDAO.Instance.getFoodbyCategory(category);
+            foreach(Food i in t)
             {
-                Food aa = new Food(); aa.name = "Seafood ahh"; aa.price = 122200; aa.discount = 10;
-                aa.image = @"C:\Users\Admin\Desktop\SmartFoodCourtSystem\Photos\1.jpg";
-                Panel a = RectangleFood(aa);
+                Panel a = RectangleFood(i);
                 flp_menu.Controls.Add(a);
             }
         }
@@ -118,6 +122,8 @@ namespace SmartFoodCourtSystem
 
         private void btnDrink_Click(object sender, EventArgs e)
         {
+            category = 0;
+            UserControl1_Menu_Load(sender, e);
             btnDrink.BackColor = SystemColors.Highlight;
             btnFood.BackColor = Color.White;
             btnFood.ForeColor = Color.Black;
@@ -126,6 +132,8 @@ namespace SmartFoodCourtSystem
 
         private void btnFood_Click(object sender, EventArgs e)
         {
+            category = 1;
+            UserControl1_Menu_Load(sender, e);
             btnFood.BackColor = SystemColors.Highlight;
             btnDrink.BackColor = Color.White;
             btnFood.ForeColor = Color.White;
