@@ -49,20 +49,30 @@ namespace SmartFoodCourtSystem
 
         private void OrderDetail_Load(object sender, EventArgs e)
         {
+            
             Food food = (Food)getData;
+            
             ptbImage.Image = Image.FromFile(food.image);
             lbName.Text = food.name;
             lb_price.Text = food.price.ToString() + "VND";
             lbDiscount.Text = food.discount.ToString() + "%";
             rtb_description.Text = food.description;
-
+           
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Food food = (Food)getData;
-            food.quantity = int.Parse(lbQuantity.Text.ToString());
-            Cart.Instance.addFood(food);
+
+            Food t = new Food();
+            t.idFood = food.idFood;
+            t.name = food.name;
+            t.price = food.price;
+            t.quantity = int.Parse(lbQuantity.Text.ToString());
+            t.image = food.image;
+            t.discount = food.discount;
+
+            Cart.Instance.addFood(t);
             Alert("Order successfully !", FAlert.emType.success);
             this.Close();
         }

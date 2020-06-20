@@ -23,11 +23,22 @@ namespace SmartFoodCourtSystem.DTO
                 //increase quantity
                 if(i.idFood==food.idFood)
                 {
-                    i.quantity += food.quantity;
+                    ChangQuantity(i.idFood, food.quantity);
                     return;
                 }
             }
             listFood.Add(food);
+        }
+        public void ChangQuantity(int id, int quantity)
+        {
+            foreach(Food i in listFood)
+            {
+                if(i.idFood==id)
+                {
+                    i.quantity += quantity;
+                    return;
+                }
+            }
         }
         public bool editCart(Food food)
         {

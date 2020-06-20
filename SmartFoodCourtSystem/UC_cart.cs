@@ -188,7 +188,7 @@ namespace SmartFoodCourtSystem
         {
             
             InitializeComponent();
-            
+            LoadCart();
         }
          
         private long CaculatePrice()
@@ -208,6 +208,7 @@ namespace SmartFoodCourtSystem
             {
 
                 Panel t = RectangleItem(i);
+                 
                 flp_cart.Controls.Add(t);
             }
             lbPrice.Text = CaculatePrice().ToString() + "VND";
