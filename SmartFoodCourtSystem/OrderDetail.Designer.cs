@@ -33,17 +33,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnPlus = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnSub = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_price = new System.Windows.Forms.Label();
             this.lbQuantity = new System.Windows.Forms.Label();
-            this.btnSmall = new System.Windows.Forms.Button();
             this.lbDiscount = new System.Windows.Forms.Label();
-            this.btnMedium = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnLarge = new System.Windows.Forms.Button();
             this.pnDescription = new System.Windows.Forms.Panel();
             this.rtb_description = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -94,27 +90,23 @@
             // 
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.btnPlus);
-            this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.btnSub);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.lb_price);
             this.panel5.Controls.Add(this.lbQuantity);
-            this.panel5.Controls.Add(this.btnSmall);
             this.panel5.Controls.Add(this.lbDiscount);
-            this.panel5.Controls.Add(this.btnMedium);
             this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.btnLarge);
-            this.panel5.Location = new System.Drawing.Point(6, 201);
+            this.panel5.Location = new System.Drawing.Point(6, 214);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(471, 142);
+            this.panel5.Size = new System.Drawing.Size(471, 129);
             this.panel5.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 8);
+            this.label4.Location = new System.Drawing.Point(14, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 32);
             this.label4.TabIndex = 9;
@@ -126,22 +118,12 @@
             this.btnPlus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlus.BackgroundImage")));
             this.btnPlus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlus.Location = new System.Drawing.Point(222, 101);
+            this.btnPlus.Location = new System.Drawing.Point(224, 91);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(20, 20);
             this.btnPlus.TabIndex = 20;
             this.btnPlus.UseVisualStyleBackColor = false;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 32);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Size:";
             // 
             // btnSub
             // 
@@ -149,7 +131,7 @@
             this.btnSub.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSub.BackgroundImage")));
             this.btnSub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSub.Location = new System.Drawing.Point(141, 101);
+            this.btnSub.Location = new System.Drawing.Point(141, 90);
             this.btnSub.Name = "btnSub";
             this.btnSub.Size = new System.Drawing.Size(20, 20);
             this.btnSub.TabIndex = 19;
@@ -160,7 +142,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 90);
+            this.label6.Location = new System.Drawing.Point(14, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 32);
             this.label6.TabIndex = 11;
@@ -170,7 +152,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.panel3.Location = new System.Drawing.Point(169, 119);
+            this.panel3.Location = new System.Drawing.Point(169, 107);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(49, 3);
             this.panel3.TabIndex = 6;
@@ -180,7 +162,7 @@
             this.lb_price.Font = new System.Drawing.Font("Malgun Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_price.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lb_price.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lb_price.Location = new System.Drawing.Point(141, 3);
+            this.lb_price.Location = new System.Drawing.Point(144, 20);
             this.lb_price.Name = "lb_price";
             this.lb_price.Size = new System.Drawing.Size(324, 37);
             this.lb_price.TabIndex = 12;
@@ -191,78 +173,33 @@
             // 
             this.lbQuantity.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuantity.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbQuantity.Location = new System.Drawing.Point(167, 84);
+            this.lbQuantity.Location = new System.Drawing.Point(167, 78);
             this.lbQuantity.Name = "lbQuantity";
             this.lbQuantity.Size = new System.Drawing.Size(51, 32);
             this.lbQuantity.TabIndex = 4;
             this.lbQuantity.Text = "1";
             this.lbQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSmall
-            // 
-            this.btnSmall.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSmall.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSmall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSmall.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSmall.ForeColor = System.Drawing.Color.White;
-            this.btnSmall.Location = new System.Drawing.Point(141, 47);
-            this.btnSmall.Name = "btnSmall";
-            this.btnSmall.Size = new System.Drawing.Size(101, 31);
-            this.btnSmall.TabIndex = 1;
-            this.btnSmall.Text = "Small";
-            this.btnSmall.UseVisualStyleBackColor = false;
-            this.btnSmall.Click += new System.EventHandler(this.btnSmall_Click);
-            // 
             // lbDiscount
             // 
             this.lbDiscount.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiscount.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbDiscount.Location = new System.Drawing.Point(415, 90);
+            this.lbDiscount.Location = new System.Drawing.Point(410, 78);
             this.lbDiscount.Name = "lbDiscount";
             this.lbDiscount.Size = new System.Drawing.Size(50, 32);
             this.lbDiscount.TabIndex = 5;
             this.lbDiscount.Text = "0%";
             this.lbDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnMedium
-            // 
-            this.btnMedium.BackColor = System.Drawing.Color.White;
-            this.btnMedium.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnMedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMedium.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedium.ForeColor = System.Drawing.Color.Black;
-            this.btnMedium.Location = new System.Drawing.Point(251, 48);
-            this.btnMedium.Name = "btnMedium";
-            this.btnMedium.Size = new System.Drawing.Size(101, 31);
-            this.btnMedium.TabIndex = 2;
-            this.btnMedium.Text = "Medium";
-            this.btnMedium.UseVisualStyleBackColor = false;
-            this.btnMedium.Click += new System.EventHandler(this.btnMedium_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(245, 90);
+            this.label8.Location = new System.Drawing.Point(270, 80);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(134, 32);
             this.label8.TabIndex = 16;
             this.label8.Text = "Discount:";
-            // 
-            // btnLarge
-            // 
-            this.btnLarge.BackColor = System.Drawing.Color.White;
-            this.btnLarge.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLarge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLarge.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLarge.ForeColor = System.Drawing.Color.Black;
-            this.btnLarge.Location = new System.Drawing.Point(364, 48);
-            this.btnLarge.Name = "btnLarge";
-            this.btnLarge.Size = new System.Drawing.Size(101, 31);
-            this.btnLarge.TabIndex = 3;
-            this.btnLarge.Text = "Large";
-            this.btnLarge.UseVisualStyleBackColor = false;
-            this.btnLarge.Click += new System.EventHandler(this.btnLarge_Click);
             // 
             // pnDescription
             // 
@@ -336,6 +273,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add to cart";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
@@ -506,17 +444,13 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnPlus;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSub;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lb_price;
         private System.Windows.Forms.Label lbQuantity;
-        private System.Windows.Forms.Button btnSmall;
         private System.Windows.Forms.Label lbDiscount;
-        private System.Windows.Forms.Button btnMedium;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnLarge;
         private System.Windows.Forms.Panel pnDescription;
         private System.Windows.Forms.RichTextBox rtb_description;
         private System.Windows.Forms.Panel panel2;

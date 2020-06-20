@@ -181,7 +181,7 @@ namespace SmartFoodCourtSystem
              Food food= ((sender as Button).Tag as Food);
             Cart.Instance.DeleteFood(food);
             flp_cart.Controls.Clear();
-            UC_cart_Load(sender,e);
+            LoadCart();
         }
 
         public UC_cart()
@@ -201,16 +201,21 @@ namespace SmartFoodCourtSystem
             }
             return price;
         }
-        private void UC_cart_Load(object sender, EventArgs e)
+        public void LoadCart()
         {
-           
-            foreach(Food i in Cart.Instance.getListFood())
+            flp_cart.Controls.Clear();
+            foreach (Food i in Cart.Instance.getListFood())
             {
-               
+
                 Panel t = RectangleItem(i);
                 flp_cart.Controls.Add(t);
             }
             lbPrice.Text = CaculatePrice().ToString() + "VND";
+        }
+        private void UC_cart_Load(object sender, EventArgs e)
+        {
+
+            LoadCart();
         }
     }
 }

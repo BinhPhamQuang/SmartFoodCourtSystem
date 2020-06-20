@@ -41,6 +41,7 @@ namespace SmartFoodCourtSystem
 
         private void btnCart_Click(object sender, EventArgs e)
         {
+            uC_cart1.LoadCart();
             SidePanel.Height = btnCart.Height;
             SidePanel.Top = btnCart.Top;
             uC_cart1.BringToFront();

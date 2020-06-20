@@ -20,43 +20,18 @@ namespace SmartFoodCourtSystem
             InitializeComponent();
         }
 
-         
 
+        void Alert(string msg, FAlert.emType type)
+        {
+            FAlert frm = new FAlert();
+            frm.showAlert(msg, type);
+
+        }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void btnSmall_Click(object sender, EventArgs e)
-        {
-            btnSmall.BackColor = SystemColors.MenuHighlight;
-            btnMedium.BackColor = Color.White;
-            btnLarge.BackColor = Color.White;
-            btnSmall.ForeColor = Color.White;
-            btnMedium.ForeColor = Color.Black;
-            btnLarge.ForeColor = Color.Black;
-        }
-
-        private void btnMedium_Click(object sender, EventArgs e)
-        {
-            btnSmall.BackColor = Color.White;
-            btnMedium.BackColor = SystemColors.MenuHighlight;
-            btnLarge.BackColor = Color.White;
-            btnSmall.ForeColor = Color.Black;
-            btnMedium.ForeColor = Color.White;
-            btnLarge.ForeColor = Color.Black;
-        }
-
-        private void btnLarge_Click(object sender, EventArgs e)
-        {
-            btnSmall.BackColor = Color.White;
-            btnMedium.BackColor = Color.White;
-            btnLarge.BackColor = SystemColors.MenuHighlight;
-            btnSmall.ForeColor = Color.Black;
-            btnMedium.ForeColor = Color.Black;
-            btnLarge.ForeColor = Color.White;
-        }
-
+        
         private void btnPlus_Click(object sender, EventArgs e)
         {
             int quantity = int.Parse(lbQuantity.Text)+1;
@@ -81,6 +56,15 @@ namespace SmartFoodCourtSystem
             lbDiscount.Text = food.discount.ToString() + "%";
             rtb_description.Text = food.description;
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Food food = (Food)getData;
+            food.quantity = int.Parse(lbQuantity.Text.ToString());
+            Cart.Instance.addFood(food);
+            Alert("Order successfully !", FAlert.emType.success);
+            this.Close();
         }
     }
 }
