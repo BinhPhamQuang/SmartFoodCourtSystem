@@ -16,6 +16,12 @@ namespace SmartFoodCourtSystem.DTO
         public int discount { get; set; }
         public int quantity { get; set; }
         public string image { get; set; }
+        public long totalprice()
+        {
+               long total = 0;
+            total = quantity * (price * (100 - discount) / 100);
+            return total;
+        }
         public string size = Size.small.ToString();
         public enum Size
         {

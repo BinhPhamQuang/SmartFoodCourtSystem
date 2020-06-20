@@ -14,6 +14,7 @@ namespace SmartFoodCourtSystem
     
     public partial class UC_cart : UserControl
     {
+        
         Panel RectangleItem(Food food)
         {
             Panel panel = new Panel();
@@ -67,6 +68,7 @@ namespace SmartFoodCourtSystem
             btndelete.ForeColor = SystemColors.MenuHighlight;
             btndelete.Image = Resources.cancel_filled_30px;
             btndelete.Click += Btndelete_Click;
+            btndelete.Tag = food;
 
             Panel line = new Panel();
             line.BackColor = Color.White;
@@ -75,43 +77,154 @@ namespace SmartFoodCourtSystem
 
             Label lbnamesize = new Label();
             lbnamesize.Text = food.size;
+            lbnamesize.ForeColor = SystemColors.GradientActiveCaption;
             lbnamesize.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
-            lbnamesize.Location = new Point(148, 66);
-            lbnamesize.AutoSize = true;
+            lbnamesize.Location = new Point(196, 43);
+            lbnamesize.AutoSize = false;
+            lbnamesize.Size= new Size(170, 19);
+            lbnamesize.TextAlign = ContentAlignment.MiddleRight;
+
+            Label lbnamequantity = new Label();
+            lbnamequantity.Text = food.quantity.ToString();
+            lbnamequantity.ForeColor = SystemColors.GradientActiveCaption;
+            lbnamequantity.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
+            lbnamequantity.Location = new Point(297, 66);
+            lbnamequantity.AutoSize = false;
+            lbnamequantity.Size = new Size(44, 19);
+            lbnamequantity.TextAlign = ContentAlignment.MiddleRight;
+
+            Label lbnameprice = new Label();
+            lbnameprice.Text = food.totalprice().ToString() + "VND";
+            lbnameprice.ForeColor = SystemColors.GradientActiveCaption;
+            lbnameprice.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
+            lbnameprice.Location = new Point(207, 90);
+            lbnameprice.AutoSize = false;
+            lbnameprice.Size = new Size(159, 19);
+            lbnameprice.TextAlign = ContentAlignment.MiddleRight;
+
+            Button btnPlus = new Button();
+            btnPlus.FlatStyle = FlatStyle.Flat;
+            btnPlus.Location = new Point(347, 66);
+            btnPlus.Size = new Size(20, 20);
+            btnPlus.ForeColor = SystemColors.MenuHighlight;
+            btnPlus.BackColor = SystemColors.MenuHighlight;
+            btnPlus.Image = Resources.plus_20px;
+            btnPlus.Click += BtnPlus;
+            btnPlus.Tag = new {a=lbnamequantity,b=food,c=lbnameprice };
+
+            Button btnMinus = new Button();
+            btnMinus.FlatStyle = FlatStyle.Flat;
+            btnMinus.Location = new Point(272, 66);
+            btnMinus.Size = new Size(20, 20);
+            btnMinus.ForeColor = SystemColors.MenuHighlight;
+            btnMinus.BackColor = SystemColors.MenuHighlight;
+            btnMinus.Image = Resources.minus_sign_20px;
+            btnMinus.Click += BtnMinus;
+            btnMinus.Tag = new { a = lbnamequantity, b = food, c = lbnameprice };
 
             panel.Controls.Add(pictureBox);
             panel.Controls.Add(lbname);
             if (food.discount != 0)
-               panel.Controls.Add(lbdiscount);
+              panel.Controls.Add(lbdiscount);
            panel.Controls.Add(lbsize);
            panel.Controls.Add(lbquantity);
             panel.Controls.Add(lbprice);
             panel.Controls.Add(line);
             panel.Controls.Add(btndelete);
+            panel.Controls.Add(lbnamesize);
+            panel.Controls.Add(lbnamequantity);
+            panel.Controls.Add(lbnameprice);
+            panel.Controls.Add(btnPlus);
+            panel.Controls.Add(btnMinus);
+
             return panel;
+        }
+
+        private void BtnMinus(object sender, EventArgs e)
+        {
+            Button t = sender as Button;
+            Label label = ((dynamic)t.Tag).a;
+            Food food = ((dynamic)t.Tag).b;
+            Label lbprice = ((dynamic)t.Tag).c;
+            int quantity = int.Parse(label.Text.ToString());
+            if (quantity > 1)
+            {
+                label.Text = (quantity -1).ToString();
+                food.quantity = quantity - 1;
+                Cart.Instance.editCart(food);
+                lbprice.Text = food.totalprice().ToString() + "VND";
+                lbPrice.Text = CaculatePrice().ToString() + "VND";
+            }
+           
+        }
+
+        private void BtnPlus(object sender, EventArgs e)
+        {
+
+            Button t = sender as Button;
+            Label label = ((dynamic)t.Tag).a;
+            Food food = ((dynamic)t.Tag).b;
+            Label lbprice = ((dynamic)t.Tag).c;
+            int quantity=int.Parse(label.Text.ToString());
+            
+            label.Text = (quantity + 1).ToString();
+            
+            food.quantity = quantity + 1;
+            Cart.Instance.editCart(food);
+            lbprice.Text = food.totalprice().ToString() + "VND";
+            lbPrice.Text = CaculatePrice().ToString() + "VND";
+
         }
 
         private void Btndelete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ahiih");
+             Food food= ((sender as Button).Tag as Food);
+            Cart.Instance.DeleteFood(food);
+            flp_cart.Controls.Clear();
+            UC_cart_Load(sender,e);
         }
 
         public UC_cart()
         {
+            
             InitializeComponent();
+            hihi();
         }
-
-        private void UC_cart_Load(object sender, EventArgs e)
+        void hihi ()
         {
-            for (int i=0; i<10;i++)
+            for (int i = 0; i < 10; i++)
             {
                 Food food = new Food();
-                food.name = "Egg Tart";
+                food.idFood = i;
+                food.name = i.ToString();
                 food.discount = 10;
-                food.price = 2000;
+                food.price = 1000;
+                food.quantity = 10;
                 food.image = @"C:\Users\Admin\Desktop\SmartFoodCourtSystem\Photos\1.jpg";
                 flp_cart.Controls.Add(RectangleItem(food));
+                Cart.Instance.addFood(food);
             }
+        }
+        private long CaculatePrice()
+        {
+            long price = 0;
+            foreach (Food i in Cart.Instance.getListFood())
+            {
+                price += i.totalprice();
+                
+            }
+            return price;
+        }
+        private void UC_cart_Load(object sender, EventArgs e)
+        {
+           
+            foreach(Food i in Cart.Instance.getListFood())
+            {
+               
+                Panel t = RectangleItem(i);
+                flp_cart.Controls.Add(t);
+            }
+            lbPrice.Text = CaculatePrice().ToString() + "VND";
         }
     }
 }

@@ -223,6 +223,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\minus_sign_20px.png" />
+    <None Include="Resources\plus_20px.png" />
     <None Include="Resources\cancel_filled_30px.png" />
     <Content Include="Resources\check.png" />
     <Content Include="Resources\checked.png" />

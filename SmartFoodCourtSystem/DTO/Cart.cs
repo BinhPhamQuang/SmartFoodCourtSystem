@@ -58,6 +58,17 @@ namespace SmartFoodCourtSystem.DTO
         {
             listFood.Clear();
         }
+        public void DeleteFood(Food food)
+        {
+            foreach(Food i in listFood)
+            {
+                if(i.idFood==food.idFood)
+                {
+                    listFood.Remove(i);
+                    return;
+                }
+            }
+        }
         
     }
 }
