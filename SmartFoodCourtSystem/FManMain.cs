@@ -34,7 +34,15 @@ namespace SmartFoodCourtSystem
             DialogResult result = MessageBox.Show("Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Close();
+                foreach (Form oForm in Application.OpenForms)
+                {
+                    if (oForm is FLogin)
+                    {
+                        oForm.Show();
+                        break;
+                    }
+                }
             }
         }
 

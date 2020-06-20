@@ -38,7 +38,15 @@ namespace SmartFoodCourtSystem
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if (oForm is FLogin)
+                {
+                    oForm.Show();
+                    break;
+                }
+            }
         }
     }
 }

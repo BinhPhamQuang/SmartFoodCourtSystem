@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLoadOrder = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@
             this.buttonMinimize = new System.Windows.Forms.PictureBox();
             this.buttonExit = new System.Windows.Forms.PictureBox();
             this.lbErrorMessage = new System.Windows.Forms.Label();
-            this.btnLoadOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonMinimize)).BeginInit();
@@ -59,6 +59,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 330);
             this.panel1.TabIndex = 0;
+            // 
+            // btnLoadOrder
+            // 
+            this.btnLoadOrder.FlatAppearance.BorderSize = 0;
+            this.btnLoadOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadOrder.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLoadOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadOrder.Image")));
+            this.btnLoadOrder.Location = new System.Drawing.Point(0, 0);
+            this.btnLoadOrder.Name = "btnLoadOrder";
+            this.btnLoadOrder.Size = new System.Drawing.Size(250, 330);
+            this.btnLoadOrder.TabIndex = 19;
+            this.btnLoadOrder.UseVisualStyleBackColor = true;
+            this.btnLoadOrder.Click += new System.EventHandler(this.btnLoadOrder_Click);
             // 
             // pictureBox1
             // 
@@ -77,7 +90,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label2.Location = new System.Drawing.Point(304, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 32);
+            this.label2.Size = new System.Drawing.Size(250, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "SFCS Manager";
             // 
@@ -85,13 +98,15 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtUsername.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsername.Location = new System.Drawing.Point(310, 100);
             this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(408, 20);
+            this.txtUsername.Size = new System.Drawing.Size(408, 25);
             this.txtUsername.TabIndex = 10;
-            this.txtUsername.Text = "admin";
+            this.txtUsername.Text = "Username";
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // shapeContainer1
             // 
@@ -129,14 +144,16 @@
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.Location = new System.Drawing.Point(309, 149);
             this.txtPassword.MaxLength = 12;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(408, 20);
+            this.txtPassword.Size = new System.Drawing.Size(408, 25);
             this.txtPassword.TabIndex = 12;
-            this.txtPassword.Text = "123";
+            this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // btnLogin
             // 
@@ -145,7 +162,7 @@
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnLogin.Location = new System.Drawing.Point(309, 249);
+            this.btnLogin.Location = new System.Drawing.Point(309, 242);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(408, 40);
             this.btnLogin.TabIndex = 14;
@@ -157,10 +174,10 @@
             // 
             this.check.AutoSize = true;
             this.check.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.check.ForeColor = System.Drawing.Color.DimGray;
             this.check.Location = new System.Drawing.Point(311, 189);
             this.check.Name = "check";
-            this.check.Size = new System.Drawing.Size(121, 20);
+            this.check.Size = new System.Drawing.Size(149, 23);
             this.check.TabIndex = 13;
             this.check.Text = "Unhide password";
             this.check.UseVisualStyleBackColor = true;
@@ -197,22 +214,9 @@
             this.lbErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbErrorMessage.Location = new System.Drawing.Point(305, 217);
             this.lbErrorMessage.Name = "lbErrorMessage";
-            this.lbErrorMessage.Size = new System.Drawing.Size(0, 17);
+            this.lbErrorMessage.Size = new System.Drawing.Size(0, 20);
             this.lbErrorMessage.TabIndex = 18;
             this.lbErrorMessage.Visible = false;
-            // 
-            // btnLoadOrder
-            // 
-            this.btnLoadOrder.FlatAppearance.BorderSize = 0;
-            this.btnLoadOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadOrder.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLoadOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadOrder.Image")));
-            this.btnLoadOrder.Location = new System.Drawing.Point(0, 0);
-            this.btnLoadOrder.Name = "btnLoadOrder";
-            this.btnLoadOrder.Size = new System.Drawing.Size(250, 330);
-            this.btnLoadOrder.TabIndex = 19;
-            this.btnLoadOrder.UseVisualStyleBackColor = true;
-            this.btnLoadOrder.Click += new System.EventHandler(this.btnLoadOrder_Click);
             // 
             // FLogin
             // 

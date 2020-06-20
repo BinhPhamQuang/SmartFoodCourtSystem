@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using SmartFoodCourtSystem.DAO;
 
 namespace SmartFoodCourtSystem
 {
@@ -17,6 +17,7 @@ namespace SmartFoodCourtSystem
         public FLogin()
         {
             InitializeComponent();
+            txtPassword.UseSystemPasswordChar = false;
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -38,18 +39,36 @@ namespace SmartFoodCourtSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
-          
-            if (txtUsername.Text == "admin" && txtPassword.Text == "123")
+            bool success = false;
+            string query = $"SELECT * from User";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            bool hidden = false;
+            foreach (DataRow r in data.Rows)
             {
-                lbErrorMessage.Visible = false;
-                this.Alert("Login successfully!", FAlert.emType.success);
-                FManMain manMain = new FManMain();
-                this.Hide();
-                manMain.Show();
-               
+                if (txtUsername.Text == r["Username"].ToString() && txtPassword.Text == r["Password"].ToString())
+                {
+                    success = true;
+                    this.Hide();
+                    hidden = true;
+                    switch (int.Parse(r["Type"].ToString()))
+                    {
+                        
+                        case 0:
+                            lbErrorMessage.Visible = false;
+                            this.Alert("Login successfully!", FAlert.emType.success);
+                            Cook cook = new Cook();
+                            cook.Show();
+                            break;
+                        case 1:
+                            lbErrorMessage.Visible = false;
+                            this.Alert("Login successfully!", FAlert.emType.success);
+                            FManMain manMain = new FManMain();
+                            manMain.Show();
+                            break;
+                    }
+                }
             }
-            else
+            if (!success)
             {
                 lbErrorMessage.Text = "";
                 lbErrorMessage.Text += "        " + "Incorrect username or password!";
@@ -76,7 +95,7 @@ namespace SmartFoodCourtSystem
 
         private void check_CheckedChanged(object sender, EventArgs e)
         {
-            if (check.Checked) txtPassword.UseSystemPasswordChar = false;
+            if (check.Checked || txtPassword.Text == "Password") txtPassword.UseSystemPasswordChar = false;
             else txtPassword.UseSystemPasswordChar = true;
         }
 
@@ -85,6 +104,44 @@ namespace SmartFoodCourtSystem
             this.Hide();
             Form1 form = new Form1();
             form.ShowDialog();
+        }
+
+        private void txtUsername_Enter(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Username")
+            {
+                txtUsername.Text = "";
+                txtUsername.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txtUsername_Leave(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "")
+            {
+                txtUsername.Text = "Username";
+                txtUsername.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Password")
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                txtPassword.Text = "Password";
+                txtPassword.ForeColor = Color.DimGray;
+            }
         }
     }
 }
