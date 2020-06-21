@@ -147,6 +147,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UCManMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCManMain.Designer.cs">
+      <DependentUpon>UCManMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCManMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCManMenu.Designer.cs">
+      <DependentUpon>UCManMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCManStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCManStaff.Designer.cs">
+      <DependentUpon>UCManStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCReport.Designer.cs">
+      <DependentUpon>UCReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_cart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -199,6 +223,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCManMain.resx">
+      <DependentUpon>UCManMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCManMenu.resx">
+      <DependentUpon>UCManMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCManStaff.resx">
+      <DependentUpon>UCManStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCReport.resx">
+      <DependentUpon>UCReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_cart.resx">
       <DependentUpon>UC_cart.cs</DependentUpon>
