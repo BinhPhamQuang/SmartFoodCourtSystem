@@ -19,14 +19,20 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
             dataGridView1.Visible = false;
+            dataGridView2.Visible = false;
         }
 
         private void GetOrderList_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.Visible == false)
+            if (dataGridView1.Visible == false)
+            {
                 dataGridView1.Visible = true;
-            else{
+                dataGridView2.Visible = true;
+            }
+            else
+            {
                 dataGridView1.Visible = false;
+                dataGridView2.Visible = false;
             }
             string query = $"Select IDBill, Totalprice from Bill";
 

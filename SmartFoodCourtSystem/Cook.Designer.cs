@@ -42,7 +42,6 @@
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnConfirm = new System.Windows.Forms.Button();
             this.BtnFinished = new System.Windows.Forms.Button();
-            this.Detail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -146,7 +145,6 @@
             this.controlPanel.Controls.Add(this.BtnCancel);
             this.controlPanel.Controls.Add(this.BtnConfirm);
             this.controlPanel.Controls.Add(this.BtnFinished);
-            this.controlPanel.Controls.Add(this.Detail);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlPanel.Location = new System.Drawing.Point(179, 119);
             this.controlPanel.Name = "controlPanel";
@@ -158,10 +156,10 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(213, 71);
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(448, 212);
+            this.dataGridView2.Size = new System.Drawing.Size(831, 396);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -217,18 +215,6 @@
             this.BtnFinished.Text = "Finished";
             this.BtnFinished.UseVisualStyleBackColor = false;
             // 
-            // Detail
-            // 
-            this.Detail.AutoSize = true;
-            this.Detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
-            this.Detail.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Detail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Detail.Location = new System.Drawing.Point(46, 136);
-            this.Detail.Name = "Detail";
-            this.Detail.Size = new System.Drawing.Size(70, 25);
-            this.Detail.TabIndex = 27;
-            this.Detail.Text = "Detail";
-            // 
             // Cook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,7 +233,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.controlPanel.ResumeLayout(false);
-            this.controlPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -267,7 +252,6 @@
         private System.Windows.Forms.Button BtnCancel;
         private System.Windows.Forms.Button BtnConfirm;
         private System.Windows.Forms.Button BtnFinished;
-        private System.Windows.Forms.Label Detail;
         private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
