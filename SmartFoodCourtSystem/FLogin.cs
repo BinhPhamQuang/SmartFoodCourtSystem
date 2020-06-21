@@ -19,6 +19,7 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
             txtPassword.UseSystemPasswordChar = false;
+            this.AcceptButton = btnLogin;
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -149,6 +150,14 @@ namespace SmartFoodCourtSystem
                 txtPassword.UseSystemPasswordChar = false;
                 txtPassword.Text = "Password";
                 txtPassword.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void btnLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
             }
         }
     }

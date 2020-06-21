@@ -90,7 +90,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label2.Location = new System.Drawing.Point(304, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 39);
+            this.label2.Size = new System.Drawing.Size(205, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "SFCS Manager";
             // 
@@ -102,7 +102,7 @@
             this.txtUsername.Location = new System.Drawing.Point(310, 100);
             this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(408, 25);
+            this.txtUsername.Size = new System.Drawing.Size(408, 20);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.Text = "Username";
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
@@ -148,7 +148,7 @@
             this.txtPassword.Location = new System.Drawing.Point(309, 149);
             this.txtPassword.MaxLength = 12;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(408, 25);
+            this.txtPassword.Size = new System.Drawing.Size(408, 20);
             this.txtPassword.TabIndex = 12;
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
@@ -169,6 +169,7 @@
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyDown);
             // 
             // check
             // 
@@ -177,7 +178,7 @@
             this.check.ForeColor = System.Drawing.Color.DimGray;
             this.check.Location = new System.Drawing.Point(311, 189);
             this.check.Name = "check";
-            this.check.Size = new System.Drawing.Size(149, 23);
+            this.check.Size = new System.Drawing.Size(121, 20);
             this.check.TabIndex = 13;
             this.check.Text = "Unhide password";
             this.check.UseVisualStyleBackColor = true;
@@ -214,7 +215,7 @@
             this.lbErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbErrorMessage.Location = new System.Drawing.Point(305, 217);
             this.lbErrorMessage.Name = "lbErrorMessage";
-            this.lbErrorMessage.Size = new System.Drawing.Size(0, 20);
+            this.lbErrorMessage.Size = new System.Drawing.Size(0, 17);
             this.lbErrorMessage.TabIndex = 18;
             this.lbErrorMessage.Visible = false;
             // 
