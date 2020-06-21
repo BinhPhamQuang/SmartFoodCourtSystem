@@ -87,5 +87,10 @@ namespace SmartFoodCourtSystem
                 }
             }
         }
+
+        private void ucManMain1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

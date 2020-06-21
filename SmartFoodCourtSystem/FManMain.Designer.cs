@@ -129,15 +129,18 @@
             // 
             this.ucManMain1.BackColor = System.Drawing.Color.White;
             this.ucManMain1.Location = new System.Drawing.Point(190, 0);
+            this.ucManMain1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ucManMain1.Name = "ucManMain1";
             this.ucManMain1.Size = new System.Drawing.Size(710, 450);
             this.ucManMain1.TabIndex = 14;
+            this.ucManMain1.Load += new System.EventHandler(this.ucManMain1_Load);
             // 
             // ucManMenu1
             // 
             this.ucManMenu1.AutoScroll = true;
             this.ucManMenu1.BackColor = System.Drawing.Color.White;
             this.ucManMenu1.Location = new System.Drawing.Point(190, 50);
+            this.ucManMenu1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ucManMenu1.Name = "ucManMenu1";
             this.ucManMenu1.Size = new System.Drawing.Size(710, 350);
             this.ucManMenu1.TabIndex = 15;
@@ -147,6 +150,7 @@
             this.ucManStaff1.AutoScroll = true;
             this.ucManStaff1.BackColor = System.Drawing.Color.White;
             this.ucManStaff1.Location = new System.Drawing.Point(190, 50);
+            this.ucManStaff1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ucManStaff1.Name = "ucManStaff1";
             this.ucManStaff1.Size = new System.Drawing.Size(710, 350);
             this.ucManStaff1.TabIndex = 16;
@@ -155,6 +159,7 @@
             // 
             this.ucReport1.BackColor = System.Drawing.Color.White;
             this.ucReport1.Location = new System.Drawing.Point(190, 50);
+            this.ucReport1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ucReport1.Name = "ucReport1";
             this.ucReport1.Size = new System.Drawing.Size(710, 350);
             this.ucReport1.TabIndex = 17;

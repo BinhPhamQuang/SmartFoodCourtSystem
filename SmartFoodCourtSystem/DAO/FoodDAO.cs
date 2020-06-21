@@ -20,7 +20,7 @@ namespace SmartFoodCourtSystem.DAO
         {
             List<Food> listfood = new List<Food>();
             string query = $"SELECT  * FROM Food WHERE Category={category} ";
-            DataTable data=DataProvider.Instance.ExecuteQuery(query);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach(DataRow r in data.Rows)
             {
                 Food t = new Food();

@@ -160,5 +160,10 @@ namespace SmartFoodCourtSystem
                 btnLogin.PerformClick();
             }
         }
+
+        private void FLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

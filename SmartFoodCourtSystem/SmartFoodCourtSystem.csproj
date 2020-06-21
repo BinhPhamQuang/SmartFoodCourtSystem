@@ -134,6 +134,12 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPayMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPayMethod.Designer.cs">
+      <DependentUpon>FormPayMethod.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,12 @@
     <Compile Include="UC_cart.Designer.cs">
       <DependentUpon>UC_cart.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_payment.Designer.cs">
+      <DependentUpon>UC_payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1_Menu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -216,6 +228,12 @@
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPayMethod.aa-DJ.resx">
+      <DependentUpon>FormPayMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPayMethod.resx">
+      <DependentUpon>FormPayMethod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderDetail.resx">
       <DependentUpon>OrderDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +257,9 @@
     <EmbeddedResource Include="UC_cart.resx">
       <DependentUpon>UC_cart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_payment.resx">
+      <DependentUpon>UC_payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl1_Menu.resx">
       <DependentUpon>UserControl1_Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,9 +281,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\zalo-pay1.png" />
+    <None Include="Resources\return.png" />
     <None Include="Resources\minus_sign_20px.png" />
     <None Include="Resources\plus_20px.png" />
     <None Include="Resources\cancel_filled_30px.png" />
+    <None Include="Resources\104479665_1126789964373134_5219131419394290619_n.jpg" />
+    <None Include="Resources\1545358638753-LOGO MoMo1.png" />
+    <None Include="Resources\a.jpg" />
     <Content Include="Resources\check.png" />
     <Content Include="Resources\checked.png" />
     <Content Include="Resources\checked_32px.png" />

@@ -215,8 +215,12 @@ namespace SmartFoodCourtSystem
         }
         private void UC_cart_Load(object sender, EventArgs e)
         {
-
             LoadCart();
+        }
+
+        private void lbPrice_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

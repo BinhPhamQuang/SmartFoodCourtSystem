@@ -70,5 +70,13 @@ namespace SmartFoodCourtSystem
             cook.ShowDialog();
             this.Show();
         }
+
+        private void bntPaymentMethod_Click(object sender, EventArgs e)
+        {
+            panel5.Controls.Clear();
+            panel5.Controls.Add(uC_payment1);
+            SidePanel.Height = bntPaymentMethod.Height;
+            SidePanel.Top = bntPaymentMethod.Top;
+        }
     }
 }
