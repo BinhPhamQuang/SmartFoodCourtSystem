@@ -17,6 +17,7 @@ namespace SmartFoodCourtSystem.DAO
         }
         private DataProvider() { }
         private string connectionSTR = "Data Source=database.db;Version=3;New=False;Compress=True;";
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

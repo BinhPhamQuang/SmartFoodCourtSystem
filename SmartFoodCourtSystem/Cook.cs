@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using SmartFoodCourtSystem.DAO;
+using System.Text.RegularExpressions;
 
 namespace SmartFoodCourtSystem
 {
@@ -15,6 +18,7 @@ namespace SmartFoodCourtSystem
         public Cook()
         {
             InitializeComponent();
+            dataGridView1.Visible = false;
         }
 
         private void GetOrderList_Click(object sender, EventArgs e)
@@ -24,6 +28,10 @@ namespace SmartFoodCourtSystem
             else{
                 dataGridView1.Visible = false;
             }
+            string query = $"Select IDBill, Totalprice from Bill";
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
 
         private void GetOrderList_MouseEnter(object sender, EventArgs e)
@@ -50,6 +58,16 @@ namespace SmartFoodCourtSystem
                         break;
                     }
                 }
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                string query = "Select Name, Quantity, Price, Description from BillInfo inner join Food on BillInfo.IDFood = Food.IDFood where IDBill = '" + dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["IDBill"].Value.ToString() + "'";
+                dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView2.DataSource = DataProvider.Instance.ExecuteQuery(query);
             }
         }
     }
