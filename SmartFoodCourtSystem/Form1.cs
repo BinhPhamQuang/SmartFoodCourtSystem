@@ -78,5 +78,10 @@ namespace SmartFoodCourtSystem
             SidePanel.Height = bntPaymentMethod.Height;
             SidePanel.Top = bntPaymentMethod.Top;
         }
+
+        private void SidePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

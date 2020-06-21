@@ -52,23 +52,31 @@ namespace SmartFoodCourtSystem
         }
 
         private void btnManHome_Click(object sender, EventArgs e)
-        {
-            ucManMain1.BringToFront();
+        {    
+           ucManMain1.BringToFront();
+           panel2.Height = btnManHome.Height;
+            panel2.Top = btnManHome.Top;
         }
 
         private void btnEditMenu_Click_1(object sender, EventArgs e)
         {
             ucManMenu1.BringToFront();
+            panel2.Height = btnEditMenu.Height;
+            panel2.Top = btnEditMenu.Top;
         }
 
         private void btnEditStaff_Click_1(object sender, EventArgs e)
         {
             ucManStaff1.BringToFront();
+            panel2.Height = btnEditStaff.Height;
+            panel2.Top = btnEditStaff.Top;
         }
 
         private void btnViewReport_Click(object sender, EventArgs e)
         {
             ucReport1.BringToFront();
+            panel2.Height = btnViewReport.Height;
+            panel2.Top = btnViewReport.Top;
         }
 
         private void btnLogOut_Click_1(object sender, EventArgs e)
@@ -89,6 +97,16 @@ namespace SmartFoodCourtSystem
         }
 
         private void ucManMain1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucReport1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucManMenu1_Load(object sender, EventArgs e)
         {
 
         }

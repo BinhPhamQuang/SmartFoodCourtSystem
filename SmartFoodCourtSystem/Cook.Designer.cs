@@ -41,12 +41,12 @@
             this.BtnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.controlPanel = new System.Windows.Forms.Panel();
+            this.StatetextBox = new System.Windows.Forms.TextBox();
+            this.StateLabel = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnFinished = new System.Windows.Forms.Button();
-            this.StateLabel = new System.Windows.Forms.Label();
-            this.StatetextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -90,6 +90,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(169, 384);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // GetOrderList
             // 
@@ -168,6 +169,25 @@
             this.controlPanel.Size = new System.Drawing.Size(834, 481);
             this.controlPanel.TabIndex = 3;
             // 
+            // StatetextBox
+            // 
+            this.StatetextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatetextBox.Location = new System.Drawing.Point(170, 27);
+            this.StatetextBox.Name = "StatetextBox";
+            this.StatetextBox.ReadOnly = true;
+            this.StatetextBox.Size = new System.Drawing.Size(180, 31);
+            this.StatetextBox.TabIndex = 38;
+            // 
+            // StateLabel
+            // 
+            this.StateLabel.AutoSize = true;
+            this.StateLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StateLabel.Location = new System.Drawing.Point(74, 35);
+            this.StateLabel.Name = "StateLabel";
+            this.StateLabel.Size = new System.Drawing.Size(64, 23);
+            this.StateLabel.TabIndex = 37;
+            this.StateLabel.Text = "Status";
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -190,6 +210,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(834, 304);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // BtnDelete
             // 
@@ -232,25 +253,6 @@
             this.BtnFinished.Text = "Finished";
             this.BtnFinished.UseVisualStyleBackColor = false;
             this.BtnFinished.Click += new System.EventHandler(this.BtnFinished_Click);
-            // 
-            // StateLabel
-            // 
-            this.StateLabel.AutoSize = true;
-            this.StateLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StateLabel.Location = new System.Drawing.Point(74, 35);
-            this.StateLabel.Name = "StateLabel";
-            this.StateLabel.Size = new System.Drawing.Size(64, 23);
-            this.StateLabel.TabIndex = 37;
-            this.StateLabel.Text = "Status";
-            // 
-            // StatetextBox
-            // 
-            this.StatetextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatetextBox.Location = new System.Drawing.Point(170, 27);
-            this.StatetextBox.Name = "StatetextBox";
-            this.StatetextBox.ReadOnly = true;
-            this.StatetextBox.Size = new System.Drawing.Size(180, 31);
-            this.StatetextBox.TabIndex = 38;
             // 
             // Cook
             // 
