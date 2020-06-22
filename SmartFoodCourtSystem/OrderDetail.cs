@@ -52,7 +52,7 @@ namespace SmartFoodCourtSystem
             
             Food food = (Food)getData;
             
-            //ptbImage.Image = Image.FromFile(food.image);
+            ptbImage.Image = Image.FromFile(food.image);
             lbName.Text = food.name;
             lb_price.Text = food.price.ToString() + "VND";
             lbDiscount.Text = food.discount.ToString() + "%";

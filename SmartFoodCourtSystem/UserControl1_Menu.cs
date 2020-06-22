@@ -14,6 +14,12 @@ namespace SmartFoodCourtSystem
 {
     public partial class UserControl1_Menu : UserControl
     {
+        void Alert(string msg, FAlert.emType type)
+        {
+            FAlert frm = new FAlert();
+            frm.showAlert(msg, type);
+
+        }
         private int category = 1;
         Panel RectangleFood(Food food)
         {
@@ -91,6 +97,7 @@ namespace SmartFoodCourtSystem
 
         private void UserControl1_Menu_Load(object sender, EventArgs e)
         {
+            AutoCompleteSearch();
             flp_menu.Controls.Clear();
             List<Food> t = FoodDAO.Instance.getFoodbyCategory(category);
             foreach(Food i in t)
@@ -104,21 +111,22 @@ namespace SmartFoodCourtSystem
         {
             tb_searchfood.Text = "";
             tb_searchfood.ForeColor = Color.Black;
-            ptb_clear.Visible = true;
+             
+            btnclear.Visible = true;
 
         }
 
         private void tb_searchfood_Leave(object sender, EventArgs e)
         {
-            tb_searchfood.Text = "Search food";
-            tb_searchfood.ForeColor = Color.Gray;
-            ptb_clear.Visible = false;
+            if (tb_searchfood.Text=="")
+            {
+                tb_searchfood.Text = "Search food";
+                tb_searchfood.ForeColor = Color.Gray;
+                btnclear.Visible = false;
+            }
         }
 
-        private void ptb_clear_Click(object sender, EventArgs e)
-        {
-            tb_searchfood.Clear();
-        }
+        
 
         private void btnDrink_Click(object sender, EventArgs e)
         {
@@ -138,6 +146,53 @@ namespace SmartFoodCourtSystem
             btnDrink.BackColor = Color.White;
             btnFood.ForeColor = Color.White;
             btnDrink.ForeColor = Color.Black;
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            
+            string query = $"SELECT * FROM Food WHERE Name='{tb_searchfood.Text}'";
+            DataTable data=DataProvider.Instance.ExecuteQuery(query);
+            if (data.Rows.Count == 0)
+            {
+                Alert("Name does not exist !", FAlert.emType.error);
+            }
+            else
+            {
+                List<Food> t = new List<Food>();
+                flp_menu.Controls.Clear();
+                foreach(DataRow i in data.Rows )
+                {
+
+                }
+                
+                foreach (Rows t in t)
+                {
+                    Panel a = RectangleFood(i);
+                    flp_menu.Controls.Add(a);
+                }
+            }
+            tb_searchfood.Text = "";
+            tb_searchfood_Leave(sender, e);
+        }
+        private void AutoCompleteSearch()
+        {
+            string query = @"Select Name from Food";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            AutoCompleteStringCollection source = new AutoCompleteStringCollection();
+            //use LINQ method syntax to pull the Title field from a DT into a string array...
+            string[] postSource = data
+                                .AsEnumerable()
+                                .Select<System.Data.DataRow, String>(x => x.Field<String>("Name"))
+                                .ToArray();
+            source.AddRange(postSource);
+            tb_searchfood.AutoCompleteCustomSource = source;
+            tb_searchfood.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            tb_searchfood.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            tb_searchfood.Text = "";
         }
     }
 }
