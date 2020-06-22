@@ -40,6 +40,7 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.ptb_clear = new System.Windows.Forms.PictureBox();
             this.btnclear = new System.Windows.Forms.Button();
+            this.btnreset = new System.Windows.Forms.Button();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_clear)).BeginInit();
             this.SuspendLayout();
@@ -53,9 +54,10 @@
             this.tb_searchfood.ForeColor = System.Drawing.Color.Gray;
             this.tb_searchfood.Location = new System.Drawing.Point(125, 20);
             this.tb_searchfood.Name = "tb_searchfood";
-            this.tb_searchfood.Size = new System.Drawing.Size(195, 20);
+            this.tb_searchfood.Size = new System.Drawing.Size(176, 20);
             this.tb_searchfood.TabIndex = 14;
             this.tb_searchfood.Text = "Seach food or drink";
+            this.tb_searchfood.TextChanged += new System.EventHandler(this.tb_searchfood_TextChanged);
             this.tb_searchfood.Enter += new System.EventHandler(this.tb_searchfood_Enter);
             this.tb_searchfood.Leave += new System.EventHandler(this.tb_searchfood_Leave);
             // 
@@ -173,11 +175,25 @@
             this.btnclear.Visible = false;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
+            // btnreset
+            // 
+            this.btnreset.FlatAppearance.BorderSize = 0;
+            this.btnreset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreset.Image = ((System.Drawing.Image)(resources.GetObject("btnreset.Image")));
+            this.btnreset.Location = new System.Drawing.Point(75, 79);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(24, 23);
+            this.btnreset.TabIndex = 20;
+            this.btnreset.UseVisualStyleBackColor = true;
+            this.btnreset.Visible = false;
+            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
+            // 
             // UserControl1_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnreset);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.tb_searchfood);
             this.Controls.Add(this.panel9);
@@ -210,5 +226,6 @@
         private System.Windows.Forms.PictureBox ptb_clear;
         private System.Windows.Forms.FlowLayoutPanel flp_menu;
         private System.Windows.Forms.Button btnclear;
+        private System.Windows.Forms.Button btnreset;
     }
 }

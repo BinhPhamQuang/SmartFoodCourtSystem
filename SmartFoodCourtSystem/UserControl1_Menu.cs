@@ -91,20 +91,23 @@ namespace SmartFoodCourtSystem
         public UserControl1_Menu()
         {
             InitializeComponent();
-          
+            AutoCompleteSearch();
 
         }
-
-        private void UserControl1_Menu_Load(object sender, EventArgs e)
+        public void LoadMenu()
         {
-            AutoCompleteSearch();
+           
             flp_menu.Controls.Clear();
             List<Food> t = FoodDAO.Instance.getFoodbyCategory(category);
-            foreach(Food i in t)
+            foreach (Food i in t)
             {
                 Panel a = RectangleFood(i);
                 flp_menu.Controls.Add(a);
             }
+        }
+        private void UserControl1_Menu_Load(object sender, EventArgs e)
+        {
+            LoadMenu();
         }
 
         private void tb_searchfood_Enter(object sender, EventArgs e)
@@ -118,7 +121,7 @@ namespace SmartFoodCourtSystem
 
         private void tb_searchfood_Leave(object sender, EventArgs e)
         {
-            if (tb_searchfood.Text=="")
+            if (tb_searchfood.Text.Length==0)
             {
                 tb_searchfood.Text = "Search food";
                 tb_searchfood.ForeColor = Color.Gray;
@@ -150,30 +153,22 @@ namespace SmartFoodCourtSystem
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            
-            string query = $"SELECT * FROM Food WHERE Name='{tb_searchfood.Text}'";
-            DataTable data=DataProvider.Instance.ExecuteQuery(query);
-            if (data.Rows.Count == 0)
+            List<Food> t = FoodDAO.Instance.getFoodByname(tb_searchfood.Text);
+            if(t==null)
             {
-                Alert("Name does not exist !", FAlert.emType.error);
+                Alert("name does not exist!", FAlert.emType.error);
             }
             else
             {
-                List<Food> t = new List<Food>();
+                btnreset.Visible = true;
                 flp_menu.Controls.Clear();
-                foreach(DataRow i in data.Rows )
+                foreach(Food i in t)
                 {
-
-                }
-                
-                foreach (Rows t in t)
-                {
-                    Panel a = RectangleFood(i);
-                    flp_menu.Controls.Add(a);
+                    Panel h = RectangleFood(i);
+                    flp_menu.Controls.Add(h);
                 }
             }
-            tb_searchfood.Text = "";
-            tb_searchfood_Leave(sender, e);
+            
         }
         private void AutoCompleteSearch()
         {
@@ -192,7 +187,20 @@ namespace SmartFoodCourtSystem
         }
         private void btnclear_Click(object sender, EventArgs e)
         {
-            tb_searchfood.Text = "";
+           tb_searchfood.Text = "";
+            tb_searchfood_Leave(sender, e);
+            
+        }
+
+        private void btnreset_Click(object sender, EventArgs e)
+        {
+            LoadMenu();
+            btnreset.Visible = false;
+        }
+
+        private void tb_searchfood_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -40,11 +40,11 @@ namespace SmartFoodCourtSystem.DAO
         }
         public List<Food> getFoodByname(string name)
         {
-            string query = $"SELECT * FROM Food WHERE Name='name'";
+            string query = $"SELECT * FROM Food WHERE Name='{name}'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             if (data.Rows.Count == 0)
             {
-                return null;
+                return null ;
             }
             else
             {
