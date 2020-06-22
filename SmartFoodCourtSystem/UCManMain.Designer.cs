@@ -39,48 +39,48 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 500);
+            this.panel2.Location = new System.Drawing.Point(0, 590);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 100);
+            this.panel2.Size = new System.Drawing.Size(840, 50);
             this.panel2.TabIndex = 16;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.Size = new System.Drawing.Size(840, 50);
             this.panel1.TabIndex = 15;
             // 
             // ManEmail
             // 
             this.ManEmail.AutoSize = true;
             this.ManEmail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManEmail.Location = new System.Drawing.Point(318, 321);
+            this.ManEmail.Location = new System.Drawing.Point(353, 321);
             this.ManEmail.Name = "ManEmail";
-            this.ManEmail.Size = new System.Drawing.Size(168, 16);
+            this.ManEmail.Size = new System.Drawing.Size(146, 16);
             this.ManEmail.TabIndex = 14;
-            this.ManEmail.Text = "nguyenvana@hcmut.edu.vn";
+            this.ManEmail.Text = "manager@hcmut.edu.vn";
             // 
             // ManName
             // 
             this.ManName.AutoSize = true;
             this.ManName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManName.Location = new System.Drawing.Point(338, 302);
+            this.ManName.Location = new System.Drawing.Point(387, 302);
             this.ManName.Name = "ManName";
-            this.ManName.Size = new System.Drawing.Size(123, 19);
+            this.ManName.Size = new System.Drawing.Size(81, 19);
             this.ManName.TabIndex = 12;
-            this.ManName.Text = "Nguyen Van A";
+            this.ManName.Text = "Manager";
             // 
             // ManAva
             // 
             this.ManAva.BackColor = System.Drawing.Color.White;
             this.ManAva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ManAva.Image = ((System.Drawing.Image)(resources.GetObject("ManAva.Image")));
-            this.ManAva.Location = new System.Drawing.Point(351, 199);
+            this.ManAva.Location = new System.Drawing.Point(377, 199);
             this.ManAva.Name = "ManAva";
             this.ManAva.Size = new System.Drawing.Size(100, 100);
             this.ManAva.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ManEmail);
@@ -99,7 +99,7 @@
             this.Controls.Add(this.ManAva);
             this.DoubleBuffered = true;
             this.Name = "UCManMain";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(840, 640);
             ((System.ComponentModel.ISupportInitialize)(this.ManAva)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

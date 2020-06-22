@@ -22,5 +22,10 @@ namespace SmartFoodCourtSystem
             FManAddStaff f = new FManAddStaff();
             f.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

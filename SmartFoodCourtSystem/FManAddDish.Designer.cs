@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FManAddDish));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.DishPrice = new System.Windows.Forms.TextBox();
             this.DishNote = new System.Windows.Forms.TextBox();
             this.DishName = new System.Windows.Forms.TextBox();
@@ -40,8 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -63,13 +63,33 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(900, 450);
+            this.panel2.Size = new System.Drawing.Size(1040, 540);
             this.panel2.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13F);
+            this.textBox1.Location = new System.Drawing.Point(444, 202);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(213, 29);
+            this.textBox1.TabIndex = 19;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(374, 206);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 22);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // DishPrice
             // 
             this.DishPrice.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.DishPrice.Location = new System.Drawing.Point(350, 330);
+            this.DishPrice.Location = new System.Drawing.Point(444, 351);
             this.DishPrice.Name = "DishPrice";
             this.DishPrice.Size = new System.Drawing.Size(213, 29);
             this.DishPrice.TabIndex = 17;
@@ -77,7 +97,7 @@
             // DishNote
             // 
             this.DishNote.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.DishNote.Location = new System.Drawing.Point(350, 280);
+            this.DishNote.Location = new System.Drawing.Point(444, 301);
             this.DishNote.Name = "DishNote";
             this.DishNote.Size = new System.Drawing.Size(213, 29);
             this.DishNote.TabIndex = 16;
@@ -85,7 +105,7 @@
             // DishName
             // 
             this.DishName.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.DishName.Location = new System.Drawing.Point(350, 229);
+            this.DishName.Location = new System.Drawing.Point(444, 250);
             this.DishName.Name = "DishName";
             this.DishName.Size = new System.Drawing.Size(213, 29);
             this.DishName.TabIndex = 15;
@@ -96,7 +116,7 @@
             this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(588, 375);
+            this.btnSave.Location = new System.Drawing.Point(682, 396);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(30, 30);
             this.btnSave.TabIndex = 14;
@@ -109,7 +129,7 @@
             this.btnReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReturn.BackgroundImage")));
             this.btnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Location = new System.Drawing.Point(244, 375);
+            this.btnReturn.Location = new System.Drawing.Point(338, 396);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(30, 30);
             this.btnReturn.TabIndex = 13;
@@ -120,7 +140,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(280, 336);
+            this.label6.Location = new System.Drawing.Point(374, 357);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 19);
             this.label6.TabIndex = 9;
@@ -130,7 +150,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(388, 98);
+            this.label5.Location = new System.Drawing.Point(482, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 16);
             this.label5.TabIndex = 8;
@@ -139,7 +159,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(280, 285);
+            this.label4.Location = new System.Drawing.Point(374, 306);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 19);
             this.label4.TabIndex = 7;
@@ -149,7 +169,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(280, 233);
+            this.label3.Location = new System.Drawing.Point(374, 254);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 22);
             this.label3.TabIndex = 6;
@@ -158,38 +178,18 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(381, 24);
+            this.pictureBox2.Location = new System.Drawing.Point(475, 45);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(154, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.textBox1.Location = new System.Drawing.Point(350, 181);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 29);
-            this.textBox1.TabIndex = 19;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(280, 185);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 22);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // FManAddDish
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.ClientSize = new System.Drawing.Size(1040, 540);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FManAddDish";
