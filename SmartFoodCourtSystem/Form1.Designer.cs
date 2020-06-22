@@ -79,7 +79,7 @@
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 640);
+            this.panel1.Size = new System.Drawing.Size(220, 655);
             this.panel1.TabIndex = 0;
             // 
             // panel6
@@ -277,7 +277,7 @@
             // 
             this.userControl_Home1.BackColor = System.Drawing.Color.White;
             this.userControl_Home1.Location = new System.Drawing.Point(0, 0);
-            this.userControl_Home1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userControl_Home1.Margin = new System.Windows.Forms.Padding(4);
             this.userControl_Home1.Name = "userControl_Home1";
             this.userControl_Home1.Size = new System.Drawing.Size(960, 459);
             this.userControl_Home1.TabIndex = 3;
@@ -287,7 +287,7 @@
             // 
             this.uC_cart1.BackColor = System.Drawing.Color.White;
             this.uC_cart1.Location = new System.Drawing.Point(0, 0);
-            this.uC_cart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uC_cart1.Margin = new System.Windows.Forms.Padding(4);
             this.uC_cart1.Name = "uC_cart1";
             this.uC_cart1.Size = new System.Drawing.Size(960, 459);
             this.uC_cart1.TabIndex = 2;
@@ -296,7 +296,7 @@
             // 
             this.userControl1_Menu1.BackColor = System.Drawing.Color.White;
             this.userControl1_Menu1.Location = new System.Drawing.Point(0, 0);
-            this.userControl1_Menu1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userControl1_Menu1.Margin = new System.Windows.Forms.Padding(4);
             this.userControl1_Menu1.Name = "userControl1_Menu1";
             this.userControl1_Menu1.Size = new System.Drawing.Size(960, 459);
             this.userControl1_Menu1.TabIndex = 0;
@@ -358,7 +358,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(220, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(820, 31);
+            this.panel2.Size = new System.Drawing.Size(1017, 31);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -373,9 +373,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 640);
+            this.ClientSize = new System.Drawing.Size(1237, 655);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);

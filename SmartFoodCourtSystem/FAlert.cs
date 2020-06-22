@@ -28,7 +28,8 @@ namespace SmartFoodCourtSystem
         {
             success ,
             error ,
-            regex
+            regex,
+            warning
         }
         private int x, y; 
         private FAlert.emAction action;
@@ -79,6 +80,11 @@ namespace SmartFoodCourtSystem
             }
         }
 
+        private void lbmsg_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void showAlert(string msg,emType type)
         {
             this.Opacity = 0.0;
@@ -112,6 +118,11 @@ namespace SmartFoodCourtSystem
                     this.ptbexclamation.BringToFront();
                     this.BackColor = Color.DimGray;
                     break;
+                case emType.warning:
+                    this.ptbexclamation.BringToFront();
+                    this.BackColor = Color.Goldenrod;
+                    break;
+
 
             }
             this.lbmsg.Text = msg;

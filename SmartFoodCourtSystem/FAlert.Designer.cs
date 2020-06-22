@@ -63,6 +63,7 @@
             this.lbmsg.TabIndex = 1;
             this.lbmsg.Text = "Successfully";
             this.lbmsg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbmsg.Click += new System.EventHandler(this.lbmsg_Click);
             // 
             // pictureBox1
             // 
@@ -75,6 +76,7 @@
             // 
             // btnexit
             // 
+            this.btnexit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnexit.FlatAppearance.BorderSize = 0;
             this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexit.ForeColor = System.Drawing.Color.SeaGreen;
@@ -102,6 +104,7 @@
             // 
             // ptbexclamation
             // 
+            this.ptbexclamation.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ptbexclamation.Image = ((System.Drawing.Image)(resources.GetObject("ptbexclamation.Image")));
             this.ptbexclamation.Location = new System.Drawing.Point(12, 22);
             this.ptbexclamation.Name = "ptbexclamation";
@@ -113,6 +116,7 @@
             // FAlert
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(311, 74);
             this.Controls.Add(this.ptbexclamation);
@@ -123,6 +127,9 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FAlert";
+            this.Opacity = 0.2D;
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FAlert_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbcheck)).EndInit();

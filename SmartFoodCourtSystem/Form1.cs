@@ -8,15 +8,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using SmartFoodCourtSystem.DTO;
 namespace SmartFoodCourtSystem
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
-           InitializeComponent();
+            InitializeComponent();
+            uC_cart1.ButtonClick += new EventHandler(UserControl_ButtonClick);
         }
+        void Alert(string msg, FAlert.emType type)
+        {
+            FAlert frm = new FAlert();
+            frm.showAlert(msg, type);
+
+        }
+        protected void UserControl_ButtonClick(object sender, EventArgs e)
+        {
+            if(Cart.Instance.getListFood().Count!=0)
+            bntPaymentMethod_Click(sender, e);
+            else
+            {
+                Alert("Your cart is empty!", FAlert.emType.warning); 
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
              
@@ -41,10 +58,19 @@ namespace SmartFoodCourtSystem
 
         private void btnCart_Click(object sender, EventArgs e)
         {
-            uC_cart1.LoadCart();
-            SidePanel.Height = btnCart.Height;
-            SidePanel.Top = btnCart.Top;
-            uC_cart1.BringToFront();
+
+           
+            if (Cart.Instance.getListFood().Count != 0)
+            {
+                uC_cart1.LoadCart();
+                SidePanel.Height = btnCart.Height;
+                SidePanel.Top = btnCart.Top;
+                uC_cart1.BringToFront();
+            }
+            else
+            {
+                Alert("Please order first!", FAlert.emType.warning);
+            }
         }
         #endregion
 
@@ -71,12 +97,20 @@ namespace SmartFoodCourtSystem
             this.Show();
         }
 
-        private void bntPaymentMethod_Click(object sender, EventArgs e)
+        public void bntPaymentMethod_Click(object sender, EventArgs e)
         {
-            panel5.Controls.Clear();
-            panel5.Controls.Add(uC_payment1);
-            SidePanel.Height = bntPaymentMethod.Height;
-            SidePanel.Top = bntPaymentMethod.Top;
+            
+            if (Cart.Instance.getListFood().Count != 0)
+            {
+                SidePanel.Height = bntPaymentMethod.Height;
+                SidePanel.Top = bntPaymentMethod.Top;
+                uC_payment1.BringToFront();
+            }
+            else
+            {
+                Alert("Your cart is empty!", FAlert.emType.warning);
+            }
+
         }
 
         private void SidePanel_Paint(object sender, PaintEventArgs e)

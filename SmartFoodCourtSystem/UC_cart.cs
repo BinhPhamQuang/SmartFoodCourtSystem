@@ -14,7 +14,13 @@ namespace SmartFoodCourtSystem
     
     public partial class UC_cart : UserControl
     {
-        
+        void Alert(string msg, FAlert.emType type)
+        {
+            FAlert frm = new FAlert();
+            frm.showAlert(msg, type);
+
+        }
+        public event EventHandler ButtonClick;
         Panel RectangleItem(Food food)
         {
             Panel panel = new Panel();
@@ -221,6 +227,29 @@ namespace SmartFoodCourtSystem
         private void lbPrice_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void btnPayment_Click(object sender, EventArgs e)
+        {
+            if (this.ButtonClick != null)
+                this.ButtonClick(this, e);
+             
+             
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            if (Cart.Instance.getListFood().Count != 0)
+            {
+                Cart.Instance.DeleteCart();
+                Alert("Done!", FAlert.emType.success);
+                LoadCart();
+            }
+            else
+            {
+                Alert("Your cart is empty!", FAlert.emType.warning);
+            }
+            
         }
     }
 }

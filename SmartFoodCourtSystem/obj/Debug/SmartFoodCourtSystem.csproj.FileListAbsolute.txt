@@ -190,7 +190,6 @@ C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\Smart
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FLogin.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FAlert.resources
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FAlert.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FAlert.resources
 D:\Hung\CNPM\BTL\Newest\version2\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe.config
 D:\Hung\CNPM\BTL\Newest\version2\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe
@@ -392,3 +391,12 @@ D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.U
 D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UC_payment.resources
 D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FormPayMethod.aa-DJ.resources
 D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FormPayMethod.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCManMain.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCManMenu.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCManStaff.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCReport.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UC_payment.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FormPayMethod.aa-DJ.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
