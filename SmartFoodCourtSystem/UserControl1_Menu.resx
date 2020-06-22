@@ -118,16 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_search.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAQ5JREFUSEvt
-        lEkKwkAQRbN3WKnXcbiB4lVEXIjTxtsoeg6HmzhuHf4LFogQuzsqgvjgQbpTPVCpSvSzlORIruTx5lIO
-        ZVG+RFPu5SXBnWzIVLD5WbLRRJZl5mZFTiXvTrIugyAtdvMWEwm0JTFbWWDCF3JuN3cxk8QO4pEna8ki
-        0uKiKonlw3tzkCzKxqPn5CSxpNQby7/PAXkZfAA1zyKqxUVNEhuUIpqIRZSii7kkth+PPKFDaSIWUopJ
-        dCQxGxnc1XQoTcQGlCLVwjdB0mI3x65MBR1KE9lGj3JzNrdxUJoMOpQmWkjKl58dz8xZWu4PTXWIC/tl
-        mGP5dv6HBHF/SI+JT0A1faSivkUUXQGEGmSrFLIhGAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="ptb_clear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAltJREFUaEPt

@@ -92,17 +92,17 @@ namespace SmartFoodCourtSystem
         public void bntPaymentMethod_Click(object sender, EventArgs e)
         {
             
-            if (Cart.Instance.getListFood().Count != 0)
+          if (Cart.Instance.getListFood().Count != 0)
             {
                 SidePanel.Height = bntPaymentMethod.Height;
                 SidePanel.Top = bntPaymentMethod.Top;
                 uC_payment1.BringToFront();
+           }
+           else
+           {
+              Alert("Your cart is empty!", FAlert.emType.warning);
             }
-            else
-            {
-                Alert("Your cart is empty!", FAlert.emType.warning);
-            }
-
+        
         }
 
         private void SidePanel_Paint(object sender, PaintEventArgs e)

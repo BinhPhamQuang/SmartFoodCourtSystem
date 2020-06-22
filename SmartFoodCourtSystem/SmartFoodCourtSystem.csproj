@@ -281,6 +281,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\exit1.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\master-card1.jpg" />
+    <None Include="Resources\visa1.jpg" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\master-card.jpg" />
+    <None Include="Resources\visa.jpg" />
+    <None Include="Resources\viettelpay.jpg" />
     <None Include="Resources\money.png" />
     <None Include="Resources\zalo-pay1.png" />
     <None Include="Resources\return.png" />

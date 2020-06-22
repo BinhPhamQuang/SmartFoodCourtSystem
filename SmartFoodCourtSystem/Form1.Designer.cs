@@ -76,7 +76,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(293, 806);
+            this.panel1.Size = new System.Drawing.Size(292, 806);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -119,7 +119,7 @@
             // 
             this.bntPaymentMethod.FlatAppearance.BorderSize = 0;
             this.bntPaymentMethod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntPaymentMethod.Font = new System.Drawing.Font("Century Gothic", 14.75F);
+            this.bntPaymentMethod.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.bntPaymentMethod.ForeColor = System.Drawing.Color.White;
             this.bntPaymentMethod.Image = global::SmartFoodCourtSystem.Properties.Resources.money;
             this.bntPaymentMethod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,10 +291,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(293, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(292, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1356, 222);
+            this.pictureBox2.Size = new System.Drawing.Size(1357, 222);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -305,12 +305,11 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Transparent;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(1301, 6);
+            this.btnExit.Image = global::SmartFoodCourtSystem.Properties.Resources.exit1;
+            this.btnExit.Location = new System.Drawing.Point(1300, 4);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(47, 28);
+            this.btnExit.Size = new System.Drawing.Size(47, 35);
             this.btnExit.TabIndex = 6;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -323,11 +322,10 @@
             this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.Transparent;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(1243, 4);
+            this.btnSetting.Location = new System.Drawing.Point(1245, 4);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(47, 30);
+            this.btnSetting.Size = new System.Drawing.Size(47, 35);
             this.btnSetting.TabIndex = 7;
             this.btnSetting.UseVisualStyleBackColor = false;
             // 
@@ -338,10 +336,10 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(293, 0);
+            this.panel2.Location = new System.Drawing.Point(292, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1356, 38);
+            this.panel2.Size = new System.Drawing.Size(1357, 43);
             this.panel2.TabIndex = 1;
             // 
             // panel4

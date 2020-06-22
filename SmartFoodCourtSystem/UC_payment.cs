@@ -62,6 +62,12 @@ namespace SmartFoodCourtSystem
             return panel;
 
         }
+        void Alert(string msg, FAlert.emType type)
+        {
+            FAlert frm = new FAlert();
+            frm.showAlert(msg, type);
+
+        }
         public void pictureBoxMouseClickEventHandler(object sender, EventArgs e)
         {
             if ((sender as PictureBox).BackColor != Color.Lime)
@@ -89,24 +95,23 @@ namespace SmartFoodCourtSystem
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-            pictureBox2.MouseClick += new MouseEventHandler(pictureBoxMouseClickEventHandler);
+            Alert( "Only MOMO", FAlert.emType.warning);
+           
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (pictureBox1.BackColor == Color.Lime || pictureBox2.BackColor == Color.Lime)
+            if (pictureBox1.BackColor == Color.Lime)
             {
                 //uC_PayMethod1.Visible = true;
                 this.Hide();
                 FormPayMethod f = new FormPayMethod();
                 f.ShowDialog();
                 this.Show() ;
-
-            
             }
             else
             {
-                MessageBox.Show("Select a payment method");
+                Alert("Select a payment method", FAlert.emType.warning);
             }
         }
 
@@ -145,6 +150,27 @@ namespace SmartFoodCourtSystem
                 price += i.totalprice();
             }
             return price;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Alert("Currently only MOMO", FAlert.emType.warning);
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Alert("Only MOMO", FAlert.emType.warning);
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Alert("Only MOMO", FAlert.emType.warning);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
