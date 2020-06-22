@@ -191,29 +191,32 @@ namespace SmartFoodCourtSystem
 
         private void BtnFinished_Click(object sender, EventArgs e)
         {
-            string query = "Update Bill Set status = 1 where IDBill = '" + dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["IDBill"].Value.ToString() + "'";
-            DataProvider.Instance.ExecuteNonQuery(query);
-
-            query = "Select IDBill, Totalprice, status from Bill";
-            show(query, dataGridView1);
-            dataGridView1.Columns["status"].Visible = false;
-
-            if (dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["status"].Value.ToString() == "0")
+            if (StatetextBox.Text == "Waiting")
             {
-                StatetextBox.Text = "Waiting";
-            }
-            else
-            {
-                StatetextBox.Text = "Finished";
-            }
+                string query = "Update Bill Set status = 1 where IDBill = '" + dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["IDBill"].Value.ToString() + "'";
+                DataProvider.Instance.ExecuteNonQuery(query);
 
-            query = "Select Name, Quantity, Price, Description" +
-                    " from BillInfo " +
-                    " inner join Food on BillInfo.IDFood = Food.IDFood " +
-                    " where IDBill = '" +
-                    dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["IDBill"].Value.ToString() + "'";
+                query = "Select IDBill, Totalprice, status from Bill";
+                show(query, dataGridView1);
+                dataGridView1.Columns["status"].Visible = false;
 
-            show(query, dataGridView2);
+                if (dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["status"].Value.ToString() == "0")
+                {
+                    StatetextBox.Text = "Waiting";
+                }
+                else
+                {
+                    StatetextBox.Text = "Finished";
+                }
+
+                query = "Select Name, Quantity, Price, Description" +
+                        " from BillInfo " +
+                        " inner join Food on BillInfo.IDFood = Food.IDFood " +
+                        " where IDBill = '" +
+                        dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["IDBill"].Value.ToString() + "'";
+
+                show(query, dataGridView2);
+            }
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
