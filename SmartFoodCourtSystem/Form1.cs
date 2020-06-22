@@ -81,20 +81,12 @@ namespace SmartFoodCourtSystem
 
         private void btnManager_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = btnManager.Height;
-            SidePanel.Top = btnManager.Top;
-            this.Hide();
-            FLogin l = new FLogin();
-            l.ShowDialog();
-            this.Show();
+            
         }
 
         private void BtnCook_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Cook cook = new Cook();
-            cook.ShowDialog();
-            this.Show();
+         
         }
 
         public void bntPaymentMethod_Click(object sender, EventArgs e)
@@ -114,6 +106,11 @@ namespace SmartFoodCourtSystem
         }
 
         private void SidePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
