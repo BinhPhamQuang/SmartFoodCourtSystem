@@ -106,6 +106,7 @@
             this.txtUsername.TabIndex = 10;
             this.txtUsername.Text = "Username";
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // shapeContainer1

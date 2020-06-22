@@ -38,8 +38,13 @@ namespace SmartFoodCourtSystem
         {
             this.Dispose();
         }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        //private bool login(string username, string password)
+        //{
+        //    string query = "SELECT * from User WHERE Password='"+password+"' and Username";
+        //    DataTable result = DataProvider.Instance.ExecuteQuery(query);
+        //    return result.Rows.Count > 0;
+        //}
+            private void btnLogin_Click(object sender, EventArgs e)
         {
             //bool re = false;
             //string removableChars = Regex.Escape(@"@&'()<>#");
@@ -49,17 +54,21 @@ namespace SmartFoodCourtSystem
             txtUsername.Text = Regex.Replace(txtUsername.Text, pattern, "");
             //txtPassword.Text = Regex.Replace(txtPassword.Text, pattern, "");
             bool success = false;
-            string query = $"SELECT * from User";
+            string query = $"SELECT * from User WHERE Username='" + txtUsername.Text + "' and Password='" + txtPassword.Text + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             bool hidden = false;
-            foreach (DataRow r in data.Rows)
-            {
-                if (txtUsername.Text == r["Username"].ToString() && txtPassword.Text == r["Password"].ToString())
+            //foreach (DataRow r in data.Rows)
+            //{
+                //if (txtUsername.Text == r["Username"].ToString() && txtPassword.Text == r["Password"].ToString())
+                //{
+                if (data.Rows.Count > 0)
                 {
+                    DataRow row = data.Rows[0];
+                    int type = int.Parse(row["Type"].ToString());
                     success = true;
                     this.Hide();
                     hidden = true;
-                    switch (int.Parse(r["Type"].ToString()))
+                    switch (type)
                     {
                         
                         case 0:
@@ -76,7 +85,7 @@ namespace SmartFoodCourtSystem
                             break;
                     }
                 }
-            }
+            //}
             if (!success)
             {
                 lbErrorMessage.Text = "";
@@ -137,7 +146,7 @@ namespace SmartFoodCourtSystem
         {
             if (txtPassword.Text == "Password")
             {
-                txtPassword.UseSystemPasswordChar = true;
+                if (!check.Checked) txtPassword.UseSystemPasswordChar = true;
                 txtPassword.Text = "";
                 txtPassword.ForeColor = Color.LightGray;
             }
@@ -164,6 +173,11 @@ namespace SmartFoodCourtSystem
         private void FLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }
