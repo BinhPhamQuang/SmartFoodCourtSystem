@@ -43,14 +43,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
-            this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
-            this.uC_payment1 = new SmartFoodCourtSystem.UC_payment();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
+            this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
+            this.uC_payment1 = new SmartFoodCourtSystem.UC_payment();
+            this.userControl1_Menu2 = new SmartFoodCourtSystem.UserControl1_Menu();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -228,6 +229,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.userControl1_Menu2);
             this.panel5.Controls.Add(this.userControl_Home1);
             this.panel5.Controls.Add(this.uC_cart1);
             this.panel5.Controls.Add(this.uC_payment1);
@@ -235,33 +237,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(960, 459);
             this.panel5.TabIndex = 8;
-            // 
-            // userControl_Home1
-            // 
-            this.userControl_Home1.BackColor = System.Drawing.Color.White;
-            this.userControl_Home1.Location = new System.Drawing.Point(0, 0);
-            this.userControl_Home1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.userControl_Home1.Name = "userControl_Home1";
-            this.userControl_Home1.Size = new System.Drawing.Size(960, 459);
-            this.userControl_Home1.TabIndex = 3;
-            this.userControl_Home1.Load += new System.EventHandler(this.userControl_Home1_Load);
-            // 
-            // uC_cart1
-            // 
-            this.uC_cart1.BackColor = System.Drawing.Color.White;
-            this.uC_cart1.Location = new System.Drawing.Point(0, 0);
-            this.uC_cart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.uC_cart1.Name = "uC_cart1";
-            this.uC_cart1.Size = new System.Drawing.Size(960, 459);
-            this.uC_cart1.TabIndex = 2;
-            // 
-            // uC_payment1
-            // 
-            this.uC_payment1.Location = new System.Drawing.Point(-2, -3);
-            this.uC_payment1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.uC_payment1.Name = "uC_payment1";
-            this.uC_payment1.Size = new System.Drawing.Size(960, 459);
-            this.uC_payment1.TabIndex = 4;
             // 
             // pictureBox2
             // 
@@ -321,6 +296,40 @@
             this.panel4.Size = new System.Drawing.Size(1208, 3);
             this.panel4.TabIndex = 10;
             // 
+            // userControl_Home1
+            // 
+            this.userControl_Home1.BackColor = System.Drawing.Color.White;
+            this.userControl_Home1.Location = new System.Drawing.Point(0, 0);
+            this.userControl_Home1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControl_Home1.Name = "userControl_Home1";
+            this.userControl_Home1.Size = new System.Drawing.Size(960, 459);
+            this.userControl_Home1.TabIndex = 3;
+            this.userControl_Home1.Load += new System.EventHandler(this.userControl_Home1_Load);
+            // 
+            // uC_cart1
+            // 
+            this.uC_cart1.BackColor = System.Drawing.Color.White;
+            this.uC_cart1.Location = new System.Drawing.Point(0, 0);
+            this.uC_cart1.Margin = new System.Windows.Forms.Padding(4);
+            this.uC_cart1.Name = "uC_cart1";
+            this.uC_cart1.Size = new System.Drawing.Size(960, 459);
+            this.uC_cart1.TabIndex = 2;
+            // 
+            // uC_payment1
+            // 
+            this.uC_payment1.Location = new System.Drawing.Point(-2, -3);
+            this.uC_payment1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uC_payment1.Name = "uC_payment1";
+            this.uC_payment1.Size = new System.Drawing.Size(960, 459);
+            this.uC_payment1.TabIndex = 4;
+            // 
+            // userControl1_Menu2
+            // 
+            this.userControl1_Menu2.Location = new System.Drawing.Point(0, 0);
+            this.userControl1_Menu2.Name = "userControl1_Menu2";
+            this.userControl1_Menu2.Size = new System.Drawing.Size(150, 150);
+            this.userControl1_Menu2.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,6 +384,7 @@
         private UC_cart uC_cart1;
         private UserControl1_Menu userControl1_Menu1;
         private UC_payment uC_payment1;
+        private UserControl1_Menu userControl1_Menu2;
     }
 }
 

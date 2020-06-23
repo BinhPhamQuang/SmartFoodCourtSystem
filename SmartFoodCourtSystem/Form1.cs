@@ -53,7 +53,8 @@ namespace SmartFoodCourtSystem
         {
             SidePanel.Height = bntMenu.Height;
             SidePanel.Top = bntMenu.Top;
-            userControl1_Menu1.BringToFront();
+            userControl1_Menu2.BringToFront();
+            userControl1_Menu2.Size = new Size(960, 459);
         }
 
         private void btnCart_Click(object sender, EventArgs e)
