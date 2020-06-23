@@ -100,7 +100,7 @@ namespace SmartFoodCourtSystem
 
         public UserControl1_Menu()
         {
-            InitializeComponent();
+          InitializeComponent();
             AutoCompleteSearch();
 
         }

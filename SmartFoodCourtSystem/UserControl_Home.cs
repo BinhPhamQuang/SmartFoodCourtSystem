@@ -24,8 +24,8 @@ namespace SmartFoodCourtSystem
 
         private void btn_Ordernow_Click(object sender, EventArgs e)
         {
-            OrderDetail orderDetail = new OrderDetail();
-            orderDetail.ShowDialog();
+            //OrderDetail orderDetail = new OrderDetail();
+           // orderDetail.ShowDialog();
         }
     }
 }

@@ -46,12 +46,12 @@
             this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
             this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
             this.uC_payment1 = new SmartFoodCourtSystem.UC_payment();
+            this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,7 +75,7 @@
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 640);
+            this.panel1.Size = new System.Drawing.Size(219, 667);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -84,7 +84,7 @@
             this.panel6.BackColor = System.Drawing.Color.Aqua;
             this.panel6.Location = new System.Drawing.Point(214, -1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(21, 663);
+            this.panel6.Size = new System.Drawing.Size(21, 668);
             this.panel6.TabIndex = 11;
             // 
             // SidePanel
@@ -132,7 +132,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 628);
+            this.label3.Location = new System.Drawing.Point(3, 648);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 3;
@@ -264,15 +264,22 @@
             this.uC_payment1.Location = new System.Drawing.Point(0, 0);
             this.uC_payment1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_payment1.Name = "uC_payment1";
-            this.uC_payment1.Size = new System.Drawing.Size(960, 459);
+            this.uC_payment1.Size = new System.Drawing.Size(960, 481);
             this.uC_payment1.TabIndex = 4;
+            // 
+            // userControl1_Menu1
+            // 
+            this.userControl1_Menu1.Location = new System.Drawing.Point(0, 0);
+            this.userControl1_Menu1.Name = "userControl1_Menu1";
+            this.userControl1_Menu1.Size = new System.Drawing.Size(960, 459);
+            this.userControl1_Menu1.TabIndex = 5;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(219, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1018, 180);
+            this.pictureBox2.Size = new System.Drawing.Size(1020, 180);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -325,20 +332,13 @@
             this.panel4.Size = new System.Drawing.Size(1208, 3);
             this.panel4.TabIndex = 10;
             // 
-            // userControl1_Menu1
-            // 
-            this.userControl1_Menu1.Location = new System.Drawing.Point(0, 0);
-            this.userControl1_Menu1.Name = "userControl1_Menu1";
-            this.userControl1_Menu1.Size = new System.Drawing.Size(960, 459);
-            this.userControl1_Menu1.TabIndex = 5;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1239, 640);
+            this.ClientSize = new System.Drawing.Size(1239, 667);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);

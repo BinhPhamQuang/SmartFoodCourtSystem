@@ -118,7 +118,7 @@
             this.lb_price.Name = "lb_price";
             this.lb_price.Size = new System.Drawing.Size(326, 74);
             this.lb_price.TabIndex = 7;
-            this.lb_price.Text = "25.000 vnd";
+            this.lb_price.Text = "14.500 vnd";
             // 
             // UserControl_Home
             // 

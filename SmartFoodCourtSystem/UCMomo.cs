@@ -34,7 +34,7 @@ namespace SmartFoodCourtSystem
             string partnerCode = "MOMO5HQZ20200623";
             string accessKey = "Z4Qa3sv4hNWPxtFG";
             string serectkey = "J2c9EHI4m169OBpJGmUjJR2rfgi2y6kB";
-            string orderInfo = " ''Thượng đế'' ban tặng!";
+            string orderInfo = "Order food";
             string returnUrl = @"https://facebook.com";
             string notifyurl = @"https://google.com";
 

@@ -35,13 +35,12 @@
             // 
             // wbMono
             // 
-            this.wbMono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wbMono.Location = new System.Drawing.Point(0, 0);
-            this.wbMono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.wbMono.MinimumSize = new System.Drawing.Size(27, 25);
+            this.wbMono.Location = new System.Drawing.Point(-4, -67);
+            this.wbMono.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbMono.Name = "wbMono";
             this.wbMono.ScriptErrorsSuppressed = true;
-            this.wbMono.Size = new System.Drawing.Size(1280, 565);
+            this.wbMono.ScrollBarsEnabled = false;
+            this.wbMono.Size = new System.Drawing.Size(964, 533);
             this.wbMono.TabIndex = 0;
             this.wbMono.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.wbMono_DocumentCompleted);
             this.wbMono.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.wbMono_Navigated);
@@ -51,24 +50,22 @@
             this.btncancel.FlatAppearance.BorderSize = 0;
             this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancel.Image = ((System.Drawing.Image)(resources.GetObject("btncancel.Image")));
-            this.btncancel.Location = new System.Drawing.Point(4, 4);
-            this.btncancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncancel.Location = new System.Drawing.Point(3, 3);
             this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(57, 49);
+            this.btncancel.Size = new System.Drawing.Size(43, 40);
             this.btncancel.TabIndex = 1;
             this.btncancel.UseVisualStyleBackColor = true;
             this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // UCMomo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.wbMono);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCMomo";
-            this.Size = new System.Drawing.Size(1280, 565);
+            this.Size = new System.Drawing.Size(960, 469);
             this.ResumeLayout(false);
 
         }
