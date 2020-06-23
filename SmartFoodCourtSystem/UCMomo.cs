@@ -31,10 +31,10 @@ namespace SmartFoodCourtSystem
         private void Load()
         {
             string endpoint = @"https://test-payment.momo.vn/gw_payment/transactionProcessor";
-            string partnerCode = "MOMOLGOP20200620";
-            string accessKey = "c1rWTlGZGdhhkBS3";
-            string serectkey = "vk5XbkORAy3oWWemEWxbZBaRaM2Ins2u";
-            string orderInfo = "Con mẹ mày !";
+            string partnerCode = "MOMO5HQZ20200623";
+            string accessKey = "Z4Qa3sv4hNWPxtFG";
+            string serectkey = "J2c9EHI4m169OBpJGmUjJR2rfgi2y6kB";
+            string orderInfo = " ''Thượng đế'' ban tặng!";
             string returnUrl = @"https://facebook.com";
             string notifyurl = @"https://google.com";
 
@@ -89,10 +89,6 @@ namespace SmartFoodCourtSystem
 
                 payurl = jmessage.GetValue("payUrl").ToString();
                 wbMono.Navigate(jmessage.GetValue("payUrl").ToString());
-
-
-
-
             }
             catch (Exception e)
             {
@@ -120,6 +116,11 @@ namespace SmartFoodCourtSystem
         private void wbMono_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             Navigated();
+        }
+
+        private void wbMono_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
         }
     }
 }
