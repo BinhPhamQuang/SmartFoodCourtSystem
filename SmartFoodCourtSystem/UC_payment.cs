@@ -23,7 +23,7 @@ namespace SmartFoodCourtSystem
 
 
             Label lbName = new Label();
-            lbName.Text = food.name;
+            lbName.Text = food.name + " " + '(' + food.size + ')';
             lbName.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
             lbName.Location = new Point(8, 40);
             lbName.AutoSize = true;
@@ -49,7 +49,7 @@ namespace SmartFoodCourtSystem
             lbQuantity.AutoSize = true;
 
             Label lbPrice = new Label();
-            lbPrice.Text = food.price.ToString();
+            lbPrice.Text = food.totalprice().ToString();
             lbPrice.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
             lbPrice.Location = new Point(450, 35);
             lbPrice.AutoSize = true;
@@ -86,7 +86,7 @@ namespace SmartFoodCourtSystem
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
@@ -95,8 +95,8 @@ namespace SmartFoodCourtSystem
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-            Alert( "Only MOMO", FAlert.emType.warning);
-           
+            Alert("Only MOMO", FAlert.emType.warning);
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace SmartFoodCourtSystem
                 this.Hide();
                 FormPayMethod f = new FormPayMethod();
                 f.ShowDialog();
-                this.Show() ;
+                this.Show();
             }
             else
             {
@@ -117,18 +117,17 @@ namespace SmartFoodCourtSystem
 
         private void uC_PayMethod1_Load_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
             LoadPayment();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-           
+
         }
         public void LoadPayment()
         {
@@ -140,7 +139,7 @@ namespace SmartFoodCourtSystem
 
                 flp_foodlist.Controls.Add(t);
             }
-            lbPrice.Text = CaculatePrice().ToString() + "VND";
+            lbtotalprice.Text = CaculatePrice().ToString() + "VND";
         }
         private long CaculatePrice()
         {
@@ -171,6 +170,17 @@ namespace SmartFoodCourtSystem
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btncancel_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to cancel order?", "Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                // this.Close();
+                flp_foodlist.Controls.Clear();
+                Alert("Thank you!", FAlert.emType.success);
+            }
         }
     }
 }
