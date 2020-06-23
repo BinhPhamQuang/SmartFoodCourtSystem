@@ -49,8 +49,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\payment\c#\MoMo\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\payment\c#\MoMo\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -86,6 +93,8 @@
     <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DTO\Cart.cs" />
     <Compile Include="DTO\Food.cs" />
+    <Compile Include="DTO\MoMoSecurity.cs" />
+    <Compile Include="DTO\PaymentRequest.cs" />
     <Compile Include="FAlert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +180,12 @@
     <Compile Include="UCManStaff.Designer.cs">
       <DependentUpon>UCManStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCMomo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMomo.Designer.cs">
+      <DependentUpon>UCMomo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,6 +266,9 @@
     <EmbeddedResource Include="UCManStaff.resx">
       <DependentUpon>UCManStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCMomo.resx">
+      <DependentUpon>UCMomo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCReport.resx">
       <DependentUpon>UCReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +299,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\dishdefault.png" />
     <None Include="Resources\exit1.png" />
     <None Include="Resources\exit.png" />

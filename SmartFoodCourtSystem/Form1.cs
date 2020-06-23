@@ -13,11 +13,31 @@ namespace SmartFoodCourtSystem
 {
     public partial class Form1 : Form
     {
+        UCMomo momo;
         public Form1()
         {
             InitializeComponent();
             uC_cart1.ButtonClick += new EventHandler(UserControl_ButtonClick);
-            userControl1_Menu2.SendToBack();
+             
+            uC_payment1.ButtonClick += new EventHandler(UC_Momo_ButtonClick);
+           // userControl1_Menu1.SendToBack();
+        }
+        private void UC_Momo_ButtonClick(object sender, EventArgs e)
+        {
+            momo = new UCMomo();
+            momo.Location = new Point(0, 0);
+            pn_uc.Controls.Add(momo);
+            momo.BringToFront();
+            momo.ButtonClick += new EventHandler(momo_ButtonClick);
+
+
+
+        }
+        private void momo_ButtonClick(object sender, EventArgs e)
+        {
+            pn_uc.Controls.Remove(momo);
+            Cart.Instance.DeleteCart();
+            btnHome_Click(sender, e);
         }
         void Alert(string msg, FAlert.emType type)
         {
@@ -57,10 +77,11 @@ namespace SmartFoodCourtSystem
         }
         private void bntMenu_Click(object sender, EventArgs e)
         {
+            
             SidePanel.Height = bntMenu.Height;
             SidePanel.Top = bntMenu.Top;
             userControl1_Menu2.BringToFront();
-            userControl1_Menu2.Size = new Size(960, 459);
+            //userControl1_Menu2.Size = new Size(960, 459);
             bntMenu.BackColor = Color.Gray;
              btnHome.BackColor = panel1.BackColor;
               bntPaymentMethod.BackColor = panel1.BackColor;

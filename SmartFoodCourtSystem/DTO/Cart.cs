@@ -80,6 +80,15 @@ namespace SmartFoodCourtSystem.DTO
                 }
             }
         }
-        
+        public long caculatePrice()
+        {
+            long price = 0;
+            foreach (Food i in listFood)
+            {
+                price += i.totalprice();
+
+            }
+            return price;
+        }
     }
 }

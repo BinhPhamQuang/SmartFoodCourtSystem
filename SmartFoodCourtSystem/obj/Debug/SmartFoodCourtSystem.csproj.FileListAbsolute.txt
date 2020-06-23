@@ -577,3 +577,8 @@ D:\test23-6-4\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\aa-DJ\SmartFoo
 D:\test23-6-4\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CopyComplete
 D:\test23-6-4\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
 D:\test23-6-4\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\log4net.dll
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCMomo.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\x64\SQLite.Interop.dll
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\x86\SQLite.Interop.dll

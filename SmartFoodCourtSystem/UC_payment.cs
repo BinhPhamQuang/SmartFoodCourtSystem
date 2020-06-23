@@ -15,6 +15,7 @@ namespace SmartFoodCourtSystem
 {
     public partial class UC_payment : UserControl
     {
+        public event EventHandler ButtonClick;
         Panel PanelItem(Food food)
         {
             Panel panel = new Panel();
@@ -104,10 +105,12 @@ namespace SmartFoodCourtSystem
             if (pictureBox1.BackColor == Color.Lime)
             {
                 //uC_PayMethod1.Visible = true;
-                this.Hide();
-                FormPayMethod f = new FormPayMethod();
-                f.ShowDialog();
-                this.Show();
+                //this.Hide();
+                //FormPayMethod f = new FormPayMethod();
+                //f.ShowDialog();
+                //this.Show();
+                if (this.ButtonClick != null)
+                    this.ButtonClick(this, e);
             }
             else
             {
