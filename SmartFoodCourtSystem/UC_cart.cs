@@ -41,7 +41,7 @@ namespace SmartFoodCourtSystem
             lbname.AutoSize = true;
 
             Label lbdiscount = new Label();
-            lbdiscount.Text = food.discount.ToString()+"%";
+            lbdiscount.Text = "-"+food.discount.ToString()+"%";
             lbdiscount.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
             lbdiscount.ForeColor = Color.Red;
             lbdiscount.Location = new Point(318, 13);

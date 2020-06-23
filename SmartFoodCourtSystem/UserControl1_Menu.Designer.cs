@@ -37,10 +37,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.flp_menu = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnreset = new System.Windows.Forms.Button();
+            this.btnclear = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
             this.ptb_clear = new System.Windows.Forms.PictureBox();
-            this.btnclear = new System.Windows.Forms.Button();
-            this.btnreset = new System.Windows.Forms.Button();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_clear)).BeginInit();
             this.SuspendLayout();
@@ -139,6 +139,32 @@
             this.flp_menu.Size = new System.Drawing.Size(810, 377);
             this.flp_menu.TabIndex = 17;
             // 
+            // btnreset
+            // 
+            this.btnreset.FlatAppearance.BorderSize = 0;
+            this.btnreset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreset.Image = ((System.Drawing.Image)(resources.GetObject("btnreset.Image")));
+            this.btnreset.Location = new System.Drawing.Point(75, 79);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(24, 23);
+            this.btnreset.TabIndex = 20;
+            this.btnreset.UseVisualStyleBackColor = true;
+            this.btnreset.Visible = false;
+            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
+            // 
+            // btnclear
+            // 
+            this.btnclear.FlatAppearance.BorderSize = 0;
+            this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclear.Image = ((System.Drawing.Image)(resources.GetObject("btnclear.Image")));
+            this.btnclear.Location = new System.Drawing.Point(318, 17);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(24, 23);
+            this.btnclear.TabIndex = 19;
+            this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Visible = false;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
+            // 
             // btn_search
             // 
             this.btn_search.FlatAppearance.BorderSize = 0;
@@ -161,32 +187,6 @@
             this.ptb_clear.TabIndex = 18;
             this.ptb_clear.TabStop = false;
             this.ptb_clear.Visible = false;
-            // 
-            // btnclear
-            // 
-            this.btnclear.FlatAppearance.BorderSize = 0;
-            this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclear.Image = ((System.Drawing.Image)(resources.GetObject("btnclear.Image")));
-            this.btnclear.Location = new System.Drawing.Point(318, 17);
-            this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(24, 23);
-            this.btnclear.TabIndex = 19;
-            this.btnclear.UseVisualStyleBackColor = true;
-            this.btnclear.Visible = false;
-            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
-            // 
-            // btnreset
-            // 
-            this.btnreset.FlatAppearance.BorderSize = 0;
-            this.btnreset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreset.Image = ((System.Drawing.Image)(resources.GetObject("btnreset.Image")));
-            this.btnreset.Location = new System.Drawing.Point(75, 79);
-            this.btnreset.Name = "btnreset";
-            this.btnreset.Size = new System.Drawing.Size(24, 23);
-            this.btnreset.TabIndex = 20;
-            this.btnreset.UseVisualStyleBackColor = true;
-            this.btnreset.Visible = false;
-            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
             // UserControl1_Menu
             // 

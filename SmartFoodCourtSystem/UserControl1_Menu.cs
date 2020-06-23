@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using SmartFoodCourtSystem.Properties;
 namespace SmartFoodCourtSystem
 {
     public partial class UserControl1_Menu : UserControl
@@ -41,7 +41,14 @@ namespace SmartFoodCourtSystem
             pictureBox.Location = new Point(3, 38);
             pictureBox.Margin = new Padding(3, 3, 3, 3);
             pictureBox.Size = new Size(185, 138);
-            pictureBox.ImageLocation = food.image;
+            if (food.image.Length != 0)
+            {
+                pictureBox.ImageLocation = food.image;
+            }
+            else
+            {
+                pictureBox.Image = Resources.dishdefault;
+            }
             //------
             Label pnprice = new Label();
             pnprice.Location = new Point(3, 179);

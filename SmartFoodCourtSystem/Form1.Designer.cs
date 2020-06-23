@@ -382,7 +382,7 @@
         private System.Windows.Forms.Panel panel6;
         private UserControl_Home userControl_Home1;
         private UC_cart uC_cart1;
-        private UserControl1_Menu userControl1_Menu1;
+         
         private UC_payment uC_payment1;
         private UserControl1_Menu userControl1_Menu2;
     }

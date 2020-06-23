@@ -17,6 +17,7 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
             uC_cart1.ButtonClick += new EventHandler(UserControl_ButtonClick);
+            userControl1_Menu2.SendToBack();
         }
         void Alert(string msg, FAlert.emType type)
         {
