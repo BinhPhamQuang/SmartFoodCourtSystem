@@ -18,7 +18,7 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
             uC_cart1.ButtonClick += new EventHandler(UserControl_ButtonClick);
-             
+            
             uC_payment1.ButtonClick += new EventHandler(UC_Momo_ButtonClick);
            // userControl1_Menu1.SendToBack();
         }
@@ -80,7 +80,7 @@ namespace SmartFoodCourtSystem
             
             SidePanel.Height = bntMenu.Height;
             SidePanel.Top = bntMenu.Top;
-            userControl1_Menu2.BringToFront();
+            userControl1_Menu1.BringToFront();
             //userControl1_Menu2.Size = new Size(960, 459);
             bntMenu.BackColor = Color.Gray;
              btnHome.BackColor = panel1.BackColor;

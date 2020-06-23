@@ -51,7 +51,7 @@
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.userControl1_Menu2 = new SmartFoodCourtSystem.UserControl1_Menu();
+            this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -172,6 +172,7 @@
             // 
             // btnHome
             // 
+            this.btnHome.BackColor = System.Drawing.Color.Gray;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 14.75F);
@@ -183,7 +184,7 @@
             this.btnHome.Size = new System.Drawing.Size(220, 80);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel3
@@ -233,7 +234,7 @@
             this.pn_uc.Controls.Add(this.userControl_Home1);
             this.pn_uc.Controls.Add(this.uC_cart1);
             this.pn_uc.Controls.Add(this.uC_payment1);
-            this.pn_uc.Controls.Add(this.userControl1_Menu2);
+            this.pn_uc.Controls.Add(this.userControl1_Menu1);
             this.pn_uc.Location = new System.Drawing.Point(241, 186);
             this.pn_uc.Name = "pn_uc";
             this.pn_uc.Size = new System.Drawing.Size(960, 459);
@@ -261,7 +262,7 @@
             // uC_payment1
             // 
             this.uC_payment1.Location = new System.Drawing.Point(0, 0);
-            this.uC_payment1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uC_payment1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_payment1.Name = "uC_payment1";
             this.uC_payment1.Size = new System.Drawing.Size(960, 459);
             this.uC_payment1.TabIndex = 4;
@@ -324,12 +325,12 @@
             this.panel4.Size = new System.Drawing.Size(1208, 3);
             this.panel4.TabIndex = 10;
             // 
-            // userControl1_Menu2
+            // userControl1_Menu1
             // 
-            this.userControl1_Menu2.Location = new System.Drawing.Point(0, 0);
-            this.userControl1_Menu2.Name = "userControl1_Menu2";
-            this.userControl1_Menu2.Size = new System.Drawing.Size(960, 459);
-            this.userControl1_Menu2.TabIndex = 5;
+            this.userControl1_Menu1.Location = new System.Drawing.Point(0, 0);
+            this.userControl1_Menu1.Name = "userControl1_Menu1";
+            this.userControl1_Menu1.Size = new System.Drawing.Size(960, 459);
+            this.userControl1_Menu1.TabIndex = 5;
             // 
             // Form1
             // 
@@ -387,7 +388,8 @@
         private UC_payment uC_payment1;
         
         
-        private UserControl1_Menu userControl1_Menu2;
+       // private UserControl1_Menu userControl1_Menu2;
+        private UserControl1_Menu userControl1_Menu1;
     }
 }
 
