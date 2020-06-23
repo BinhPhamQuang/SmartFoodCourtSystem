@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SmartFoodCourtSystem.DTO;
-
+using SmartFoodCourtSystem.Properties;
 namespace SmartFoodCourtSystem
 {
     public partial class OrderDetail : Form
@@ -51,8 +51,17 @@ namespace SmartFoodCourtSystem
         {
             
             Food food = (Food)getData;
+
+            try
+            { 
+                ptbImage.Image = Image.FromFile(food.image);
+            }
+            catch(Exception a)
+            {
+                
+                ptbImage.Image = Resources.dishdefault;
+            }
             
-            ptbImage.Image = Image.FromFile(food.image);
             lbName.Text = food.name;
             lb_price.Text = food.price.ToString() + "VND";
             lbDiscount.Text = food.discount.ToString() + "%";

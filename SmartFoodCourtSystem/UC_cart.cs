@@ -30,7 +30,18 @@ namespace SmartFoodCourtSystem
             PictureBox pictureBox = new PictureBox();
             pictureBox.Location = new Point(3, 14);
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox.ImageLocation = food.image;
+            try
+            {
+                 
+                pictureBox.Image = Image.FromFile(food.image);
+                
+            }
+            catch (Exception a)
+            {
+
+                pictureBox.Image = Resources.dishdefault;
+            }
+            
             pictureBox.Margin = new Padding(3, 3, 3, 3);
             pictureBox.Size = new Size(143, 96);
 

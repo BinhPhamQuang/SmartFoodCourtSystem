@@ -41,14 +41,17 @@ namespace SmartFoodCourtSystem
             pictureBox.Location = new Point(3, 38);
             pictureBox.Margin = new Padding(3, 3, 3, 3);
             pictureBox.Size = new Size(185, 138);
-            if (food.image.Length != 0)
+            try
             {
-                pictureBox.ImageLocation = food.image;
+                pictureBox.Image = Image.FromFile(food.image);
+                 
             }
-            else
+            catch (Exception a)
             {
+
                 pictureBox.Image = Resources.dishdefault;
             }
+             
             //------
             Label pnprice = new Label();
             pnprice.Location = new Point(3, 179);
