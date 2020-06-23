@@ -49,6 +49,11 @@ namespace SmartFoodCourtSystem
             SidePanel.Height = btnHome.Height;
             SidePanel.Top = btnHome.Top;
             userControl_Home1.BringToFront();
+            btnHome.BackColor = Color.Gray;
+             bntMenu.BackColor = panel1.BackColor;
+              bntPaymentMethod.BackColor = panel1.BackColor;
+             btnDelivery.BackColor = panel1.BackColor;
+             btnCart.BackColor = panel1.BackColor;
         }
         private void bntMenu_Click(object sender, EventArgs e)
         {
@@ -56,23 +61,33 @@ namespace SmartFoodCourtSystem
             SidePanel.Top = bntMenu.Top;
             userControl1_Menu2.BringToFront();
             userControl1_Menu2.Size = new Size(960, 459);
+            bntMenu.BackColor = Color.Gray;
+             btnHome.BackColor = panel1.BackColor;
+              bntPaymentMethod.BackColor = panel1.BackColor;
+             btnDelivery.BackColor = panel1.BackColor;
+             btnCart.BackColor = panel1.BackColor;
         }
 
         private void btnCart_Click(object sender, EventArgs e)
         {
 
            
-            if (Cart.Instance.getListFood().Count != 0)
+           if (Cart.Instance.getListFood().Count != 0)
             {
                 uC_cart1.LoadCart();
                 SidePanel.Height = btnCart.Height;
                 SidePanel.Top = btnCart.Top;
                 uC_cart1.BringToFront();
+                btnCart.BackColor = Color.Gray;
+                btnHome.BackColor = panel1.BackColor;
+                bntPaymentMethod.BackColor = panel1.BackColor;
+                btnDelivery.BackColor = panel1.BackColor;
+                bntMenu.BackColor = panel1.BackColor;
             }
-            else
-            {
-                Alert("Please order first!", FAlert.emType.warning);
-            }
+             else
+              {
+                 Alert("Please order first!", FAlert.emType.warning);
+              }
         }
         #endregion
 
@@ -99,8 +114,13 @@ namespace SmartFoodCourtSystem
                 SidePanel.Height = bntPaymentMethod.Height;
                 SidePanel.Top = bntPaymentMethod.Top;
                 uC_payment1.BringToFront();
-           }
-           else
+                bntPaymentMethod.BackColor = Color.Gray;
+                btnHome.BackColor = panel1.BackColor;
+                bntMenu.BackColor = panel1.BackColor;
+                btnDelivery.BackColor = panel1.BackColor;
+                btnCart.BackColor = panel1.BackColor;
+            }
+            else
            {
               Alert("Your cart is empty!", FAlert.emType.warning);
             }
@@ -115,6 +135,11 @@ namespace SmartFoodCourtSystem
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnDelivery_Click(object sender, EventArgs e)
+        {
+            Alert("Delivery unallowed", FAlert.emType.error);
         }
     }
 }
