@@ -85,14 +85,7 @@ namespace SmartFoodCourtSystem
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                foreach (Form oForm in Application.OpenForms)
-                {
-                    if (oForm is FLogin)
-                    {
-                        oForm.Show();
-                        break;
-                    }
-                }
+                 
             }
         }
 

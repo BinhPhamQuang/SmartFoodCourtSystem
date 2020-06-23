@@ -75,13 +75,13 @@ namespace SmartFoodCourtSystem
                             lbErrorMessage.Visible = false;
                             this.Alert("Login successfully!", FAlert.emType.success);
                             Cook cook = new Cook();
-                            cook.Show();
+                             cook.ShowDialog();
                             break;
                         case 1:
                             lbErrorMessage.Visible = false;
                             this.Alert("Login successfully!", FAlert.emType.success);
                             FManMain manMain = new FManMain();
-                            manMain.Show();
+                            manMain.ShowDialog();
                             break;
                     }
                 }
@@ -93,6 +93,11 @@ namespace SmartFoodCourtSystem
                 lbErrorMessage.Visible = true;
                 this.Alert("Error!", FAlert.emType.error);
             }
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtPassword_Leave(sender, e);
+            txtUsername_Leave(sender, e);
+            this.Show();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -122,6 +127,11 @@ namespace SmartFoodCourtSystem
             this.Hide();
             Form1 form = new Form1();
             form.ShowDialog();
+            txtUsername.Text="";
+            txtPassword.Text="";
+            txtPassword_Leave(sender, e);
+            txtUsername_Leave(sender, e);
+            this.Show();
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)

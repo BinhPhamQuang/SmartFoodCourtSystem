@@ -492,3 +492,4 @@ C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartF
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FormPayMethod.aa-DJ.resources
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
