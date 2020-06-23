@@ -36,8 +36,8 @@ namespace SmartFoodCourtSystem
         private void momo_ButtonClick(object sender, EventArgs e)
         {
             pn_uc.Controls.Remove(momo);
-            Cart.Instance.DeleteCart();
-            btnHome_Click(sender, e);
+           // Cart.Instance.DeleteCart();
+          //  btnHome_Click(sender, e);
         }
         void Alert(string msg, FAlert.emType type)
         {

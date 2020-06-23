@@ -39,6 +39,7 @@
             this.wbMono.Location = new System.Drawing.Point(0, 0);
             this.wbMono.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbMono.Name = "wbMono";
+            this.wbMono.ScriptErrorsSuppressed = true;
             this.wbMono.Size = new System.Drawing.Size(960, 459);
             this.wbMono.TabIndex = 0;
             this.wbMono.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.wbMono_Navigated);
