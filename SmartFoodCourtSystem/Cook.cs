@@ -67,7 +67,14 @@ namespace SmartFoodCourtSystem
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                
+                foreach (Form i in Application.OpenForms)
+                {
+                    if (i is FLogin)
+                    {
+                        i.Show();
+                        
+                    }
+                }
             }
         }
         private void hideBtn(bool state)
