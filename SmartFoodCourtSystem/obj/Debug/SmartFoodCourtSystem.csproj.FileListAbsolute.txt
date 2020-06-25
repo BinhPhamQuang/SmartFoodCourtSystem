@@ -674,3 +674,6 @@ C:\Users\Acer\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\aa-DJ\
 C:\Users\Acer\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CopyComplete
 C:\Users\Acer\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
 C:\Users\Acer\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
+C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\x64\SQLite.Interop.dll
+C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\x86\SQLite.Interop.dll
+C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCMomo.resources

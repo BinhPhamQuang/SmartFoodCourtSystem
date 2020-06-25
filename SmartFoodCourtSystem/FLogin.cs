@@ -49,9 +49,9 @@ namespace SmartFoodCourtSystem
             //bool re = false;
             //string removableChars = Regex.Escape(@"@&'()<>#");
             //string pattern = "[" + removableChars + "]";
-            string pattern = @"(\W|_|)";
+            //string pattern = @"(\W|_|)";
             //this.Alert("Unallowed characters!", FAlert.emType.regex);
-            txtUsername.Text = Regex.Replace(txtUsername.Text, pattern, "");
+            //txtUsername.Text = Regex.Replace(txtUsername.Text, pattern, "");
             //txtPassword.Text = Regex.Replace(txtPassword.Text, pattern, "");
             bool success = false;
             string query = $"SELECT * from User WHERE Username='" + txtUsername.Text + "' and Password='" + txtPassword.Text + "'";
@@ -182,6 +182,11 @@ namespace SmartFoodCourtSystem
         }
 
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
