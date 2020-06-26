@@ -94,6 +94,7 @@
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 80);
             this.SidePanel.TabIndex = 3;
+            this.SidePanel.Visible = false;
             this.SidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SidePanel_Paint);
             // 
             // btnDelivery

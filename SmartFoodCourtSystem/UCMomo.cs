@@ -105,6 +105,7 @@ namespace SmartFoodCourtSystem
                 wbMono.AllowNavigation = false;
 
                 Alert("Successfully!", FAlert.emType.success);
+                Cart.Instance.DeleteCart();
             }
         }
         private void btncancel_Click(object sender, EventArgs e)

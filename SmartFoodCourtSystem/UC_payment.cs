@@ -111,6 +111,8 @@ namespace SmartFoodCourtSystem
         }
         public UC_payment()
         {
+            stt = 1;
+
             InitializeComponent();
             LoadPayment();
         }
@@ -134,6 +136,7 @@ namespace SmartFoodCourtSystem
         {
             if (pictureBox1.BackColor == Color.Lime)
             {
+                stt = 1;
                 //uC_PayMethod1.Visible = true;
                 //this.Hide();
                 //FormPayMethod f = new FormPayMethod();
@@ -150,6 +153,8 @@ namespace SmartFoodCourtSystem
 
         private void uC_PayMethod1_Load_1(object sender, EventArgs e)
         {
+            stt = 1;
+
 
         }
 
@@ -164,6 +169,7 @@ namespace SmartFoodCourtSystem
         }
         public void LoadPayment()
         {
+            stt = 1;
             flp_foodlist.Controls.Clear();
             foreach (Food i in Cart.Instance.getListFood())
             {
@@ -210,6 +216,7 @@ namespace SmartFoodCourtSystem
             DialogResult result = MessageBox.Show("Are you sure you want to cancel order?", "Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                stt = 1;
                 // this.Close();
                 flp_foodlist.Controls.Clear();
                 Cart.Instance.DeleteCart();
