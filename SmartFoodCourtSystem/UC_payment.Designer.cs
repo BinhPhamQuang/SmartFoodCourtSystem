@@ -120,7 +120,7 @@
             // 
             this.lbstt.AutoSize = true;
             this.lbstt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbstt.Location = new System.Drawing.Point(-1, 10);
+            this.lbstt.Location = new System.Drawing.Point(2, 10);
             this.lbstt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbstt.Name = "lbstt";
             this.lbstt.Size = new System.Drawing.Size(19, 21);
@@ -194,7 +194,7 @@
             this.pictureBox6.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox6.Image = global::SmartFoodCourtSystem.Properties.Resources.visa1;
-            this.pictureBox6.Location = new System.Drawing.Point(818, 10);
+            this.pictureBox6.Location = new System.Drawing.Point(813, 10);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(70, 70);
@@ -208,7 +208,7 @@
             this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox5.Image = global::SmartFoodCourtSystem.Properties.Resources.master_card1;
-            this.pictureBox5.Location = new System.Drawing.Point(907, 10);
+            this.pictureBox5.Location = new System.Drawing.Point(887, 10);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(70, 70);
@@ -222,7 +222,7 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Image = global::SmartFoodCourtSystem.Properties.Resources.viettelpay1;
-            this.pictureBox3.Location = new System.Drawing.Point(727, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(739, 10);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(70, 70);
@@ -253,7 +253,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox2.Image = global::SmartFoodCourtSystem.Properties.Resources.zalo_pay11;
-            this.pictureBox2.Location = new System.Drawing.Point(636, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(665, 10);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 70);
@@ -267,7 +267,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::SmartFoodCourtSystem.Properties.Resources._1545358638753_LOGO_MoMo1;
-            this.pictureBox1.Location = new System.Drawing.Point(538, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(591, 10);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 70);

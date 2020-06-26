@@ -15,6 +15,7 @@ namespace SmartFoodCourtSystem
 {
     public partial class UC_payment : UserControl
     {
+        private static int stt = 1;
         public event EventHandler ButtonClick;
         Panel PanelItem(Food food)
         {
@@ -31,6 +32,13 @@ namespace SmartFoodCourtSystem
             lbName.AutoSize = false;
             lbName.Size = new Size(248, 21);
             lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
+            Label lbstt = new Label();
+            lbstt.Text = stt.ToString();
+            lbstt.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
+            lbstt.Location = new Point(2, 10);
+            lbstt.AutoSize = true;
+            stt += 1;
 
             Label lbDiscount = new Label();
             lbDiscount.Text = food.discount.ToString() + "%";
@@ -81,6 +89,7 @@ namespace SmartFoodCourtSystem
             panel.Controls.Add(lbQuantity);
             panel.Controls.Add(lbPrice);
             panel.Controls.Add(caulation);
+            panel.Controls.Add(lbstt);
             return panel;
 
         }

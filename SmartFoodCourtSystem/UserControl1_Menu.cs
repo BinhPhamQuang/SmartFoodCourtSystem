@@ -41,6 +41,8 @@ namespace SmartFoodCourtSystem
             pictureBox.Location = new Point(3, 38);
             pictureBox.Margin = new Padding(3, 3, 3, 3);
             pictureBox.Size = new Size(185, 138);
+            pictureBox.Click += BtnOrder_Click;
+            pictureBox.Tag = food;
             try
             {
                 pictureBox.Image = Image.FromFile(food.image);
@@ -92,7 +94,20 @@ namespace SmartFoodCourtSystem
 
         private void BtnOrder_Click(object sender, EventArgs e)
         {
-            Food t = (sender as Button).Tag as Food;
+            Food t=null ;
+
+            try
+            {
+                t = (sender as Button).Tag as Food;
+            }
+            catch(Exception a)
+            {
+
+            }
+            if (t == null)
+            {
+               t = (sender as PictureBox).Tag as Food;
+            }
             OrderDetail orderDetail = new OrderDetail();
             orderDetail.getData = t;
             orderDetail.ShowDialog();
