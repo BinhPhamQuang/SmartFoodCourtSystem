@@ -63,7 +63,7 @@
             this.panel3.Controls.Add(this.lbPrice);
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.label17);
-            this.panel3.Location = new System.Drawing.Point(535, 285);
+            this.panel3.Location = new System.Drawing.Point(582, 285);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(381, 57);
             this.panel3.TabIndex = 3;
@@ -111,9 +111,9 @@
             this.btnOrder.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnOrder.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(535, 400);
+            this.btnOrder.Location = new System.Drawing.Point(582, 400);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(381, 36);
             this.btnOrder.TabIndex = 22;
@@ -126,9 +126,9 @@
             this.btnPayment.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnPayment.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.ForeColor = System.Drawing.Color.White;
-            this.btnPayment.Location = new System.Drawing.Point(535, 359);
+            this.btnPayment.Location = new System.Drawing.Point(582, 359);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(381, 35);
             this.btnPayment.TabIndex = 21;
@@ -141,7 +141,7 @@
             this.panel8.Controls.Add(this.tbPromotioncode);
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Controls.Add(this.label20);
-            this.panel8.Location = new System.Drawing.Point(535, 144);
+            this.panel8.Location = new System.Drawing.Point(582, 144);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(381, 57);
             this.panel8.TabIndex = 22;
@@ -180,9 +180,9 @@
             this.btnApplyPromotioncode.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnApplyPromotioncode.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnApplyPromotioncode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApplyPromotioncode.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplyPromotioncode.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApplyPromotioncode.ForeColor = System.Drawing.Color.White;
-            this.btnApplyPromotioncode.Location = new System.Drawing.Point(535, 216);
+            this.btnApplyPromotioncode.Location = new System.Drawing.Point(582, 216);
             this.btnApplyPromotioncode.Name = "btnApplyPromotioncode";
             this.btnApplyPromotioncode.Size = new System.Drawing.Size(381, 35);
             this.btnApplyPromotioncode.TabIndex = 23;
@@ -196,7 +196,7 @@
             this.flp_cart.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flp_cart.Location = new System.Drawing.Point(61, 68);
             this.flp_cart.Name = "flp_cart";
-            this.flp_cart.Size = new System.Drawing.Size(442, 372);
+            this.flp_cart.Size = new System.Drawing.Size(442, 368);
             this.flp_cart.TabIndex = 24;
             // 
             // UC_cart
@@ -212,7 +212,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
             this.Name = "UC_cart";
-            this.Size = new System.Drawing.Size(960, 459);
+            this.Size = new System.Drawing.Size(1020, 490);
             this.Load += new System.EventHandler(this.UC_cart_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

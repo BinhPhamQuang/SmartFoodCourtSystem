@@ -81,7 +81,7 @@
             this.panel1.Location = new System.Drawing.Point(-4, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(977, 459);
+            this.panel1.Size = new System.Drawing.Size(1022, 490);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -180,7 +180,7 @@
             this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancel.ForeColor = System.Drawing.SystemColors.Control;
-            this.btncancel.Location = new System.Drawing.Point(482, 403);
+            this.btncancel.Location = new System.Drawing.Point(516, 435);
             this.btncancel.Margin = new System.Windows.Forms.Padding(2);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(241, 44);
@@ -194,7 +194,7 @@
             this.pictureBox6.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox6.Image = global::SmartFoodCourtSystem.Properties.Resources.visa1;
-            this.pictureBox6.Location = new System.Drawing.Point(813, 10);
+            this.pictureBox6.Location = new System.Drawing.Point(853, 10);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(70, 70);
@@ -208,7 +208,7 @@
             this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox5.Image = global::SmartFoodCourtSystem.Properties.Resources.master_card1;
-            this.pictureBox5.Location = new System.Drawing.Point(887, 10);
+            this.pictureBox5.Location = new System.Drawing.Point(927, 10);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(70, 70);
@@ -222,7 +222,7 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Image = global::SmartFoodCourtSystem.Properties.Resources.viettelpay1;
-            this.pictureBox3.Location = new System.Drawing.Point(739, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(779, 10);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(70, 70);
@@ -238,7 +238,7 @@
             this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn.Location = new System.Drawing.Point(727, 403);
+            this.btn.Location = new System.Drawing.Point(770, 435);
             this.btn.Margin = new System.Windows.Forms.Padding(2);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(241, 44);
@@ -253,7 +253,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox2.Image = global::SmartFoodCourtSystem.Properties.Resources.zalo_pay11;
-            this.pictureBox2.Location = new System.Drawing.Point(665, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(705, 10);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 70);
@@ -267,7 +267,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::SmartFoodCourtSystem.Properties.Resources._1545358638753_LOGO_MoMo1;
-            this.pictureBox1.Location = new System.Drawing.Point(591, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(631, 10);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 70);
@@ -280,7 +280,7 @@
             // 
             this.lbDiscount.AutoSize = true;
             this.lbDiscount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiscount.Location = new System.Drawing.Point(270, 87);
+            this.lbDiscount.Location = new System.Drawing.Point(291, 87);
             this.lbDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDiscount.Name = "lbDiscount";
             this.lbDiscount.Size = new System.Drawing.Size(74, 19);
@@ -291,7 +291,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(561, 87);
+            this.label6.Location = new System.Drawing.Point(582, 87);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 19);
@@ -304,7 +304,7 @@
             this.flp_foodlist.BackColor = System.Drawing.Color.White;
             this.flp_foodlist.Controls.Add(this.panel2);
             this.flp_foodlist.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flp_foodlist.Location = new System.Drawing.Point(4, 108);
+            this.flp_foodlist.Location = new System.Drawing.Point(25, 108);
             this.flp_foodlist.Margin = new System.Windows.Forms.Padding(2);
             this.flp_foodlist.Name = "flp_foodlist";
             this.flp_foodlist.Size = new System.Drawing.Size(973, 287);
@@ -314,7 +314,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(413, 87);
+            this.label7.Location = new System.Drawing.Point(434, 87);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 19);
@@ -337,7 +337,7 @@
             // 
             this.lbtotalprice.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtotalprice.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbtotalprice.Location = new System.Drawing.Point(159, 409);
+            this.lbtotalprice.Location = new System.Drawing.Point(184, 441);
             this.lbtotalprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbtotalprice.Name = "lbtotalprice";
             this.lbtotalprice.Size = new System.Drawing.Size(319, 38);
@@ -350,7 +350,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 412);
+            this.label3.Location = new System.Drawing.Point(2, 444);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(158, 32);
@@ -361,7 +361,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(119, 87);
+            this.label2.Location = new System.Drawing.Point(140, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 19);
@@ -375,7 +375,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_payment";
-            this.Size = new System.Drawing.Size(975, 459);
+            this.Size = new System.Drawing.Size(1020, 490);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

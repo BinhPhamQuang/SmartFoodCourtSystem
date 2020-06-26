@@ -134,9 +134,9 @@
             // 
             this.flp_menu.AutoScroll = true;
             this.flp_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.flp_menu.Location = new System.Drawing.Point(105, 67);
+            this.flp_menu.Location = new System.Drawing.Point(3, 67);
             this.flp_menu.Name = "flp_menu";
-            this.flp_menu.Size = new System.Drawing.Size(810, 377);
+            this.flp_menu.Size = new System.Drawing.Size(996, 436);
             this.flp_menu.TabIndex = 17;
             // 
             // btnreset
@@ -144,7 +144,7 @@
             this.btnreset.FlatAppearance.BorderSize = 0;
             this.btnreset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnreset.Image = ((System.Drawing.Image)(resources.GetObject("btnreset.Image")));
-            this.btnreset.Location = new System.Drawing.Point(75, 79);
+            this.btnreset.Location = new System.Drawing.Point(3, 44);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(24, 23);
             this.btnreset.TabIndex = 20;
@@ -203,7 +203,7 @@
             this.Controls.Add(this.ptb_clear);
             this.Controls.Add(this.flp_menu);
             this.Name = "UserControl1_Menu";
-            this.Size = new System.Drawing.Size(960, 459);
+            this.Size = new System.Drawing.Size(1011, 506);
             this.Load += new System.EventHandler(this.UserControl1_Menu_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();

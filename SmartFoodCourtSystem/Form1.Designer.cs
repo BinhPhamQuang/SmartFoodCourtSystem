@@ -46,12 +46,12 @@
             this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
             this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
             this.uC_payment1 = new SmartFoodCourtSystem.UC_payment();
-            this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -236,9 +236,9 @@
             this.pn_uc.Controls.Add(this.uC_cart1);
             this.pn_uc.Controls.Add(this.uC_payment1);
             this.pn_uc.Controls.Add(this.userControl1_Menu1);
-            this.pn_uc.Location = new System.Drawing.Point(241, 186);
+            this.pn_uc.Location = new System.Drawing.Point(219, 177);
             this.pn_uc.Name = "pn_uc";
-            this.pn_uc.Size = new System.Drawing.Size(960, 459);
+            this.pn_uc.Size = new System.Drawing.Size(1020, 490);
             this.pn_uc.TabIndex = 8;
             // 
             // userControl_Home1
@@ -247,7 +247,7 @@
             this.userControl_Home1.Location = new System.Drawing.Point(0, 0);
             this.userControl_Home1.Margin = new System.Windows.Forms.Padding(4);
             this.userControl_Home1.Name = "userControl_Home1";
-            this.userControl_Home1.Size = new System.Drawing.Size(960, 459);
+            this.userControl_Home1.Size = new System.Drawing.Size(1020, 490);
             this.userControl_Home1.TabIndex = 3;
             this.userControl_Home1.Load += new System.EventHandler(this.userControl_Home1_Load);
             // 
@@ -257,7 +257,7 @@
             this.uC_cart1.Location = new System.Drawing.Point(0, 0);
             this.uC_cart1.Margin = new System.Windows.Forms.Padding(4);
             this.uC_cart1.Name = "uC_cart1";
-            this.uC_cart1.Size = new System.Drawing.Size(960, 459);
+            this.uC_cart1.Size = new System.Drawing.Size(1020, 490);
             this.uC_cart1.TabIndex = 2;
             // 
             // uC_payment1
@@ -265,15 +265,8 @@
             this.uC_payment1.Location = new System.Drawing.Point(0, 0);
             this.uC_payment1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_payment1.Name = "uC_payment1";
-            this.uC_payment1.Size = new System.Drawing.Size(960, 481);
+            this.uC_payment1.Size = new System.Drawing.Size(1020, 490);
             this.uC_payment1.TabIndex = 4;
-            // 
-            // userControl1_Menu1
-            // 
-            this.userControl1_Menu1.Location = new System.Drawing.Point(0, 0);
-            this.userControl1_Menu1.Name = "userControl1_Menu1";
-            this.userControl1_Menu1.Size = new System.Drawing.Size(960, 459);
-            this.userControl1_Menu1.TabIndex = 5;
             // 
             // pictureBox2
             // 
@@ -333,6 +326,13 @@
             this.panel4.Size = new System.Drawing.Size(1208, 3);
             this.panel4.TabIndex = 10;
             // 
+            // userControl1_Menu1
+            // 
+            this.userControl1_Menu1.Location = new System.Drawing.Point(0, 0);
+            this.userControl1_Menu1.Name = "userControl1_Menu1";
+            this.userControl1_Menu1.Size = new System.Drawing.Size(1020, 490);
+            this.userControl1_Menu1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,9 +387,6 @@
         private UC_cart uC_cart1;
          
         private UC_payment uC_payment1;
-        
-        
-       // private UserControl1_Menu userControl1_Menu2;
         private UserControl1_Menu userControl1_Menu1;
     }
 }
