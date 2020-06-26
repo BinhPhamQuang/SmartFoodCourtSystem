@@ -106,11 +106,12 @@
             // 
             // lbcaculate
             // 
-            this.lbcaculate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbcaculate.Location = new System.Drawing.Point(717, 10);
+            this.lbcaculate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbcaculate.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbcaculate.Location = new System.Drawing.Point(629, 10);
             this.lbcaculate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbcaculate.Name = "lbcaculate";
-            this.lbcaculate.Size = new System.Drawing.Size(224, 21);
+            this.lbcaculate.Size = new System.Drawing.Size(312, 21);
             this.lbcaculate.TabIndex = 5;
             this.lbcaculate.Text = "2000x2x(100-0)%=4000";
             this.lbcaculate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -300,7 +301,7 @@
             // flp_foodlist
             // 
             this.flp_foodlist.AutoScroll = true;
-            this.flp_foodlist.BackColor = System.Drawing.SystemColors.Menu;
+            this.flp_foodlist.BackColor = System.Drawing.Color.White;
             this.flp_foodlist.Controls.Add(this.panel2);
             this.flp_foodlist.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flp_foodlist.Location = new System.Drawing.Point(4, 108);

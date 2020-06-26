@@ -25,7 +25,7 @@ namespace SmartFoodCourtSystem
             panel.AutoSize = false;
 
             Label lbName = new Label();
-            lbName.Text = food.name + " " + '(' + food.size + ')';
+            lbName.Text = food.name;
             lbName.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
             lbName.Location = new Point(22, 10);
             lbName.AutoSize = false;
@@ -63,13 +63,24 @@ namespace SmartFoodCourtSystem
             lbPrice.Location = new Point(537, 10);
             lbPrice.Size = new Size(83, 21);
             lbPrice.AutoSize = false;
-            lbPrice.TextAlign= System.Drawing.ContentAlignment.MiddleCenter; 
+            lbPrice.TextAlign= System.Drawing.ContentAlignment.MiddleCenter;
+
+            Label caulation = new Label();
+            caulation.Text = $"{food.price} x {food.quantity} x (100 - {food.discount})% = {food.price*food.quantity*(100-food.discount)/100}";
+            caulation.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
+            caulation.ForeColor = Color.ForestGreen;
+            caulation.Location = new Point(629, 10);
+            caulation.Size = new Size(312, 21);
+            caulation.AutoSize = false;
+            caulation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+
 
 
             panel.Controls.Add(lbName);
             panel.Controls.Add(lbDiscount);
             panel.Controls.Add(lbQuantity);
             panel.Controls.Add(lbPrice);
+            panel.Controls.Add(caulation);
             return panel;
 
         }
