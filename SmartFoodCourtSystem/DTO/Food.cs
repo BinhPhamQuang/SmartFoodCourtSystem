@@ -30,6 +30,6 @@ namespace SmartFoodCourtSystem.DTO
             medium,
             large
         }
-        
+        public string note { get; set; }
     }
 }

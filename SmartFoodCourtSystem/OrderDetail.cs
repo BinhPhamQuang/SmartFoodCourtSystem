@@ -51,7 +51,23 @@ namespace SmartFoodCourtSystem
         {
             
             Food food = (Food)getData;
+            foreach(Food i in Cart.Instance.getListFood())
+            {
+                if(food.idFood==i.idFood)
+                {
+                    pn_ordered.Visible = true;
+                    if(i.quantity>1)
+                    {
+                        lb_ordered.Text = i.quantity.ToString() + " items";
+                    }
+                    else
+                    {
+                        lb_ordered.Text = i.quantity.ToString() + " item";
+                    }
+                    
 
+                }
+            }
             try
             { 
                 ptbImage.Image = Image.FromFile(food.image);
@@ -80,6 +96,7 @@ namespace SmartFoodCourtSystem
             t.quantity = int.Parse(lbQuantity.Text.ToString());
             t.image = food.image;
             t.discount = food.discount;
+            t.note = txtNote.Text;
 
             Cart.Instance.addFood(t);
             Alert("Order successfully !", FAlert.emType.success);

@@ -19,41 +19,51 @@ namespace SmartFoodCourtSystem
         Panel PanelItem(Food food)
         {
             Panel panel = new Panel();
-            panel.Size = new Size(525, 75);
-            panel.BackColor = SystemColors.InactiveCaption;
-
+            panel.Size = new Size(951, 41);
+            panel.BackColor = SystemColors.ActiveCaption;
+            panel.Location = new Point(6, 96);
+            panel.AutoSize = false;
 
             Label lbName = new Label();
             lbName.Text = food.name + " " + '(' + food.size + ')';
             lbName.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
-            lbName.Location = new Point(8, 40);
-            lbName.AutoSize = true;
+            lbName.Location = new Point(22, 10);
+            lbName.AutoSize = false;
+            lbName.Size = new Size(248, 21);
+            lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
             Label lbDiscount = new Label();
             lbDiscount.Text = food.discount.ToString() + "%";
             lbDiscount.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
             lbDiscount.ForeColor = Color.Red;
-            lbDiscount.Location = new Point(248, 35);
-            lbDiscount.AutoSize = true;
+            lbDiscount.Location = new Point(274, 10);
+            lbDiscount.AutoSize = false;
+            lbDiscount.Size = new Size(52, 21);
+            lbDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
-            Label lbsize = new Label();
-            lbsize.Text = "Size:";
-            lbsize.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
-            lbsize.Location = new Point(100, 35);
-            lbsize.AutoSize = true;
+            //Label lbsize = new Label();
+            //lbsize.Text = "Size:";
+            //lbsize.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
+            //lbsize.Location = new Point(208, 10);
+            //lbsize.AutoSize = true;
+            //lbsize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
 
             Label lbQuantity = new Label();
             lbQuantity.Text = food.quantity.ToString();
             lbQuantity.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
-            lbQuantity.Location = new Point(357, 35);
+            lbQuantity.Location = new Point(434, 10);
             lbQuantity.AutoSize = true;
+            lbQuantity.TextAlign =System.Drawing.ContentAlignment.MiddleCenter;
+
 
             Label lbPrice = new Label();
             lbPrice.Text = food.totalprice().ToString();
             lbPrice.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
-            lbPrice.Location = new Point(450, 35);
-            lbPrice.AutoSize = true;
+            lbPrice.Location = new Point(537, 10);
+            lbPrice.Size = new Size(83, 21);
+            lbPrice.AutoSize = false;
+            lbPrice.TextAlign= System.Drawing.ContentAlignment.MiddleCenter; 
 
 
             panel.Controls.Add(lbName);

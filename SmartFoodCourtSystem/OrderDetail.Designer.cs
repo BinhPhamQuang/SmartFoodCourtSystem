@@ -59,6 +59,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btn_subtract = new System.Windows.Forms.Panel();
+            this.lb_o = new System.Windows.Forms.Label();
+            this.pn_ordered = new System.Windows.Forms.Panel();
+            this.lb_ordered = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNote = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnDescription.SuspendLayout();
@@ -73,40 +80,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbImage)).BeginInit();
             this.panel7.SuspendLayout();
             this.btn_subtract.SuspendLayout();
+            this.pn_ordered.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.pnDescription);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.pnName);
             this.panel4.Location = new System.Drawing.Point(474, 17);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(483, 357);
+            this.panel4.Size = new System.Drawing.Size(483, 370);
             this.panel4.TabIndex = 22;
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.btnSub);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.btnPlus);
-            this.panel5.Controls.Add(this.btnSub);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.lb_price);
             this.panel5.Controls.Add(this.lbQuantity);
             this.panel5.Controls.Add(this.lbDiscount);
             this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(6, 214);
+            this.panel5.Location = new System.Drawing.Point(6, 225);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(471, 129);
+            this.panel5.Size = new System.Drawing.Size(471, 97);
             this.panel5.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 25);
+            this.label4.Location = new System.Drawing.Point(14, 8);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 32);
             this.label4.TabIndex = 9;
@@ -118,7 +128,7 @@
             this.btnPlus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlus.BackgroundImage")));
             this.btnPlus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlus.Location = new System.Drawing.Point(224, 91);
+            this.btnPlus.Location = new System.Drawing.Point(224, 57);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(20, 20);
             this.btnPlus.TabIndex = 20;
@@ -131,7 +141,7 @@
             this.btnSub.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSub.BackgroundImage")));
             this.btnSub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSub.Location = new System.Drawing.Point(141, 90);
+            this.btnSub.Location = new System.Drawing.Point(141, 56);
             this.btnSub.Name = "btnSub";
             this.btnSub.Size = new System.Drawing.Size(20, 20);
             this.btnSub.TabIndex = 19;
@@ -142,7 +152,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 79);
+            this.label6.Location = new System.Drawing.Point(14, 46);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 32);
             this.label6.TabIndex = 11;
@@ -152,7 +162,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.panel3.Location = new System.Drawing.Point(169, 107);
+            this.panel3.Location = new System.Drawing.Point(169, 73);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(49, 3);
             this.panel3.TabIndex = 6;
@@ -162,7 +172,7 @@
             this.lb_price.Font = new System.Drawing.Font("Malgun Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_price.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lb_price.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lb_price.Location = new System.Drawing.Point(144, 20);
+            this.lb_price.Location = new System.Drawing.Point(144, 3);
             this.lb_price.Name = "lb_price";
             this.lb_price.Size = new System.Drawing.Size(324, 37);
             this.lb_price.TabIndex = 12;
@@ -173,7 +183,7 @@
             // 
             this.lbQuantity.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuantity.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbQuantity.Location = new System.Drawing.Point(167, 78);
+            this.lbQuantity.Location = new System.Drawing.Point(167, 44);
             this.lbQuantity.Name = "lbQuantity";
             this.lbQuantity.Size = new System.Drawing.Size(51, 32);
             this.lbQuantity.TabIndex = 4;
@@ -184,9 +194,9 @@
             // 
             this.lbDiscount.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiscount.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbDiscount.Location = new System.Drawing.Point(410, 78);
+            this.lbDiscount.Location = new System.Drawing.Point(393, 44);
             this.lbDiscount.Name = "lbDiscount";
-            this.lbDiscount.Size = new System.Drawing.Size(50, 32);
+            this.lbDiscount.Size = new System.Drawing.Size(67, 32);
             this.lbDiscount.TabIndex = 5;
             this.lbDiscount.Text = "0%";
             this.lbDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -195,7 +205,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(270, 80);
+            this.label8.Location = new System.Drawing.Point(270, 46);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(134, 32);
             this.label8.TabIndex = 16;
@@ -206,7 +216,7 @@
             this.pnDescription.Controls.Add(this.rtb_description);
             this.pnDescription.Location = new System.Drawing.Point(9, 70);
             this.pnDescription.Name = "pnDescription";
-            this.pnDescription.Size = new System.Drawing.Size(474, 125);
+            this.pnDescription.Size = new System.Drawing.Size(474, 155);
             this.pnDescription.TabIndex = 1;
             // 
             // rtb_description
@@ -216,10 +226,10 @@
             this.rtb_description.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.rtb_description.DetectUrls = false;
             this.rtb_description.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtb_description.Location = new System.Drawing.Point(7, 12);
+            this.rtb_description.Location = new System.Drawing.Point(7, 3);
             this.rtb_description.Name = "rtb_description";
             this.rtb_description.ReadOnly = true;
-            this.rtb_description.Size = new System.Drawing.Size(461, 110);
+            this.rtb_description.Size = new System.Drawing.Size(461, 149);
             this.rtb_description.TabIndex = 8;
             this.rtb_description.Text = "100% breast fillet chicken coated in Zinger flavouring, lettuce and mayo all perf" +
     "ectly matched to deliver a spicy flavor hit.";
@@ -387,13 +397,14 @@
             // 
             this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.label2);
-            this.panel7.Location = new System.Drawing.Point(153, 348);
+            this.panel7.Location = new System.Drawing.Point(153, 345);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(62, 57);
             this.panel7.TabIndex = 24;
             // 
             // btn_subtract
             // 
+            this.btn_subtract.Controls.Add(this.pn_ordered);
             this.btn_subtract.Controls.Add(this.panel6);
             this.btn_subtract.Controls.Add(this.panel4);
             this.btn_subtract.Controls.Add(this.panel1);
@@ -403,6 +414,75 @@
             this.btn_subtract.Name = "btn_subtract";
             this.btn_subtract.Size = new System.Drawing.Size(960, 459);
             this.btn_subtract.TabIndex = 3;
+            // 
+            // lb_o
+            // 
+            this.lb_o.AutoSize = true;
+            this.lb_o.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_o.Location = new System.Drawing.Point(3, 12);
+            this.lb_o.Name = "lb_o";
+            this.lb_o.Size = new System.Drawing.Size(142, 20);
+            this.lb_o.TabIndex = 7;
+            this.lb_o.Text = "You have ordered";
+            // 
+            // pn_ordered
+            // 
+            this.pn_ordered.Controls.Add(this.lb_ordered);
+            this.pn_ordered.Controls.Add(this.lb_o);
+            this.pn_ordered.Location = new System.Drawing.Point(0, 407);
+            this.pn_ordered.Name = "pn_ordered";
+            this.pn_ordered.Size = new System.Drawing.Size(205, 37);
+            this.pn_ordered.TabIndex = 25;
+            this.pn_ordered.Visible = false;
+            // 
+            // lb_ordered
+            // 
+            this.lb_ordered.AutoSize = true;
+            this.lb_ordered.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ordered.Location = new System.Drawing.Point(147, 12);
+            this.lb_ordered.Name = "lb_ordered";
+            this.lb_ordered.Size = new System.Drawing.Size(56, 20);
+            this.lb_ordered.TabIndex = 8;
+            this.lb_ordered.Text = "1 item.";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Controls.Add(this.txtNote);
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Location = new System.Drawing.Point(6, 323);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(468, 36);
+            this.panel8.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 32);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Note:";
+            // 
+            // txtNote
+            // 
+            this.txtNote.BackColor = System.Drawing.Color.White;
+            this.txtNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNote.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote.Location = new System.Drawing.Point(102, 5);
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(355, 20);
+            this.txtNote.TabIndex = 22;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel9.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.panel9.Location = new System.Drawing.Point(103, 28);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(354, 3);
+            this.panel9.TabIndex = 7;
             // 
             // OrderDetail
             // 
@@ -434,6 +514,10 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.btn_subtract.ResumeLayout(false);
+            this.pn_ordered.ResumeLayout(false);
+            this.pn_ordered.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -470,5 +554,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel btn_subtract;
+        private System.Windows.Forms.Panel pn_ordered;
+        private System.Windows.Forms.Label lb_o;
+        private System.Windows.Forms.Label lb_ordered;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.Label label3;
     }
 }
