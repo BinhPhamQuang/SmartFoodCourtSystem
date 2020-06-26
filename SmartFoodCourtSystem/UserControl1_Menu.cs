@@ -181,6 +181,8 @@ namespace SmartFoodCourtSystem
             List<Food> t = FoodDAO.Instance.getFoodByname(tb_searchfood.Text);
             if(t==null)
             {
+                 
+                
                 Alert("name does not exist!", FAlert.emType.error);
             }
             else

@@ -36,6 +36,10 @@ namespace SmartFoodCourtSystem
         private void momo_ButtonClick(object sender, EventArgs e)
         {
             pn_uc.Controls.Remove(momo);
+            if(momo.paysuccessed==true)
+            {
+
+            }
            // Cart.Instance.DeleteCart();
           //  btnHome_Click(sender, e);
         }
@@ -117,16 +121,7 @@ namespace SmartFoodCourtSystem
            
         }
 
-        private void btnManager_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void BtnCook_Click(object sender, EventArgs e)
-        {
-         
-        }
-
+        
         public void bntPaymentMethod_Click(object sender, EventArgs e)
         {
             

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SmartFoodCourtSystem.DTO;
 using Newtonsoft.Json.Linq;
+using SmartFoodCourtSystem.DAO;
 
 namespace SmartFoodCourtSystem
 {
@@ -22,6 +23,7 @@ namespace SmartFoodCourtSystem
 
         }
         private string payurl = "";
+        public bool paysuccessed = false;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public UCMomo()
         {
@@ -105,6 +107,8 @@ namespace SmartFoodCourtSystem
                 wbMono.AllowNavigation = false;
 
                 Alert("Successfully!", FAlert.emType.success);
+
+                BillDAO.Instance.createbill();
                 Cart.Instance.DeleteCart();
             }
         }

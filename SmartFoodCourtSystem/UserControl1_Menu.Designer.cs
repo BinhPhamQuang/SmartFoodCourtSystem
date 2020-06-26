@@ -134,7 +134,7 @@
             // 
             this.flp_menu.AutoScroll = true;
             this.flp_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.flp_menu.Location = new System.Drawing.Point(3, 67);
+            this.flp_menu.Location = new System.Drawing.Point(7, 67);
             this.flp_menu.Name = "flp_menu";
             this.flp_menu.Size = new System.Drawing.Size(996, 436);
             this.flp_menu.TabIndex = 17;

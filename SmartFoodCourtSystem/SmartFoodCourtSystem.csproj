@@ -88,9 +88,11 @@
     <Compile Include="Cook.Designer.cs">
       <DependentUpon>Cook.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\Cart.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\MoMoSecurity.cs" />

@@ -222,6 +222,7 @@ namespace SmartFoodCourtSystem
                 Cart.Instance.DeleteCart();
                 lbtotalprice.Text = "0VND";
                 Alert("Thank you!", FAlert.emType.success);
+                
             }
         }
     }
