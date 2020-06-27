@@ -92,10 +92,12 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\OrderList.cs" />
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\Cart.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\MoMoSecurity.cs" />
+    <Compile Include="DTO\Order.cs" />
     <Compile Include="DTO\PaymentRequest.cs" />
     <Compile Include="FAlert.cs">
       <SubType>Form</SubType>
@@ -150,6 +152,9 @@
     </Compile>
     <Compile Include="FormPayMethod.Designer.cs">
       <DependentUpon>FormPayMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="OrderDetail.cs">
       <SubType>Form</SubType>
@@ -218,6 +223,12 @@
     <Compile Include="UserControl_Home.Designer.cs">
       <DependentUpon>UserControl_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewOrder.Designer.cs">
+      <DependentUpon>ViewOrder.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cook.resx">
       <DependentUpon>Cook.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Home.resx">
       <DependentUpon>UserControl_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOrder.resx">
+      <DependentUpon>ViewOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
