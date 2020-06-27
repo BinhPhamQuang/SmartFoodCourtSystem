@@ -15,6 +15,7 @@ namespace SmartFoodCourtSystem
     {
         public FAlert()
         {
+            this.ShowInTaskbar = false;
             InitializeComponent();
         }
         public enum emAction
