@@ -30,21 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cook));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnReturn = new System.Windows.Forms.Button();
             this.GetOrderList = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.controlPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.BtnExit = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.BtnReturn);
             this.panel1.Controls.Add(this.GetOrderList);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -52,6 +54,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(179, 600);
             this.panel1.TabIndex = 1;
+            // 
+            // BtnReturn
+            // 
+            this.BtnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
+            this.BtnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReturn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnReturn.Location = new System.Drawing.Point(-2, 209);
+            this.BtnReturn.Name = "BtnReturn";
+            this.BtnReturn.Size = new System.Drawing.Size(179, 80);
+            this.BtnReturn.TabIndex = 2;
+            this.BtnReturn.Text = "Return";
+            this.BtnReturn.UseVisualStyleBackColor = false;
+            this.BtnReturn.Click += new System.EventHandler(this.BtnReturn_Click);
+            this.BtnReturn.MouseEnter += new System.EventHandler(this.BtnReturn_MouseEnter);
+            this.BtnReturn.MouseLeave += new System.EventHandler(this.BtnReturn_MouseLeave);
             // 
             // GetOrderList
             // 
@@ -69,6 +87,16 @@
             this.GetOrderList.MouseEnter += new System.EventHandler(this.GetOrderList_MouseEnter);
             this.GetOrderList.MouseLeave += new System.EventHandler(this.GetOrderList_MouseLeave);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(177, 117);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
@@ -80,6 +108,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(834, 119);
             this.panel2.TabIndex = 2;
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Location = new System.Drawing.Point(792, -2);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(40, 39);
+            this.BtnExit.TabIndex = 28;
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // label1
             // 
@@ -94,6 +134,7 @@
             // 
             // controlPanel
             // 
+            this.controlPanel.AutoScroll = true;
             this.controlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.controlPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -101,28 +142,6 @@
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(834, 481);
             this.controlPanel.TabIndex = 3;
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
-            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Location = new System.Drawing.Point(792, -2);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(40, 39);
-            this.BtnExit.TabIndex = 28;
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(177, 117);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
             // 
             // Cook
             // 
@@ -137,9 +156,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cook";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,5 +172,6 @@
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel controlPanel;
+        private System.Windows.Forms.Button BtnReturn;
     }
 }

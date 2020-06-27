@@ -22,7 +22,7 @@ namespace SmartFoodCourtSystem
             panel.TopColor = Color.FromArgb(226, 226, 226);
             panel.BackColor = Color.FromArgb(34, 36, 45);
             panel.Angle = 60;
-            panel.Margin = new Padding(25);
+            panel.Margin = new Padding(20);
             panel.AutoScroll = true;
             /*panel.BackgroundImage = Properties.Resources.pre_school_order;
             panel.BackgroundImageLayout = ImageLayout.Stretch;*/
@@ -101,9 +101,9 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
             LoadOrderList();
-
+            BtnReturn.Visible = false;
         }
-        void LoadOrderList()
+        public void LoadOrderList()
         {
             controlPanel.Controls.Clear();
             List<Order> orders =  OrderList.Instance.LoadOrderList();
@@ -144,6 +144,9 @@ namespace SmartFoodCourtSystem
 
         private void GetOrderList_Click(object sender, EventArgs e)
         {
+            BtnReturn.Visible = false;
+            controlPanel.AutoScroll = true;
+            ;
             LoadOrderList();
         }
 
@@ -159,15 +162,32 @@ namespace SmartFoodCourtSystem
 
         private void BtnViewOrder_Click(object sender, EventArgs e)
         {
-
+            BtnReturn.Visible = true;
+            controlPanel.AutoScroll = false;
             ViewOrder view = new ViewOrder((sender as Button).Tag as Order);
-
             AddControlToPanel(view);
         }
         private void AddControlToPanel(Control c)
         {
             controlPanel.Controls.Clear();
             controlPanel.Controls.Add(c);
+        }
+
+        private void BtnReturn_Click(object sender, EventArgs e)
+        {
+            BtnReturn.Visible = false;
+            controlPanel.AutoScroll = true;
+            LoadOrderList();
+        }
+
+        private void BtnReturn_MouseEnter(object sender, EventArgs e)
+        {
+            BtnReturn.BackColor = Color.FromArgb(142, 153, 165);
+        }
+
+        private void BtnReturn_MouseLeave(object sender, EventArgs e)
+        {
+            BtnReturn.BackColor = Color.FromArgb(34, 36, 45);
         }
     }
 }
