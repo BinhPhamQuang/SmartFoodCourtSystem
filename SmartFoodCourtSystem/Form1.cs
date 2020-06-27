@@ -20,12 +20,20 @@ namespace SmartFoodCourtSystem
             uC_cart1.ButtonClick += new EventHandler(UserControl_ButtonClick);
             
             uC_payment1.ButtonClick += new EventHandler(UC_Momo_ButtonClick);
+            uC_payment1.BtnCancelClick += new EventHandler(UCpayment_cancelClick);
            // userControl1_Menu1.SendToBack();
         }
+
+        private void UCpayment_cancelClick(object sender, EventArgs e)
+        {
+            btnHome_Click(sender, e);
+        }
+
         private void UC_Momo_ButtonClick(object sender, EventArgs e)
         {
             momo = new UCMomo();
             momo.Location = new Point(0, 0);
+            momo.Size = new Size(1020, 490);
             pn_uc.Controls.Add(momo);
             momo.BringToFront();
             momo.ButtonClick += new EventHandler(momo_ButtonClick);
@@ -38,9 +46,9 @@ namespace SmartFoodCourtSystem
             pn_uc.Controls.Remove(momo);
             if(momo.paysuccessed==true)
             {
-
+                btnHome_Click(sender, e);
             }
-           // Cart.Instance.DeleteCart();
+           // Cart.Instance.DeleteCart();s
           //  btnHome_Click(sender, e);
         }
         void Alert(string msg, FAlert.emType type)

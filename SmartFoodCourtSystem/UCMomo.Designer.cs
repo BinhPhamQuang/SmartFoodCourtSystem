@@ -39,6 +39,7 @@
             this.wbMono.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbMono.Name = "wbMono";
             this.wbMono.ScriptErrorsSuppressed = true;
+            this.wbMono.ScrollBarsEnabled = false;
             this.wbMono.Size = new System.Drawing.Size(964, 533);
             this.wbMono.TabIndex = 0;
             this.wbMono.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.wbMono_DocumentCompleted);

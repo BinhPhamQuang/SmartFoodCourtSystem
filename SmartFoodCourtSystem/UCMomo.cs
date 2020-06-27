@@ -15,6 +15,7 @@ namespace SmartFoodCourtSystem
 {
     public partial class UCMomo : UserControl
     {
+         
         public event EventHandler ButtonClick;
         void Alert(string msg, FAlert.emType type)
         {
@@ -107,7 +108,7 @@ namespace SmartFoodCourtSystem
                 wbMono.AllowNavigation = false;
 
                 Alert("Successfully!", FAlert.emType.success);
-
+                paysuccessed = true;
                 BillDAO.Instance.createbill();
                 Cart.Instance.DeleteCart();
             }

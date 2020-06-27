@@ -17,6 +17,7 @@ namespace SmartFoodCourtSystem
     {
         private static int stt = 1;
         public event EventHandler ButtonClick;
+        public event EventHandler BtnCancelClick;
         Panel PanelItem(Food food)
         {
             Panel panel = new Panel();
@@ -222,7 +223,9 @@ namespace SmartFoodCourtSystem
                 Cart.Instance.DeleteCart();
                 lbtotalprice.Text = "0VND";
                 Alert("Thank you!", FAlert.emType.success);
-                
+                if (this.BtnCancelClick != null)
+                    this.BtnCancelClick(this, e);
+
             }
         }
     }
