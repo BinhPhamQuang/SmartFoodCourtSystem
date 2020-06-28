@@ -18,8 +18,8 @@ namespace SmartFoodCourtSystem
         GradientPanel Square(Order order)
         {
             GradientPanel panel = new GradientPanel();
-            panel.Size = new Size(225, 225);
-            panel.TopColor = Color.FromArgb(226, 226, 226);
+            panel.Size = new Size(225, 200);
+            panel.TopColor = Color.FromArgb(255, 255, 255);
             panel.BackColor = Color.FromArgb(34, 36, 45);
             panel.Angle = 60;
             panel.Margin = new Padding(20);
@@ -77,7 +77,7 @@ namespace SmartFoodCourtSystem
             Status.Margin = new Padding(10);
 
             Button btnViewOrder = new Button();
-            btnViewOrder.Size = new Size(150, 25);
+            btnViewOrder.Size = new Size(150, 35);
             btnViewOrder.Text = "View Order";
             btnViewOrder.TextAlign = ContentAlignment.MiddleCenter;
             btnViewOrder.Dock = DockStyle.Bottom;
