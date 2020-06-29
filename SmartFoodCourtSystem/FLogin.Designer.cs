@@ -90,7 +90,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label2.Location = new System.Drawing.Point(304, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 39);
+            this.label2.Size = new System.Drawing.Size(205, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "SFCS Manager";
             // 
@@ -102,7 +102,7 @@
             this.txtUsername.Location = new System.Drawing.Point(310, 100);
             this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(408, 25);
+            this.txtUsername.Size = new System.Drawing.Size(408, 20);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.Text = "Username";
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
@@ -149,7 +149,7 @@
             this.txtPassword.Location = new System.Drawing.Point(309, 149);
             this.txtPassword.MaxLength = 12;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(408, 25);
+            this.txtPassword.Size = new System.Drawing.Size(408, 20);
             this.txtPassword.TabIndex = 12;
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
@@ -160,8 +160,10 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnLogin.Location = new System.Drawing.Point(309, 242);
@@ -180,7 +182,7 @@
             this.check.ForeColor = System.Drawing.Color.DimGray;
             this.check.Location = new System.Drawing.Point(311, 189);
             this.check.Name = "check";
-            this.check.Size = new System.Drawing.Size(149, 23);
+            this.check.Size = new System.Drawing.Size(121, 20);
             this.check.TabIndex = 13;
             this.check.Text = "Unhide password";
             this.check.UseVisualStyleBackColor = true;
@@ -217,12 +219,13 @@
             this.lbErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbErrorMessage.Location = new System.Drawing.Point(305, 217);
             this.lbErrorMessage.Name = "lbErrorMessage";
-            this.lbErrorMessage.Size = new System.Drawing.Size(0, 20);
+            this.lbErrorMessage.Size = new System.Drawing.Size(0, 17);
             this.lbErrorMessage.TabIndex = 18;
             this.lbErrorMessage.Visible = false;
             // 
             // FLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
@@ -238,6 +241,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FLogin";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

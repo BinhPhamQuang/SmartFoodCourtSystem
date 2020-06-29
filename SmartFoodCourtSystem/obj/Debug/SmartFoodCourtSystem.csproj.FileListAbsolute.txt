@@ -724,3 +724,5 @@ D:\Hung\CNPM\BTL\Newest\version9\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\D
 D:\Hung\CNPM\BTL\Newest\version9\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.dll.config
 D:\Hung\CNPM\BTL\Newest\version9\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
 D:\Hung\CNPM\BTL\Newest\version9\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CopyComplete
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrder.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Fcomment.resources

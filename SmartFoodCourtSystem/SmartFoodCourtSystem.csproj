@@ -105,6 +105,12 @@
     <Compile Include="FAlert.Designer.cs">
       <DependentUpon>FAlert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fcomment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fcomment.Designer.cs">
+      <DependentUpon>Fcomment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FManAddDish.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FAlert.resx">
       <DependentUpon>FAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fcomment.resx">
+      <DependentUpon>Fcomment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FManAddDish.resx">
       <DependentUpon>FManAddDish.cs</DependentUpon>

@@ -165,5 +165,11 @@ namespace SmartFoodCourtSystem
         {
             Alert("Delivery unallowed", FAlert.emType.error);
         }
+
+        private void btnMail_Click(object sender, EventArgs e)
+        {
+            Fcomment fcomment = new Fcomment();
+            fcomment.ShowDialog();
+        }
     }
 }
