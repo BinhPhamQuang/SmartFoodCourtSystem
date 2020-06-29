@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fcomment));
             this.btnSend = new System.Windows.Forms.Button();
             this.lbErrorMessage = new System.Windows.Forms.Label();
-            this.buttonExit = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbother = new System.Windows.Forms.RadioButton();
             this.rbfemale = new System.Windows.Forms.RadioButton();
@@ -52,7 +51,6 @@
             this.lb_error = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_error = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -91,18 +89,6 @@
             this.lbErrorMessage.Size = new System.Drawing.Size(0, 17);
             this.lbErrorMessage.TabIndex = 27;
             this.lbErrorMessage.Visible = false;
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
-            this.buttonExit.Location = new System.Drawing.Point(457, 0);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(20, 24);
-            this.buttonExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.buttonExit.TabIndex = 25;
-            this.buttonExit.TabStop = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // panel1
             // 
@@ -269,7 +255,7 @@
             // 
             this.rtb_cmt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.rtb_cmt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_cmt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtb_cmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtb_cmt.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.rtb_cmt.Location = new System.Drawing.Point(23, 196);
             this.rtb_cmt.Name = "rtb_cmt";
@@ -351,7 +337,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbErrorMessage);
-            this.Controls.Add(this.buttonExit);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -361,7 +346,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fcomment";
             this.Load += new System.EventHandler(this.Fcomment_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -379,7 +363,6 @@
 
         #endregion
         private System.Windows.Forms.Label lbErrorMessage;
-        private System.Windows.Forms.PictureBox buttonExit;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;

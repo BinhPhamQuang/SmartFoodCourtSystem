@@ -21,6 +21,7 @@ namespace SmartFoodCourtSystem
         public Fcomment()
         {
             InitializeComponent();
+            this.ShowInTaskbar = false;
         }
 
         private void Fcomment_Load(object sender, EventArgs e)
