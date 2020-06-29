@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbcaculate = new System.Windows.Forms.Label();
-            this.lbstt = new System.Windows.Forms.Label();
-            this.lb_discount = new System.Windows.Forms.Label();
-            this.lbPrice = new System.Windows.Forms.Label();
-            this.lbQuantity = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
             this.btncancel = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -46,23 +39,32 @@
             this.lbDiscount = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.flp_foodlist = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbcaculate = new System.Windows.Forms.Label();
+            this.lbstt = new System.Windows.Forms.Label();
+            this.lb_discount = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbQuantity = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbtotalprice = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flp_foodlist.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btncancel);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
@@ -84,6 +86,145 @@
             this.panel1.Size = new System.Drawing.Size(1022, 490);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btncancel
+            // 
+            this.btncancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btncancel.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btncancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancel.ForeColor = System.Drawing.Color.Crimson;
+            this.btncancel.Location = new System.Drawing.Point(511, 429);
+            this.btncancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btncancel.Name = "btncancel";
+            this.btncancel.Size = new System.Drawing.Size(241, 44);
+            this.btncancel.TabIndex = 41;
+            this.btncancel.Text = "Cancel";
+            this.btncancel.UseVisualStyleBackColor = false;
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click_1);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox6.Image = global::SmartFoodCourtSystem.Properties.Resources.visa1;
+            this.pictureBox6.Location = new System.Drawing.Point(853, 10);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 40;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox5.Image = global::SmartFoodCourtSystem.Properties.Resources.master_card1;
+            this.pictureBox5.Location = new System.Drawing.Point(927, 10);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 39;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Image = global::SmartFoodCourtSystem.Properties.Resources.viettelpay1;
+            this.pictureBox3.Location = new System.Drawing.Point(779, 10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 37;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // btn
+            // 
+            this.btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btn.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
+            this.btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn.Location = new System.Drawing.Point(756, 429);
+            this.btn.Margin = new System.Windows.Forms.Padding(2);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(241, 44);
+            this.btn.TabIndex = 32;
+            this.btn.Text = "Make payment";
+            this.btn.UseVisualStyleBackColor = false;
+            this.btn.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox2.Image = global::SmartFoodCourtSystem.Properties.Resources.zalo_pay11;
+            this.pictureBox2.Location = new System.Drawing.Point(705, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::SmartFoodCourtSystem.Properties.Resources._1545358638753_LOGO_MoMo1;
+            this.pictureBox1.Location = new System.Drawing.Point(631, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // lbDiscount
+            // 
+            this.lbDiscount.AutoSize = true;
+            this.lbDiscount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiscount.Location = new System.Drawing.Point(291, 87);
+            this.lbDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbDiscount.Name = "lbDiscount";
+            this.lbDiscount.Size = new System.Drawing.Size(74, 19);
+            this.lbDiscount.TabIndex = 25;
+            this.lbDiscount.Text = "Discount";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(582, 87);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 19);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Price";
+            // 
+            // flp_foodlist
+            // 
+            this.flp_foodlist.AutoScroll = true;
+            this.flp_foodlist.BackColor = System.Drawing.Color.White;
+            this.flp_foodlist.Controls.Add(this.panel2);
+            this.flp_foodlist.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flp_foodlist.Location = new System.Drawing.Point(25, 108);
+            this.flp_foodlist.Margin = new System.Windows.Forms.Padding(2);
+            this.flp_foodlist.Name = "flp_foodlist";
+            this.flp_foodlist.Size = new System.Drawing.Size(973, 287);
+            this.flp_foodlist.TabIndex = 31;
             // 
             // panel2
             // 
@@ -173,143 +314,6 @@
             this.lbName.Text = "Egg tart";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btncancel
-            // 
-            this.btncancel.BackColor = System.Drawing.Color.Brown;
-            this.btncancel.FlatAppearance.BorderSize = 0;
-            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancel.ForeColor = System.Drawing.SystemColors.Control;
-            this.btncancel.Location = new System.Drawing.Point(516, 435);
-            this.btncancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(241, 44);
-            this.btncancel.TabIndex = 41;
-            this.btncancel.Text = "Cancel";
-            this.btncancel.UseVisualStyleBackColor = false;
-            this.btncancel.Click += new System.EventHandler(this.btncancel_Click_1);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox6.Image = global::SmartFoodCourtSystem.Properties.Resources.visa1;
-            this.pictureBox6.Location = new System.Drawing.Point(853, 10);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 40;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox5.Image = global::SmartFoodCourtSystem.Properties.Resources.master_card1;
-            this.pictureBox5.Location = new System.Drawing.Point(927, 10);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 39;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Image = global::SmartFoodCourtSystem.Properties.Resources.viettelpay1;
-            this.pictureBox3.Location = new System.Drawing.Point(779, 10);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 37;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // btn
-            // 
-            this.btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn.FlatAppearance.BorderSize = 0;
-            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn.Location = new System.Drawing.Point(770, 435);
-            this.btn.Margin = new System.Windows.Forms.Padding(2);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(241, 44);
-            this.btn.TabIndex = 32;
-            this.btn.Text = "Make payment";
-            this.btn.UseVisualStyleBackColor = false;
-            this.btn.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox2.Image = global::SmartFoodCourtSystem.Properties.Resources.zalo_pay11;
-            this.pictureBox2.Location = new System.Drawing.Point(705, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::SmartFoodCourtSystem.Properties.Resources._1545358638753_LOGO_MoMo1;
-            this.pictureBox1.Location = new System.Drawing.Point(631, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // lbDiscount
-            // 
-            this.lbDiscount.AutoSize = true;
-            this.lbDiscount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiscount.Location = new System.Drawing.Point(291, 87);
-            this.lbDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbDiscount.Name = "lbDiscount";
-            this.lbDiscount.Size = new System.Drawing.Size(74, 19);
-            this.lbDiscount.TabIndex = 25;
-            this.lbDiscount.Text = "Discount";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(582, 87);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 19);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Price";
-            // 
-            // flp_foodlist
-            // 
-            this.flp_foodlist.AutoScroll = true;
-            this.flp_foodlist.BackColor = System.Drawing.Color.White;
-            this.flp_foodlist.Controls.Add(this.panel2);
-            this.flp_foodlist.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flp_foodlist.Location = new System.Drawing.Point(25, 108);
-            this.flp_foodlist.Margin = new System.Windows.Forms.Padding(2);
-            this.flp_foodlist.Name = "flp_foodlist";
-            this.flp_foodlist.Size = new System.Drawing.Size(973, 287);
-            this.flp_foodlist.TabIndex = 31;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -337,7 +341,7 @@
             // 
             this.lbtotalprice.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtotalprice.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbtotalprice.Location = new System.Drawing.Point(184, 441);
+            this.lbtotalprice.Location = new System.Drawing.Point(179, 435);
             this.lbtotalprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbtotalprice.Name = "lbtotalprice";
             this.lbtotalprice.Size = new System.Drawing.Size(319, 38);
@@ -350,7 +354,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 444);
+            this.label3.Location = new System.Drawing.Point(21, 438);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(158, 32);
@@ -368,6 +372,14 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Product";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel3.Location = new System.Drawing.Point(179, 470);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(319, 3);
+            this.panel3.TabIndex = 42;
+            // 
             // UC_payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,14 +390,14 @@
             this.Size = new System.Drawing.Size(1020, 490);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flp_foodlist.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -415,5 +427,6 @@
         private System.Windows.Forms.Label lbcaculate;
         private System.Windows.Forms.Label lbstt;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel3;
     }
 }

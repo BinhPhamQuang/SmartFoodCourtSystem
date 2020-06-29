@@ -49,11 +49,16 @@
             this.rtb_cmt = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lb_error = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pn_error = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pn_error.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSend
@@ -63,14 +68,15 @@
             this.btnSend.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnSend.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnSend.Location = new System.Drawing.Point(23, 352);
+            this.btnSend.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnSend.Location = new System.Drawing.Point(23, 379);
             this.btnSend.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(431, 38);
             this.btnSend.TabIndex = 4;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = false;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // lbErrorMessage
             // 
@@ -229,6 +235,8 @@
             this.txtName.Size = new System.Drawing.Size(315, 19);
             this.txtName.TabIndex = 2;
             this.txtName.Text = "anonymous";
+            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtName_MouseClick);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // panel5
             // 
@@ -259,13 +267,13 @@
             // 
             // rtb_cmt
             // 
-            this.rtb_cmt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.rtb_cmt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.rtb_cmt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtb_cmt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtb_cmt.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rtb_cmt.Location = new System.Drawing.Point(23, 189);
+            this.rtb_cmt.Location = new System.Drawing.Point(23, 196);
             this.rtb_cmt.Name = "rtb_cmt";
-            this.rtb_cmt.Size = new System.Drawing.Size(431, 154);
+            this.rtb_cmt.Size = new System.Drawing.Size(431, 155);
             this.rtb_cmt.TabIndex = 1;
             this.rtb_cmt.Text = "";
             // 
@@ -289,7 +297,7 @@
             this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.Crimson;
-            this.btnCancel.Location = new System.Drawing.Point(23, 396);
+            this.btnCancel.Location = new System.Drawing.Point(23, 422);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(431, 38);
@@ -298,20 +306,52 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lb_error
+            // 
+            this.lb_error.AutoSize = true;
+            this.lb_error.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_error.ForeColor = System.Drawing.Color.Red;
+            this.lb_error.Location = new System.Drawing.Point(35, 17);
+            this.lb_error.Name = "lb_error";
+            this.lb_error.Size = new System.Drawing.Size(324, 17);
+            this.lb_error.TabIndex = 41;
+            this.lb_error.Text = "Please fil out full information before send it to us !";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(11, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(18, 18);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pn_error
+            // 
+            this.pn_error.Controls.Add(this.pictureBox1);
+            this.pn_error.Controls.Add(this.lb_error);
+            this.pn_error.Location = new System.Drawing.Point(23, 341);
+            this.pn_error.Name = "pn_error";
+            this.pn_error.Size = new System.Drawing.Size(431, 46);
+            this.pn_error.TabIndex = 43;
+            this.pn_error.Visible = false;
+            // 
             // Fcomment
             // 
             this.AcceptButton = this.btnSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(475, 449);
+            this.ClientSize = new System.Drawing.Size(475, 476);
+            this.Controls.Add(this.btnSend);
+            this.Controls.Add(this.rtb_cmt);
+            this.Controls.Add(this.pn_error);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.rtb_cmt);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbErrorMessage);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.btnSend);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -329,6 +369,9 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pn_error.ResumeLayout(false);
+            this.pn_error.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +398,8 @@
         private System.Windows.Forms.RichTextBox rtb_cmt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lb_error;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pn_error;
     }
 }

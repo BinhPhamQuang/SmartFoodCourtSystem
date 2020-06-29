@@ -115,8 +115,8 @@ namespace SmartFoodCourtSystem
 
         public UserControl1_Menu()
         {
-           // InitializeComponent();
-         // AutoCompleteSearch();
+            InitializeComponent();
+          AutoCompleteSearch();
 
         }
         public void LoadMenu()

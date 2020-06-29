@@ -108,11 +108,12 @@
             // 
             // btnOrder
             // 
-            this.btnOrder.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnOrder.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnOrder.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnOrder.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.Color.Crimson;
             this.btnOrder.Location = new System.Drawing.Point(582, 400);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(381, 36);
@@ -123,11 +124,12 @@
             // 
             // btnPayment
             // 
-            this.btnPayment.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnPayment.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPayment.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPayment.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPayment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.ForeColor = System.Drawing.Color.White;
+            this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.ForeColor = System.Drawing.Color.Black;
             this.btnPayment.Location = new System.Drawing.Point(582, 359);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(381, 35);
@@ -177,11 +179,12 @@
             // 
             // btnApplyPromotioncode
             // 
-            this.btnApplyPromotioncode.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnApplyPromotioncode.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnApplyPromotioncode.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnApplyPromotioncode.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnApplyPromotioncode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.btnApplyPromotioncode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApplyPromotioncode.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplyPromotioncode.ForeColor = System.Drawing.Color.White;
+            this.btnApplyPromotioncode.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplyPromotioncode.ForeColor = System.Drawing.Color.Black;
             this.btnApplyPromotioncode.Location = new System.Drawing.Point(582, 216);
             this.btnApplyPromotioncode.Name = "btnApplyPromotioncode";
             this.btnApplyPromotioncode.Size = new System.Drawing.Size(381, 35);
