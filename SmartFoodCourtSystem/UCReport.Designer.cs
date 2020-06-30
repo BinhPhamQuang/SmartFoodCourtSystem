@@ -38,22 +38,22 @@
             this.money = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnMakeReport = new System.Windows.Forms.Button();
-            this.cb1 = new System.Windows.Forms.ComboBox();
-            this.cb2 = new System.Windows.Forms.ComboBox();
-            this.cb3 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cb3 = new System.Windows.Forms.ComboBox();
+            this.cb2 = new System.Windows.Forms.ComboBox();
+            this.cb1 = new System.Windows.Forms.ComboBox();
+            this.btnMakeReport = new System.Windows.Forms.Button();
             this.grBox = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.grBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lV
@@ -137,18 +137,68 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             // 
-            // btnMakeReport
+            // label3
             // 
-            this.btnMakeReport.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnMakeReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMakeReport.ForeColor = System.Drawing.Color.White;
-            this.btnMakeReport.Location = new System.Drawing.Point(258, 31);
-            this.btnMakeReport.Name = "btnMakeReport";
-            this.btnMakeReport.Size = new System.Drawing.Size(157, 46);
-            this.btnMakeReport.TabIndex = 10;
-            this.btnMakeReport.Text = "TẠO BÁO CÁO";
-            this.btnMakeReport.UseVisualStyleBackColor = false;
-            this.btnMakeReport.Click += new System.EventHandler(this.btnMakeReport_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(170, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 17);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Năm";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(94, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 17);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Tháng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Ngày";
+            // 
+            // cb3
+            // 
+            this.cb3.FormattingEnabled = true;
+            this.cb3.Items.AddRange(new object[] {
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "Năm"});
+            this.cb3.Location = new System.Drawing.Point(173, 43);
+            this.cb3.Name = "cb3";
+            this.cb3.Size = new System.Drawing.Size(70, 24);
+            this.cb3.TabIndex = 13;
+            // 
+            // cb2
+            // 
+            this.cb2.FormattingEnabled = true;
+            this.cb2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "Tháng"});
+            this.cb2.Location = new System.Drawing.Point(97, 43);
+            this.cb2.Name = "cb2";
+            this.cb2.Size = new System.Drawing.Size(70, 24);
+            this.cb2.TabIndex = 12;
             // 
             // cb1
             // 
@@ -191,68 +241,18 @@
             this.cb1.Size = new System.Drawing.Size(70, 24);
             this.cb1.TabIndex = 11;
             // 
-            // cb2
+            // btnMakeReport
             // 
-            this.cb2.FormattingEnabled = true;
-            this.cb2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "Tháng"});
-            this.cb2.Location = new System.Drawing.Point(97, 43);
-            this.cb2.Name = "cb2";
-            this.cb2.Size = new System.Drawing.Size(70, 24);
-            this.cb2.TabIndex = 12;
-            // 
-            // cb3
-            // 
-            this.cb3.FormattingEnabled = true;
-            this.cb3.Items.AddRange(new object[] {
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "Năm"});
-            this.cb3.Location = new System.Drawing.Point(173, 43);
-            this.cb3.Name = "cb3";
-            this.cb3.Size = new System.Drawing.Size(70, 24);
-            this.cb3.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Ngày";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Tháng";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Năm";
+            this.btnMakeReport.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnMakeReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMakeReport.ForeColor = System.Drawing.Color.White;
+            this.btnMakeReport.Location = new System.Drawing.Point(258, 31);
+            this.btnMakeReport.Name = "btnMakeReport";
+            this.btnMakeReport.Size = new System.Drawing.Size(157, 46);
+            this.btnMakeReport.TabIndex = 10;
+            this.btnMakeReport.Text = "TẠO BÁO CÁO";
+            this.btnMakeReport.UseVisualStyleBackColor = false;
+            this.btnMakeReport.Click += new System.EventHandler(this.btnMakeReport_Click);
             // 
             // grBox
             // 
@@ -271,6 +271,38 @@
             this.grBox.Text = "BÁO CÁO DOANH THU";
             this.grBox.Visible = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(1085, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(35, 38);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnExit.TabIndex = 3;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Yellow;
+            this.label5.Location = new System.Drawing.Point(187, 256);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 36);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "label5";
+            this.label5.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(20, 209);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(282, 139);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -283,38 +315,6 @@
             this.label4.Text = "Chuỗi nhà hàng Hippo Town";
             this.label4.Visible = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(293, 267);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 44);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "label5";
-            this.label5.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(67, 230);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 139);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(1085, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(35, 38);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnExit.TabIndex = 3;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // UCReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -324,15 +324,15 @@
             this.Controls.Add(this.lV);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCReport";
             this.Size = new System.Drawing.Size(1120, 665);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grBox.ResumeLayout(false);
             this.grBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
