@@ -726,3 +726,17 @@ D:\Hung\CNPM\BTL\Newest\version9\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\D
 D:\Hung\CNPM\BTL\Newest\version9\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CopyComplete
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrder.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Fcomment.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\x64\SQLite.Interop.dll
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\x86\SQLite.Interop.dll
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Fcomment.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FormPayMethod.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCManMain.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCManMenu.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCManStaff.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCMomo.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCReport.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UC_payment.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrder.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FormPayMethod.aa-DJ.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
