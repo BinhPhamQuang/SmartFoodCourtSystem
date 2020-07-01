@@ -101,7 +101,7 @@
             // 
             // date
             // 
-            this.date.Text = "Thời gian xuất";
+            this.date.Text = "Thời gian xuất hóa đơn";
             this.date.Width = 160;
             // 
             // money
@@ -119,7 +119,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1114, 559);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Doanh thu";
+            this.groupBox1.Text = "Chi tiết hóa đơn";
             // 
             // groupBox2
             // 
