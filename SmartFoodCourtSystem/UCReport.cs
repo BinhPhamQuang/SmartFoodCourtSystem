@@ -143,6 +143,7 @@ namespace SmartFoodCourtSystem
             grBox.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
+            if (money == 0) label5.Text = "Không có dữ liệu!";
         }
 
         private void btnExit_Click(object sender, EventArgs e)

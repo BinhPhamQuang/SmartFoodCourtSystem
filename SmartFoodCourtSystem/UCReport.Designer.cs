@@ -131,9 +131,9 @@
             this.groupBox2.Controls.Add(this.cb2);
             this.groupBox2.Controls.Add(this.cb1);
             this.groupBox2.Controls.Add(this.btnMakeReport);
-            this.groupBox2.Location = new System.Drawing.Point(420, 3);
+            this.groupBox2.Location = new System.Drawing.Point(6, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(433, 98);
+            this.groupBox2.Size = new System.Drawing.Size(431, 98);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             // 
@@ -256,7 +256,7 @@
             // 
             // grBox
             // 
-            this.grBox.BackColor = System.Drawing.Color.Gray;
+            this.grBox.BackColor = System.Drawing.Color.DarkGray;
             this.grBox.Controls.Add(this.btnExit);
             this.grBox.Controls.Add(this.label5);
             this.grBox.Controls.Add(this.pictureBox1);
@@ -287,7 +287,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(187, 256);
+            this.label5.Location = new System.Drawing.Point(230, 286);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 36);
             this.label5.TabIndex = 1;
@@ -297,9 +297,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 209);
+            this.pictureBox1.Location = new System.Drawing.Point(-69, 130);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 139);
+            this.pictureBox1.Size = new System.Drawing.Size(383, 237);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
