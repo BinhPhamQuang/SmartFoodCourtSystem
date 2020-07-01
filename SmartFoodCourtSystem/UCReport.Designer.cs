@@ -81,32 +81,32 @@
             // 
             // Number
             // 
-            this.Number.Text = "STT";
+            this.Number.Text = "No";
             this.Number.Width = 40;
             // 
             // idbill
             // 
-            this.idbill.Text = "Mã hóa đơn";
+            this.idbill.Text = "Bill ID";
             this.idbill.Width = 90;
             // 
             // foodlist
             // 
-            this.foodlist.Text = "Danh sách món ăn";
+            this.foodlist.Text = "Food List";
             this.foodlist.Width = 315;
             // 
             // amount
             // 
-            this.amount.Text = "Số món";
+            this.amount.Text = "Amount";
             this.amount.Width = 70;
             // 
             // date
             // 
-            this.date.Text = "Thời gian xuất hóa đơn";
+            this.date.Text = "Time Checkout";
             this.date.Width = 160;
             // 
             // money
             // 
-            this.money.Text = "Tổng tiền";
+            this.money.Text = "Total Price";
             this.money.Width = 109;
             // 
             // groupBox1
@@ -119,7 +119,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1114, 559);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chi tiết hóa đơn";
+            this.groupBox1.Text = "All Bills";
             // 
             // groupBox2
             // 
@@ -142,27 +142,27 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(170, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 17);
+            this.label3.Size = new System.Drawing.Size(38, 17);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Năm";
+            this.label3.Text = "Year";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(94, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Tháng";
+            this.label2.Text = "Month";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.Size = new System.Drawing.Size(33, 17);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Ngày";
+            this.label1.Text = "Day";
             // 
             // cb3
             // 
@@ -172,7 +172,8 @@
             "2019",
             "2018",
             "2017",
-            "Năm"});
+            "2016",
+            "2015"});
             this.cb3.Location = new System.Drawing.Point(173, 43);
             this.cb3.Name = "cb3";
             this.cb3.Size = new System.Drawing.Size(70, 24);
@@ -193,8 +194,7 @@
             "9",
             "10",
             "11",
-            "12",
-            "Tháng"});
+            "12"});
             this.cb2.Location = new System.Drawing.Point(97, 43);
             this.cb2.Name = "cb2";
             this.cb2.Size = new System.Drawing.Size(70, 24);
@@ -234,8 +234,7 @@
             "28",
             "29",
             "30",
-            "31",
-            "Ngày"});
+            "31"});
             this.cb1.Location = new System.Drawing.Point(21, 43);
             this.cb1.Name = "cb1";
             this.cb1.Size = new System.Drawing.Size(70, 24);
@@ -248,9 +247,9 @@
             this.btnMakeReport.ForeColor = System.Drawing.Color.White;
             this.btnMakeReport.Location = new System.Drawing.Point(258, 31);
             this.btnMakeReport.Name = "btnMakeReport";
-            this.btnMakeReport.Size = new System.Drawing.Size(157, 46);
+            this.btnMakeReport.Size = new System.Drawing.Size(167, 46);
             this.btnMakeReport.TabIndex = 10;
-            this.btnMakeReport.Text = "TẠO BÁO CÁO";
+            this.btnMakeReport.Text = "GENERATE REPORT";
             this.btnMakeReport.UseVisualStyleBackColor = false;
             this.btnMakeReport.Click += new System.EventHandler(this.btnMakeReport_Click);
             // 
@@ -268,7 +267,7 @@
             this.grBox.Size = new System.Drawing.Size(1120, 665);
             this.grBox.TabIndex = 12;
             this.grBox.TabStop = false;
-            this.grBox.Text = "BÁO CÁO DOANH THU";
+            this.grBox.Text = "REVENUE REPORT";
             this.grBox.Visible = false;
             // 
             // btnExit
@@ -321,10 +320,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.grBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lV);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grBox);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCReport";
             this.Size = new System.Drawing.Size(1120, 665);

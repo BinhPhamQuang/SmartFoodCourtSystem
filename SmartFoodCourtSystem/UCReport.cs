@@ -68,7 +68,7 @@ namespace SmartFoodCourtSystem
             {
                 i++;
                 string date = r["Timecheckout"].ToString() + " - " + r["Date"].ToString() + "/" + r["Month"].ToString() + "/" + r["Year"].ToString();
-                string money = changetoVND(r["Totalprice"].ToString()) + " VNĐ";
+                string money = changetoVND(r["Totalprice"].ToString()) + " VND";
                 ListViewItem x = new ListViewItem();
                 x.Text = i.ToString();
                 int b_id = int.Parse(r["IDBill"].ToString());
@@ -102,7 +102,7 @@ namespace SmartFoodCourtSystem
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
             int money = 0;
-            label5.Text = "Thu nhập của";
+            label5.Text = "Total revenue of ";
             if (cb1.SelectedIndex > -1 && cb2.SelectedIndex > -1 && cb3.SelectedIndex > -1)
             {
                 string d = cb1.SelectedItem.ToString();
@@ -114,7 +114,47 @@ namespace SmartFoodCourtSystem
                 {
                     money += int.Parse(r["Totalprice"].ToString());
                 }
-                label5.Text += " ngày " + d + " tháng " + m + " năm " + y + " là " + changetoVND(money.ToString()) + " VNĐ";
+                string thang = "";
+                switch (int.Parse(m))
+                {
+                    case 1:
+                        thang = "Jan";
+                        break;
+                    case 2:
+                        thang = "Feb";
+                        break;
+                    case 3:
+                        thang = "Mar";
+                        break;
+                    case 4:
+                        thang = "Apr";
+                        break;
+                    case 5:
+                        thang = "May";
+                        break;
+                    case 6:
+                        thang = "Jun";
+                        break;
+                    case 7:
+                        thang = "Jul";
+                        break;
+                    case 8:
+                        thang = "Aug";
+                        break;
+                    case 9:
+                        thang = "Sep";
+                        break;
+                    case 10:
+                        thang = "Oct";
+                        break;
+                    case 11:
+                        thang = "Nov";
+                        break;
+                    case 12:
+                        thang = "Dec";
+                        break;
+                }
+                label5.Text += d +" " + thang + ", " + y + " is " + changetoVND(money.ToString()) + " VND";
             }
             else if (cb1.SelectedIndex <= -1 && cb2.SelectedIndex > -1 && cb3.SelectedIndex > -1)
             {
@@ -126,7 +166,47 @@ namespace SmartFoodCourtSystem
                 {
                     money += int.Parse(r["Totalprice"].ToString());
                 }
-                label5.Text += " tháng " + m + " năm " + y + " là " + changetoVND(money.ToString()) + " VNĐ";
+                string thang = "";
+                switch (int.Parse(m))
+                {
+                    case 1:
+                        thang = "Jan";
+                        break;
+                    case 2:
+                        thang = "Feb";
+                        break;
+                    case 3:
+                        thang = "Mar";
+                        break;
+                    case 4:
+                        thang = "Apr";
+                        break;
+                    case 5:
+                        thang = "May";
+                        break;
+                    case 6:
+                        thang = "Jun";
+                        break;
+                    case 7:
+                        thang = "Jul";
+                        break;
+                    case 8:
+                        thang = "Aug";
+                        break;
+                    case 9:
+                        thang = "Sep";
+                        break;
+                    case 10:
+                        thang = "Oct";
+                        break;
+                    case 11:
+                        thang = "Nov";
+                        break;
+                    case 12:
+                        thang = "Dec";
+                        break;
+                }
+                label5.Text += thang + ", " + y + " is " + changetoVND(money.ToString()) + " VND";
             }
             else if (cb1.SelectedIndex <= -1 && cb2.SelectedIndex <= -1 && cb3.SelectedIndex > -1)
             {
@@ -137,13 +217,13 @@ namespace SmartFoodCourtSystem
                 {
                     money += int.Parse(r["Totalprice"].ToString());
                 }
-                label5.Text += " năm " + y + " là " + changetoVND(money.ToString()) + " VNĐ";
+                label5.Text +=  y + " is " + changetoVND(money.ToString()) + " VND";
             }
             grBox.BringToFront();
             grBox.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
-            if (money == 0) label5.Text = "Không có dữ liệu!";
+            if (money == 0) label5.Text = "No data found!";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
