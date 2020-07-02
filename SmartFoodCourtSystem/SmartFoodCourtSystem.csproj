@@ -235,6 +235,12 @@
     <Compile Include="ViewOrder.Designer.cs">
       <DependentUpon>ViewOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewOrderList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewOrderList.Designer.cs">
+      <DependentUpon>ViewOrderList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cook.resx">
       <DependentUpon>Cook.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewOrder.resx">
       <DependentUpon>ViewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOrderList.resx">
+      <DependentUpon>ViewOrderList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
