@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
 using SmartFoodCourtSystem.DTO;
 namespace SmartFoodCourtSystem
@@ -51,17 +53,40 @@ namespace SmartFoodCourtSystem
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            if (rtb_cmt.Text.Length == 0 || txtEmail.Text.Length==0)
+            if (rtb_cmt.Text.Length == 0 || txtEmail.Text.Length == 0)
             {
                 Alert("Error !", FAlert.emType.error);
                 pn_error.Visible = true;
             }
             else
             {
+                Alert("Thanks for opinions!", FAlert.emType.success);
                 pn_error.Visible = false;
-            }
-        }
 
+                if (rbproduct.Checked == true)
+                    sendmail("voquocbao@gmail.com", "voquocbaonana@gmail.com", "Opinion for " + rbproduct.Text, rtb_cmt.Text);
+                else
+                    sendmail("voquocbao@gmail.com", "voquocbaonana@gmail.com", "Opinion for " + rbDevice.Text, rtb_cmt.Text);
+            }
+
+        }
+        void sendmail(string from, string to, string subject, string message)
+        {
+            string body;
+            if (rbfemale.Checked == true)
+                body = "Customer Name: " + txtName.Text + "\n" + "Email: " + txtEmail.Text + "\n" + "Sex: " + rbfemale.Text + "\n" + "Content: " + message;
+            else if (rbmale.Checked == true)
+                body = "Customer Name: " + txtName.Text + "\n" + "Email: " + txtEmail.Text + "\n" + "Sex: " + rbfemale.Text + "\n" + "Content: " + message;
+            else
+                body = "Customer Name: " + txtName.Text + "\n" + "Email: " + txtEmail.Text + "\n" + "Sex: " + rbfemale.Text + "\n" + "Content: " + message;
+
+            MailMessage mess = new MailMessage(from, to, subject, body);
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            client.EnableSsl = true;
+            client.Credentials = new NetworkCredential("voquocbaonana@gmail.com", "voquocbao");
+            client.Send(mess);
+
+        }
         private void txtName_MouseClick(object sender, MouseEventArgs e)
         {
             txtName.Clear();

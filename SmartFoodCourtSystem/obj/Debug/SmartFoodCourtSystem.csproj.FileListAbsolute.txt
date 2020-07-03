@@ -170,7 +170,6 @@ D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.cspr
 D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CopyComplete
 D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
 D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
-D:\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 D:\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
@@ -841,3 +840,4 @@ D:\SE\gitpro\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtS
 D:\SE\gitpro\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
 D:\SE\gitpro\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
 D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrderList.resources
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Newtonsoft.Json.dll
