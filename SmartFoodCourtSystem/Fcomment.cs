@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
+using System.IO;
 using System.Windows.Forms;
 using SmartFoodCourtSystem.DTO;
 namespace SmartFoodCourtSystem
@@ -53,6 +54,11 @@ namespace SmartFoodCourtSystem
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            FileStream fs = new FileStream("gmail.txt", FileMode.Open);
+            StreamReader sr = new StreamReader(fs,Encoding.UTF8);
+            string email;
+          
+
             if (rtb_cmt.Text.Length == 0 || txtEmail.Text.Length == 0)
             {
                 Alert("Error !", FAlert.emType.error);
@@ -62,11 +68,13 @@ namespace SmartFoodCourtSystem
             {
                 Alert("Thanks for opinions!", FAlert.emType.success);
                 pn_error.Visible = false;
-
-                if (rbproduct.Checked == true)
-                    sendmail("voquocbao@gmail.com", "voquocbaonana@gmail.com", "Opinion for " + rbproduct.Text, rtb_cmt.Text);
-                else
-                    sendmail("voquocbao@gmail.com", "voquocbaonana@gmail.com", "Opinion for " + rbDevice.Text, rtb_cmt.Text);
+                while ((email = sr.ReadLine()) != null)
+                {
+                    if (rbproduct.Checked == true)
+                        sendmail("voquocbao@gmail.com", email, "Opinion for " + rbproduct.Text, rtb_cmt.Text);
+                    else
+                        sendmail("voquocbao@gmail.com", email, "Opinion for " + rbDevice.Text, rtb_cmt.Text);
+                }
             }
 
         }
