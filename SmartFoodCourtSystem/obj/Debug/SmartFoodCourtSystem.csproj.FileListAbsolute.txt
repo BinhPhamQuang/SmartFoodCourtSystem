@@ -840,3 +840,4 @@ D:\SE\gitpro\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\aa-DJ\SmartFood
 D:\SE\gitpro\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CopyComplete
 D:\SE\gitpro\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
 D:\SE\gitpro\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
+D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrderList.resources
