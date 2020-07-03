@@ -10,6 +10,7 @@ using System.Net;
 using System.Net.Mail;
 using System.IO;
 using System.Windows.Forms;
+using System.Threading;
 using SmartFoodCourtSystem.DTO;
 namespace SmartFoodCourtSystem
 {
@@ -25,6 +26,8 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
             this.ShowInTaskbar = false;
+
+           
         }
 
         private void Fcomment_Load(object sender, EventArgs e)
@@ -54,11 +57,48 @@ namespace SmartFoodCourtSystem
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            FileStream fs = new FileStream("gmail.txt", FileMode.Open);
-            StreamReader sr = new StreamReader(fs,Encoding.UTF8);
-            string email;
-          
+            Thread thread = new Thread(() =>
 
+            {
+                if (btnSend.InvokeRequired)
+                {
+                    btnSend.Invoke(new Action(Send));
+                    return;
+                }
+                else
+                {
+                    /*  FileStream fs = new FileStream("D:\\SmartFoodCourtSystem\\SmartFoodCourtSystem\\bin\\Debug\\File\\gmail.txt", FileMode.Open);
+                      StreamReader sr = new StreamReader(fs, Encoding.UTF8);
+                      string email;
+                      if (rtb_cmt.Text.Length == 0 || txtEmail.Text.Length == 0)
+                      {
+                          Alert("Error !", FAlert.emType.error);
+                          pn_error.Visible = true;
+                      }
+                      else
+                      {
+                          Alert("Thanks for opinions!", FAlert.emType.success);
+                          pn_error.Visible = false;
+                          while ((email = sr.ReadLine()) != null)
+                          {
+                              if (rbproduct.Checked == true)
+                                  sendmail("voquocbao@gmail.com", email, "Opinion for " + rbproduct.Text, rtb_cmt.Text);
+                              else
+                                  sendmail("voquocbao@gmail.com", email, "Opinion for " + rbDevice.Text, rtb_cmt.Text);
+                          }
+                          sr.Close();
+                      }*/
+                }
+            }
+            );
+            thread.Start();
+            
+        }
+        private void Send()
+        {
+            FileStream fs = new FileStream("D:\\SmartFoodCourtSystem\\SmartFoodCourtSystem\\bin\\Debug\\File\\gmail.txt", FileMode.Open);
+            StreamReader sr = new StreamReader(fs, Encoding.UTF8);
+            string email;
             if (rtb_cmt.Text.Length == 0 || txtEmail.Text.Length == 0)
             {
                 Alert("Error !", FAlert.emType.error);
@@ -75,8 +115,8 @@ namespace SmartFoodCourtSystem
                     else
                         sendmail("voquocbao@gmail.com", email, "Opinion for " + rbDevice.Text, rtb_cmt.Text);
                 }
+                sr.Close();
             }
-
         }
         void sendmail(string from, string to, string subject, string message)
         {
@@ -84,9 +124,9 @@ namespace SmartFoodCourtSystem
             if (rbfemale.Checked == true)
                 body = "Customer Name: " + txtName.Text + "\n" + "Email: " + txtEmail.Text + "\n" + "Sex: " + rbfemale.Text + "\n" + "Content: " + message;
             else if (rbmale.Checked == true)
-                body = "Customer Name: " + txtName.Text + "\n" + "Email: " + txtEmail.Text + "\n" + "Sex: " + rbfemale.Text + "\n" + "Content: " + message;
+                body = "Customer Name: " + txtName.Text + "\n" + "Email: " + txtEmail.Text + "\n" + "Sex: " + rbmale.Text + "\n" + "Content: " + message;
             else
-                body = "Customer Name: " + txtName.Text + "\n" + "Email: " + txtEmail.Text + "\n" + "Sex: " + rbfemale.Text + "\n" + "Content: " + message;
+                body = "Customer Name: " + txtName.Text + "\n" + "Email: " + txtEmail.Text + "\n" + "Sex: " + rbother.Text + "\n" + "Content: " + message;
 
             MailMessage mess = new MailMessage(from, to, subject, body);
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
