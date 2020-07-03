@@ -334,6 +334,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ocb.png" />
+    <None Include="Resources\edit_property_26px.png" />
+    <None Include="Resources\delete_bin_30px.png" />
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

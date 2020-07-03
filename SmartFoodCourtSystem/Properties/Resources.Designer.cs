@@ -153,9 +153,29 @@ namespace SmartFoodCourtSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_bin_30px {
+            get {
+                object obj = ResourceManager.GetObject("delete_bin_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dishdefault {
             get {
                 object obj = ResourceManager.GetObject("dishdefault", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_property_26px {
+            get {
+                object obj = ResourceManager.GetObject("edit_property_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
