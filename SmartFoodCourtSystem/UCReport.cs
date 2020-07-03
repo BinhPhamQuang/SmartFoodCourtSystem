@@ -102,6 +102,8 @@ namespace SmartFoodCourtSystem
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
             int type = -1;
+            string thang = "";
+            string thangtruoc = "";
             int reve = 0;
             int l_reve = 0;
             string month = "";
@@ -120,6 +122,58 @@ namespace SmartFoodCourtSystem
                 DataTable data = DataProvider.Instance.ExecuteQuery(query);
                 month = m;
                 year = y;
+                switch (int.Parse(m))
+                {
+                    case 1:
+                        thang = "January";
+                        thangtruoc = "last December";
+                        break;
+                    case 2:
+                        thangtruoc = "January";
+                        thang = "February";
+                        break;
+                    case 3:
+                        thangtruoc = "February";
+                        thang = "March";
+                        break;
+                    case 4:
+                        thangtruoc = "February";
+                        thang = "April";
+                        break;
+                    case 5:
+                        thangtruoc = "April";
+                        thang = "May";
+                        break;
+                    case 6:
+                        thangtruoc = "May";
+                        thang = "June";
+                        break;
+                    case 7:
+                        thangtruoc = "June";
+                        thang = "July";
+                        break;
+                    case 8:
+                        thangtruoc = "July";
+                        thang = "August";
+                        break;
+                    case 9:
+                        thangtruoc = "August";
+                        thang = "September";
+                        break;
+                    case 10:
+                        thangtruoc = "September";
+                        thang = "October";
+                        break;
+                    case 11:
+                        thangtruoc = "October";
+                        thang = "November";
+                        break;
+                    case 12:
+                        thangtruoc = "November";
+                        thang = "December";
+                        break;
+
+                }
                 foreach (DataRow r in data.Rows)
                 {
                     reve += int.Parse(r["Totalprice"].ToString());
@@ -162,8 +216,8 @@ namespace SmartFoodCourtSystem
             }
             if (l_reve != 0)
             {
-                l_grossprofit = (double)l_reve - cost;
-                percent = Math.Round((grossprofit / l_grossprofit - 1), 2);
+                l_grossprofit = (double)l_reve - l_cost;
+                percent = Math.Abs(Math.Round((grossprofit / l_grossprofit - 1), 2)*100);
             }
             double diff = Math.Abs(grossprofit - l_grossprofit);
             switch (type)
@@ -182,8 +236,8 @@ namespace SmartFoodCourtSystem
                     lV1.Items.Add(a);
                     lV1.Items.Add(b);
                     lV1.Visible = true;
-                    if (grossprofit > l_grossprofit) label1.Text = "The gross profit of month " + month + " is greater than month " + (int.Parse(month) - 1).ToString() +" " + changetoVND(diff.ToString()) + "VND";
-                    else label1.Text = "The gross profit of month " + month + " is less than month " + (int.Parse(month) - 1).ToString() + " " + changetoVND(diff.ToString()) + "VND";
+                    if (grossprofit > l_grossprofit) label1.Text = "The gross profit of " + thang + " is greater than " + thangtruoc + ": " + changetoVND(diff.ToString()) + "VND, greater than " + percent.ToString() + "%";
+                    else label1.Text = "The gross profit of " + thang + " is less than " + thangtruoc + changetoVND(diff.ToString()) + "VND, less than " + percent.ToString() + "%";
                     break;
                 case 1:
                     a.Text = (int.Parse(year) - 1).ToString();
@@ -197,8 +251,8 @@ namespace SmartFoodCourtSystem
                     lV2.Items.Add(a);
                     lV2.Items.Add(b);
                     lV2.Visible = true;
-                    if (grossprofit > l_grossprofit) label1.Text = "The gross profit of year " + year+ " is greater than year " + (int.Parse(year) - 1).ToString() + " " + changetoVND(diff.ToString()) + "VND";
-                    else label1.Text = "The gross profit of year " + year + " is less than year " + (int.Parse(year) - 1).ToString() + " " + changetoVND(diff.ToString()) + "VND";
+                    if (grossprofit > l_grossprofit) label1.Text = "The gross profit of " + year+ " is greater than " + (int.Parse(year) - 1).ToString() + ": " + changetoVND(diff.ToString()) + "VND, greater than " + percent.ToString() + "%";
+                    else label1.Text = "The gross profit of " + year + " is less than " + (int.Parse(year) - 1).ToString() + ": " + changetoVND(diff.ToString()) + "VND, less than " + percent.ToString() + "%";
                     break;
             }
             
@@ -211,6 +265,9 @@ namespace SmartFoodCourtSystem
         {
             grBox.Visible = false;
             label4.Visible = false;
+            //label1.Visible = false;
+            lV1.Visible = false;
+            lV2.Visible = false;
         }
     }
 }
