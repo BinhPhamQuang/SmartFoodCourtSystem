@@ -100,6 +100,7 @@
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\Cart.cs" />
     <Compile Include="DTO\Food.cs" />
+    <Compile Include="DTO\HashMD5.cs" />
     <Compile Include="DTO\MoMoSecurity.cs" />
     <Compile Include="DTO\Order.cs" />
     <Compile Include="DTO\PaymentRequest.cs" />

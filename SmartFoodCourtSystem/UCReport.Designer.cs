@@ -385,10 +385,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.grBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lV);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grBox);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCReport";
             this.Size = new System.Drawing.Size(1120, 665);

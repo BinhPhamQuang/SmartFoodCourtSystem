@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using SmartFoodCourtSystem.DAO;
 using System.Text.RegularExpressions;
-
+using SmartFoodCourtSystem.DTO;
 namespace SmartFoodCourtSystem
 {
     public partial class FLogin : Form
@@ -20,6 +20,9 @@ namespace SmartFoodCourtSystem
             InitializeComponent();
             txtPassword.UseSystemPasswordChar = false;
             this.AcceptButton = btnLogin;
+            string newmk = DTO.HashMD5.Encrypt("1");
+            string query = $"Update User set Password='"+newmk+"'";
+            DataProvider.Instance.ExecuteQuery(query);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -54,7 +57,8 @@ namespace SmartFoodCourtSystem
             //txtUsername.Text = Regex.Replace(txtUsername.Text, pattern, "");
             //txtPassword.Text = Regex.Replace(txtPassword.Text, pattern, "");
             bool success = false;
-            string query = $"SELECT * from User WHERE Username='" + txtUsername.Text + "' and Password='" + txtPassword.Text + "'";
+            string mk = DTO.HashMD5.Encrypt(txtPassword.Text);
+            string query = $"SELECT * from User WHERE Username='" + txtUsername.Text + "' and Password='" + mk + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             bool hidden = false;
             //foreach (DataRow r in data.Rows)
