@@ -20,9 +20,9 @@ namespace SmartFoodCourtSystem
             InitializeComponent();
             txtPassword.UseSystemPasswordChar = false;
             this.AcceptButton = btnLogin;
-            string newmk = DTO.HashMD5.Encrypt("1");
-            string query = $"Update User set Password='"+newmk+"'";
-            DataProvider.Instance.ExecuteQuery(query);
+            //string newmk = DTO.HashMD5.Encrypt("1");
+            //string query = $"Update User set Password='"+newmk+"'";
+            //DataProvider.Instance.ExecuteQuery(query);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
