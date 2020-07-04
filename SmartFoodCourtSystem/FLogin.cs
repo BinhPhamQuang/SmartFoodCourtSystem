@@ -23,10 +23,10 @@ namespace SmartFoodCourtSystem
             txtPassword.UseSystemPasswordChar = false;
             this.AcceptButton = btnLogin;
             //string newtype2 = DTO.HashMD5.Encrypt("1");
-            string query = $"Update User set Type='" + newtype0 + "' where (Username = 'cook')";
-            DataProvider.Instance.ExecuteQuery(query);
-            string query1 = $"Update User set Type='" + newtype1 + "' where (Username = 'manager')";
-            DataProvider.Instance.ExecuteQuery(query1);
+            //string query = $"Update User set Type='" + newtype0 + "' where (Username = 'cook')";
+            //DataProvider.Instance.ExecuteQuery(query);
+            //string query1 = $"Update User set Type='" + newtype1 + "' where (Username = 'manager')";
+            //DataProvider.Instance.ExecuteQuery(query1);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -73,7 +73,6 @@ namespace SmartFoodCourtSystem
                 {
                     DataRow row = data.Rows[0];
                     string type = row["Type"].ToString();
-                    string x = DTO.HashMD5.Decrypt(newtype0);
                     success = true;
                     this.Hide();
                     hidden = true;
