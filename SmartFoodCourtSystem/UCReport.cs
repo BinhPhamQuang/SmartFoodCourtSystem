@@ -18,6 +18,8 @@ namespace SmartFoodCourtSystem
     public partial class UCReport : UserControl
     {
         static int type = -1;
+        static int found1 = 0;
+        static int found2 = 0;
         public string changetoVND(string x)
         {
             int l = x.Length;
@@ -64,6 +66,7 @@ namespace SmartFoodCourtSystem
         public UCReport()
         {
             InitializeComponent();
+            
             string query = $"SELECT * from Bill";
             System.Data.DataTable data = DataProvider.Instance.ExecuteQuery(query);
             int i = 0;
@@ -104,13 +107,14 @@ namespace SmartFoodCourtSystem
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
-            if (cb2.SelectedIndex <= -1 && cb3.SelectedIndex <= -1)
-                MessageBox.Show("Please choose time!","Message", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            if ((cb2.SelectedIndex <= -1 && cb3.SelectedIndex <= -1) | (cb2.SelectedIndex > -1 && cb3.SelectedIndex <= -1))
+                MessageBox.Show("Please choose year or both month and year!","Message", MessageBoxButtons.OK,MessageBoxIcon.Error);
             else
             {
                 string thang = "";
                 int thiang = -1;
                 string thangtruoc = "";
+                string nam = "";
                 int reve = 0;
                 int l_reve = 0;
                 string month = "";
@@ -133,7 +137,7 @@ namespace SmartFoodCourtSystem
                     {
                         case 1:
                             thang = "January";
-                            thangtruoc = "last December";
+                            thangtruoc = "December";
                             break;
                         case 2:
                             thangtruoc = "January";
@@ -190,9 +194,15 @@ namespace SmartFoodCourtSystem
                     if (thiang == 0)
                     {
                         query1 = $"SELECT * from Bill WHERE Month ={12.ToString()} AND Year ={(int.Parse(y) - 1).ToString()} ";
+                        nam = (int.Parse(y) - 1).ToString();
                     }
-                    else query1 = $"SELECT * from Bill WHERE Month ={(int.Parse(m) - 1).ToString()} AND Year ={y} ";
+                    else
+                    {
+                        query1 = $"SELECT * from Bill WHERE Month ={(int.Parse(m) - 1).ToString()} AND Year ={y} ";
+                        nam = year;
+                    }
                     System.Data.DataTable data1 = DataProvider.Instance.ExecuteQuery(query1);
+                   
                     foreach (DataRow r in data1.Rows)
                     {
                         l_reve += int.Parse(r["Totalprice"].ToString());
@@ -205,6 +215,7 @@ namespace SmartFoodCourtSystem
                     string y = cb3.SelectedItem.ToString();
                     string query = $"SELECT * from Bill WHERE Year ={y} ";
                     System.Data.DataTable data = DataProvider.Instance.ExecuteQuery(query);
+                 
                     year = y;
                     foreach (DataRow r in data.Rows)
                     {
@@ -212,6 +223,7 @@ namespace SmartFoodCourtSystem
                     }
                     string query1 = $"SELECT * from Bill WHERE Year ={(int.Parse(y) - 1).ToString()}";
                     System.Data.DataTable data1 = DataProvider.Instance.ExecuteQuery(query1);
+                    
                     foreach (DataRow r in data1.Rows)
                     {
                         l_reve += int.Parse(r["Totalprice"].ToString());
@@ -257,14 +269,25 @@ namespace SmartFoodCourtSystem
                         lV1.Items.Add(a);
                         lV1.Items.Add(b);
                         lV1.Visible = true;
-                        if (reve == 0)
-                        {
-                            label1.Text = "No data found";
-                        }
-                        else
+                        if (reve != 0 && l_reve != 0)
                         {
                             if (grossprofit > l_grossprofit) label1.Text = "The gross profit of " + thang + " is greater than " + thangtruoc + ": " + changetoVND(diff.ToString()) + "VND, greater than " + percent.ToString() + "%";
                             else label1.Text = "The gross profit of " + thang + " is less than " + thangtruoc + ": " + changetoVND(diff.ToString()) + "VND, less than " + percent.ToString() + "%";
+                        }
+                        else
+                        {
+                            if (l_reve == 0 && reve ==0)
+                            {
+                                label1.Text = "No data found of " + thangtruoc + ", " + nam + " and " + thang + ", " + year;
+                            }
+                            else if (reve == 0)
+                            {
+                                label1.Text = "No data found of " + thang + ", " + year;
+                            }
+                            else if (l_reve ==0)
+                            {
+                                label1.Text = "No data found of " + thangtruoc + ", " + (int.Parse(year) - 1).ToString();
+                            }
                         }
                         break;
                     case 1:
@@ -279,14 +302,26 @@ namespace SmartFoodCourtSystem
                         lV2.Items.Add(a);
                         lV2.Items.Add(b);
                         lV2.Visible = true;
-                        if (reve == 0)
+                        if (reve != 0 && l_reve != 0)
                         {
-                            label1.Text = "No data found";
+                            found1 = 1;
+                            if (grossprofit > l_grossprofit) label1.Text = "The gross profit of " + year + " is greater than " + (int.Parse(year) - 1).ToString() + ": " + changetoVND(diff.ToString()) + "VND, greater than " + percent.ToString() + "%";
+                            else label1.Text = "The gross profit of " + year + " is less than " + (int.Parse(year) - 1).ToString() + ": " + changetoVND(diff.ToString()) + "VND, less than " + percent.ToString() + "%";
                         }
                         else
                         {
-                            if (grossprofit > l_grossprofit) label1.Text = "The gross profit of " + year + " is greater than " + (int.Parse(year) - 1).ToString() + ": " + changetoVND(diff.ToString()) + "VND, greater than " + percent.ToString() + "%";
-                            else label1.Text = "The gross profit of " + year + " is less than " + (int.Parse(year) - 1).ToString() + ": " + changetoVND(diff.ToString()) + "VND, less than " + percent.ToString() + "%";    
+                            if (l_reve == 0 && reve == 0)
+                            {
+                                label1.Text = "No data found of " + (int.Parse(year) - 1).ToString() + " and " + year;
+                            }
+                            else if (reve == 0)
+                            {
+                                label1.Text = "No data found of " + year;
+                            }
+                            else if (l_reve == 0)
+                            {
+                                label1.Text = "No data found of " + (int.Parse(year) - 1).ToString();
+                            }
                         }
                         break;
                 }
@@ -306,6 +341,7 @@ namespace SmartFoodCourtSystem
             lV2.Visible = false;
             lV1.Items.Clear();
             lV2.Items.Clear();
+            
         }
 
         private void btnExport_Click(object sender, EventArgs e)

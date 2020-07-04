@@ -44,7 +44,6 @@
             this.cb2 = new System.Windows.Forms.ComboBox();
             this.btnMakeReport = new System.Windows.Forms.Button();
             this.grBox = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnExport = new System.Windows.Forms.Button();
             this.lV2 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,6 +59,7 @@
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.grBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
@@ -214,7 +214,7 @@
             // 
             // grBox
             // 
-            this.grBox.BackColor = System.Drawing.Color.DarkGray;
+            this.grBox.BackColor = System.Drawing.Color.Transparent;
             this.grBox.Controls.Add(this.label1);
             this.grBox.Controls.Add(this.btnExport);
             this.grBox.Controls.Add(this.lV2);
@@ -222,8 +222,8 @@
             this.grBox.Controls.Add(this.btnExit);
             this.grBox.Controls.Add(this.pictureBox1);
             this.grBox.Controls.Add(this.label4);
-            this.grBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grBox.ForeColor = System.Drawing.Color.Yellow;
+            this.grBox.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grBox.ForeColor = System.Drawing.Color.Red;
             this.grBox.Location = new System.Drawing.Point(0, 0);
             this.grBox.Name = "grBox";
             this.grBox.Size = new System.Drawing.Size(1120, 665);
@@ -232,25 +232,16 @@
             this.grBox.Text = "REVENUE REPORT";
             this.grBox.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(215, 433);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 24);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnExport
             // 
-            this.btnExport.BackColor = System.Drawing.Color.Gray;
-            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.Yellow;
-            this.btnExport.Location = new System.Drawing.Point(500, 575);
+            this.btnExport.BackColor = System.Drawing.Color.White;
+            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.Black;
+            this.btnExport.Location = new System.Drawing.Point(515, 575);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(120, 48);
+            this.btnExport.Size = new System.Drawing.Size(90, 36);
             this.btnExport.TabIndex = 10;
             this.btnExport.Text = "Export";
             this.btnExport.UseVisualStyleBackColor = false;
@@ -269,7 +260,7 @@
             this.lV2.FullRowSelect = true;
             this.lV2.GridLines = true;
             this.lV2.HideSelection = false;
-            this.lV2.Location = new System.Drawing.Point(264, 238);
+            this.lV2.Location = new System.Drawing.Point(232, 238);
             this.lV2.Name = "lV2";
             this.lV2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lV2.Scrollable = false;
@@ -312,7 +303,7 @@
             this.lV1.FullRowSelect = true;
             this.lV1.GridLines = true;
             this.lV1.HideSelection = false;
-            this.lV1.Location = new System.Drawing.Point(232, 238);
+            this.lV1.Location = new System.Drawing.Point(201, 238);
             this.lV1.Name = "lV1";
             this.lV1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lV1.Scrollable = false;
@@ -359,9 +350,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(331, -24);
+            this.pictureBox1.Location = new System.Drawing.Point(369, -24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(383, 237);
+            this.pictureBox1.Size = new System.Drawing.Size(382, 237);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -377,6 +368,17 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Chuỗi nhà hàng Hippo Town";
             this.label4.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(201, 345);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(718, 58);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UCReport
             // 
