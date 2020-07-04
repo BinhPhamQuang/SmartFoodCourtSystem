@@ -222,7 +222,7 @@ namespace SmartFoodCourtSystem
                 flp_foodlist.Controls.Clear();
                 Cart.Instance.DeleteCart();
                 lbtotalprice.Text = "0VND";
-                Alert("Thank you!", FAlert.emType.success);
+                Alert("See you again!", FAlert.emType.success);
                 if (this.BtnCancelClick != null)
                     this.BtnCancelClick(this, e);
 

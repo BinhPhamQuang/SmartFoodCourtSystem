@@ -93,10 +93,10 @@
             // picturebox1
             // 
             this.picturebox1.Image = ((System.Drawing.Image)(resources.GetObject("picturebox1.Image")));
-            this.picturebox1.Location = new System.Drawing.Point(513, 70);
+            this.picturebox1.Location = new System.Drawing.Point(511, 70);
             this.picturebox1.Name = "picturebox1";
-            this.picturebox1.Size = new System.Drawing.Size(444, 318);
-            this.picturebox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebox1.Size = new System.Drawing.Size(446, 318);
+            this.picturebox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox1.TabIndex = 8;
             this.picturebox1.TabStop = false;
             // 
@@ -104,7 +104,7 @@
             // 
             this.lb_price.Font = new System.Drawing.Font("Malgun Gothic", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_price.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lb_price.Location = new System.Drawing.Point(29, 112);
+            this.lb_price.Location = new System.Drawing.Point(28, 103);
             this.lb_price.Name = "lb_price";
             this.lb_price.Size = new System.Drawing.Size(365, 74);
             this.lb_price.TabIndex = 7;
@@ -115,7 +115,7 @@
             this.lb_discount.AutoSize = true;
             this.lb_discount.Font = new System.Drawing.Font("Malgun Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_discount.ForeColor = System.Drawing.Color.Crimson;
-            this.lb_discount.Location = new System.Drawing.Point(343, 75);
+            this.lb_discount.Location = new System.Drawing.Point(338, 75);
             this.lb_discount.Name = "lb_discount";
             this.lb_discount.Size = new System.Drawing.Size(105, 47);
             this.lb_discount.TabIndex = 14;

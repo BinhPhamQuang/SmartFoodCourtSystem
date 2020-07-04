@@ -262,5 +262,22 @@ namespace SmartFoodCourtSystem
             }
             
         }
+
+        private void btnApplyPromotioncode_Click(object sender, EventArgs e)
+        {
+            if(tbPromotioncode.Text.Length!=0&& tbPromotioncode.Text=="B2D2H")
+            {
+               foreach(Food i in Cart.Instance.getListFood())
+                {
+                    i.discount = 50;
+                }
+                LoadCart();
+            }
+            else
+            {
+                Alert("Wrong code", FAlert.emType.error);
+                tbPromotioncode.Clear();
+            }
+        }
     }
 }

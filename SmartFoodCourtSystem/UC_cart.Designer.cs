@@ -191,6 +191,7 @@
             this.btnApplyPromotioncode.TabIndex = 23;
             this.btnApplyPromotioncode.Text = "Apply";
             this.btnApplyPromotioncode.UseVisualStyleBackColor = false;
+            this.btnApplyPromotioncode.Click += new System.EventHandler(this.btnApplyPromotioncode_Click);
             // 
             // flp_cart
             // 

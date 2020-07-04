@@ -240,7 +240,7 @@
             this.panel6.Location = new System.Drawing.Point(135, 34);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(344, 4);
+            this.panel6.Size = new System.Drawing.Size(344, 2);
             this.panel6.TabIndex = 36;
             // 
             // txtEmail
@@ -284,7 +284,7 @@
             this.panel5.Location = new System.Drawing.Point(136, 33);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(344, 4);
+            this.panel5.Size = new System.Drawing.Size(344, 2);
             this.panel5.TabIndex = 35;
             // 
             // txtName

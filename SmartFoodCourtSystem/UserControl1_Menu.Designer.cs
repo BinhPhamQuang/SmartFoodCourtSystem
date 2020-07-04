@@ -33,7 +33,6 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnDrink = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.flp_menu = new System.Windows.Forms.FlowLayoutPanel();
@@ -66,8 +65,7 @@
             // 
             this.panel9.Controls.Add(this.btnDrink);
             this.panel9.Controls.Add(this.btnFood);
-            this.panel9.Controls.Add(this.label19);
-            this.panel9.Location = new System.Drawing.Point(662, 3);
+            this.panel9.Location = new System.Drawing.Point(724, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(284, 58);
             this.panel9.TabIndex = 16;
@@ -101,16 +99,6 @@
             this.btnFood.Text = "Food";
             this.btnFood.UseVisualStyleBackColor = false;
             this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(92, 7);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(85, 21);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Category";
             // 
             // panel1
             // 
@@ -207,7 +195,6 @@
             this.Size = new System.Drawing.Size(1011, 506);
             this.Load += new System.EventHandler(this.UserControl1_Menu_Load);
             this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_clear)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,7 +207,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnDrink;
         private System.Windows.Forms.Button btnFood;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

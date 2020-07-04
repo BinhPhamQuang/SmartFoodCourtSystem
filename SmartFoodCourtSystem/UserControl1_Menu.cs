@@ -80,10 +80,12 @@ namespace SmartFoodCourtSystem
             btnOrder.Font = new Font("Century Gothic", 12.0f);
             btnOrder.Size = new Size(190, 31);
             btnOrder.ForeColor = Color.White;
-            btnOrder.BackColor = Color.OliveDrab;
+            btnOrder.BackColor = Color.Goldenrod;
+            btnOrder.FlatAppearance.MouseOverBackColor = Color.Olive;
             btnOrder.FlatStyle = FlatStyle.Flat;
             btnOrder.Click += BtnOrder_Click;
             btnOrder.Tag = food;
+            btnOrder.FlatAppearance.BorderSize = 0;
             //---
             panel.Controls.Add(lb_name);
             panel.Controls.Add(pictureBox);
