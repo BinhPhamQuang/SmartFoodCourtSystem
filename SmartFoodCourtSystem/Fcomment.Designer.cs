@@ -32,6 +32,10 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.lbErrorMessage = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.rbDevice = new System.Windows.Forms.RadioButton();
+            this.rbproduct = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rbfemale = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,17 +55,13 @@
             this.lb_error = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_error = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.rbproduct = new System.Windows.Forms.RadioButton();
-            this.rbDevice = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_error.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSend
@@ -105,6 +105,51 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(453, 208);
             this.panel1.TabIndex = 34;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.rbDevice);
+            this.panel7.Controls.Add(this.rbproduct);
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Location = new System.Drawing.Point(-1, 159);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(453, 43);
+            this.panel7.TabIndex = 42;
+            // 
+            // rbDevice
+            // 
+            this.rbDevice.AutoSize = true;
+            this.rbDevice.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.rbDevice.Location = new System.Drawing.Point(296, 4);
+            this.rbDevice.Name = "rbDevice";
+            this.rbDevice.Size = new System.Drawing.Size(121, 34);
+            this.rbDevice.TabIndex = 2;
+            this.rbDevice.TabStop = true;
+            this.rbDevice.Text = "Device";
+            this.rbDevice.UseVisualStyleBackColor = true;
+            // 
+            // rbproduct
+            // 
+            this.rbproduct.AutoSize = true;
+            this.rbproduct.Checked = true;
+            this.rbproduct.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.rbproduct.Location = new System.Drawing.Point(128, 4);
+            this.rbproduct.Name = "rbproduct";
+            this.rbproduct.Size = new System.Drawing.Size(126, 34);
+            this.rbproduct.TabIndex = 1;
+            this.rbproduct.TabStop = true;
+            this.rbproduct.Text = "Product";
+            this.rbproduct.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label5.Location = new System.Drawing.Point(8, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 30);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Type :";
             // 
             // panel4
             // 
@@ -277,9 +322,9 @@
             this.label4.Location = new System.Drawing.Point(20, 244);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 20);
+            this.label4.Size = new System.Drawing.Size(125, 20);
             this.label4.TabIndex = 40;
-            this.label4.Text = "Your opinion: ";
+            this.label4.Text = "Your feedback: ";
             // 
             // btnCancel
             // 
@@ -329,51 +374,6 @@
             this.pn_error.TabIndex = 43;
             this.pn_error.Visible = false;
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.rbDevice);
-            this.panel7.Controls.Add(this.rbproduct);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(-1, 159);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(453, 43);
-            this.panel7.TabIndex = 42;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(8, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 30);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Type :";
-            // 
-            // rbproduct
-            // 
-            this.rbproduct.AutoSize = true;
-            this.rbproduct.Checked = true;
-            this.rbproduct.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rbproduct.Location = new System.Drawing.Point(128, 4);
-            this.rbproduct.Name = "rbproduct";
-            this.rbproduct.Size = new System.Drawing.Size(126, 34);
-            this.rbproduct.TabIndex = 1;
-            this.rbproduct.TabStop = true;
-            this.rbproduct.Text = "Product";
-            this.rbproduct.UseVisualStyleBackColor = true;
-            // 
-            // rbDevice
-            // 
-            this.rbDevice.AutoSize = true;
-            this.rbDevice.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rbDevice.Location = new System.Drawing.Point(296, 4);
-            this.rbDevice.Name = "rbDevice";
-            this.rbDevice.Size = new System.Drawing.Size(121, 34);
-            this.rbDevice.TabIndex = 2;
-            this.rbDevice.TabStop = true;
-            this.rbDevice.Text = "Device";
-            this.rbDevice.UseVisualStyleBackColor = true;
-            // 
             // Fcomment
             // 
             this.AcceptButton = this.btnSend;
@@ -398,6 +398,8 @@
             this.Text = "Fcomment";
             this.Load += new System.EventHandler(this.Fcomment_Load);
             this.panel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -407,8 +409,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pn_error.ResumeLayout(false);
             this.pn_error.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
