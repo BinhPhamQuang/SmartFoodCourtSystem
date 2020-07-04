@@ -20,6 +20,11 @@ namespace SmartFoodCourtSystem
         static int type = -1;
         static int found1 = 0;
         static int found2 = 0;
+        void Alert(string msg, FAlert.emType type)
+        {
+            FAlert frm = new FAlert();
+            frm.showAlert(msg, type);
+        }
         public string changetoVND(string x)
         {
             int l = x.Length;
@@ -108,7 +113,7 @@ namespace SmartFoodCourtSystem
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
             if ((cb2.SelectedIndex <= -1 && cb3.SelectedIndex <= -1) | (cb2.SelectedIndex > -1 && cb3.SelectedIndex <= -1))
-                MessageBox.Show("Please choose year or both month and year!","Message", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                Alert("Wrong format!", FAlert.emType.warning);
             else
             {
                 string thang = "";
@@ -202,7 +207,7 @@ namespace SmartFoodCourtSystem
                         nam = year;
                     }
                     System.Data.DataTable data1 = DataProvider.Instance.ExecuteQuery(query1);
-                   
+
                     foreach (DataRow r in data1.Rows)
                     {
                         l_reve += int.Parse(r["Totalprice"].ToString());
@@ -215,7 +220,7 @@ namespace SmartFoodCourtSystem
                     string y = cb3.SelectedItem.ToString();
                     string query = $"SELECT * from Bill WHERE Year ={y} ";
                     System.Data.DataTable data = DataProvider.Instance.ExecuteQuery(query);
-                 
+
                     year = y;
                     foreach (DataRow r in data.Rows)
                     {
@@ -223,7 +228,7 @@ namespace SmartFoodCourtSystem
                     }
                     string query1 = $"SELECT * from Bill WHERE Year ={(int.Parse(y) - 1).ToString()}";
                     System.Data.DataTable data1 = DataProvider.Instance.ExecuteQuery(query1);
-                    
+
                     foreach (DataRow r in data1.Rows)
                     {
                         l_reve += int.Parse(r["Totalprice"].ToString());
@@ -276,7 +281,7 @@ namespace SmartFoodCourtSystem
                         }
                         else
                         {
-                            if (l_reve == 0 && reve ==0)
+                            if (l_reve == 0 && reve == 0)
                             {
                                 label1.Text = "No data found of " + thangtruoc + ", " + nam + " and " + thang + ", " + year;
                             }
@@ -284,7 +289,7 @@ namespace SmartFoodCourtSystem
                             {
                                 label1.Text = "No data found of " + thang + ", " + year;
                             }
-                            else if (l_reve ==0)
+                            else if (l_reve == 0)
                             {
                                 label1.Text = "No data found of " + thangtruoc + ", " + (int.Parse(year) - 1).ToString();
                             }
@@ -391,7 +396,7 @@ namespace SmartFoodCourtSystem
                     
                     wb.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing, true, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
                     app.Quit();
-                    MessageBox.Show("Your data has been successfully exported", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Alert("Successfully saved!", FAlert.emType.success);
                 }
         }
     }
