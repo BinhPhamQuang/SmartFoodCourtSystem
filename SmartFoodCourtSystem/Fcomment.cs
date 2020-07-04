@@ -26,7 +26,7 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
             this.ShowInTaskbar = false;
-
+            Control.CheckForIllegalCrossThreadCalls = false;
            
         }
 
@@ -57,48 +57,7 @@ namespace SmartFoodCourtSystem
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread(() =>
 
-            {
-                if (btnSend.InvokeRequired)
-                {
-                    btnSend.Invoke(new Action(Send));
-                    return;
-                }
-                else
-                {
-                    /*  FileStream fs = new FileStream("D:\\SmartFoodCourtSystem\\SmartFoodCourtSystem\\bin\\Debug\\File\\gmail.txt", FileMode.Open);
-                      StreamReader sr = new StreamReader(fs, Encoding.UTF8);
-                      string email;
-                      if (rtb_cmt.Text.Length == 0 || txtEmail.Text.Length == 0)
-                      {
-                          Alert("Error !", FAlert.emType.error);
-                          pn_error.Visible = true;
-                      }
-                      else
-                      {
-                          Alert("Thanks for opinions!", FAlert.emType.success);
-                          pn_error.Visible = false;
-                          while ((email = sr.ReadLine()) != null)
-                          {
-                              if (rbproduct.Checked == true)
-                                  sendmail("voquocbao@gmail.com", email, "Opinion for " + rbproduct.Text, rtb_cmt.Text);
-                              else
-                                  sendmail("voquocbao@gmail.com", email, "Opinion for " + rbDevice.Text, rtb_cmt.Text);
-                          }
-                          sr.Close();
-                      }*/
-                }
-            }
-            );
-            thread.Start();
-            
-        }
-        private void Send()
-        {
-            FileStream fs = new FileStream("D:\\SmartFoodCourtSystem\\SmartFoodCourtSystem\\bin\\Debug\\File\\gmail.txt", FileMode.Open);
-            StreamReader sr = new StreamReader(fs, Encoding.UTF8);
-            string email;
             if (rtb_cmt.Text.Length == 0 || txtEmail.Text.Length == 0)
             {
                 Alert("Error !", FAlert.emType.error);
@@ -108,19 +67,37 @@ namespace SmartFoodCourtSystem
             {
                 Alert("Thanks for opinions!", FAlert.emType.success);
                 pn_error.Visible = false;
-                while ((email = sr.ReadLine()) != null)
-                {
-                    if (rbproduct.Checked == true)
-                        sendmail("voquocbao@gmail.com", email, "Opinion for " + rbproduct.Text, rtb_cmt.Text);
-                    else
-                        sendmail("voquocbao@gmail.com", email, "Opinion for " + rbDevice.Text, rtb_cmt.Text);
-                }
-                sr.Close();
+                //Thread mainthread = Thread.CurrentThread;
+                Thread thread = new Thread(Send);
+                thread.IsBackground = true;
+                //  mainthread.Abort();
+                //  thread.Start();
+                //  mainthread.Start();
+                thread.Start();
             }
         }
-        void sendmail(string from, string to, string subject, string message)
+        public void Send()
         {
+            FileStream fs = new FileStream("D:\\SmartFoodCourtSystem\\SmartFoodCourtSystem\\bin\\Debug\\File\\gmail.txt", FileMode.Open);
+            StreamReader sr = new StreamReader(fs, Encoding.UTF8);
+            string email;
+            while ((email = sr.ReadLine()) != null)
+            {
+                sendmail("voquocbao@gmail.com", email, "Opinion for " + rbproduct.Text, "");
+
+            }
+            sr.Close();
+        }
+        public void sendmail(string from, string to, string subject, string message)
+        {
+            message = rtb_cmt.Text;
             string body;
+            if (rbproduct.Checked == true)
+                subject = "Opinion for " + subject;
+            else
+                subject = "Opinion for " + subject;
+
+
             if (rbfemale.Checked == true)
                 body = "Customer Name: " + txtName.Text + "\n" + "Email: " + txtEmail.Text + "\n" + "Sex: " + rbfemale.Text + "\n" + "Content: " + message;
             else if (rbmale.Checked == true)
@@ -133,7 +110,6 @@ namespace SmartFoodCourtSystem
             client.EnableSsl = true;
             client.Credentials = new NetworkCredential("voquocbaonana@gmail.com", "voquocbao");
             client.Send(mess);
-
         }
         private void txtName_MouseClick(object sender, MouseEventArgs e)
         {
