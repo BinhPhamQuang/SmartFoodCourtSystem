@@ -22,6 +22,8 @@ namespace SmartFoodCourtSystem
             uC_payment1.ButtonClick += new EventHandler(UC_Momo_ButtonClick);
             uC_payment1.BtnCancelClick += new EventHandler(UCpayment_cancelClick);
            // userControl1_Menu1.SendToBack();
+           
+
         }
 
         private void UCpayment_cancelClick(object sender, EventArgs e)
@@ -171,5 +173,6 @@ namespace SmartFoodCourtSystem
             Fcomment fcomment = new Fcomment();
             fcomment.ShowDialog();
         }
+         
     }
 }

@@ -91,7 +91,7 @@
             this.lbErrorMessage.Location = new System.Drawing.Point(577, 367);
             this.lbErrorMessage.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbErrorMessage.Name = "lbErrorMessage";
-            this.lbErrorMessage.Size = new System.Drawing.Size(0, 20);
+            this.lbErrorMessage.Size = new System.Drawing.Size(0, 17);
             this.lbErrorMessage.TabIndex = 27;
             this.lbErrorMessage.Visible = false;
             // 
@@ -122,7 +122,7 @@
             this.rbDevice.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.rbDevice.Location = new System.Drawing.Point(296, 4);
             this.rbDevice.Name = "rbDevice";
-            this.rbDevice.Size = new System.Drawing.Size(121, 34);
+            this.rbDevice.Size = new System.Drawing.Size(94, 26);
             this.rbDevice.TabIndex = 2;
             this.rbDevice.TabStop = true;
             this.rbDevice.Text = "Device";
@@ -135,7 +135,7 @@
             this.rbproduct.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.rbproduct.Location = new System.Drawing.Point(128, 4);
             this.rbproduct.Name = "rbproduct";
-            this.rbproduct.Size = new System.Drawing.Size(126, 34);
+            this.rbproduct.Size = new System.Drawing.Size(101, 26);
             this.rbproduct.TabIndex = 1;
             this.rbproduct.TabStop = true;
             this.rbproduct.Text = "Product";
@@ -147,7 +147,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label5.Location = new System.Drawing.Point(8, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 30);
+            this.label5.Size = new System.Drawing.Size(64, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "Type :";
             // 
@@ -170,7 +170,7 @@
             this.rbfemale.Location = new System.Drawing.Point(229, 11);
             this.rbfemale.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rbfemale.Name = "rbfemale";
-            this.rbfemale.Size = new System.Drawing.Size(124, 34);
+            this.rbfemale.Size = new System.Drawing.Size(94, 26);
             this.rbfemale.TabIndex = 38;
             this.rbfemale.Text = "Female";
             this.rbfemale.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             this.label3.Location = new System.Drawing.Point(7, 13);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 30);
+            this.label3.Size = new System.Drawing.Size(50, 22);
             this.label3.TabIndex = 36;
             this.label3.Text = "Sex :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -196,7 +196,7 @@
             this.rbother.Location = new System.Drawing.Point(348, 11);
             this.rbother.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rbother.Name = "rbother";
-            this.rbother.Size = new System.Drawing.Size(111, 34);
+            this.rbother.Size = new System.Drawing.Size(89, 26);
             this.rbother.TabIndex = 39;
             this.rbother.Text = "Others";
             this.rbother.UseVisualStyleBackColor = true;
@@ -210,7 +210,7 @@
             this.rbmale.Location = new System.Drawing.Point(127, 11);
             this.rbmale.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rbmale.Name = "rbmale";
-            this.rbmale.Size = new System.Drawing.Size(95, 34);
+            this.rbmale.Size = new System.Drawing.Size(73, 26);
             this.rbmale.TabIndex = 37;
             this.rbmale.TabStop = true;
             this.rbmale.Text = "Male";
@@ -243,7 +243,7 @@
             this.txtEmail.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEmail.Location = new System.Drawing.Point(124, 6);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(315, 23);
+            this.txtEmail.Size = new System.Drawing.Size(315, 19);
             this.txtEmail.TabIndex = 3;
             // 
             // label2
@@ -254,7 +254,7 @@
             this.label2.Location = new System.Drawing.Point(4, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 30);
+            this.label2.Size = new System.Drawing.Size(114, 22);
             this.label2.TabIndex = 34;
             this.label2.Text = "Your email :";
             // 
@@ -284,7 +284,7 @@
             this.txtName.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtName.Location = new System.Drawing.Point(125, 5);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(315, 23);
+            this.txtName.Size = new System.Drawing.Size(315, 19);
             this.txtName.TabIndex = 2;
             this.txtName.Text = "anonymous";
             this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtName_MouseClick);
@@ -298,7 +298,7 @@
             this.label1.Location = new System.Drawing.Point(5, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 30);
+            this.label1.Size = new System.Drawing.Size(120, 22);
             this.label1.TabIndex = 34;
             this.label1.Text = "Your name :";
             // 
@@ -322,7 +322,7 @@
             this.label4.Location = new System.Drawing.Point(20, 244);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 20);
+            this.label4.Size = new System.Drawing.Size(101, 17);
             this.label4.TabIndex = 40;
             this.label4.Text = "Your feedback: ";
             // 
@@ -350,7 +350,7 @@
             this.lb_error.ForeColor = System.Drawing.Color.Red;
             this.lb_error.Location = new System.Drawing.Point(35, 17);
             this.lb_error.Name = "lb_error";
-            this.lb_error.Size = new System.Drawing.Size(410, 21);
+            this.lb_error.Size = new System.Drawing.Size(324, 17);
             this.lb_error.TabIndex = 41;
             this.lb_error.Text = "Please fil out full information before send it to us !";
             // 
@@ -376,8 +376,7 @@
             // 
             // Fcomment
             // 
-            this.AcceptButton = this.btnSend;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(475, 566);

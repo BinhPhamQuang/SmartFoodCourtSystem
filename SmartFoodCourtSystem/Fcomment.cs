@@ -65,8 +65,9 @@ namespace SmartFoodCourtSystem
             }
             else
             {
-                Alert("Thanks for opinions!", FAlert.emType.success);
+                Alert("Thanks for feedback!", FAlert.emType.success);
                 pn_error.Visible = false;
+                this.Close();
                 if (rbproduct.Checked == true)
                     sendmail("testcasettcnpm@gmail.com", "testcasettcnpm@gmail.com", "Feedback for " + rbproduct.Text, rtb_cmt.Text);
                 else  

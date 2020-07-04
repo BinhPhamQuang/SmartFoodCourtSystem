@@ -842,3 +842,4 @@ D:\SE\gitpro\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtS
 D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrderList.resources
 D:\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrderList.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrderList.resources

@@ -137,10 +137,10 @@ namespace SmartFoodCourtSystem
 
         private void tb_searchfood_Enter(object sender, EventArgs e)
         {
-            tb_searchfood.Text = "";
-            tb_searchfood.ForeColor = Color.Black;
+            //tb_searchfood.Text = "";
+            //tb_searchfood.ForeColor = Color.Black;
              
-            btnclear.Visible = true;
+            //btnclear.Visible = true;
 
         }
 
@@ -228,6 +228,14 @@ namespace SmartFoodCourtSystem
         private void tb_searchfood_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void tb_searchfood_MouseClick(object sender, MouseEventArgs e)
+        {
+            tb_searchfood.Clear();
+            tb_searchfood.ForeColor = Color.Black;
+
+            btnclear.Visible = true;
         }
     }
 }

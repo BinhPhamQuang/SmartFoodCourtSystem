@@ -57,6 +57,7 @@
             this.tb_searchfood.Size = new System.Drawing.Size(176, 20);
             this.tb_searchfood.TabIndex = 14;
             this.tb_searchfood.Text = "Seach food or drink";
+            this.tb_searchfood.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tb_searchfood_MouseClick);
             this.tb_searchfood.TextChanged += new System.EventHandler(this.tb_searchfood_TextChanged);
             this.tb_searchfood.Enter += new System.EventHandler(this.tb_searchfood_Enter);
             this.tb_searchfood.Leave += new System.EventHandler(this.tb_searchfood_Leave);
@@ -66,9 +67,9 @@
             this.panel9.Controls.Add(this.btnDrink);
             this.panel9.Controls.Add(this.btnFood);
             this.panel9.Controls.Add(this.label19);
-            this.panel9.Location = new System.Drawing.Point(662, 15);
+            this.panel9.Location = new System.Drawing.Point(662, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(284, 36);
+            this.panel9.Size = new System.Drawing.Size(284, 58);
             this.panel9.TabIndex = 16;
             // 
             // btnDrink
@@ -78,7 +79,7 @@
             this.btnDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDrink.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDrink.ForeColor = System.Drawing.Color.Black;
-            this.btnDrink.Location = new System.Drawing.Point(191, 3);
+            this.btnDrink.Location = new System.Drawing.Point(188, 31);
             this.btnDrink.Name = "btnDrink";
             this.btnDrink.Size = new System.Drawing.Size(86, 24);
             this.btnDrink.TabIndex = 2;
@@ -93,7 +94,7 @@
             this.btnFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFood.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFood.ForeColor = System.Drawing.Color.White;
-            this.btnFood.Location = new System.Drawing.Point(99, 3);
+            this.btnFood.Location = new System.Drawing.Point(96, 31);
             this.btnFood.Name = "btnFood";
             this.btnFood.Size = new System.Drawing.Size(86, 24);
             this.btnFood.TabIndex = 1;
@@ -105,11 +106,11 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(5, 7);
+            this.label19.Location = new System.Drawing.Point(92, 7);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(88, 21);
+            this.label19.Size = new System.Drawing.Size(85, 21);
             this.label19.TabIndex = 0;
-            this.label19.Text = "Sorted by:";
+            this.label19.Text = "Category";
             // 
             // panel1
             // 
