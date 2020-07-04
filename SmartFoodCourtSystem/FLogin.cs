@@ -15,14 +15,18 @@ namespace SmartFoodCourtSystem
 {
     public partial class FLogin : Form
     {
+        static string newtype0 = DTO.HashMD5.Encrypt("0");
+        static string newtype1 = DTO.HashMD5.Encrypt("1");
         public FLogin()
         {
             InitializeComponent();
             txtPassword.UseSystemPasswordChar = false;
             this.AcceptButton = btnLogin;
-            //string newmk = DTO.HashMD5.Encrypt("1");
-            //string query = $"Update User set Password='"+newmk+"'";
-            //DataProvider.Instance.ExecuteQuery(query);
+            //string newtype2 = DTO.HashMD5.Encrypt("1");
+            string query = $"Update User set Type='" + newtype0 + "' where (Username = 'cook')";
+            DataProvider.Instance.ExecuteQuery(query);
+            string query1 = $"Update User set Type='" + newtype1 + "' where (Username = 'manager')";
+            DataProvider.Instance.ExecuteQuery(query1);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -65,28 +69,27 @@ namespace SmartFoodCourtSystem
             //{
                 //if (txtUsername.Text == r["Username"].ToString() && txtPassword.Text == r["Password"].ToString())
                 //{
-                if (data.Rows.Count > 0)
+                if (data.Rows.Count == 1)
                 {
                     DataRow row = data.Rows[0];
-                    int type = int.Parse(row["Type"].ToString());
+                    string type = row["Type"].ToString();
+                    string x = DTO.HashMD5.Decrypt(newtype0);
                     success = true;
                     this.Hide();
                     hidden = true;
-                    switch (type)
+                    if (type == newtype0)
                     {
-                        
-                        case 0:
-                            lbErrorMessage.Visible = false;
-                            this.Alert("Login successfully!", FAlert.emType.success);
-                            Cook cook = new Cook();
-                             cook.Show();
-                            break;
-                        case 1:
-                            lbErrorMessage.Visible = false;
-                            this.Alert("Login successfully!", FAlert.emType.success);
-                            FManMain manMain = new FManMain();
-                            manMain.Show();
-                            break;
+                        lbErrorMessage.Visible = false;
+                        this.Alert("Login successfully!", FAlert.emType.success);
+                        Cook cook = new Cook();
+                        cook.Show();
+                    }
+                    else if (type == newtype1)
+                    {
+                        lbErrorMessage.Visible = false;
+                        this.Alert("Login successfully!", FAlert.emType.success);
+                        FManMain manMain = new FManMain();
+                        manMain.Show();
                     }
                 }
             //}
