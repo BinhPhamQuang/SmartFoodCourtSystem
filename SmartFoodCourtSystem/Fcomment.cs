@@ -57,14 +57,29 @@ namespace SmartFoodCourtSystem
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-
+            lb_error.Text = "Please fil out full information before send it to us !";
+           
             if (rtb_cmt.Text.Length == 0 || txtEmail.Text.Length == 0)
             {
+               
                 Alert("Error !", FAlert.emType.error);
                 pn_error.Visible = true;
             }
             else
             {
+                bool at = false;
+                for (int i = 0; i < txtEmail.Text.Length; i++)
+                {
+                    if (txtEmail.Text[i] == '@')
+                        at = true;
+                }
+                if (at == false)
+                {
+                    Alert("Error !", FAlert.emType.error);
+                    lb_error.Text = "Wrong fomat email !";
+                    pn_error.Visible = true;
+                    return;
+                }
                 Alert("Thanks for feedback!", FAlert.emType.success);
                 pn_error.Visible = false;
                 this.Close();
