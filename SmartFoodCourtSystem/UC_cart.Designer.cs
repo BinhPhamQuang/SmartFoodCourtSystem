@@ -42,8 +42,13 @@
             this.label20 = new System.Windows.Forms.Label();
             this.btnApplyPromotioncode = new System.Windows.Forms.Button();
             this.flp_cart = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.flp_cart.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -197,11 +202,41 @@
             // 
             this.flp_cart.AutoScroll = true;
             this.flp_cart.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.flp_cart.Controls.Add(this.panel1);
             this.flp_cart.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flp_cart.Location = new System.Drawing.Point(61, 68);
             this.flp_cart.Name = "flp_cart";
             this.flp_cart.Size = new System.Drawing.Size(442, 368);
             this.flp_cart.TabIndex = 24;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(418, 146);
+            this.panel1.TabIndex = 0;
+            this.panel1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(149, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(318, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 22);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "50";
             // 
             // UC_cart
             // 
@@ -222,6 +257,9 @@
             this.panel3.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.flp_cart.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,5 +281,8 @@
         private System.Windows.Forms.TextBox tbPromotioncode;
         private System.Windows.Forms.FlowLayoutPanel flp_cart;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

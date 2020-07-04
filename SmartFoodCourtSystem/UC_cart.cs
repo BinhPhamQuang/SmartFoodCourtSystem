@@ -14,6 +14,7 @@ namespace SmartFoodCourtSystem
     
     public partial class UC_cart : UserControl
     {
+        public static bool isapplypromotioncode = false;
         void Alert(string msg, FAlert.emType type)
         {
             FAlert frm = new FAlert();
@@ -47,19 +48,16 @@ namespace SmartFoodCourtSystem
 
             Label lbname = new Label();
             lbname.Text = food.name;
-            lbname.Font = new Font("Century Gothic", 14.25f, FontStyle.Bold);
+            lbname.Font = new Font("Comic Sans MS", 15.25f, FontStyle.Bold);
             lbname.Location = new Point(149, 10);
             lbname.AutoSize = true;
+            
+             
 
-            Label lbdiscount = new Label();
-            lbdiscount.Text = "-"+food.discount.ToString()+"%";
-            lbdiscount.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
-            lbdiscount.ForeColor = Color.Red;
-            lbdiscount.Location = new Point(318, 13);
-            lbdiscount.AutoSize = true;
+            
 
             Label lbsize = new Label();
-            lbsize.Text = "Size:";
+            lbsize.Text = "Discount:";
             lbsize.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
             lbsize.Location = new Point(148, 43);
             lbsize.AutoSize = true;
@@ -86,6 +84,7 @@ namespace SmartFoodCourtSystem
             btndelete.Image = Resources.cancel_filled_30px;
             btndelete.Click += Btndelete_Click;
             btndelete.Tag = food;
+            btndelete.BringToFront();
 
             Panel line = new Panel();
             line.BackColor = Color.White;
@@ -93,13 +92,23 @@ namespace SmartFoodCourtSystem
             line.Size = new Size(411, 3);
 
             Label lbnamesize = new Label();
-            lbnamesize.Text = food.size;
-            lbnamesize.ForeColor = SystemColors.GradientActiveCaption;
+            lbnamesize.Text = "-" + food.discount.ToString() + "%";
+            lbnamesize.ForeColor = Color.Crimson;
             lbnamesize.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
             lbnamesize.Location = new Point(196, 43);
             lbnamesize.AutoSize = false;
-            lbnamesize.Size= new Size(170, 19);
+            lbnamesize.Size = new Size(170, 19);
             lbnamesize.TextAlign = ContentAlignment.MiddleRight;
+
+            //Label lbdiscount = new Label();
+            //lbdiscount.Text = "-" + food.discount.ToString() + "%";
+            //lbdiscount.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
+            //lbdiscount.ForeColor = Color.Red;
+            //lbdiscount.Location = new Point(196, 43);
+            //lbdiscount.AutoSize = true;
+            //lbdiscount.Size = new Size(170, 19);
+            //lbdiscount.TextAlign = ContentAlignment.MiddleRight;
+
 
             Label lbnamequantity = new Label();
             lbnamequantity.Text = food.quantity.ToString();
@@ -141,19 +150,19 @@ namespace SmartFoodCourtSystem
 
             panel.Controls.Add(pictureBox);
             panel.Controls.Add(lbname);
-            if (food.discount != 0)
-              panel.Controls.Add(lbdiscount);
+         //   if (food.discount != 0)
+             // panel.Controls.Add(lbdiscount);
            panel.Controls.Add(lbsize);
            panel.Controls.Add(lbquantity);
             panel.Controls.Add(lbprice);
             panel.Controls.Add(line);
-            panel.Controls.Add(btndelete);
+            
             panel.Controls.Add(lbnamesize);
             panel.Controls.Add(lbnamequantity);
             panel.Controls.Add(lbnameprice);
             panel.Controls.Add(btnPlus);
             panel.Controls.Add(btnMinus);
-
+            panel.Controls.Add(btndelete);
             return panel;
         }
 
@@ -253,6 +262,7 @@ namespace SmartFoodCourtSystem
             if (Cart.Instance.getListFood().Count != 0)
             {
                 Cart.Instance.DeleteCart();
+                isapplypromotioncode = false;
                 Alert("Done!", FAlert.emType.success);
                 LoadCart();
             }
@@ -265,11 +275,13 @@ namespace SmartFoodCourtSystem
 
         private void btnApplyPromotioncode_Click(object sender, EventArgs e)
         {
-            if(tbPromotioncode.Text.Length!=0&& tbPromotioncode.Text=="B2D2H")
+            if(tbPromotioncode.Text.Length!=0&& tbPromotioncode.Text=="B2D2H" && isapplypromotioncode==false)
             {
+                isapplypromotioncode = true;
                foreach(Food i in Cart.Instance.getListFood())
                 {
-                    i.discount = 50;
+                    i.discount += 50;
+                    if (i.discount > 100) i.discount = 100;
                 }
                 LoadCart();
             }

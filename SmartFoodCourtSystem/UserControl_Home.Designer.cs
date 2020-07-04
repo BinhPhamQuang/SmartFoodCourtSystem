@@ -115,7 +115,7 @@
             this.lb_discount.AutoSize = true;
             this.lb_discount.Font = new System.Drawing.Font("Malgun Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_discount.ForeColor = System.Drawing.Color.Crimson;
-            this.lb_discount.Location = new System.Drawing.Point(338, 75);
+            this.lb_discount.Location = new System.Drawing.Point(325, 70);
             this.lb_discount.Name = "lb_discount";
             this.lb_discount.Size = new System.Drawing.Size(105, 47);
             this.lb_discount.TabIndex = 14;
@@ -124,22 +124,23 @@
             // 
             // lb_prevprice
             // 
+            this.lb_prevprice.AutoSize = true;
             this.lb_prevprice.Font = new System.Drawing.Font("Malgun Gothic", 35.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_prevprice.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.lb_prevprice.Location = new System.Drawing.Point(42, 43);
             this.lb_prevprice.Name = "lb_prevprice";
-            this.lb_prevprice.Size = new System.Drawing.Size(309, 66);
+            this.lb_prevprice.Size = new System.Drawing.Size(299, 62);
             this.lb_prevprice.TabIndex = 15;
-            this.lb_prevprice.Text = "14.500 vnd";
+            this.lb_prevprice.Text = "1450000vnd";
             // 
             // UserControl_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_discount);
             this.Controls.Add(this.lb_prevprice);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Ordernow);
             this.Controls.Add(this.richTextBox_detailfoodinfo);
             this.Controls.Add(this.lb_namefood);

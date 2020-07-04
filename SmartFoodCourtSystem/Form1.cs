@@ -48,6 +48,7 @@ namespace SmartFoodCourtSystem
             pn_uc.Controls.Remove(momo);
             if(momo.paysuccessed==true)
             {
+                UC_cart.isapplypromotioncode = false;
                 btnHome_Click(sender, e);
             }
            // Cart.Instance.DeleteCart();s

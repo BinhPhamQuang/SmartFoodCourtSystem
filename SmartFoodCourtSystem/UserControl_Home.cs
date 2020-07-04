@@ -39,8 +39,8 @@ namespace SmartFoodCourtSystem
 
                 picturebox1.Image = Resources.dishdefault;
             }
-            lb_price.Text = (t.price * (100 - t.discount)/100).ToString() + " VND";
-            lb_prevprice.Text = t.price.ToString()+" VND";
+            lb_price.Text = (t.price * (100 - t.discount)/100).ToString() + " vnd";
+            lb_prevprice.Text = t.price.ToString()+" vnd";
             lb_discount.Text = "- "+t.discount.ToString() + "%";
             lb_namefood.Text = t.name;
             richTextBox_detailfoodinfo.Text = t.description;

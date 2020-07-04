@@ -223,6 +223,7 @@ namespace SmartFoodCourtSystem
                 Cart.Instance.DeleteCart();
                 lbtotalprice.Text = "0VND";
                 Alert("See you again!", FAlert.emType.success);
+                UC_cart.isapplypromotioncode = false;
                 if (this.BtnCancelClick != null)
                     this.BtnCancelClick(this, e);
 
