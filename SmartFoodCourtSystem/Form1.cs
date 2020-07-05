@@ -39,15 +39,17 @@ namespace SmartFoodCourtSystem
             pn_uc.Controls.Add(momo);
             momo.BringToFront();
             momo.ButtonClick += new EventHandler(momo_ButtonClick);
-
+            lbwarningpayment.Visible = true;
 
 
         }
         private void momo_ButtonClick(object sender, EventArgs e)
         {
+            lbwarningpayment.Visible = false;
             pn_uc.Controls.Remove(momo);
             if(momo.paysuccessed==true)
             {
+                
                 UC_cart.isapplypromotioncode = false;
                 btnHome_Click(sender, e);
             }

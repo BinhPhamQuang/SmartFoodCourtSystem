@@ -53,6 +53,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbwarningpayment = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -136,11 +137,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 668);
+            this.label3.Location = new System.Drawing.Point(3, 677);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Version 1.0";
+            this.label3.Text = "Version 2.1.1";
             // 
             // btnCart
             // 
@@ -350,6 +351,22 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
+            // lbwarningpayment
+            // 
+            this.lbwarningpayment.AutoSize = true;
+            this.lbwarningpayment.BackColor = System.Drawing.Color.Aquamarine;
+            this.lbwarningpayment.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbwarningpayment.ForeColor = System.Drawing.Color.Red;
+            this.lbwarningpayment.Location = new System.Drawing.Point(461, 146);
+            this.lbwarningpayment.Name = "lbwarningpayment";
+            this.lbwarningpayment.Size = new System.Drawing.Size(587, 32);
+            this.lbwarningpayment.TabIndex = 6;
+            this.lbwarningpayment.Text = "Because this is a test version. Please DO NOT scan the QR code if you do not have" +
+    " a MoMo TEST ACCOUNT.\r\n We are not responsible if you pay with official MoMo acc" +
+    "ount.";
+            this.lbwarningpayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbwarningpayment.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,6 +374,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1239, 690);
+            this.Controls.Add(this.lbwarningpayment);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -379,6 +397,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -409,6 +428,7 @@
         private UserControl_Home userControl_Home1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lbwarningpayment;
     }
 }
 
