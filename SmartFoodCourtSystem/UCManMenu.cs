@@ -18,71 +18,7 @@ namespace SmartFoodCourtSystem
         public UCManMenu()
         {
             InitializeComponent();
-        }
-
-        private int category = 1;
-        Panel Dish(Food food)
-        {
-            Panel paneldish = new Panel();
-            paneldish.Width = 782;
-            paneldish.Height = 119;
-            paneldish.BackColor = Color.White;
-            /////
-            Label name = new Label();
-            name.Text = food.name;
-            name.Font = new Font("Century Gothic", 14.0f, FontStyle.Bold);
-            name.Location = new Point(120, 21);
-            name.AutoSize = true;
-            /////
-            PictureBox pic = new PictureBox();
-            pic.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic.Location = new Point(3, 3);
-            pic.Margin = new Padding(3, 3, 3, 3);
-            pic.Size = new Size(111, 113);
-            pic.Tag = food;
-            try
-            {
-                pic.Image = Image.FromFile(food.image);
-
-            }
-            catch (Exception a)
-            {
-
-                pic.Image = Resources.dishdefault;
-            }
-            /////
-            Label price = new Label();
-            price.Location = new Point(120, 88);
-            price.AutoSize = true;
-            price.Text = food.price.ToString() + "VND";
-            price.Font = new Font("Century Gothic", 10.0f);
-            price.ForeColor = Color.Black;
-            /////
-            Button edit = new Button();
-            edit.Location = new Point(739, 3);
-            edit.BackgroundImage = Properties.Resources.edit_property_26px;
-            edit.BackgroundImageLayout = ImageLayout.Zoom;
-            edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            edit.Size = new Size(40, 40);
-            edit.FlatStyle = FlatStyle.Flat;
-            /////
-            Button delete = new Button();
-            delete.Location = new Point(739, 76);
-            delete.BackgroundImage = Properties.Resources.delete_bin_30px;
-            delete.BackgroundImageLayout = ImageLayout.Zoom;
-            delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            delete.Size = new Size(40, 40);
-            delete.FlatStyle = FlatStyle.Flat;
-            /////
-            ///
-            paneldish.Controls.Add(name);
-            paneldish.Controls.Add(price);
-            paneldish.Controls.Add(pic);
-            paneldish.Controls.Add(edit);
-            paneldish.Controls.Add(delete);
-
-
-            return paneldish;
+            LoadMenu();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -93,14 +29,7 @@ namespace SmartFoodCourtSystem
          
         public void LoadMenu()
         {
-
-            flwMenu.Controls.Clear();
-            List<Food> t = FoodDAO.Instance.getFoodbyCategory(category);
-            foreach (Food i in t)
-            {
-                Panel a = Dish(i);
-                flwMenu.Controls.Add(a);
-            }
+            dtgListFood.DataSource = FoodDAO.Instance.GetListFood();
         }
 
         private void UCManMenu_Load(object sender, EventArgs e)
@@ -108,24 +37,76 @@ namespace SmartFoodCourtSystem
             LoadMenu();
         }
 
-        private void btnFood_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            category = 1;
-            UCManMenu_Load(sender, e);
-            btnFood.BackColor = SystemColors.Highlight;
-            btnDrink.BackColor = Color.White;
-            btnFood.ForeColor = Color.White;
-            btnDrink.ForeColor = Color.Black;
+            if (e.RowIndex != -1)
+            {
+                int i;
+                i = dtgListFood.CurrentRow.Index;
+                tBid.Text = dtgListFood.Rows[i].Cells["IDFood"].Value.ToString();
+                tBname.Text = dtgListFood.Rows[i].Cells["Name"].Value.ToString();
+                nmPrice.Value = Convert.ToInt32(dtgListFood.Rows[i].Cells["Price"].Value);
+                nmDiscount.Value = Convert.ToInt32(dtgListFood.Rows[i].Cells["Discount"].Value);
+                nmCat.Value = Convert.ToInt32(dtgListFood.Rows[i].Cells["Category"].Value);
+                tBdescript.Text = dtgListFood.Rows[i].Cells["Description"].Value.ToString();
+            }
         }
 
-        private void btnDrink_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            category = 0;
-            UCManMenu_Load(sender, e);
-            btnDrink.BackColor = SystemColors.Highlight;
-            btnFood.BackColor = Color.White;
-            btnFood.ForeColor = Color.Black;
-            btnDrink.ForeColor = Color.White;
+            string name = tBname.Text;
+            int category = (int)nmCat.Value;
+            int price = (int)nmPrice.Value;
+            int discount = (int)nmDiscount.Value;
+            string description = tBdescript.Text;
+
+            if (FoodDAO.Instance.InsertFood(name, price, description, category, discount))
+            {
+                MessageBox.Show("Dish added successfully");
+                LoadMenu();
+            }
+            else
+            {
+                MessageBox.Show("Fail to add a dish");
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(tBid.Text);
+            string name = tBname.Text;
+            int category = (int)nmCat.Value;
+            int price = (int)nmPrice.Value;
+            int discount = (int)nmDiscount.Value;
+            string description = tBdescript.Text;
+
+            if (FoodDAO.Instance.UpdateFood(id, name, price, description, category, discount))
+            {
+                MessageBox.Show("Dish updated successfully");
+                LoadMenu();
+            }
+            else
+            {
+                MessageBox.Show("Fail to update dish");
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this dish?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(tBid.Text);
+                if (FoodDAO.Instance.DeleteFood(id))
+                {
+                    MessageBox.Show("Dish deleted successfully");
+                    LoadMenu();
+                }
+                else
+                {
+                    MessageBox.Show("Fail to delete dish");
+                }
+            }
         }
     }
 }

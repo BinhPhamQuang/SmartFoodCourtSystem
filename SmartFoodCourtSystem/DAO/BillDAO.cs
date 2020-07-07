@@ -16,6 +16,12 @@ namespace SmartFoodCourtSystem.DAO
             private set { BillDAO.instance = value; }
         }
         private BillDAO() {    }
+
+        public void DeleteBillByFoodId(int id)
+        {
+            DataProvider.Instance.ExecuteQuery("delete from BillInfo where IDFood = " + id);
+        }
+
         public void createbill()
         {
             Bill bill = new Bill();

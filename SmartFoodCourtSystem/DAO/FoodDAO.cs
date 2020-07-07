@@ -66,5 +66,39 @@ namespace SmartFoodCourtSystem.DAO
             }
         }
 
+
+        public DataTable GetListFood()
+        {
+            List<Food> list = new List<Food>();
+
+            string query = $"SELECT * FROM Food";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            return data;
+        }
+
+        public bool InsertFood(string name, float price, string description, int id, int discount)
+        {
+            string query = string.Format(@"Insert Into Food ( Name, Price, Description, Category, Discount) VALUES ('" + name + "','" + price + "','" + description + "','" + id + "','" + discount + "' )");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return (result > 0);
+        }
+
+        public bool UpdateFood(int idfood, string name, float price, string description, int id, int discount)
+        {
+            string query = string.Format(@"Update Food SET Name = '" + name + "', price = '" + price + "', description = '" + description + "', category = '" + id + "', discount = '" + discount + "' WHERE idfood = '" + idfood + "' ");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return (result > 0);
+        }
+
+        public bool DeleteFood(int idfood)
+        {
+            BillDAO.Instance.DeleteBillByFoodId(idfood);
+            string query = string.Format(@"Delete FROM Food where IDFood = '" + idfood + "' ");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return (result > 0);
+        }
+
     }
 }
