@@ -28,19 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewOrder));
             this.OrderIDLabel = new System.Windows.Forms.Label();
             this.StatusLabel = new System.Windows.Forms.Label();
             this.StatuscomboBox = new System.Windows.Forms.ComboBox();
             this.OrderIDtextBox = new System.Windows.Forms.TextBox();
             this.DetailLabel = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnConfirm = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderIDLabel
@@ -49,7 +46,7 @@
             this.OrderIDLabel.AutoSize = true;
             this.OrderIDLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderIDLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OrderIDLabel.Location = new System.Drawing.Point(3, 36);
+            this.OrderIDLabel.Location = new System.Drawing.Point(131, 39);
             this.OrderIDLabel.Name = "OrderIDLabel";
             this.OrderIDLabel.Size = new System.Drawing.Size(81, 23);
             this.OrderIDLabel.TabIndex = 0;
@@ -60,7 +57,7 @@
             this.StatusLabel.AutoSize = true;
             this.StatusLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.StatusLabel.Location = new System.Drawing.Point(247, 36);
+            this.StatusLabel.Location = new System.Drawing.Point(494, 42);
             this.StatusLabel.Name = "StatusLabel";
             this.StatusLabel.Size = new System.Drawing.Size(64, 23);
             this.StatusLabel.TabIndex = 1;
@@ -74,14 +71,14 @@
             "In Queue",
             "Processing",
             "Finished"});
-            this.StatuscomboBox.Location = new System.Drawing.Point(346, 38);
+            this.StatuscomboBox.Location = new System.Drawing.Point(593, 44);
             this.StatuscomboBox.Name = "StatuscomboBox";
             this.StatuscomboBox.Size = new System.Drawing.Size(99, 21);
             this.StatuscomboBox.TabIndex = 2;
             // 
             // OrderIDtextBox
             // 
-            this.OrderIDtextBox.Location = new System.Drawing.Point(108, 39);
+            this.OrderIDtextBox.Location = new System.Drawing.Point(236, 42);
             this.OrderIDtextBox.Name = "OrderIDtextBox";
             this.OrderIDtextBox.ReadOnly = true;
             this.OrderIDtextBox.Size = new System.Drawing.Size(99, 20);
@@ -92,7 +89,7 @@
             this.DetailLabel.AutoSize = true;
             this.DetailLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.DetailLabel.Location = new System.Drawing.Point(194, 96);
+            this.DetailLabel.Location = new System.Drawing.Point(396, 84);
             this.DetailLabel.Name = "DetailLabel";
             this.DetailLabel.Size = new System.Drawing.Size(64, 23);
             this.DetailLabel.TabIndex = 0;
@@ -104,23 +101,12 @@
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(0, 136);
+            this.dataGridView.Location = new System.Drawing.Point(0, 124);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
-            this.dataGridView.Size = new System.Drawing.Size(445, 224);
+            this.dataGridView.Size = new System.Drawing.Size(834, 224);
             this.dataGridView.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(451, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(382, 480);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // BtnConfirm
             // 
@@ -128,7 +114,7 @@
             this.BtnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfirm.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnConfirm.Location = new System.Drawing.Point(315, 411);
+            this.BtnConfirm.Location = new System.Drawing.Point(627, 377);
             this.BtnConfirm.Name = "BtnConfirm";
             this.BtnConfirm.Size = new System.Drawing.Size(130, 67);
             this.BtnConfirm.TabIndex = 6;
@@ -142,7 +128,7 @@
             this.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDelete.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDelete.Location = new System.Drawing.Point(162, 411);
+            this.BtnDelete.Location = new System.Drawing.Point(373, 377);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(130, 67);
             this.BtnDelete.TabIndex = 6;
@@ -155,7 +141,7 @@
             this.BtnCancel.BackColor = System.Drawing.Color.Red;
             this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancel.Location = new System.Drawing.Point(3, 411);
+            this.BtnCancel.Location = new System.Drawing.Point(82, 377);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(130, 67);
             this.BtnCancel.TabIndex = 6;
@@ -171,7 +157,6 @@
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnConfirm);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.OrderIDtextBox);
             this.Controls.Add(this.StatuscomboBox);
@@ -181,7 +166,6 @@
             this.Name = "ViewOrder";
             this.Size = new System.Drawing.Size(834, 481);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +179,6 @@
         private System.Windows.Forms.TextBox OrderIDtextBox;
         private System.Windows.Forms.Label DetailLabel;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnConfirm;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.Button BtnCancel;
