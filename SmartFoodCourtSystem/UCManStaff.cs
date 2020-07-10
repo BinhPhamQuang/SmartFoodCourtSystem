@@ -65,5 +65,45 @@ namespace SmartFoodCourtSystem
                 MessageBox.Show("Fail to add a Staff");
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(tBiduser.Text);
+            string name = tBname.Text;
+            int salary = (int)nmSalary.Value;
+            int age = (int)nmAge.Value;
+            int phone = (int)nmPhone.Value;
+            string username = tBusername.Text;
+            string password = tBpass.Text;
+            string type = tBtype.Text;
+
+            if (EmployeeDAO.Instance.UpdateStaff(id ,name, salary, age, phone) && UserDAO.Instance.UpdateUser(id, username, password, type))
+            {
+                MessageBox.Show("Staff updated successfully");
+                LoadListEmployee();
+            }
+            else
+            {
+                MessageBox.Show("Fail to update Staff");
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this staff?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(tBiduser.Text);
+                if (EmployeeDAO.Instance.DeleteStaff(id) && UserDAO.Instance.DeleteUser(id))
+                {
+                    MessageBox.Show("Staff deleted successfully");
+                    LoadListEmployee();
+                }
+                else
+                {
+                    MessageBox.Show("Fail to delete dish");
+                }
+            }
+        }
     }
 }
