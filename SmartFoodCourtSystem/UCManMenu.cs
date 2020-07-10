@@ -49,6 +49,8 @@ namespace SmartFoodCourtSystem
                 nmDiscount.Value = Convert.ToInt32(dtgListFood.Rows[i].Cells["Discount"].Value);
                 nmCat.Value = Convert.ToInt32(dtgListFood.Rows[i].Cells["Category"].Value);
                 tBdescript.Text = dtgListFood.Rows[i].Cells["Description"].Value.ToString();
+                //tBsize.Text = dtgListFood.Rows[i].Cells["Size"].Value.ToString();
+                cBsize.Text = dtgListFood.Rows[i].Cells["Size"].Value.ToString(); ;
             }
         }
 
@@ -59,8 +61,9 @@ namespace SmartFoodCourtSystem
             int price = (int)nmPrice.Value;
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
+            string size = cBsize.Text;
 
-            if (FoodDAO.Instance.InsertFood(name, price, description, category, discount))
+            if (FoodDAO.Instance.InsertFood(name, price, description, category, discount,size))
             {
                 MessageBox.Show("Dish added successfully");
                 LoadMenu();
@@ -79,8 +82,9 @@ namespace SmartFoodCourtSystem
             int price = (int)nmPrice.Value;
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
+            string size = cBsize.Text;
 
-            if (FoodDAO.Instance.UpdateFood(id, name, price, description, category, discount))
+            if (FoodDAO.Instance.UpdateFood(id, name, price, description, category, discount,size))
             {
                 MessageBox.Show("Dish updated successfully");
                 LoadMenu();
@@ -107,6 +111,16 @@ namespace SmartFoodCourtSystem
                     MessageBox.Show("Fail to delete dish");
                 }
             }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

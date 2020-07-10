@@ -69,7 +69,7 @@ namespace SmartFoodCourtSystem.DAO
 
         public DataTable GetListFood()
         {
-            List<Food> list = new List<Food>();
+
 
             string query = $"SELECT * FROM Food";
 
@@ -78,16 +78,16 @@ namespace SmartFoodCourtSystem.DAO
             return data;
         }
 
-        public bool InsertFood(string name, float price, string description, int id, int discount)
+        public bool InsertFood(string name, float price, string description, int id, int discount, string size)
         {
-            string query = string.Format(@"Insert Into Food ( Name, Price, Description, Category, Discount) VALUES ('" + name + "','" + price + "','" + description + "','" + id + "','" + discount + "' )");
+            string query = string.Format(@"Insert Into Food ( Name, Price, Description, Category, Discount, Size) VALUES ('" + name + "','" + price + "','" + description + "','" + id + "','" + discount + "', '"+size+"' )");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return (result > 0);
         }
 
-        public bool UpdateFood(int idfood, string name, float price, string description, int id, int discount)
+        public bool UpdateFood(int idfood, string name, float price, string description, int id, int discount, string size)
         {
-            string query = string.Format(@"Update Food SET Name = '" + name + "', price = '" + price + "', description = '" + description + "', category = '" + id + "', discount = '" + discount + "' WHERE idfood = '" + idfood + "' ");
+            string query = string.Format(@"Update Food SET Name = '" + name + "', price = '" + price + "', description = '" + description + "', category = '" + id + "', discount = '" + discount + "', size = '" + size + "' WHERE IDFood = '" + idfood + "' ");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return (result > 0);
         }

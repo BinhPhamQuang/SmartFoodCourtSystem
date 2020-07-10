@@ -94,11 +94,14 @@
     </Compile>
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\OrderList.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\Cart.cs" />
+    <Compile Include="DTO\EmployeeDTO.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\HashMD5.cs" />
     <Compile Include="DTO\MoMoSecurity.cs" />

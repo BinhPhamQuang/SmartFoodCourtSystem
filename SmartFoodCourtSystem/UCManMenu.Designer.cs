@@ -45,6 +45,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cBsize = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListFood)).BeginInit();
             this.gBdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
@@ -63,6 +65,8 @@
             // 
             // gBdetail
             // 
+            this.gBdetail.Controls.Add(this.cBsize);
+            this.gBdetail.Controls.Add(this.label7);
             this.gBdetail.Controls.Add(this.tBid);
             this.gBdetail.Controls.Add(this.label1);
             this.gBdetail.Controls.Add(this.btnDel);
@@ -233,6 +237,31 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
+            // label7
+            // 
+            this.label7.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(353, 144);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 18);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Size";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // cBsize
+            // 
+            this.cBsize.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBsize.FormattingEnabled = true;
+            this.cBsize.Items.AddRange(new object[] {
+            "Small",
+            "Medium",
+            "Large"});
+            this.cBsize.Location = new System.Drawing.Point(447, 141);
+            this.cBsize.Name = "cBsize";
+            this.cBsize.Size = new System.Drawing.Size(121, 24);
+            this.cBsize.TabIndex = 21;
+            // 
             // UCManMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,5 +301,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tBname;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cBsize;
     }
 }
