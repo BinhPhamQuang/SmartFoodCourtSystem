@@ -843,3 +843,11 @@ D:\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.View
 D:\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrderList.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrderList.resources
+D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\x64\SQLite.Interop.dll
+D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\x86\SQLite.Interop.dll
+D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Newtonsoft.Json.dll
+D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.Fcomment.resources
+D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCMomo.resources
+D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrder.resources
+D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrderList.resources

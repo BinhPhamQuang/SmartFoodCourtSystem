@@ -101,7 +101,7 @@ namespace SmartFoodCourtSystem
                 }
                 else
                 {
-                    MessageBox.Show("Fail to delete dish");
+                    MessageBox.Show("Fail to delete staff");
                 }
             }
         }

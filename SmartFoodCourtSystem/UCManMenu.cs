@@ -41,29 +41,39 @@ namespace SmartFoodCourtSystem
         {
             if (e.RowIndex != -1)
             {
-                int i;
-                i = dtgListFood.CurrentRow.Index;
-                tBid.Text = dtgListFood.Rows[i].Cells["IDFood"].Value.ToString();
+                int i = dtgListFood.CurrentRow.Index;
+                //tBid.Text = dtgListFood.Rows[i].Cells["IDFood"].Value.ToString();
                 tBname.Text = dtgListFood.Rows[i].Cells["Name"].Value.ToString();
                 nmPrice.Value = Convert.ToInt32(dtgListFood.Rows[i].Cells["Price"].Value);
                 nmDiscount.Value = Convert.ToInt32(dtgListFood.Rows[i].Cells["Discount"].Value);
-                nmCat.Value = Convert.ToInt32(dtgListFood.Rows[i].Cells["Category"].Value);
+                int category = Convert.ToInt32(dtgListFood.Rows[i].Cells["Category"].Value);
+                if (category == 1)
+                {
+                    cBcat.Text = "Food";
+                }
+                else
+                {
+                    cBcat.Text = "Drink";
+                }
                 tBdescript.Text = dtgListFood.Rows[i].Cells["Description"].Value.ToString();
                 //tBsize.Text = dtgListFood.Rows[i].Cells["Size"].Value.ToString();
-                cBsize.Text = dtgListFood.Rows[i].Cells["Size"].Value.ToString(); ;
+                //cBsize.Text = dtgListFood.Rows[i].Cells["Size"].Value.ToString(); ;
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
             string name = tBname.Text;
-            int category = (int)nmCat.Value;
+            int category;
+            if (cBcat.Text == "Food") category = 1;
+            else category = 0;
             int price = (int)nmPrice.Value;
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
-            string size = cBsize.Text;
+            //string size = cBsize.Text;
 
-            if (FoodDAO.Instance.InsertFood(name, price, description, category, discount,size))
+            if (FoodDAO.Instance.InsertFood(name, price, description, category, discount))
             {
                 MessageBox.Show("Dish added successfully");
                 LoadMenu();
@@ -76,15 +86,18 @@ namespace SmartFoodCourtSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(tBid.Text);
+            int i = dtgListFood.CurrentRow.Index;
+            int id = Convert.ToInt32(dtgListFood.Rows[i].Cells["IDFood"].Value);
             string name = tBname.Text;
-            int category = (int)nmCat.Value;
+            int category;
+            if (cBcat.Text == "Food") category = 1;
+            else category = 0;
             int price = (int)nmPrice.Value;
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
-            string size = cBsize.Text;
+            //string size = cBsize.Text;
 
-            if (FoodDAO.Instance.UpdateFood(id, name, price, description, category, discount,size))
+            if (FoodDAO.Instance.UpdateFood(id, name, price, description, category, discount))
             {
                 MessageBox.Show("Dish updated successfully");
                 LoadMenu();
@@ -100,7 +113,8 @@ namespace SmartFoodCourtSystem
             DialogResult result = MessageBox.Show("Are you sure you want to delete this dish?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                int id = Convert.ToInt32(tBid.Text);
+                int i = dtgListFood.CurrentRow.Index;
+                int id = Convert.ToInt32(dtgListFood.Rows[i].Cells["IDFood"].Value);
                 if (FoodDAO.Instance.DeleteFood(id))
                 {
                     MessageBox.Show("Dish deleted successfully");
