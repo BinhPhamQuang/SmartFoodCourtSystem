@@ -72,6 +72,7 @@ namespace SmartFoodCourtSystem
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
             //string size = cBsize.Text;
+         
             if (name == "" || price == 0 || description == "")
             {
                 MessageBox.Show("Wrong format, Unable to add a dish");

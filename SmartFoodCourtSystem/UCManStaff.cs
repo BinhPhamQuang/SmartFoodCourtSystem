@@ -35,7 +35,7 @@ namespace SmartFoodCourtSystem
         private void dtgListEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = dtgListEmployee.CurrentRow.Index;
-            //tBiduser.Text = dtgListEmployee.Rows[i].Cells["IDUser"].Value.ToString();
+       
             tBname.Text = dtgListEmployee.Rows[i].Cells["Name"].Value.ToString();
             nmAge.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Age"].Value);
             nmSalary.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Salary"].Value);
@@ -61,23 +61,31 @@ namespace SmartFoodCourtSystem
             string type;
             if (cBtype.Text == "Cook") type = "0";
             else type = "1";
-
-            if (name == "" || salary == 0 || age == 0 || phone == 0 || username == "" || password == "" || type == "")
-            {
-                MessageBox.Show("Wrong format, Unable to add a staff");
-            }
+            int a = dtgListEmployee.Rows.Count;
+            
+            string query = $"SELECT * from User WHERE Username='" + tBusername.Text + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            if (data.Rows.Count >= 1) MessageBox.Show("User account already existed in the system");
             else
             {
-                if (EmployeeDAO.Instance.InsertStaff(name, salary, age, phone) && UserDAO.Instance.InsertUser(username, password, type))
+                if (name == "" || salary == 0 || age == 0 || phone == 0 || username == "" || password == "" || type == "")
                 {
-                    MessageBox.Show("Staff added successfully");
-                    LoadListEmployee();
+                    MessageBox.Show("Wrong format, Unable to add a staff");
                 }
                 else
                 {
-                    MessageBox.Show("Fail to add a Staff");
+                    if (EmployeeDAO.Instance.InsertStaff(name, salary, age, phone) && UserDAO.Instance.InsertUser(username, password, type))
+                    {
+                        MessageBox.Show("Staff added successfully");
+                        LoadListEmployee();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fail to add a Staff");
+                    }
                 }
             }
+            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -93,7 +101,6 @@ namespace SmartFoodCourtSystem
             string type;
             if (cBtype.Text == "Cook") type = "0";
             else type = "1";
-
             if (EmployeeDAO.Instance.UpdateStaff(id ,name, salary, age, phone) && UserDAO.Instance.UpdateUser(id, username, password, type))
             {
                 MessageBox.Show("Staff updated successfully");

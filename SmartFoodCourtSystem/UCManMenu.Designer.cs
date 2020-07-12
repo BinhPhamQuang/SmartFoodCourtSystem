@@ -51,6 +51,7 @@
             // 
             // dtgListFood
             // 
+            this.dtgListFood.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dtgListFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgListFood.Location = new System.Drawing.Point(38, 15);
             this.dtgListFood.Name = "dtgListFood";
@@ -73,46 +74,56 @@
             this.gBdetail.Controls.Add(this.label3);
             this.gBdetail.Controls.Add(this.tBname);
             this.gBdetail.Controls.Add(this.label2);
-            this.gBdetail.Location = new System.Drawing.Point(26, 285);
+            this.gBdetail.Location = new System.Drawing.Point(38, 285);
             this.gBdetail.Name = "gBdetail";
-            this.gBdetail.Size = new System.Drawing.Size(789, 237);
+            this.gBdetail.Size = new System.Drawing.Size(761, 237);
             this.gBdetail.TabIndex = 40;
             this.gBdetail.TabStop = false;
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(703, 158);
+            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnDel.Location = new System.Drawing.Point(674, 158);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(86, 79);
             this.btnDel.TabIndex = 17;
             this.btnDel.Text = "Delete";
-            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.UseVisualStyleBackColor = false;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(703, 81);
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnUpdate.Location = new System.Drawing.Point(674, 81);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(86, 79);
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(703, 5);
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnAdd.Location = new System.Drawing.Point(674, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(86, 79);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // nmDiscount
             // 
             this.nmDiscount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmDiscount.Location = new System.Drawing.Point(492, 76);
+            this.nmDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.nmDiscount.Location = new System.Drawing.Point(463, 76);
             this.nmDiscount.Name = "nmDiscount";
             this.nmDiscount.Size = new System.Drawing.Size(161, 26);
             this.nmDiscount.TabIndex = 11;
@@ -121,7 +132,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(398, 77);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label6.Location = new System.Drawing.Point(369, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 18);
             this.label6.TabIndex = 10;
@@ -130,12 +142,13 @@
             // nmPrice
             // 
             this.nmPrice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.nmPrice.Increment = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
-            this.nmPrice.Location = new System.Drawing.Point(144, 73);
+            this.nmPrice.Location = new System.Drawing.Point(115, 73);
             this.nmPrice.Maximum = new decimal(new int[] {
             500000,
             0,
@@ -148,7 +161,8 @@
             // tBdescript
             // 
             this.tBdescript.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBdescript.Location = new System.Drawing.Point(144, 129);
+            this.tBdescript.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.tBdescript.Location = new System.Drawing.Point(115, 129);
             this.tBdescript.Multiline = true;
             this.tBdescript.Name = "tBdescript";
             this.tBdescript.Size = new System.Drawing.Size(509, 87);
@@ -158,7 +172,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(52, 129);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label5.Location = new System.Drawing.Point(23, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 18);
             this.label5.TabIndex = 6;
@@ -168,7 +183,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(398, 22);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label4.Location = new System.Drawing.Point(369, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 18);
             this.label4.TabIndex = 4;
@@ -178,7 +194,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 73);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label3.Location = new System.Drawing.Point(23, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 18);
             this.label3.TabIndex = 2;
@@ -187,7 +204,8 @@
             // tBname
             // 
             this.tBname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBname.Location = new System.Drawing.Point(144, 23);
+            this.tBname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.tBname.Location = new System.Drawing.Point(115, 23);
             this.tBname.Name = "tBname";
             this.tBname.Size = new System.Drawing.Size(161, 26);
             this.tBname.TabIndex = 1;
@@ -196,7 +214,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 23);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label2.Location = new System.Drawing.Point(23, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 0;
@@ -205,11 +224,12 @@
             // cBcat
             // 
             this.cBcat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.cBcat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.cBcat.FormattingEnabled = true;
             this.cBcat.Items.AddRange(new object[] {
             "Food",
             "Drink"});
-            this.cBcat.Location = new System.Drawing.Point(492, 23);
+            this.cBcat.Location = new System.Drawing.Point(463, 23);
             this.cBcat.Name = "cBcat";
             this.cBcat.Size = new System.Drawing.Size(161, 26);
             this.cBcat.TabIndex = 18;

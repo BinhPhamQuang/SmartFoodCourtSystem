@@ -20,7 +20,7 @@ namespace SmartFoodCourtSystem.DAO
 
         public DataTable GetListEmployee()
         {
-            string query = $"Select Employee.IDUser, Name, Salary, Username, Password, Phonenumber, Age, Type from Employee " +
+            string query = $"Select  Name, Salary, Username, Password, Phonenumber, Age, Type from Employee " +
                         "inner join User on Employee.IDUser = User.IDUser " ;
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
