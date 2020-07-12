@@ -35,14 +35,19 @@ namespace SmartFoodCourtSystem
         private void dtgListEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = dtgListEmployee.CurrentRow.Index;
-            tBiduser.Text = dtgListEmployee.Rows[i].Cells["IDUser"].Value.ToString();
+            //tBiduser.Text = dtgListEmployee.Rows[i].Cells["IDUser"].Value.ToString();
             tBname.Text = dtgListEmployee.Rows[i].Cells["Name"].Value.ToString();
             nmAge.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Age"].Value);
             nmSalary.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Salary"].Value);
             nmPhone.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Phonenumber"].Value);
             tBpass.Text = HashMD5.Decrypt(dtgListEmployee.Rows[i].Cells["Password"].Value.ToString());
             tBusername.Text = dtgListEmployee.Rows[i].Cells["Username"].Value.ToString();
-            tBtype.Text = HashMD5.Decrypt(dtgListEmployee.Rows[i].Cells["Type"].Value.ToString());
+            int type = Convert.ToInt32(HashMD5.Decrypt(dtgListEmployee.Rows[i].Cells["Type"].Value.ToString()));
+            if (type == 0)
+            {
+                cBtype.Text = "Cook";
+            }
+            else cBtype.Text = "Manager";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -53,29 +58,41 @@ namespace SmartFoodCourtSystem
             int phone = (int)nmPhone.Value;
             string username = tBusername.Text;
             string password = tBpass.Text;
-            string type = tBtype.Text;
+            string type;
+            if (cBtype.Text == "Cook") type = "0";
+            else type = "1";
 
-            if (EmployeeDAO.Instance.InsertStaff(name, salary, age,phone) && UserDAO.Instance.InsertUser(username,password,type))
+            if (name == "" || salary == 0 || age == 0 || phone == 0 || username == "" || password == "" || type == "")
             {
-                MessageBox.Show("Staff added successfully");
-                LoadListEmployee();
+                MessageBox.Show("Wrong format, Unable to add a staff");
             }
             else
             {
-                MessageBox.Show("Fail to add a Staff");
+                if (EmployeeDAO.Instance.InsertStaff(name, salary, age, phone) && UserDAO.Instance.InsertUser(username, password, type))
+                {
+                    MessageBox.Show("Staff added successfully");
+                    LoadListEmployee();
+                }
+                else
+                {
+                    MessageBox.Show("Fail to add a Staff");
+                }
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(tBiduser.Text);
+            int i = dtgListEmployee.CurrentRow.Index;
+            int id = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["IDUser"].Value);
             string name = tBname.Text;
             int salary = (int)nmSalary.Value;
             int age = (int)nmAge.Value;
             int phone = (int)nmPhone.Value;
             string username = tBusername.Text;
             string password = tBpass.Text;
-            string type = tBtype.Text;
+            string type;
+            if (cBtype.Text == "Cook") type = "0";
+            else type = "1";
 
             if (EmployeeDAO.Instance.UpdateStaff(id ,name, salary, age, phone) && UserDAO.Instance.UpdateUser(id, username, password, type))
             {
@@ -93,7 +110,8 @@ namespace SmartFoodCourtSystem
             DialogResult result = MessageBox.Show("Are you sure you want to delete this staff?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                int id = Convert.ToInt32(tBiduser.Text);
+                int i = dtgListEmployee.CurrentRow.Index;
+                int id = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["IDUser"].Value);
                 if (EmployeeDAO.Instance.DeleteStaff(id) && UserDAO.Instance.DeleteUser(id))
                 {
                     MessageBox.Show("Staff deleted successfully");

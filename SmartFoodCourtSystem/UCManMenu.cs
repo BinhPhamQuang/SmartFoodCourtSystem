@@ -72,15 +72,21 @@ namespace SmartFoodCourtSystem
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
             //string size = cBsize.Text;
-
-            if (FoodDAO.Instance.InsertFood(name, price, description, category, discount))
+            if (name == "" || price == 0 || description == "")
             {
-                MessageBox.Show("Dish added successfully");
-                LoadMenu();
+                MessageBox.Show("Wrong format, Unable to add a dish");
             }
             else
             {
-                MessageBox.Show("Fail to add a dish");
+                if (FoodDAO.Instance.InsertFood(name, price, description, category, discount))
+                {
+                    MessageBox.Show("Dish added successfully");
+                    LoadMenu();
+                }
+                else
+                {
+                    MessageBox.Show("Fail to add a dish");
+                }
             }
         }
 
