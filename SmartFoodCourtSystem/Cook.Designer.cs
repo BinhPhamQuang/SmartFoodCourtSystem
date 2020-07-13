@@ -57,7 +57,7 @@
             // 
             this.GetOrderList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.GetOrderList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GetOrderList.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GetOrderList.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GetOrderList.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.GetOrderList.Location = new System.Drawing.Point(-2, 123);
             this.GetOrderList.Name = "GetOrderList";
@@ -72,10 +72,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(20, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(177, 117);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.Size = new System.Drawing.Size(130, 117);
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             // 
@@ -106,13 +105,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(288, 39);
+            this.label1.Location = new System.Drawing.Point(230, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 38);
+            this.label1.Size = new System.Drawing.Size(376, 39);
             this.label1.TabIndex = 27;
-            this.label1.Text = "Smart FoodCourt";
+            this.label1.Text = "Hippo Town Restaurant";
             // 
             // controlPanel
             // 
@@ -132,6 +131,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cook";

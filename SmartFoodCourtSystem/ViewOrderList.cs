@@ -40,8 +40,9 @@ namespace SmartFoodCourtSystem
             OrderID.AutoSize = false;
             OrderID.TextAlign = ContentAlignment.MiddleCenter;
             OrderID.Left = OrderID.Location.X + (panel.Width - OrderID.Size.Width) / 2;
-            OrderID.ForeColor = Color.FromArgb(89, 200, 153);
-            OrderID.BackColor = Color.FromArgb(80, 80, 80);
+            OrderID.ForeColor = Color.FromArgb(34, 36, 45);
+            // OrderID.BackColor = Color.FromArgb(80, 80, 80);
+            OrderID.BackColor = Color.Transparent;
             OrderID.Font = new Font("Century Gothic", 14.0f, FontStyle.Bold);
             OrderID.Margin = new Padding(10);
 
@@ -52,8 +53,8 @@ namespace SmartFoodCourtSystem
             TotalPrice.TextAlign = ContentAlignment.MiddleCenter;
             TotalPrice.Left = TotalPrice.Location.X + (panel.Width - TotalPrice.Size.Width) / 2;
             TotalPrice.Top = TotalPrice.Location.Y + OrderID.Height + 20;
-            TotalPrice.ForeColor = Color.FromArgb(89, 200, 153);
-            TotalPrice.BackColor = Color.FromArgb(80, 80, 80);
+            TotalPrice.ForeColor = Color.FromArgb(34, 36, 45);
+            TotalPrice.BackColor = Color.Transparent;
             TotalPrice.Font = new Font("Century Gothic", 14.0f, FontStyle.Bold);
             TotalPrice.Margin = new Padding(10);
 
@@ -77,8 +78,8 @@ namespace SmartFoodCourtSystem
             Status.TextAlign = ContentAlignment.MiddleCenter;
             Status.Left = Status.Location.X + (panel.Width - Status.Size.Width) / 2;
             Status.Top = Status.Location.Y + OrderID.Height + TotalPrice.Height + 40;
-            Status.ForeColor = Color.FromArgb(89, 200, 153);
-            Status.BackColor = Color.FromArgb(80, 80, 80);
+            Status.ForeColor = Color.FromArgb(34, 36, 45);
+            Status.BackColor = Color.Transparent;
             Status.Font = new Font("Century Gothic", 14.0f, FontStyle.Bold);
             Status.Margin = new Padding(10);
 
