@@ -49,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListEmployee)).BeginInit();
             this.gBdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmAge)).BeginInit();
@@ -91,6 +92,7 @@
             this.gBdetail.Controls.Add(this.label3);
             this.gBdetail.Controls.Add(this.tBname);
             this.gBdetail.Controls.Add(this.label2);
+            this.gBdetail.Controls.Add(this.checkBox1);
             this.gBdetail.Location = new System.Drawing.Point(46, 287);
             this.gBdetail.Name = "gBdetail";
             this.gBdetail.Size = new System.Drawing.Size(745, 237);
@@ -139,7 +141,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label8.Location = new System.Drawing.Point(350, 150);
+            this.label8.Location = new System.Drawing.Point(350, 146);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 18);
             this.label8.TabIndex = 22;
@@ -153,6 +155,8 @@
             this.tBpass.Name = "tBpass";
             this.tBpass.Size = new System.Drawing.Size(170, 26);
             this.tBpass.TabIndex = 21;
+            this.tBpass.UseSystemPasswordChar = true;
+            this.tBpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBpass_KeyPress);
             // 
             // label7
             // 
@@ -269,6 +273,7 @@
             this.tBusername.Name = "tBusername";
             this.tBusername.Size = new System.Drawing.Size(170, 26);
             this.tBusername.TabIndex = 7;
+            this.tBusername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBusername_KeyPress);
             // 
             // label5
             // 
@@ -324,6 +329,19 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(444, 122);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(134, 21);
+            this.checkBox1.TabIndex = 27;
+            this.checkBox1.Text = "Unhide password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // UCManStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,5 +385,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cBtype;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
