@@ -130,5 +130,10 @@ namespace SmartFoodCourtSystem
                 }
             }
         }
+
+        private void dtgListEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dtgListEmployee_CellContentClick(sender, e);
+        }
     }
 }

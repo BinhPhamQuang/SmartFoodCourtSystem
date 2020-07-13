@@ -30,6 +30,9 @@
         {
             this.dtgListEmployee = new System.Windows.Forms.DataGridView();
             this.gBdetail = new System.Windows.Forms.GroupBox();
+            this.cBtype = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tBpass = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,9 +49,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cBtype = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListEmployee)).BeginInit();
             this.gBdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmAge)).BeginInit();
@@ -58,12 +58,16 @@
             // 
             // dtgListEmployee
             // 
+            this.dtgListEmployee.AllowUserToAddRows = false;
+            this.dtgListEmployee.AllowUserToDeleteRows = false;
             this.dtgListEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dtgListEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgListEmployee.Location = new System.Drawing.Point(46, 21);
             this.dtgListEmployee.Name = "dtgListEmployee";
+            this.dtgListEmployee.ReadOnly = true;
             this.dtgListEmployee.Size = new System.Drawing.Size(745, 260);
             this.dtgListEmployee.TabIndex = 0;
+            this.dtgListEmployee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgListEmployee_CellClick);
             this.dtgListEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgListEmployee_CellContentClick);
             // 
             // gBdetail
@@ -92,6 +96,42 @@
             this.gBdetail.Size = new System.Drawing.Size(745, 237);
             this.gBdetail.TabIndex = 41;
             this.gBdetail.TabStop = false;
+            // 
+            // cBtype
+            // 
+            this.cBtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBtype.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.cBtype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.cBtype.FormattingEnabled = true;
+            this.cBtype.Items.AddRange(new object[] {
+            "Cook",
+            "Manager"});
+            this.cBtype.Location = new System.Drawing.Point(444, 144);
+            this.cBtype.Name = "cBtype";
+            this.cBtype.Size = new System.Drawing.Size(170, 26);
+            this.cBtype.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label9.Location = new System.Drawing.Point(431, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(137, 18);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Personal Account";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label1.Location = new System.Drawing.Point(86, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 18);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Personal Information";
             // 
             // label8
             // 
@@ -129,6 +169,7 @@
             // btnDel
             // 
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.btnDel.Location = new System.Drawing.Point(659, 157);
@@ -142,6 +183,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.btnUpdate.Location = new System.Drawing.Point(659, 82);
@@ -155,6 +197,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.btnAdd.Location = new System.Drawing.Point(659, 5);
@@ -280,41 +323,6 @@
             this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label1.Location = new System.Drawing.Point(86, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 18);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Personal Information";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label9.Location = new System.Drawing.Point(431, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 18);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Personal Account";
-            // 
-            // cBtype
-            // 
-            this.cBtype.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cBtype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.cBtype.FormattingEnabled = true;
-            this.cBtype.Items.AddRange(new object[] {
-            "Cook",
-            "Manager"});
-            this.cBtype.Location = new System.Drawing.Point(444, 144);
-            this.cBtype.Name = "cBtype";
-            this.cBtype.Size = new System.Drawing.Size(170, 26);
-            this.cBtype.TabIndex = 26;
             // 
             // UCManStaff
             // 

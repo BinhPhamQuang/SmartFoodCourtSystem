@@ -30,6 +30,7 @@
         {
             this.dtgListFood = new System.Windows.Forms.DataGridView();
             this.gBdetail = new System.Windows.Forms.GroupBox();
+            this.cBcat = new System.Windows.Forms.ComboBox();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cBcat = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListFood)).BeginInit();
             this.gBdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
@@ -51,12 +51,16 @@
             // 
             // dtgListFood
             // 
+            this.dtgListFood.AllowUserToAddRows = false;
+            this.dtgListFood.AllowUserToDeleteRows = false;
             this.dtgListFood.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dtgListFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgListFood.Location = new System.Drawing.Point(38, 15);
             this.dtgListFood.Name = "dtgListFood";
+            this.dtgListFood.ReadOnly = true;
             this.dtgListFood.Size = new System.Drawing.Size(761, 264);
             this.dtgListFood.TabIndex = 0;
+            this.dtgListFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgListFood_CellClick);
             this.dtgListFood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // gBdetail
@@ -80,9 +84,24 @@
             this.gBdetail.TabIndex = 40;
             this.gBdetail.TabStop = false;
             // 
+            // cBcat
+            // 
+            this.cBcat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBcat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.cBcat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.cBcat.FormattingEnabled = true;
+            this.cBcat.Items.AddRange(new object[] {
+            "Food",
+            "Drink"});
+            this.cBcat.Location = new System.Drawing.Point(463, 23);
+            this.cBcat.Name = "cBcat";
+            this.cBcat.Size = new System.Drawing.Size(161, 26);
+            this.cBcat.TabIndex = 18;
+            // 
             // btnDel
             // 
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.btnDel.Location = new System.Drawing.Point(674, 158);
@@ -96,6 +115,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.btnUpdate.Location = new System.Drawing.Point(674, 81);
@@ -109,6 +129,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.btnAdd.Location = new System.Drawing.Point(674, 5);
@@ -220,19 +241,6 @@
             this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
-            // 
-            // cBcat
-            // 
-            this.cBcat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cBcat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.cBcat.FormattingEnabled = true;
-            this.cBcat.Items.AddRange(new object[] {
-            "Food",
-            "Drink"});
-            this.cBcat.Location = new System.Drawing.Point(463, 23);
-            this.cBcat.Name = "cBcat";
-            this.cBcat.Size = new System.Drawing.Size(161, 26);
-            this.cBcat.TabIndex = 18;
             // 
             // UCManMenu
             // 

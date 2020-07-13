@@ -143,5 +143,10 @@ namespace SmartFoodCourtSystem
         {
 
         }
+
+        private void dtgListFood_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1_CellContentClick(sender, e);
+        }
     }
 }
