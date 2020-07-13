@@ -44,54 +44,62 @@
             // 
             this.OrderIDLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.OrderIDLabel.AutoSize = true;
-            this.OrderIDLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderIDLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderIDLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.OrderIDLabel.Location = new System.Drawing.Point(131, 39);
             this.OrderIDLabel.Name = "OrderIDLabel";
-            this.OrderIDLabel.Size = new System.Drawing.Size(81, 23);
+            this.OrderIDLabel.Size = new System.Drawing.Size(83, 22);
             this.OrderIDLabel.TabIndex = 0;
             this.OrderIDLabel.Text = "OrderID";
             // 
             // StatusLabel
             // 
             this.StatusLabel.AutoSize = true;
-            this.StatusLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.StatusLabel.Location = new System.Drawing.Point(494, 42);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(64, 23);
+            this.StatusLabel.Size = new System.Drawing.Size(65, 22);
             this.StatusLabel.TabIndex = 1;
             this.StatusLabel.Text = "Status";
             // 
             // StatuscomboBox
             // 
             this.StatuscomboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.StatuscomboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
+            this.StatuscomboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StatuscomboBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatuscomboBox.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.StatuscomboBox.FormattingEnabled = true;
             this.StatuscomboBox.Items.AddRange(new object[] {
             "In Queue",
             "Processing",
             "Finished"});
-            this.StatuscomboBox.Location = new System.Drawing.Point(593, 44);
+            this.StatuscomboBox.Location = new System.Drawing.Point(576, 39);
             this.StatuscomboBox.Name = "StatuscomboBox";
-            this.StatuscomboBox.Size = new System.Drawing.Size(99, 21);
+            this.StatuscomboBox.Size = new System.Drawing.Size(99, 25);
             this.StatuscomboBox.TabIndex = 2;
             // 
             // OrderIDtextBox
             // 
-            this.OrderIDtextBox.Location = new System.Drawing.Point(236, 42);
+            this.OrderIDtextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
+            this.OrderIDtextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OrderIDtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderIDtextBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OrderIDtextBox.Location = new System.Drawing.Point(231, 39);
             this.OrderIDtextBox.Name = "OrderIDtextBox";
             this.OrderIDtextBox.ReadOnly = true;
-            this.OrderIDtextBox.Size = new System.Drawing.Size(99, 20);
+            this.OrderIDtextBox.Size = new System.Drawing.Size(99, 24);
             this.OrderIDtextBox.TabIndex = 3;
             // 
             // DetailLabel
             // 
             this.DetailLabel.AutoSize = true;
-            this.DetailLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.DetailLabel.Location = new System.Drawing.Point(396, 84);
             this.DetailLabel.Name = "DetailLabel";
-            this.DetailLabel.Size = new System.Drawing.Size(64, 23);
+            this.DetailLabel.Size = new System.Drawing.Size(62, 22);
             this.DetailLabel.TabIndex = 0;
             this.DetailLabel.Text = "Detail";
             // 

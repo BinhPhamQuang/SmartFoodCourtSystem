@@ -20,6 +20,7 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
             LoadOrderList();
+            comboBox1.SelectedIndex = 0;
         }
         GradientPanel Square(Order order)
         {

@@ -59,7 +59,7 @@
             this.GetOrderList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GetOrderList.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GetOrderList.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.GetOrderList.Location = new System.Drawing.Point(-2, 123);
+            this.GetOrderList.Location = new System.Drawing.Point(-2, 155);
             this.GetOrderList.Name = "GetOrderList";
             this.GetOrderList.Size = new System.Drawing.Size(179, 80);
             this.GetOrderList.TabIndex = 2;
@@ -92,12 +92,14 @@
             // 
             // BtnExit
             // 
-            this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
             this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnExit.FlatAppearance.BorderSize = 0;
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Location = new System.Drawing.Point(792, -2);
+            this.BtnExit.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            this.BtnExit.Location = new System.Drawing.Point(787, 3);
             this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(40, 39);
+            this.BtnExit.Size = new System.Drawing.Size(33, 30);
             this.BtnExit.TabIndex = 28;
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
