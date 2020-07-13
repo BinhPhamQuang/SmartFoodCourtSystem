@@ -333,27 +333,29 @@ namespace SmartFoodCourtSystem
 
                 grBox.BringToFront();
                 grBox.Visible = true;
-                label4.Visible = true;
+               // label4.Visible = true;
             }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             grBox.Visible = false;
-            label4.Visible = false;
+           // label4.Visible = false;
             //label1.Visible = false;
             lV1.Visible = false;
             lV2.Visible = false;
             lV1.Items.Clear();
             lV2.Items.Clear();
+            cb2.SelectedIndex = -1;
+            cb3.SelectedIndex = -1;
             
         }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xls", ValidateNames = true })
+            using (SaveFileDialog sfd = new SaveFileDialog() {FileName="Report "+cb2.Text+" "+cb3.Text, Filter = "Excel Workbook|*.xls", ValidateNames = true })
                 if (sfd.ShowDialog()==DialogResult.OK)
-                {
+                       {
                     Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
                     Workbook wb = app.Workbooks.Add(XlSheetType.xlWorksheet);
                     Worksheet ws = (Worksheet)app.ActiveSheet;
