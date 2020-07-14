@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SmartFoodCourtSystem.DTO;
 using SmartFoodCourtSystem.Properties;
+using System.Globalization;
+
 namespace SmartFoodCourtSystem
 {
     
     public partial class UC_cart : UserControl
     {
+        CultureInfo culture = new CultureInfo("vi-VN");
         public static bool isapplypromotioncode = false;
         void Alert(string msg, FAlert.emType type)
         {
@@ -92,7 +95,7 @@ namespace SmartFoodCourtSystem
             line.Size = new Size(411, 3);
 
             Label lbnamesize = new Label();
-            lbnamesize.Text = "-" + food.discount.ToString() + "%";
+            lbnamesize.Text = food.discount.ToString() + "%";
             lbnamesize.ForeColor = Color.Crimson;
             lbnamesize.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
             lbnamesize.Location = new Point(196, 43);
@@ -120,7 +123,7 @@ namespace SmartFoodCourtSystem
             lbnamequantity.TextAlign = ContentAlignment.MiddleRight;
 
             Label lbnameprice = new Label();
-            lbnameprice.Text = food.totalprice().ToString() + "VND";
+            lbnameprice.Text = food.totalprice().ToString("#,### vnđ", culture.NumberFormat) ;
             lbnameprice.ForeColor = SystemColors.GradientActiveCaption;
             lbnameprice.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
             lbnameprice.Location = new Point(207, 90);
@@ -178,8 +181,8 @@ namespace SmartFoodCourtSystem
                 label.Text = (quantity -1).ToString();
                 food.quantity = quantity - 1;
                 Cart.Instance.editCart(food);
-                lbprice.Text = food.totalprice().ToString() + "VND";
-                lbPrice.Text = CaculatePrice().ToString() + "VND";
+                lbprice.Text = food.totalprice().ToString("#,### vnđ", culture.NumberFormat) ;
+                lbPrice.Text = CaculatePrice().ToString("#,### vnđ", culture.NumberFormat) ;
             }
            
         }
@@ -197,8 +200,8 @@ namespace SmartFoodCourtSystem
             
             food.quantity = quantity + 1;
             Cart.Instance.editCart(food);
-            lbprice.Text = food.totalprice().ToString() + "VND";
-            lbPrice.Text = CaculatePrice().ToString() + "VND";
+            lbprice.Text = food.totalprice().ToString("#,### vnđ", culture.NumberFormat)   ;
+            lbPrice.Text = CaculatePrice().ToString("#,### vnđ", culture.NumberFormat)  ;
 
         }
 
@@ -237,7 +240,7 @@ namespace SmartFoodCourtSystem
                  
                 flp_cart.Controls.Add(t);
             }
-            lbPrice.Text = CaculatePrice().ToString() + "VND";
+            lbPrice.Text = CaculatePrice().ToString("#,### vnđ", culture.NumberFormat) ;
         }
         private void UC_cart_Load(object sender, EventArgs e)
         {

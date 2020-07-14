@@ -30,10 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderDetail));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.txtNote = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnSub = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnPlus = new System.Windows.Forms.Button();
-            this.btnSub = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_price = new System.Windows.Forms.Label();
@@ -59,14 +63,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btn_subtract = new System.Windows.Forms.Panel();
-            this.lb_o = new System.Windows.Forms.Label();
             this.pn_ordered = new System.Windows.Forms.Panel();
             this.lb_ordered = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNote = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.lb_o = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnDescription.SuspendLayout();
             this.pnName.SuspendLayout();
@@ -81,7 +82,6 @@
             this.panel7.SuspendLayout();
             this.btn_subtract.SuspendLayout();
             this.pn_ordered.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -95,6 +95,45 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(483, 370);
             this.panel4.TabIndex = 22;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Controls.Add(this.txtNote);
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Location = new System.Drawing.Point(6, 323);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(468, 36);
+            this.panel8.TabIndex = 6;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel9.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.panel9.Location = new System.Drawing.Point(103, 28);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(354, 3);
+            this.panel9.TabIndex = 7;
+            // 
+            // txtNote
+            // 
+            this.txtNote.BackColor = System.Drawing.Color.White;
+            this.txtNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNote.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote.Location = new System.Drawing.Point(102, 5);
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(355, 20);
+            this.txtNote.TabIndex = 22;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 32);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Note:";
             // 
             // panel5
             // 
@@ -111,6 +150,19 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(471, 97);
             this.panel5.TabIndex = 2;
+            // 
+            // btnSub
+            // 
+            this.btnSub.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSub.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSub.BackgroundImage")));
+            this.btnSub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSub.Location = new System.Drawing.Point(141, 56);
+            this.btnSub.Name = "btnSub";
+            this.btnSub.Size = new System.Drawing.Size(20, 20);
+            this.btnSub.TabIndex = 19;
+            this.btnSub.UseVisualStyleBackColor = false;
+            this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
             // 
             // label4
             // 
@@ -134,19 +186,6 @@
             this.btnPlus.TabIndex = 20;
             this.btnPlus.UseVisualStyleBackColor = false;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
-            // 
-            // btnSub
-            // 
-            this.btnSub.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSub.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSub.BackgroundImage")));
-            this.btnSub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSub.Location = new System.Drawing.Point(141, 56);
-            this.btnSub.Name = "btnSub";
-            this.btnSub.Size = new System.Drawing.Size(20, 20);
-            this.btnSub.TabIndex = 19;
-            this.btnSub.UseVisualStyleBackColor = false;
-            this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
             // 
             // label6
             // 
@@ -174,7 +213,7 @@
             this.lb_price.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lb_price.Location = new System.Drawing.Point(144, 3);
             this.lb_price.Name = "lb_price";
-            this.lb_price.Size = new System.Drawing.Size(324, 37);
+            this.lb_price.Size = new System.Drawing.Size(313, 37);
             this.lb_price.TabIndex = 12;
             this.lb_price.Text = "200000VND";
             this.lb_price.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -196,7 +235,7 @@
             this.lbDiscount.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbDiscount.Location = new System.Drawing.Point(393, 44);
             this.lbDiscount.Name = "lbDiscount";
-            this.lbDiscount.Size = new System.Drawing.Size(67, 32);
+            this.lbDiscount.Size = new System.Drawing.Size(64, 32);
             this.lbDiscount.TabIndex = 5;
             this.lbDiscount.Text = "0%";
             this.lbDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -311,6 +350,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(144, 37);
             this.panel6.TabIndex = 23;
+            this.panel6.Visible = false;
             // 
             // pictureBox6
             // 
@@ -365,9 +405,9 @@
             // ptbImage
             // 
             this.ptbImage.Image = ((System.Drawing.Image)(resources.GetObject("ptbImage.Image")));
-            this.ptbImage.Location = new System.Drawing.Point(0, 17);
+            this.ptbImage.Location = new System.Drawing.Point(8, 20);
             this.ptbImage.Name = "ptbImage";
-            this.ptbImage.Size = new System.Drawing.Size(467, 325);
+            this.ptbImage.Size = new System.Drawing.Size(459, 352);
             this.ptbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbImage.TabIndex = 0;
             this.ptbImage.TabStop = false;
@@ -401,35 +441,26 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(62, 57);
             this.panel7.TabIndex = 24;
+            this.panel7.Visible = false;
             // 
             // btn_subtract
             // 
             this.btn_subtract.Controls.Add(this.pn_ordered);
+            this.btn_subtract.Controls.Add(this.ptbImage);
             this.btn_subtract.Controls.Add(this.panel6);
             this.btn_subtract.Controls.Add(this.panel4);
             this.btn_subtract.Controls.Add(this.panel1);
-            this.btn_subtract.Controls.Add(this.ptbImage);
             this.btn_subtract.Controls.Add(this.panel7);
             this.btn_subtract.Location = new System.Drawing.Point(8, 8);
             this.btn_subtract.Name = "btn_subtract";
             this.btn_subtract.Size = new System.Drawing.Size(960, 459);
             this.btn_subtract.TabIndex = 3;
             // 
-            // lb_o
-            // 
-            this.lb_o.AutoSize = true;
-            this.lb_o.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_o.Location = new System.Drawing.Point(3, 12);
-            this.lb_o.Name = "lb_o";
-            this.lb_o.Size = new System.Drawing.Size(142, 20);
-            this.lb_o.TabIndex = 7;
-            this.lb_o.Text = "You have ordered";
-            // 
             // pn_ordered
             // 
             this.pn_ordered.Controls.Add(this.lb_ordered);
             this.pn_ordered.Controls.Add(this.lb_o);
-            this.pn_ordered.Location = new System.Drawing.Point(0, 407);
+            this.pn_ordered.Location = new System.Drawing.Point(4, 385);
             this.pn_ordered.Name = "pn_ordered";
             this.pn_ordered.Size = new System.Drawing.Size(205, 37);
             this.pn_ordered.TabIndex = 25;
@@ -445,44 +476,15 @@
             this.lb_ordered.TabIndex = 8;
             this.lb_ordered.Text = "1 item.";
             // 
-            // panel8
+            // lb_o
             // 
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Controls.Add(this.txtNote);
-            this.panel8.Controls.Add(this.label3);
-            this.panel8.Location = new System.Drawing.Point(6, 323);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(468, 36);
-            this.panel8.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 32);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Note:";
-            // 
-            // txtNote
-            // 
-            this.txtNote.BackColor = System.Drawing.Color.White;
-            this.txtNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNote.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNote.Location = new System.Drawing.Point(102, 5);
-            this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(355, 20);
-            this.txtNote.TabIndex = 22;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.panel9.Location = new System.Drawing.Point(103, 28);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(354, 3);
-            this.panel9.TabIndex = 7;
+            this.lb_o.AutoSize = true;
+            this.lb_o.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_o.Location = new System.Drawing.Point(3, 12);
+            this.lb_o.Name = "lb_o";
+            this.lb_o.Size = new System.Drawing.Size(142, 20);
+            this.lb_o.TabIndex = 7;
+            this.lb_o.Text = "You have ordered";
             // 
             // OrderDetail
             // 
@@ -498,6 +500,8 @@
             this.Text = "OrderDetail";
             this.Load += new System.EventHandler(this.OrderDetail_Load);
             this.panel4.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.pnDescription.ResumeLayout(false);
@@ -516,8 +520,6 @@
             this.btn_subtract.ResumeLayout(false);
             this.pn_ordered.ResumeLayout(false);
             this.pn_ordered.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }

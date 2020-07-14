@@ -10,10 +10,13 @@ using System.Windows.Forms;
 using SmartFoodCourtSystem.DAO;
 using SmartFoodCourtSystem.DTO;
 using SmartFoodCourtSystem.Properties;
+using System.Globalization;
+
 namespace SmartFoodCourtSystem
 {
     public partial class UserControl_Home : UserControl
     {
+        CultureInfo culture = new CultureInfo("vi-VN");
         public UserControl_Home()
         {
             InitializeComponent();
@@ -39,8 +42,8 @@ namespace SmartFoodCourtSystem
 
                 picturebox1.Image = Resources.dishdefault;
             }
-            lb_price.Text = (t.price * (100 - t.discount)/100).ToString() + " vnd";
-            lb_prevprice.Text = t.price.ToString()+" vnd";
+            lb_price.Text = (t.price * (100 - t.discount)/100).ToString("#,### vnđ", culture.NumberFormat);
+            lb_prevprice.Text = t.price.ToString("#,### vnđ", culture.NumberFormat);
             lb_discount.Text = "- "+t.discount.ToString() + "%";
             lb_namefood.Text = t.name;
             richTextBox_detailfoodinfo.Text = t.description;

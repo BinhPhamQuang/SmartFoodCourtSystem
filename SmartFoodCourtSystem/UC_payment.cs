@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using SmartFoodCourtSystem.DTO;
 using SmartFoodCourtSystem.DAO;
 using SmartFoodCourtSystem.Properties;
+using System.Globalization;
 
 namespace SmartFoodCourtSystem
 {
     public partial class UC_payment : UserControl
     {
+        CultureInfo culture = new CultureInfo("vi-VN");
         private static int stt = 1;
         public event EventHandler ButtonClick;
         public event EventHandler BtnCancelClick;
@@ -67,7 +69,7 @@ namespace SmartFoodCourtSystem
 
 
             Label lbPrice = new Label();
-            lbPrice.Text = food.totalprice().ToString();
+            lbPrice.Text = food.totalprice().ToString("#,###", culture.NumberFormat);
             lbPrice.Font = new Font("Century Gothic", 12.0f, FontStyle.Regular);
             lbPrice.Location = new Point(537, 10);
             lbPrice.Size = new Size(83, 21);
@@ -75,7 +77,7 @@ namespace SmartFoodCourtSystem
             lbPrice.TextAlign= System.Drawing.ContentAlignment.MiddleCenter;
 
             Label caulation = new Label();
-            caulation.Text = $"{food.price} x {food.quantity} x (100 - {food.discount})% = {food.price*food.quantity*(100-food.discount)/100}";
+            caulation.Text = $"{(food.price).ToString("#,###", culture.NumberFormat)} x {food.quantity} x (100 - {food.discount})% = {(food.price*food.quantity*(100-food.discount)/100).ToString("#,###", culture.NumberFormat)}";
             caulation.Font = new Font("Century Gothic", 12.0f, FontStyle.Bold);
             caulation.ForeColor = Color.ForestGreen;
             caulation.Location = new Point(629, 10);
@@ -129,7 +131,7 @@ namespace SmartFoodCourtSystem
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-            Alert("Only MOMO", FAlert.emType.warning);
+           // Alert("Only MOMO", FAlert.emType.warning);
 
         }
 
@@ -179,7 +181,7 @@ namespace SmartFoodCourtSystem
 
                 flp_foodlist.Controls.Add(t);
             }
-            lbtotalprice.Text = CaculatePrice().ToString() + "VND";
+            lbtotalprice.Text = CaculatePrice().ToString("#,### vnđ", culture.NumberFormat)  ;
         }
         private long CaculatePrice()
         {
@@ -193,18 +195,18 @@ namespace SmartFoodCourtSystem
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Alert("Currently only MOMO", FAlert.emType.warning);
+           // Alert("Currently only MOMO", FAlert.emType.warning);
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Alert("Only MOMO", FAlert.emType.warning);
+            //Alert("Only MOMO", FAlert.emType.warning);
 
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Alert("Only MOMO", FAlert.emType.warning);
+            //Alert("Only MOMO", FAlert.emType.warning);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -214,7 +216,7 @@ namespace SmartFoodCourtSystem
 
         private void btncancel_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to cancel order?", "Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Are you sure want to cancel order?", "Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 stt = 1;

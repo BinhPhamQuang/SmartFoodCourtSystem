@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,11 @@ namespace SmartFoodCourtSystem
 {
     public partial class OrderDetail : Form
     {
+        CultureInfo culture = new CultureInfo("vi-VN");
+
+        //Thread.CurrentThread.CurrentCulture = culture;
+
+       
         public object getData;
 
         public OrderDetail()
@@ -79,7 +85,8 @@ namespace SmartFoodCourtSystem
             }
             
             lbName.Text = food.name;
-            lb_price.Text = food.price.ToString() + "VND";
+              
+            lb_price.Text = food.price.ToString("#,### vnđ", culture.NumberFormat);
             lbDiscount.Text = food.discount.ToString() + "%";
             rtb_description.Text = food.description;
            

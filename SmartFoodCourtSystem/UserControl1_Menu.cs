@@ -10,10 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SmartFoodCourtSystem.Properties;
+using System.Globalization;
+
 namespace SmartFoodCourtSystem
 {
     public partial class UserControl1_Menu : UserControl
     {
+        CultureInfo culture = new CultureInfo("vi-VN");
         void Alert(string msg, FAlert.emType type)
         {
             FAlert frm = new FAlert();
@@ -58,7 +61,7 @@ namespace SmartFoodCourtSystem
             Label pnprice = new Label();
             pnprice.Location = new Point(3, 179);
             pnprice.AutoSize = true;
-            pnprice.Text = food.price.ToString()+"VND";
+            pnprice.Text = food.price.ToString("#,### vnđ", culture.NumberFormat);
             pnprice.Font = new Font("Century Gothic", 14.0f);
             pnprice.ForeColor = Color.RoyalBlue;
             
