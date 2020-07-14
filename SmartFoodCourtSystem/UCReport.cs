@@ -68,10 +68,24 @@ namespace SmartFoodCourtSystem
             }
             return realresult;
         }
+        private void loaditemyear()
+        {
+            System.Data.DataTable data = DataProvider.Instance.ExecuteQuery("SELECT Year FROM Bill");
+            
+            List<int> year = new List<int>();
+            foreach(DataRow i in data.Rows)
+            {
+                year.Add(int.Parse(i["year"].ToString()));
+            }
+            year=year.Distinct().ToList();
+            cb3.DataSource = year;
+            cb3.SelectedIndex = -1;
+
+        }
         public UCReport()
         {
             InitializeComponent();
-
+            loaditemyear();
             Loadbill("");
             //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
