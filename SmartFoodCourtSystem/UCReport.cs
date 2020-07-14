@@ -71,8 +71,14 @@ namespace SmartFoodCourtSystem
         public UCReport()
         {
             InitializeComponent();
-            
-            string query = $"SELECT * from Bill";
+
+            Loadbill("");
+            //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+        private void Loadbill( string conditon)
+        {
+            string query = $"SELECT * from Bill {conditon}";
             System.Data.DataTable data = DataProvider.Instance.ExecuteQuery(query);
             int i = 0;
             foreach (DataRow r in data.Rows)
@@ -106,14 +112,11 @@ namespace SmartFoodCourtSystem
                 lV.Items.Add(x);
 
             }
-            //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-            //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
-
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
             if ((cb2.SelectedIndex <= -1 && cb3.SelectedIndex <= -1) | (cb2.SelectedIndex > -1 && cb3.SelectedIndex <= -1))
-                Alert("Wrong format!", FAlert.emType.warning);
+                Alert("Wrong format!", FAlert.emType.error);
             else
             {
                 string thang = "";
@@ -400,6 +403,41 @@ namespace SmartFoodCourtSystem
                     app.Quit();
                     Alert("Successfully saved!", FAlert.emType.success);
                 }
+        }
+
+        private void btnFitler_Click(object sender, EventArgs e)
+        {
+            if ((cb2.SelectedIndex <= -1 && cb3.SelectedIndex <= -1) | (cb2.SelectedIndex > -1 && cb3.SelectedIndex <= -1))
+                Alert("Wrong format!", FAlert.emType.error);
+            else
+            {
+                btnBack.Visible = true;
+                lV.Items.Clear();
+                string item = "";
+                if (cb2.SelectedIndex==-1)
+                {
+                    item = $"WHERE Year={cb3.SelectedItem.ToString()}";
+                   groupBox1.Text = "Revenue " + cb3.SelectedItem.ToString();
+                }
+                else
+                {
+                    item = $"WHERE Year={cb3.SelectedItem.ToString()} AND Month={cb2.SelectedItem.ToString()}";
+                    groupBox1.Text = "Revenue " + cb2.SelectedItem.ToString()+"/"+ cb3.SelectedItem.ToString();
+
+                }
+                Loadbill(item);
+                
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            lV.Items.Clear();
+            Loadbill("");
+            groupBox1.Text = "All bill";
+            cb2.SelectedIndex = -1;
+            cb3.SelectedIndex = -1;
+            btnBack.Visible = false;
         }
     }
 }
