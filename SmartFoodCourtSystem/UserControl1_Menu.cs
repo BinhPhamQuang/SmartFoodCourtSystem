@@ -17,6 +17,12 @@ namespace SmartFoodCourtSystem
     public partial class UserControl1_Menu : UserControl
     {
         CultureInfo culture = new CultureInfo("vi-VN");
+        public UserControl1_Menu()
+        {
+             InitializeComponent();
+             AutoCompleteSearch();
+
+        }
         void Alert(string msg, FAlert.emType type)
         {
             FAlert frm = new FAlert();
@@ -118,12 +124,7 @@ namespace SmartFoodCourtSystem
             orderDetail.ShowDialog();
         }
 
-        public UserControl1_Menu()
-        {
-            InitializeComponent();
-          AutoCompleteSearch();
-
-        }
+        
         public void LoadMenu()
         {
            
