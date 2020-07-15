@@ -63,9 +63,10 @@ namespace SmartFoodCourtSystem
             else type = "1";
             int a = dtgListEmployee.Rows.Count;
             
-            string query = $"SELECT * from User WHERE Username='" + tBusername.Text + "'";
+            string query = $"SELECT * from User WHERE Username ='" + tBusername.Text + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             if (data.Rows.Count >= 1) MessageBox.Show("User account already existed in the system");
+
             else
             {
                 if (name == "" || salary == 0 || age == 0 || phone == 0 || username == "" || password == "" || type == "")

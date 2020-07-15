@@ -77,20 +77,27 @@ namespace SmartFoodCourtSystem
             string description = tBdescript.Text;
             string image = selectedimage;
 
-            if (name == "" || price == 0 || description == "")
-            {
-                MessageBox.Show("Wrong format, Unable to add a dish");
-            }
+            string query = $"SELECT * from Food WHERE Name ='" + tBname.Text + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            if (data.Rows.Count >= 1) MessageBox.Show("Dish already existed in the system");
             else
             {
-                if (FoodDAO.Instance.InsertFood(name, price, description, category, discount, image))
+                if (name == "" || price == 0 || description == "")
                 {
-                    MessageBox.Show("Dish added successfully");
-                    LoadMenu();
+                    MessageBox.Show("Wrong format, Unable to add a dish");
                 }
                 else
                 {
-                    MessageBox.Show("Fail to add a dish");
+                    if (FoodDAO.Instance.InsertFood(name, price, description, category, discount, image))
+                    {
+                        MessageBox.Show("Dish added successfully");
+                        LoadMenu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fail to add a dish");
+                    }
                 }
             }
         }
