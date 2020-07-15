@@ -89,18 +89,23 @@ namespace SmartFoodCourtSystem
             {
                 if (name == "" || price == 0 || description == "")
                 {
-                    MessageBox.Show("Wrong format, Unable to add a dish");
+                    //MessageBox.Show("Wrong format, Unable to add a dish");
+                    Alert("Wrong format", FAlert.emType.error);
                 }
                 else
                 {
                     if (FoodDAO.Instance.InsertFood(name, price, description, category, discount, image))
                     {
-                        MessageBox.Show("Dish added successfully");
+                        //MessageBox.Show("Dish added successfully");
+                        Alert("successfully", FAlert.emType.success);
+                        btnNew_Click(sender, e);
+             
                         LoadMenu();
                     }
                     else
                     {
-                        MessageBox.Show("Fail to add a dish");
+                        //MessageBox.Show("Fail to add a dish");
+                        Alert("Failed", FAlert.emType.error);
                     }
                 }
             }
@@ -117,16 +122,20 @@ namespace SmartFoodCourtSystem
             int price = (int)nmPrice.Value;
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
+            if (selectedimage == "") selectedimage = dtgListFood.Rows[i].Cells["Image"].Value.ToString();
             string image = selectedimage;
 
             if (FoodDAO.Instance.UpdateFood(id, name, price, description, category, discount, image))
             {
-                MessageBox.Show("Dish updated successfully");
+                //MessageBox.Show("Dish updated successfully");
+                Alert("Successfully", FAlert.emType.success);
+                btnNew_Click(sender, e);
                 LoadMenu();
             }
             else
             {
-                MessageBox.Show("Fail to update dish");
+                //MessageBox.Show("Fail to update dish");
+                Alert("Failed", FAlert.emType.error);
             }
         }
 
@@ -139,12 +148,15 @@ namespace SmartFoodCourtSystem
                 int id = Convert.ToInt32(dtgListFood.Rows[i].Cells["IDFood"].Value);
                 if (FoodDAO.Instance.DeleteFood(id))
                 {
-                    MessageBox.Show("Dish deleted successfully");
+                    //MessageBox.Show("Dish deleted successfully");
+                    Alert("Successfully", FAlert.emType.success);
+                    btnNew_Click(sender, e);
                     LoadMenu();
                 }
                 else
                 {
-                    MessageBox.Show("Fail to delete dish");
+                    //MessageBox.Show("Fail to delete dish");
+                    Alert("Failed", FAlert.emType.error);
                 }
             }
         }
