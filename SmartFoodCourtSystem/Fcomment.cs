@@ -57,7 +57,7 @@ namespace SmartFoodCourtSystem
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            lb_error.Text = "Please fil out full information before send it to us !";
+            lb_error.Text = "Please fill out full information before send it to us !";
            
             if (rtb_cmt.Text.Length == 0 || txtEmail.Text.Length == 0)
             {
@@ -76,17 +76,35 @@ namespace SmartFoodCourtSystem
                 if (at == false)
                 {
                     Alert("Error !", FAlert.emType.error);
-                    lb_error.Text = "Wrong fomat email !";
+                    lb_error.Text = "Wrong email format !";
                     pn_error.Visible = true;
                     return;
                 }
+                Thread t = new Thread(() => {
+
+                    pn_error.Visible = false;
+
+
+
+                    if (rbproduct.Checked == true)
+                        sendmail("testcasettcnpm@gmail.com", "testcasettcnpm@gmail.com", "Feedback for " + rbproduct.Text, rtb_cmt.Text);
+                    else
+                        sendmail("testcasettcnpm@gmail.com", "testcasettcnpm@gmail.com", "Feedback for " + rbDevice.Text, rtb_cmt.Text);
+                    //Thread mainthread = Thread.CurrentThread;
+
+                    //  mainthread.Start();
+                    //thread.Start();
+
+
+                    this.Close();
+
+
+                });
+                ptbprocessing.Visible = true;
+                lbprocessing.Visible = true;
+                t.Start();
+
                 Alert("Thanks for feedback!", FAlert.emType.success);
-                pn_error.Visible = false;
-                this.Close();
-                if (rbproduct.Checked == true)
-                    sendmail("testcasettcnpm@gmail.com", "testcasettcnpm@gmail.com", "Feedback for " + rbproduct.Text, rtb_cmt.Text);
-                else  
-                    sendmail("testcasettcnpm@gmail.com", "testcasettcnpm@gmail.com", "Feedback for " + rbDevice.Text,rtb_cmt.Text);
                 //Thread mainthread = Thread.CurrentThread;
                 //Thread thread = new Thread(Send);
                 // thread.IsBackground = true;

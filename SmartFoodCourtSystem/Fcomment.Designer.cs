@@ -56,6 +56,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_error = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.ptbprocessing = new System.Windows.Forms.PictureBox();
+            this.lbprocessing = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -63,6 +65,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_error.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbprocessing)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSend
@@ -98,25 +101,26 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel7);
             this.panel1.Location = new System.Drawing.Point(13, 34);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(494, 246);
+            this.panel1.Size = new System.Drawing.Size(494, 271);
             this.panel1.TabIndex = 34;
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.ptbprocessing);
             this.panel7.Controls.Add(this.rbDevice);
             this.panel7.Controls.Add(this.rbproduct);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Location = new System.Drawing.Point(-1, 188);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(494, 51);
+            this.panel7.Size = new System.Drawing.Size(494, 79);
             this.panel7.TabIndex = 42;
             // 
             // rbDevice
@@ -174,7 +178,7 @@
             this.rbfemale.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbfemale.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.rbfemale.Location = new System.Drawing.Point(250, 13);
-            this.rbfemale.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rbfemale.Margin = new System.Windows.Forms.Padding(5);
             this.rbfemale.Name = "rbfemale";
             this.rbfemale.Size = new System.Drawing.Size(92, 30);
             this.rbfemale.TabIndex = 38;
@@ -200,7 +204,7 @@
             this.rbother.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbother.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.rbother.Location = new System.Drawing.Point(380, 13);
-            this.rbother.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rbother.Margin = new System.Windows.Forms.Padding(5);
             this.rbother.Name = "rbother";
             this.rbother.Size = new System.Drawing.Size(91, 30);
             this.rbother.TabIndex = 39;
@@ -214,7 +218,7 @@
             this.rbmale.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbmale.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.rbmale.Location = new System.Drawing.Point(139, 13);
-            this.rbmale.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rbmale.Margin = new System.Windows.Forms.Padding(5);
             this.rbmale.Name = "rbmale";
             this.rbmale.Size = new System.Drawing.Size(72, 30);
             this.rbmale.TabIndex = 37;
@@ -332,7 +336,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(22, 288);
+            this.label4.Location = new System.Drawing.Point(22, 297);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 17);
@@ -401,20 +405,43 @@
             this.label6.TabIndex = 36;
             this.label6.Text = "FEEDBACK";
             // 
+            // ptbprocessing
+            // 
+            this.ptbprocessing.Image = ((System.Drawing.Image)(resources.GetObject("ptbprocessing.Image")));
+            this.ptbprocessing.Location = new System.Drawing.Point(206, 5);
+            this.ptbprocessing.Name = "ptbprocessing";
+            this.ptbprocessing.Size = new System.Drawing.Size(64, 64);
+            this.ptbprocessing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbprocessing.TabIndex = 3;
+            this.ptbprocessing.TabStop = false;
+            this.ptbprocessing.Visible = false;
+            // 
+            // lbprocessing
+            // 
+            this.lbprocessing.AutoSize = true;
+            this.lbprocessing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(72)))), ((int)(((byte)(230)))));
+            this.lbprocessing.Location = new System.Drawing.Point(197, 305);
+            this.lbprocessing.Name = "lbprocessing";
+            this.lbprocessing.Size = new System.Drawing.Size(115, 26);
+            this.lbprocessing.TabIndex = 4;
+            this.lbprocessing.Text = "Processing...";
+            this.lbprocessing.Visible = false;
+            // 
             // Fcomment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(518, 669);
+            this.Controls.Add(this.lbprocessing);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.rtb_cmt);
             this.Controls.Add(this.pn_error);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbErrorMessage);
+            this.Controls.Add(this.rtb_cmt);
             this.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -436,6 +463,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pn_error.ResumeLayout(false);
             this.pn_error.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbprocessing)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,5 +497,7 @@
         private System.Windows.Forms.RadioButton rbproduct;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox ptbprocessing;
+        private System.Windows.Forms.Label lbprocessing;
     }
 }

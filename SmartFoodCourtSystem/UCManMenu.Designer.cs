@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCManMenu));
             this.dtgListFood = new System.Windows.Forms.DataGridView();
             this.gBdetail = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddImage = new System.Windows.Forms.Button();
+            this.pBfood = new System.Windows.Forms.PictureBox();
+            this.btnNew = new System.Windows.Forms.Button();
             this.cBcat = new System.Windows.Forms.ComboBox();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -44,16 +48,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnAddImage = new System.Windows.Forms.Button();
-            this.pBfood = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListFood)).BeginInit();
             this.gBdetail.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBfood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBfood)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgListFood
@@ -92,6 +92,54 @@
             this.gBdetail.Size = new System.Drawing.Size(761, 236);
             this.gBdetail.TabIndex = 40;
             this.gBdetail.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnAddImage);
+            this.panel1.Controls.Add(this.pBfood);
+            this.panel1.Location = new System.Drawing.Point(10, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(191, 188);
+            this.panel1.TabIndex = 29;
+            // 
+            // btnAddImage
+            // 
+            this.btnAddImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAddImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddImage.BackgroundImage")));
+            this.btnAddImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddImage.Location = new System.Drawing.Point(153, 152);
+            this.btnAddImage.Name = "btnAddImage";
+            this.btnAddImage.Size = new System.Drawing.Size(25, 25);
+            this.btnAddImage.TabIndex = 21;
+            this.btnAddImage.UseVisualStyleBackColor = false;
+            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
+            // 
+            // pBfood
+            // 
+            this.pBfood.BackColor = System.Drawing.Color.White;
+            this.pBfood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBfood.Location = new System.Drawing.Point(13, 12);
+            this.pBfood.Name = "pBfood";
+            this.pBfood.Size = new System.Drawing.Size(165, 165);
+            this.pBfood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBfood.TabIndex = 19;
+            this.pBfood.TabStop = false;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnNew.Location = new System.Drawing.Point(675, 6);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(86, 59);
+            this.btnNew.TabIndex = 28;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // cBcat
             // 
@@ -195,6 +243,7 @@
             this.tBdescript.Location = new System.Drawing.Point(299, 129);
             this.tBdescript.Multiline = true;
             this.tBdescript.Name = "tBdescript";
+            this.tBdescript.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tBdescript.Size = new System.Drawing.Size(325, 87);
             this.tBdescript.TabIndex = 7;
             // 
@@ -251,54 +300,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnNew.Location = new System.Drawing.Point(675, 6);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(86, 59);
-            this.btnNew.TabIndex = 28;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnAddImage
-            // 
-            this.btnAddImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnAddImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddImage.BackgroundImage")));
-            this.btnAddImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddImage.Location = new System.Drawing.Point(153, 152);
-            this.btnAddImage.Name = "btnAddImage";
-            this.btnAddImage.Size = new System.Drawing.Size(25, 25);
-            this.btnAddImage.TabIndex = 21;
-            this.btnAddImage.UseVisualStyleBackColor = false;
-            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
-            // 
-            // pBfood
-            // 
-            this.pBfood.BackColor = System.Drawing.Color.White;
-            this.pBfood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBfood.Location = new System.Drawing.Point(13, 12);
-            this.pBfood.Name = "pBfood";
-            this.pBfood.Size = new System.Drawing.Size(165, 165);
-            this.pBfood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBfood.TabIndex = 19;
-            this.pBfood.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.btnAddImage);
-            this.panel1.Controls.Add(this.pBfood);
-            this.panel1.Location = new System.Drawing.Point(10, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 188);
-            this.panel1.TabIndex = 29;
-            // 
             // UCManMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,10 +313,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgListFood)).EndInit();
             this.gBdetail.ResumeLayout(false);
             this.gBdetail.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBfood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBfood)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
