@@ -20,7 +20,11 @@ namespace SmartFoodCourtSystem
             InitializeComponent();
             LoadMenu();
         }
-
+        void Alert(string msg, FAlert.emType type)
+        {
+            FAlert frm = new FAlert();
+            frm.showAlert(msg, type);
+        }
         string selectedimage = "";
 
         private void button9_Click(object sender, EventArgs e)

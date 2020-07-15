@@ -20,7 +20,12 @@ namespace SmartFoodCourtSystem
             InitializeComponent();
             LoadListEmployee();
         }
-
+        void Alert(string msg, FAlert.emType type)
+        {
+            FAlert frm = new FAlert();
+            frm.showAlert(msg, type);
+        }
+        
         public void LoadListEmployee()
         {
             dtgListEmployee.DataSource = EmployeeDAO.Instance.GetListEmployee();
@@ -71,18 +76,22 @@ namespace SmartFoodCourtSystem
             {
                 if (name == "" || salary == 0 || age == 0 || phone == 0 || username == "" || password == "" || type == "")
                 {
-                    MessageBox.Show("Wrong format, Unable to add a staff");
+                    //MessageBox.Show("Wrong format, Unable to add a staff");
+                    Alert("Wrong format", FAlert.emType.error);
                 }
                 else
                 {
                     if (EmployeeDAO.Instance.InsertStaff(name, salary, age, phone) && UserDAO.Instance.InsertUser(username, password, type))
                     {
-                        MessageBox.Show("Staff added successfully");
+                      //  MessageBox.Show("Staff added successfully");
+                        Alert("successfully", FAlert.emType.success);
+                        btnNew_Click(sender, e);
                         LoadListEmployee();
                     }
                     else
                     {
-                        MessageBox.Show("Fail to add a Staff");
+                        // MessageBox.Show("Fail to add a Staff");
+                        Alert("Failed", FAlert.emType.error);
                     }
                 }
             }
@@ -104,12 +113,15 @@ namespace SmartFoodCourtSystem
             else type = "1";
             if (EmployeeDAO.Instance.UpdateStaff(id ,name, salary, age, phone) && UserDAO.Instance.UpdateUser(id, username, password, type))
             {
-                MessageBox.Show("Staff updated successfully");
+               // MessageBox.Show("Staff updated successfully");
+                Alert("Successfully", FAlert.emType.success);
                 LoadListEmployee();
+                btnNew_Click(sender, e);
             }
             else
             {
-                MessageBox.Show("Fail to update Staff");
+                // MessageBox.Show("Fail to update Staff");
+                Alert("Failed", FAlert.emType.error);
             }
         }
 
@@ -122,12 +134,15 @@ namespace SmartFoodCourtSystem
                 int id = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["IDUser"].Value);
                 if (EmployeeDAO.Instance.DeleteStaff(id) && UserDAO.Instance.DeleteUser(id))
                 {
-                    MessageBox.Show("Staff deleted successfully");
+                    // MessageBox.Show("Staff deleted successfully");
+                    Alert("Successfully", FAlert.emType.success);
+                    btnNew_Click(sender, e);
                     LoadListEmployee();
                 }
                 else
                 {
-                    MessageBox.Show("Fail to delete staff");
+                    //MessageBox.Show("Fail to delete staff");
+                    Alert("Failed", FAlert.emType.error);
                 }
             }
         }
