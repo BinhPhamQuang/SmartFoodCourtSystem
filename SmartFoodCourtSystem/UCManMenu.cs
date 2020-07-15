@@ -21,6 +21,8 @@ namespace SmartFoodCourtSystem
             LoadMenu();
         }
 
+        string selectedimage = "";
+
         private void button9_Click(object sender, EventArgs e)
         {
             FManAddDish f = new FManAddDish();
@@ -73,15 +75,15 @@ namespace SmartFoodCourtSystem
             int price = (int)nmPrice.Value;
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
-            //string size = cBsize.Text;
-         
+            string image = selectedimage;
+
             if (name == "" || price == 0 || description == "")
             {
                 MessageBox.Show("Wrong format, Unable to add a dish");
             }
             else
             {
-                if (FoodDAO.Instance.InsertFood(name, price, description, category, discount))
+                if (FoodDAO.Instance.InsertFood(name, price, description, category, discount, image))
                 {
                     MessageBox.Show("Dish added successfully");
                     LoadMenu();
@@ -104,9 +106,9 @@ namespace SmartFoodCourtSystem
             int price = (int)nmPrice.Value;
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
-            //string size = cBsize.Text;
+            string image = selectedimage;
 
-            if (FoodDAO.Instance.UpdateFood(id, name, price, description, category, discount))
+            if (FoodDAO.Instance.UpdateFood(id, name, price, description, category, discount, image))
             {
                 MessageBox.Show("Dish updated successfully");
                 LoadMenu();
@@ -166,11 +168,9 @@ namespace SmartFoodCourtSystem
             OpenFileDialog dlg = new OpenFileDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                string fileName;
+                selectedimage = dlg.FileName;
 
-                fileName = dlg.FileName;
-
-                pBfood.Image = Image.FromFile(fileName);
+                pBfood.Image = Image.FromFile(selectedimage);
             }
         }
     }
