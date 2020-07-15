@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCManMenu));
             this.dtgListFood = new System.Windows.Forms.DataGridView();
             this.gBdetail = new System.Windows.Forms.GroupBox();
             this.cBcat = new System.Windows.Forms.ComboBox();
@@ -43,10 +44,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnAddImage = new System.Windows.Forms.Button();
+            this.pBfood = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListFood)).BeginInit();
             this.gBdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBfood)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgListFood
@@ -65,6 +72,8 @@
             // 
             // gBdetail
             // 
+            this.gBdetail.Controls.Add(this.panel1);
+            this.gBdetail.Controls.Add(this.btnNew);
             this.gBdetail.Controls.Add(this.cBcat);
             this.gBdetail.Controls.Add(this.btnDel);
             this.gBdetail.Controls.Add(this.btnUpdate);
@@ -80,7 +89,7 @@
             this.gBdetail.Controls.Add(this.label2);
             this.gBdetail.Location = new System.Drawing.Point(38, 285);
             this.gBdetail.Name = "gBdetail";
-            this.gBdetail.Size = new System.Drawing.Size(761, 237);
+            this.gBdetail.Size = new System.Drawing.Size(761, 236);
             this.gBdetail.TabIndex = 40;
             this.gBdetail.TabStop = false;
             // 
@@ -93,9 +102,9 @@
             this.cBcat.Items.AddRange(new object[] {
             "Food",
             "Drink"});
-            this.cBcat.Location = new System.Drawing.Point(463, 23);
+            this.cBcat.Location = new System.Drawing.Point(524, 20);
             this.cBcat.Name = "cBcat";
-            this.cBcat.Size = new System.Drawing.Size(161, 26);
+            this.cBcat.Size = new System.Drawing.Size(100, 26);
             this.cBcat.TabIndex = 18;
             // 
             // btnDel
@@ -104,9 +113,9 @@
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnDel.Location = new System.Drawing.Point(674, 158);
+            this.btnDel.Location = new System.Drawing.Point(675, 177);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(86, 79);
+            this.btnDel.Size = new System.Drawing.Size(86, 59);
             this.btnDel.TabIndex = 17;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
@@ -118,9 +127,9 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnUpdate.Location = new System.Drawing.Point(674, 81);
+            this.btnUpdate.Location = new System.Drawing.Point(675, 119);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(86, 79);
+            this.btnUpdate.Size = new System.Drawing.Size(86, 59);
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -132,9 +141,9 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnAdd.Location = new System.Drawing.Point(674, 5);
+            this.btnAdd.Location = new System.Drawing.Point(675, 64);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(86, 79);
+            this.btnAdd.Size = new System.Drawing.Size(86, 59);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -144,9 +153,9 @@
             // 
             this.nmDiscount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.nmDiscount.Location = new System.Drawing.Point(463, 76);
+            this.nmDiscount.Location = new System.Drawing.Point(524, 73);
             this.nmDiscount.Name = "nmDiscount";
-            this.nmDiscount.Size = new System.Drawing.Size(161, 26);
+            this.nmDiscount.Size = new System.Drawing.Size(100, 26);
             this.nmDiscount.TabIndex = 11;
             // 
             // label6
@@ -154,7 +163,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label6.Location = new System.Drawing.Point(369, 77);
+            this.label6.Location = new System.Drawing.Point(430, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 18);
             this.label6.TabIndex = 10;
@@ -169,24 +178,24 @@
             0,
             0,
             0});
-            this.nmPrice.Location = new System.Drawing.Point(115, 73);
+            this.nmPrice.Location = new System.Drawing.Point(299, 72);
             this.nmPrice.Maximum = new decimal(new int[] {
             500000,
             0,
             0,
             0});
             this.nmPrice.Name = "nmPrice";
-            this.nmPrice.Size = new System.Drawing.Size(161, 26);
+            this.nmPrice.Size = new System.Drawing.Size(100, 26);
             this.nmPrice.TabIndex = 8;
             // 
             // tBdescript
             // 
             this.tBdescript.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBdescript.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.tBdescript.Location = new System.Drawing.Point(115, 129);
+            this.tBdescript.Location = new System.Drawing.Point(299, 129);
             this.tBdescript.Multiline = true;
             this.tBdescript.Name = "tBdescript";
-            this.tBdescript.Size = new System.Drawing.Size(509, 87);
+            this.tBdescript.Size = new System.Drawing.Size(325, 87);
             this.tBdescript.TabIndex = 7;
             // 
             // label5
@@ -194,7 +203,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label5.Location = new System.Drawing.Point(23, 129);
+            this.label5.Location = new System.Drawing.Point(207, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 18);
             this.label5.TabIndex = 6;
@@ -205,7 +214,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label4.Location = new System.Drawing.Point(369, 22);
+            this.label4.Location = new System.Drawing.Point(430, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 18);
             this.label4.TabIndex = 4;
@@ -216,7 +225,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label3.Location = new System.Drawing.Point(23, 73);
+            this.label3.Location = new System.Drawing.Point(207, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 18);
             this.label3.TabIndex = 2;
@@ -226,9 +235,9 @@
             // 
             this.tBname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.tBname.Location = new System.Drawing.Point(115, 23);
+            this.tBname.Location = new System.Drawing.Point(299, 22);
             this.tBname.Name = "tBname";
-            this.tBname.Size = new System.Drawing.Size(161, 26);
+            this.tBname.Size = new System.Drawing.Size(100, 26);
             this.tBname.TabIndex = 1;
             // 
             // label2
@@ -236,11 +245,59 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label2.Location = new System.Drawing.Point(23, 23);
+            this.label2.Location = new System.Drawing.Point(207, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnNew.Location = new System.Drawing.Point(675, 6);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(86, 59);
+            this.btnNew.TabIndex = 28;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnAddImage
+            // 
+            this.btnAddImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAddImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddImage.BackgroundImage")));
+            this.btnAddImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddImage.Location = new System.Drawing.Point(153, 152);
+            this.btnAddImage.Name = "btnAddImage";
+            this.btnAddImage.Size = new System.Drawing.Size(25, 25);
+            this.btnAddImage.TabIndex = 21;
+            this.btnAddImage.UseVisualStyleBackColor = false;
+            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
+            // 
+            // pBfood
+            // 
+            this.pBfood.BackColor = System.Drawing.Color.White;
+            this.pBfood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBfood.Location = new System.Drawing.Point(13, 12);
+            this.pBfood.Name = "pBfood";
+            this.pBfood.Size = new System.Drawing.Size(165, 165);
+            this.pBfood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBfood.TabIndex = 19;
+            this.pBfood.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnAddImage);
+            this.panel1.Controls.Add(this.pBfood);
+            this.panel1.Location = new System.Drawing.Point(10, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(191, 188);
+            this.panel1.TabIndex = 29;
             // 
             // UCManMenu
             // 
@@ -257,6 +314,8 @@
             this.gBdetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBfood)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -278,5 +337,9 @@
         private System.Windows.Forms.TextBox tBname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cBcat;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAddImage;
+        private System.Windows.Forms.PictureBox pBfood;
     }
 }

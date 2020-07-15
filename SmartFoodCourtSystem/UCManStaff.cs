@@ -155,5 +155,16 @@ namespace SmartFoodCourtSystem
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            tBname.Clear();
+            tBpass.Clear();
+            tBusername.Clear();
+            nmAge.Value = 0;
+            nmPhone.Value = 0;
+            nmSalary.Value = 0;
+            cBtype.SelectedIndex = 0;
+        }
     }
 }

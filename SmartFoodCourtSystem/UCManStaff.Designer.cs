@@ -50,6 +50,7 @@
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListEmployee)).BeginInit();
             this.gBdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmAge)).BeginInit();
@@ -73,6 +74,7 @@
             // 
             // gBdetail
             // 
+            this.gBdetail.Controls.Add(this.btnNew);
             this.gBdetail.Controls.Add(this.cBtype);
             this.gBdetail.Controls.Add(this.label9);
             this.gBdetail.Controls.Add(this.label1);
@@ -95,7 +97,7 @@
             this.gBdetail.Controls.Add(this.checkBox1);
             this.gBdetail.Location = new System.Drawing.Point(46, 287);
             this.gBdetail.Name = "gBdetail";
-            this.gBdetail.Size = new System.Drawing.Size(745, 237);
+            this.gBdetail.Size = new System.Drawing.Size(745, 236);
             this.gBdetail.TabIndex = 41;
             this.gBdetail.TabStop = false;
             // 
@@ -176,9 +178,9 @@
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnDel.Location = new System.Drawing.Point(659, 157);
+            this.btnDel.Location = new System.Drawing.Point(659, 177);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(86, 79);
+            this.btnDel.Size = new System.Drawing.Size(86, 59);
             this.btnDel.TabIndex = 17;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
@@ -190,9 +192,9 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnUpdate.Location = new System.Drawing.Point(659, 82);
+            this.btnUpdate.Location = new System.Drawing.Point(659, 122);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(86, 79);
+            this.btnUpdate.Size = new System.Drawing.Size(86, 59);
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -204,9 +206,9 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnAdd.Location = new System.Drawing.Point(659, 5);
+            this.btnAdd.Location = new System.Drawing.Point(659, 64);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(86, 79);
+            this.btnAdd.Size = new System.Drawing.Size(86, 59);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -342,6 +344,20 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnNew.Location = new System.Drawing.Point(659, 6);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(86, 59);
+            this.btnNew.TabIndex = 28;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
             // UCManStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,5 +402,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cBtype;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnNew;
     }
 }

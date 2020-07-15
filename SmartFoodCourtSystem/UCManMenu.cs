@@ -56,8 +56,10 @@ namespace SmartFoodCourtSystem
                     cBcat.Text = "Drink";
                 }
                 tBdescript.Text = dtgListFood.Rows[i].Cells["Description"].Value.ToString();
-                //tBsize.Text = dtgListFood.Rows[i].Cells["Size"].Value.ToString();
-                //cBsize.Text = dtgListFood.Rows[i].Cells["Size"].Value.ToString(); ;
+                string image = dtgListFood.Rows[i].Cells["Image"].Value.ToString();
+                if (image != "") pBfood.Image = Image.FromFile(image);
+                else pBfood.Image = Resources.dishdefault;
+                
             }
         }
 
@@ -147,6 +149,29 @@ namespace SmartFoodCourtSystem
         private void dtgListFood_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1_CellContentClick(sender, e);
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            tBdescript.Clear();
+            tBname.Clear();
+            nmDiscount.Value = 0;
+            nmPrice.Value = 0;
+            cBcat.SelectedIndex = 0;
+            pBfood.Image = Resources.dishdefault;
+        }
+
+        private void btnAddImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string fileName;
+
+                fileName = dlg.FileName;
+
+                pBfood.Image = Image.FromFile(fileName);
+            }
         }
     }
 }
