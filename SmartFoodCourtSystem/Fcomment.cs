@@ -25,6 +25,8 @@ namespace SmartFoodCourtSystem
         public Fcomment()
         {
             InitializeComponent();
+            ptbprocessing.Visible = false;
+            lbprocessing.Visible = false;
             this.ShowInTaskbar = false;
             Control.CheckForIllegalCrossThreadCalls = false;
            

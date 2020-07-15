@@ -12,6 +12,7 @@ using SmartFoodCourtSystem.DTO;
 using SmartFoodCourtSystem.Properties;
 using System.Text.RegularExpressions;
 using Microsoft.Office.Interop.Excel;
+using System.Threading;
 
 namespace SmartFoodCourtSystem
 {
@@ -412,10 +413,24 @@ namespace SmartFoodCourtSystem
                             }
                             break;
                     }
-                    
-                    wb.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing, true, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
-                    app.Quit();
+                    Thread t = new Thread(() => {
+                        wb.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing, true, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
+                        app.Quit();
+
+                        
+
+                    });
+                    ptbprocessing.Visible = true;
+                    lbprocessing.Visible = true;
+                    t.Start();
+
+                    t.Join();
                     Alert("Successfully saved!", FAlert.emType.success);
+                    btnExit_Click(null, null);
+                    ptbprocessing.Visible = false;
+                    lbprocessing.Visible = false;
+
+
                 }
         }
 

@@ -37,13 +37,18 @@
             this.date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.money = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnFitler = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cb3 = new System.Windows.Forms.ComboBox();
             this.cb2 = new System.Windows.Forms.ComboBox();
             this.btnMakeReport = new System.Windows.Forms.Button();
             this.grBox = new System.Windows.Forms.GroupBox();
+            this.lbprocessing = new System.Windows.Forms.Label();
+            this.ptbprocessing = new System.Windows.Forms.PictureBox();
             this.btnExport = new System.Windows.Forms.Button();
             this.lV2 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,11 +64,11 @@
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnFitler = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.grBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbprocessing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -125,6 +130,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.btnBack);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,6 +143,27 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "All Bills";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(352, 132);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(1, 31);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(23, 30);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Visible = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // groupBox2
             // 
@@ -154,6 +181,21 @@
             this.groupBox2.Size = new System.Drawing.Size(254, 80);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
+            // 
+            // btnFitler
+            // 
+            this.btnFitler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnFitler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFitler.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFitler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnFitler.Location = new System.Drawing.Point(124, 35);
+            this.btnFitler.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFitler.Name = "btnFitler";
+            this.btnFitler.Size = new System.Drawing.Size(113, 38);
+            this.btnFitler.TabIndex = 17;
+            this.btnFitler.Text = "Filter";
+            this.btnFitler.UseVisualStyleBackColor = false;
+            this.btnFitler.Click += new System.EventHandler(this.btnFitler_Click);
             // 
             // label3
             // 
@@ -233,6 +275,8 @@
             // grBox
             // 
             this.grBox.BackColor = System.Drawing.Color.Transparent;
+            this.grBox.Controls.Add(this.lbprocessing);
+            this.grBox.Controls.Add(this.ptbprocessing);
             this.grBox.Controls.Add(this.btnExport);
             this.grBox.Controls.Add(this.lV2);
             this.grBox.Controls.Add(this.lV1);
@@ -250,6 +294,27 @@
             this.grBox.TabStop = false;
             this.grBox.Text = "REVENUE REPORT";
             this.grBox.Visible = false;
+            // 
+            // lbprocessing
+            // 
+            this.lbprocessing.AutoSize = true;
+            this.lbprocessing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(72)))), ((int)(((byte)(230)))));
+            this.lbprocessing.Location = new System.Drawing.Point(348, 287);
+            this.lbprocessing.Name = "lbprocessing";
+            this.lbprocessing.Size = new System.Drawing.Size(159, 31);
+            this.lbprocessing.TabIndex = 13;
+            this.lbprocessing.Text = "Processing...";
+            this.lbprocessing.Visible = false;
+            // 
+            // ptbprocessing
+            // 
+            this.ptbprocessing.Image = ((System.Drawing.Image)(resources.GetObject("ptbprocessing.Image")));
+            this.ptbprocessing.Location = new System.Drawing.Point(386, 218);
+            this.ptbprocessing.Name = "ptbprocessing";
+            this.ptbprocessing.Size = new System.Drawing.Size(68, 66);
+            this.ptbprocessing.TabIndex = 12;
+            this.ptbprocessing.TabStop = false;
+            this.ptbprocessing.Visible = false;
             // 
             // btnExport
             // 
@@ -400,34 +465,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // btnFitler
-            // 
-            this.btnFitler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnFitler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFitler.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFitler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnFitler.Location = new System.Drawing.Point(124, 35);
-            this.btnFitler.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFitler.Name = "btnFitler";
-            this.btnFitler.Size = new System.Drawing.Size(113, 38);
-            this.btnFitler.TabIndex = 17;
-            this.btnFitler.Text = "Filter";
-            this.btnFitler.UseVisualStyleBackColor = false;
-            this.btnFitler.Click += new System.EventHandler(this.btnFitler_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(1, 31);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(23, 30);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Visible = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // UCReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,9 +477,12 @@
             this.Name = "UCReport";
             this.Size = new System.Drawing.Size(840, 540);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grBox.ResumeLayout(false);
+            this.grBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbprocessing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -483,5 +523,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFitler;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lbprocessing;
+        private System.Windows.Forms.PictureBox ptbprocessing;
     }
 }
