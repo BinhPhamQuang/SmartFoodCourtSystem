@@ -416,19 +416,21 @@ namespace SmartFoodCourtSystem
                     Thread t = new Thread(() => {
                         wb.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing, true, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
                         app.Quit();
-
                         
 
+                       
                     });
                     ptbprocessing.Visible = true;
                     lbprocessing.Visible = true;
                     t.Start();
-
                     t.Join();
                     Alert("Successfully saved!", FAlert.emType.success);
-                    btnExit_Click(null, null);
                     ptbprocessing.Visible = false;
                     lbprocessing.Visible = false;
+
+
+                    //btnExit_Click(null, null);
+
 
 
                 }

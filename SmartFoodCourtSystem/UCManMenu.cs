@@ -98,7 +98,8 @@ namespace SmartFoodCourtSystem
                     {
                         //MessageBox.Show("Dish added successfully");
                         Alert("successfully", FAlert.emType.success);
-                        btnNew_Click(sender, e);
+                        clear();
+                        btnAdd.Enabled = false;
              
                         LoadMenu();
                     }
@@ -175,15 +176,20 @@ namespace SmartFoodCourtSystem
         {
             dataGridView1_CellContentClick(sender, e);
         }
-
-        private void btnNew_Click(object sender, EventArgs e)
+        private void clear()
         {
+            pBfood.Image = null;
             tBdescript.Clear();
             tBname.Clear();
             nmDiscount.Value = 0;
             nmPrice.Value = 0;
-            cBcat.SelectedIndex = 0;
-            pBfood.Image = Resources.dishdefault;
+            cBcat.SelectedIndex = -1;
+        }
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            btnAdd.Enabled = true;
+            clear();
+           // pBfood.Image = Resources.dishdefault;
         }
 
         private void btnAddImage_Click(object sender, EventArgs e)

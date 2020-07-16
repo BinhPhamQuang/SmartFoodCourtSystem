@@ -43,11 +43,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.nmPrice = new System.Windows.Forms.NumericUpDown();
             this.tBdescript = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListFood)).BeginInit();
             this.gBdetail.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -186,6 +186,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAdd.Enabled = false;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
@@ -240,23 +241,12 @@
             // 
             this.tBdescript.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBdescript.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.tBdescript.Location = new System.Drawing.Point(299, 129);
+            this.tBdescript.Location = new System.Drawing.Point(210, 129);
             this.tBdescript.Multiline = true;
             this.tBdescript.Name = "tBdescript";
             this.tBdescript.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tBdescript.Size = new System.Drawing.Size(325, 87);
+            this.tBdescript.Size = new System.Drawing.Size(414, 87);
             this.tBdescript.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label5.Location = new System.Drawing.Point(207, 129);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 18);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Description";
             // 
             // label4
             // 
@@ -300,6 +290,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label5.Location = new System.Drawing.Point(207, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 18);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Description:";
+            // 
             // UCManMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,7 +333,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown nmPrice;
         private System.Windows.Forms.TextBox tBdescript;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tBname;
@@ -342,5 +342,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddImage;
         private System.Windows.Forms.PictureBox pBfood;
+        private System.Windows.Forms.Label label5;
     }
 }
