@@ -17,7 +17,7 @@ namespace SmartFoodCourtSystem
     {
         public UCManStaff()
         {
-            InitializeComponent();
+           InitializeComponent();
             LoadListEmployee();
         }
         void Alert(string msg, FAlert.emType type)

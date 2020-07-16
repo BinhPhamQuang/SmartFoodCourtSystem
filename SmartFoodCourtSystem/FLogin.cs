@@ -76,7 +76,16 @@ namespace SmartFoodCourtSystem
                     success = true;
                     this.Hide();
                     hidden = true;
-                    if (type == newtype0)
+
+                string id = row["IDUser"].ToString();
+                string query1 = $"SELECT name,Phonenumber FROM Employee WHERE IDUser={id}";
+                DataTable t = DataProvider.Instance.ExecuteQuery(query1);
+                DataRow t0 = t.Rows[0];
+                StaffDTO.Instance.name = t0["Name"].ToString();
+                StaffDTO.Instance.phone= t0["Phonenumber"].ToString();
+            
+
+                if (type == newtype0)
                     {
                         lbErrorMessage.Visible = false;
                         this.Alert("Login successfully!", FAlert.emType.success);

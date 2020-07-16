@@ -57,23 +57,23 @@
             // 
             // ManEmail
             // 
-            this.ManEmail.AutoSize = true;
             this.ManEmail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManEmail.Location = new System.Drawing.Point(353, 321);
+            this.ManEmail.Location = new System.Drawing.Point(355, 339);
             this.ManEmail.Name = "ManEmail";
             this.ManEmail.Size = new System.Drawing.Size(146, 16);
             this.ManEmail.TabIndex = 14;
             this.ManEmail.Text = "manager@hcmut.edu.vn";
+            this.ManEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ManName
             // 
-            this.ManName.AutoSize = true;
-            this.ManName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManName.Location = new System.Drawing.Point(387, 302);
+            this.ManName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManName.Location = new System.Drawing.Point(263, 302);
             this.ManName.Name = "ManName";
-            this.ManName.Size = new System.Drawing.Size(81, 19);
+            this.ManName.Size = new System.Drawing.Size(328, 45);
             this.ManName.TabIndex = 12;
             this.ManName.Text = "Manager";
+            this.ManName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ManAva
             // 
@@ -100,9 +100,9 @@
             this.DoubleBuffered = true;
             this.Name = "UCManMain";
             this.Size = new System.Drawing.Size(840, 640);
+            this.Load += new System.EventHandler(this.UCManMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ManAva)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

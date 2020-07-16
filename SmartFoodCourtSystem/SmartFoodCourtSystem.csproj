@@ -107,6 +107,7 @@
     <Compile Include="DTO\MoMoSecurity.cs" />
     <Compile Include="DTO\Order.cs" />
     <Compile Include="DTO\PaymentRequest.cs" />
+    <Compile Include="DTO\StaffDTO.cs" />
     <Compile Include="FAlert.cs">
       <SubType>Form</SubType>
     </Compile>

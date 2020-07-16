@@ -15,8 +15,9 @@ namespace SmartFoodCourtSystem
     {
         public FAlert()
         {
-            this.ShowInTaskbar = false;
+            
             InitializeComponent();
+            this.ShowInTaskbar = false;
         }
         public enum emAction
         {
@@ -127,6 +128,7 @@ namespace SmartFoodCourtSystem
 
             }
             this.lbmsg.Text = msg;
+            
             this.Show();
              
             this.action = emAction.start;

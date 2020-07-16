@@ -87,7 +87,11 @@ namespace SmartFoodCourtSystem
         {
             InitializeComponent();
             loaditemyear();
-            Loadbill("");
+           Loadbill("");
+
+
+
+
             //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
