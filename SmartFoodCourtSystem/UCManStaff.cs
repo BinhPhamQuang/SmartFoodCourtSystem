@@ -44,7 +44,7 @@ namespace SmartFoodCourtSystem
             tBname.Text = dtgListEmployee.Rows[i].Cells["Name"].Value.ToString();
             nmAge.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Age"].Value);
             nmSalary.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Salary"].Value);
-            nmPhone.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Phonenumber"].Value);
+            nmPhone.Text = dtgListEmployee.Rows[i].Cells["Phonenumber"].Value.ToString();
             tBpass.Text = HashMD5.Decrypt(dtgListEmployee.Rows[i].Cells["Password"].Value.ToString());
             tBusername.Text = dtgListEmployee.Rows[i].Cells["Username"].Value.ToString();
             int type = Convert.ToInt32(HashMD5.Decrypt(dtgListEmployee.Rows[i].Cells["Type"].Value.ToString()));
@@ -57,10 +57,11 @@ namespace SmartFoodCourtSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
             string name = tBname.Text;
             int salary = (int)nmSalary.Value;
             int age = (int)nmAge.Value;
-            int phone = (int)nmPhone.Value;
+            string phone =  nmPhone.Text;
             string username = tBusername.Text;
             string password = tBpass.Text;
             string type;
@@ -70,11 +71,15 @@ namespace SmartFoodCourtSystem
             
             string query = $"SELECT * from User WHERE Username ='" + tBusername.Text + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            if (data.Rows.Count >= 1) MessageBox.Show("User account already existed in the system");
+            if (data.Rows.Count >= 1)
+            {
+                //MessageBox.Show("User account already existed in the system");
+                Alert("User account existed", FAlert.emType.error);
+            }
 
             else
             {
-                if (name == "" || salary == 0 || age == 0 || phone == 0 || username == "" || password == "" || type == "")
+                if (name == "" || salary == 0 || age == 0 || phone.Length == 0 || username == "" || password == "" || type == "")
                 {
                     //MessageBox.Show("Wrong format, Unable to add a staff");
                     Alert("Wrong format", FAlert.emType.error);
@@ -83,9 +88,11 @@ namespace SmartFoodCourtSystem
                 {
                     if (EmployeeDAO.Instance.InsertStaff(name, salary, age, phone) && UserDAO.Instance.InsertUser(username, password, type))
                     {
-                      //  MessageBox.Show("Staff added successfully");
+                        //  MessageBox.Show("Staff added successfully");
                         Alert("successfully", FAlert.emType.success);
-                        btnNew_Click(sender, e);
+                        tBusername.ReadOnly = true;
+                        btnAdd.Enabled = false;
+                        clear();
                         LoadListEmployee();
                     }
                     else
@@ -105,18 +112,25 @@ namespace SmartFoodCourtSystem
             string name = tBname.Text;
             int salary = (int)nmSalary.Value;
             int age = (int)nmAge.Value;
-            int phone = (int)nmPhone.Value;
+            string phone = nmPhone.Text;
             string username = tBusername.Text;
             string password = tBpass.Text;
             string type;
             if (cBtype.Text == "Cook") type = "0";
             else type = "1";
+            if (tBname.Text == "" || (int)nmSalary.Value == 0 || age == 0 || phone.Length == 0 || username == "" || password == "" || type == "")
+            {
+                //MessageBox.Show("Wrong format, Unable to add a staff");
+                Alert("Wrong format", FAlert.emType.error);
+                return;
+            }
+            
             if (EmployeeDAO.Instance.UpdateStaff(id ,name, salary, age, phone) && UserDAO.Instance.UpdateUser(id, username, password, type))
             {
                // MessageBox.Show("Staff updated successfully");
                 Alert("Successfully", FAlert.emType.success);
                 LoadListEmployee();
-                btnNew_Click(sender, e);
+                clear();
             }
             else
             {
@@ -136,7 +150,7 @@ namespace SmartFoodCourtSystem
                 {
                     // MessageBox.Show("Staff deleted successfully");
                     Alert("Successfully", FAlert.emType.success);
-                    btnNew_Click(sender, e);
+                    clear();
                     LoadListEmployee();
                 }
                 else
@@ -171,16 +185,35 @@ namespace SmartFoodCourtSystem
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
-        private void btnNew_Click(object sender, EventArgs e)
+        private void clear()
         {
             tBname.Clear();
             tBpass.Clear();
             tBusername.Clear();
             nmAge.Value = 0;
-            nmPhone.Value = 0;
+            nmPhone.Text = 0.ToString();
             nmSalary.Value = 0;
-            cBtype.SelectedIndex = 0;
+            cBtype.SelectedIndex = -1;
+        }
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            tBusername.ReadOnly = false;
+            btnAdd.Enabled = true;
+            clear();
+        }
+
+        private void nmPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // If you want, you can allow decimal (float) numbers
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

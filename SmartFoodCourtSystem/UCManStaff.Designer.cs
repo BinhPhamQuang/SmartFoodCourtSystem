@@ -30,6 +30,7 @@
         {
             this.dtgListEmployee = new System.Windows.Forms.DataGridView();
             this.gBdetail = new System.Windows.Forms.GroupBox();
+            this.btnNew = new System.Windows.Forms.Button();
             this.cBtype = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.nmAge = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.nmPhone = new System.Windows.Forms.NumericUpDown();
             this.nmSalary = new System.Windows.Forms.NumericUpDown();
             this.tBusername = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,11 +50,10 @@
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btnNew = new System.Windows.Forms.Button();
+            this.nmPhone = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListEmployee)).BeginInit();
             this.gBdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmAge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmSalary)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +73,7 @@
             // 
             // gBdetail
             // 
+            this.gBdetail.Controls.Add(this.nmPhone);
             this.gBdetail.Controls.Add(this.btnNew);
             this.gBdetail.Controls.Add(this.cBtype);
             this.gBdetail.Controls.Add(this.label9);
@@ -86,7 +86,6 @@
             this.gBdetail.Controls.Add(this.btnAdd);
             this.gBdetail.Controls.Add(this.nmAge);
             this.gBdetail.Controls.Add(this.label6);
-            this.gBdetail.Controls.Add(this.nmPhone);
             this.gBdetail.Controls.Add(this.nmSalary);
             this.gBdetail.Controls.Add(this.tBusername);
             this.gBdetail.Controls.Add(this.label5);
@@ -100,6 +99,20 @@
             this.gBdetail.Size = new System.Drawing.Size(745, 236);
             this.gBdetail.TabIndex = 41;
             this.gBdetail.TabStop = false;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnNew.Location = new System.Drawing.Point(659, 6);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(86, 59);
+            this.btnNew.TabIndex = 28;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // cBtype
             // 
@@ -203,6 +216,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAdd.Enabled = false;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
@@ -234,20 +248,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Age";
             // 
-            // nmPhone
-            // 
-            this.nmPhone.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.nmPhone.Location = new System.Drawing.Point(102, 193);
-            this.nmPhone.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nmPhone.Name = "nmPhone";
-            this.nmPhone.Size = new System.Drawing.Size(170, 26);
-            this.nmPhone.TabIndex = 9;
-            // 
             // nmSalary
             // 
             this.nmSalary.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -273,6 +273,7 @@
             this.tBusername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.tBusername.Location = new System.Drawing.Point(444, 48);
             this.tBusername.Name = "tBusername";
+            this.tBusername.ReadOnly = true;
             this.tBusername.Size = new System.Drawing.Size(170, 26);
             this.tBusername.TabIndex = 7;
             this.tBusername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBusername_KeyPress);
@@ -344,19 +345,16 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // btnNew
+            // nmPhone
             // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnNew.Location = new System.Drawing.Point(659, 6);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(86, 59);
-            this.btnNew.TabIndex = 28;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            this.nmPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.nmPhone.Location = new System.Drawing.Point(102, 189);
+            this.nmPhone.Name = "nmPhone";
+            this.nmPhone.Size = new System.Drawing.Size(170, 24);
+            this.nmPhone.TabIndex = 29;
+            this.nmPhone.Text = "0";
+            this.nmPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nmPhone_KeyPress);
             // 
             // UCManStaff
             // 
@@ -372,7 +370,6 @@
             this.gBdetail.ResumeLayout(false);
             this.gBdetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmAge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmSalary)).EndInit();
             this.ResumeLayout(false);
 
@@ -388,7 +385,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.NumericUpDown nmAge;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown nmPhone;
         private System.Windows.Forms.NumericUpDown nmSalary;
         private System.Windows.Forms.TextBox tBusername;
         private System.Windows.Forms.Label label5;
@@ -403,5 +399,6 @@
         private System.Windows.Forms.ComboBox cBtype;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.TextBox nmPhone;
     }
 }

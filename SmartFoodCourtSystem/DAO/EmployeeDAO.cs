@@ -28,16 +28,16 @@ namespace SmartFoodCourtSystem.DAO
             return data;
         }
 
-        public bool InsertStaff(string name, float Salary, int age, int phone)
+        public bool InsertStaff(string name, float Salary, int age, string phone)
         {
-            string query = string.Format(@"Insert Into Employee ( Name,Salary,Age,Phonenumber) VALUES ('" + name + "','" + Salary + "','" + age + "','" + phone + "')");
+            string query = $"Insert Into Employee ( Name,Salary,Age,Phonenumber) VALUES ('{name}',{Salary },{age},'{phone}')";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return (result > 0);
         }
 
-        public bool UpdateStaff(int IDUser, string name, float Salary, int age, int phone)
+        public bool UpdateStaff(int IDUser, string name, float Salary, int age, string phone)
         {
-            string query = string.Format(@"Update Employee SET Name = '" + name + "', salary = '" + Salary + "', age = '" + age + "' WHERE IDUser = '" + IDUser + "' ");
+            string query = $"Update Employee SET Name = '{name}', salary = '{Salary}', age = {age}, Phonenumber='{phone}' WHERE IDUser = {IDUser}";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return (result > 0);
         }
