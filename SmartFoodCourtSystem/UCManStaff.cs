@@ -40,7 +40,7 @@ namespace SmartFoodCourtSystem
         private void dtgListEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = dtgListEmployee.CurrentRow.Index;
-       
+            tBusername.ReadOnly = true;
             tBname.Text = dtgListEmployee.Rows[i].Cells["Name"].Value.ToString();
             nmAge.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Age"].Value);
             nmSalary.Value = Convert.ToInt32(dtgListEmployee.Rows[i].Cells["Salary"].Value);

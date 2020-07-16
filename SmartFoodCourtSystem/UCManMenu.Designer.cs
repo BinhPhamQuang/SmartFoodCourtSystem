@@ -43,11 +43,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.nmPrice = new System.Windows.Forms.NumericUpDown();
             this.tBdescript = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListFood)).BeginInit();
             this.gBdetail.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -62,7 +62,7 @@
             this.dtgListFood.AllowUserToDeleteRows = false;
             this.dtgListFood.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dtgListFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgListFood.Location = new System.Drawing.Point(38, 15);
+            this.dtgListFood.Location = new System.Drawing.Point(54, 15);
             this.dtgListFood.Name = "dtgListFood";
             this.dtgListFood.ReadOnly = true;
             this.dtgListFood.Size = new System.Drawing.Size(761, 264);
@@ -87,11 +87,12 @@
             this.gBdetail.Controls.Add(this.label3);
             this.gBdetail.Controls.Add(this.tBname);
             this.gBdetail.Controls.Add(this.label2);
-            this.gBdetail.Location = new System.Drawing.Point(38, 285);
+            this.gBdetail.Location = new System.Drawing.Point(54, 285);
             this.gBdetail.Name = "gBdetail";
             this.gBdetail.Size = new System.Drawing.Size(761, 236);
             this.gBdetail.TabIndex = 40;
             this.gBdetail.TabStop = false;
+            this.gBdetail.Enter += new System.EventHandler(this.gBdetail_Enter);
             // 
             // panel1
             // 
@@ -150,10 +151,11 @@
             this.cBcat.Items.AddRange(new object[] {
             "Food",
             "Drink"});
-            this.cBcat.Location = new System.Drawing.Point(524, 20);
+            this.cBcat.Location = new System.Drawing.Point(569, 19);
             this.cBcat.Name = "cBcat";
             this.cBcat.Size = new System.Drawing.Size(100, 26);
             this.cBcat.TabIndex = 18;
+            this.cBcat.SelectedIndexChanged += new System.EventHandler(this.cBcat_SelectedIndexChanged);
             // 
             // btnDel
             // 
@@ -202,7 +204,7 @@
             // 
             this.nmDiscount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.nmDiscount.Location = new System.Drawing.Point(524, 73);
+            this.nmDiscount.Location = new System.Drawing.Point(569, 70);
             this.nmDiscount.Name = "nmDiscount";
             this.nmDiscount.Size = new System.Drawing.Size(100, 26);
             this.nmDiscount.TabIndex = 11;
@@ -212,7 +214,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label6.Location = new System.Drawing.Point(430, 74);
+            this.label6.Location = new System.Drawing.Point(485, 72);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 18);
             this.label6.TabIndex = 10;
@@ -227,14 +229,14 @@
             0,
             0,
             0});
-            this.nmPrice.Location = new System.Drawing.Point(299, 72);
+            this.nmPrice.Location = new System.Drawing.Point(266, 70);
             this.nmPrice.Maximum = new decimal(new int[] {
             500000,
             0,
             0,
             0});
             this.nmPrice.Name = "nmPrice";
-            this.nmPrice.Size = new System.Drawing.Size(100, 26);
+            this.nmPrice.Size = new System.Drawing.Size(194, 26);
             this.nmPrice.TabIndex = 8;
             // 
             // tBdescript
@@ -245,15 +247,26 @@
             this.tBdescript.Multiline = true;
             this.tBdescript.Name = "tBdescript";
             this.tBdescript.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tBdescript.Size = new System.Drawing.Size(414, 87);
+            this.tBdescript.Size = new System.Drawing.Size(459, 87);
             this.tBdescript.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label5.Location = new System.Drawing.Point(207, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 18);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Description:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label4.Location = new System.Drawing.Point(430, 19);
+            this.label4.Location = new System.Drawing.Point(485, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 18);
             this.label4.TabIndex = 4;
@@ -274,9 +287,9 @@
             // 
             this.tBname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.tBname.Location = new System.Drawing.Point(299, 22);
+            this.tBname.Location = new System.Drawing.Point(266, 19);
             this.tBname.Name = "tBname";
-            this.tBname.Size = new System.Drawing.Size(100, 26);
+            this.tBname.Size = new System.Drawing.Size(194, 26);
             this.tBname.TabIndex = 1;
             // 
             // label2
@@ -289,17 +302,6 @@
             this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label5.Location = new System.Drawing.Point(207, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 18);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Description:";
             // 
             // UCManMenu
             // 

@@ -63,8 +63,19 @@ namespace SmartFoodCourtSystem
                 }
                 tBdescript.Text = dtgListFood.Rows[i].Cells["Description"].Value.ToString();
                 string image = dtgListFood.Rows[i].Cells["Image"].Value.ToString();
-                if (image != "") pBfood.Image = Image.FromFile(image);
-                else pBfood.Image = Resources.dishdefault;
+
+
+                try
+                {
+                    pBfood.Image = Image.FromFile(image);
+
+                }
+                catch (Exception a)
+                {
+
+                    pBfood.Image = Resources.dishdefault;
+                }
+                 
                 
             }
         }
@@ -80,14 +91,18 @@ namespace SmartFoodCourtSystem
             int discount = (int)nmDiscount.Value;
             string description = tBdescript.Text;
             string image = selectedimage;
-
+            if(name.Length==0 || nmPrice.Value==0)
+            {
+                Alert("Wrong format", FAlert.emType.error);
+                return;
+            }
             string query = $"SELECT * from Food WHERE Name ='" + tBname.Text + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             if (data.Rows.Count >= 1) MessageBox.Show("Dish already existed in the system");
             else
             {
-                if (name == "" || price == 0 || description == "")
+                if (name == "" || price == 0 )
                 {
                     //MessageBox.Show("Wrong format, Unable to add a dish");
                     Alert("Wrong format", FAlert.emType.error);
@@ -125,6 +140,12 @@ namespace SmartFoodCourtSystem
             string description = tBdescript.Text;
             if (selectedimage == "") selectedimage = dtgListFood.Rows[i].Cells["Image"].Value.ToString();
             string image = selectedimage;
+            if (name == "" || price == 0)
+            {
+                //MessageBox.Show("Wrong format, Unable to add a dish");
+                Alert("Wrong format", FAlert.emType.error);
+                return;
+            }
 
             if (FoodDAO.Instance.UpdateFood(id, name, price, description, category, discount, image))
             {
@@ -180,7 +201,7 @@ namespace SmartFoodCourtSystem
         {
             pBfood.Image = null;
             tBdescript.Clear();
-            tBname.Clear();
+            tBname.Text="";
             nmDiscount.Value = 0;
             nmPrice.Value = 0;
             cBcat.SelectedIndex = -1;
@@ -201,6 +222,16 @@ namespace SmartFoodCourtSystem
 
                 pBfood.Image = Image.FromFile(selectedimage);
             }
+        }
+
+        private void cBcat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gBdetail_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
