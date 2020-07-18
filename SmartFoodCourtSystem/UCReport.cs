@@ -382,60 +382,52 @@ namespace SmartFoodCourtSystem
                     Workbook wb = app.Workbooks.Add(XlSheetType.xlWorksheet);
                     Worksheet ws = (Worksheet)app.ActiveSheet;
                     app.Visible = false;
-                    switch(type)
-                    {
-                        case 0:
-                            ws.Cells[1, 1] = "Month";
-                            ws.Cells[1, 2] = "Year";
-                            ws.Cells[1, 3] = "Sales Revenue";
-                            ws.Cells[1, 4] = "Cost Of Sales";
-                            ws.Cells[1, 5] = "Gross Profit";
+                    
+                       
+                            ws.Cells[1, 1] = "No";
+                            ws.Cells[1, 2] = "Bill ID";
+                            ws.Cells[1, 3] = "Food List";
+                            ws.Cells[1, 4] = "Amount";
+                            ws.Cells[1, 5] = "Time checkout";
+                            ws.Cells[1, 6] = "Total price";
                             int i = 2;
-                            foreach (ListViewItem item in lV1.Items)
+                            foreach (ListViewItem item in lV.Items)
                             {
                                 ws.Cells[i, 1] = item.SubItems[0].Text;
                                 ws.Cells[i, 2] = item.SubItems[1].Text;
                                 ws.Cells[i, 3] = item.SubItems[2].Text;
                                 ws.Cells[i, 4] = item.SubItems[3].Text;
                                 ws.Cells[i, 5] = item.SubItems[4].Text;
+                                ws.Cells[i, 6] = item.SubItems[5].Text;
                                 i++;
                             }
-                            break;
-                        case 1:
-                            ws.Cells[1, 1] = "Year";
-                            ws.Cells[1, 2] = "Sales Revenue";
-                            ws.Cells[1, 3] = "Cost Of Sales";
-                            ws.Cells[1, 4] = "Gross Profit";
-                            int j = 2;
-                            foreach (ListViewItem item in lV2.Items)
-                            {
-                                ws.Cells[j, 1] = item.SubItems[0].Text;
-                                ws.Cells[j, 2] = item.SubItems[1].Text;
-                                ws.Cells[j, 3] = item.SubItems[2].Text;
-                                ws.Cells[j, 4] = item.SubItems[3].Text;
-                                j++;
-                            }
-                            break;
-                    }
+
+                    int status = 0;   
+                    
                     Thread t = new Thread(() => {
                         wb.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing, true, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
                         app.Quit();
+                        status = 1;
                         
 
                        
                     });
+                    t.Start();
                     ptbprocessing.Visible = true;
                     lbprocessing.Visible = true;
-                    t.Start();
-                    t.Join();
-                    Alert("Successfully saved!", FAlert.emType.success);
-                    ptbprocessing.Visible = false;
-                    lbprocessing.Visible = false;
 
+
+
+                    t.Join();
+                   
+                     Alert("Successfully saved!", FAlert.emType.success);
+                      ptbprocessing.Visible = false;
+                     lbprocessing.Visible = false;
+                    
 
                     //btnExit_Click(null, null);
 
-
+                   // MessageBox.Show(status.ToString());
 
                 }
         }
@@ -473,6 +465,22 @@ namespace SmartFoodCourtSystem
             cb2.SelectedIndex = -1;
             cb3.SelectedIndex = -1;
             btnBack.Visible = false;
+        }
+
+        private void lV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lV.SelectedItems.Count == 0)
+            {
+                return;
+            }
+            
+            ListViewItem item = lV.SelectedItems[0];
+             
+            Billdetail b = new Billdetail();
+            b.id = int.Parse(item.SubItems[1].Text);
+           // b.totalprice = int.Parse(item.SubItems[5].Text);
+            b.ShowDialog();
+
         }
     }
 }

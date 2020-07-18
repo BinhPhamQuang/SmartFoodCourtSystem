@@ -47,3 +47,4 @@ C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\Sma
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.exe
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.pdb
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.UCpromotioncode.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.Billdetail.resources

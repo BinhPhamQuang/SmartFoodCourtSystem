@@ -86,6 +86,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Billdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billdetail.Designer.cs">
+      <DependentUpon>Billdetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     <Compile Include="ViewOrderList.Designer.cs">
       <DependentUpon>ViewOrderList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Billdetail.resx">
+      <DependentUpon>Billdetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cook.resx">
       <DependentUpon>Cook.cs</DependentUpon>
     </EmbeddedResource>
