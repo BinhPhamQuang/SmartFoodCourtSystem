@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.gBdetail = new System.Windows.Forms.GroupBox();
-            this.numTimes = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
             this.btncancel = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
             this.numericdiscount = new System.Windows.Forms.NumericUpDown();
@@ -50,17 +48,19 @@
             this.enddate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.discount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvcode = new System.Windows.Forms.ListView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numTimes = new System.Windows.Forms.NumericUpDown();
             this.gBdetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numTimes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericdiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTimes)).BeginInit();
             this.SuspendLayout();
             // 
             // gBdetail
             // 
+            this.gBdetail.Controls.Add(this.btncreate);
+            this.gBdetail.Controls.Add(this.btncancel);
             this.gBdetail.Controls.Add(this.numTimes);
             this.gBdetail.Controls.Add(this.label5);
-            this.gBdetail.Controls.Add(this.btncancel);
-            this.gBdetail.Controls.Add(this.btncreate);
             this.gBdetail.Controls.Add(this.numericdiscount);
             this.gBdetail.Controls.Add(this.label4);
             this.gBdetail.Controls.Add(this.duedate);
@@ -71,38 +71,9 @@
             this.gBdetail.Controls.Add(this.label1);
             this.gBdetail.Location = new System.Drawing.Point(34, 292);
             this.gBdetail.Name = "gBdetail";
-            this.gBdetail.Size = new System.Drawing.Size(426, 242);
+            this.gBdetail.Size = new System.Drawing.Size(426, 230);
             this.gBdetail.TabIndex = 42;
             this.gBdetail.TabStop = false;
-            // 
-            // numTimes
-            // 
-            this.numTimes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numTimes.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numTimes.Location = new System.Drawing.Point(146, 175);
-            this.numTimes.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.numTimes.Name = "numTimes";
-            this.numTimes.Size = new System.Drawing.Size(260, 26);
-            this.numTimes.TabIndex = 46;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label5.Location = new System.Drawing.Point(9, 177);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 20);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Number of times:";
             // 
             // btncancel
             // 
@@ -110,7 +81,7 @@
             this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btncancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btncancel.Location = new System.Drawing.Point(226, 207);
+            this.btncancel.Location = new System.Drawing.Point(226, 184);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(180, 30);
             this.btncancel.TabIndex = 44;
@@ -125,7 +96,7 @@
             this.btncreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncreate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btncreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btncreate.Location = new System.Drawing.Point(13, 207);
+            this.btncreate.Location = new System.Drawing.Point(13, 184);
             this.btncreate.Name = "btncreate";
             this.btncreate.Size = new System.Drawing.Size(180, 30);
             this.btncreate.TabIndex = 43;
@@ -311,6 +282,37 @@
             this.lvcode.View = System.Windows.Forms.View.Details;
             this.lvcode.SelectedIndexChanged += new System.EventHandler(this.lvcode_SelectedIndexChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label5.Location = new System.Drawing.Point(9, 177);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 20);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Number of times:";
+            this.label5.Visible = false;
+            // 
+            // numTimes
+            // 
+            this.numTimes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numTimes.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numTimes.Location = new System.Drawing.Point(146, 175);
+            this.numTimes.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numTimes.Name = "numTimes";
+            this.numTimes.Size = new System.Drawing.Size(260, 26);
+            this.numTimes.TabIndex = 46;
+            this.numTimes.Visible = false;
+            // 
             // UCpromotioncode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,8 +326,8 @@
             this.Size = new System.Drawing.Size(840, 540);
             this.gBdetail.ResumeLayout(false);
             this.gBdetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numTimes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericdiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTimes)).EndInit();
             this.ResumeLayout(false);
 
         }

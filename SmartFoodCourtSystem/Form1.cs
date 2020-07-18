@@ -79,6 +79,7 @@ namespace SmartFoodCourtSystem
         #region button
         private void btnExit_Click(object sender, EventArgs e)
         {
+            Cart.Instance.DeleteCart();
             this.Close();
         }
         private void btnHome_Click(object sender, EventArgs e)

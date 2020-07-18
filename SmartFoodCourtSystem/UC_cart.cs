@@ -279,22 +279,58 @@ namespace SmartFoodCourtSystem
         private void btnApplyPromotioncode_Click(object sender, EventArgs e)
         {
             string query = "SELECT * FROM Promotioncode";
-            //DataTable code= DataPr
-            if(tbPromotioncode.Text.Length!=0&& tbPromotioncode.Text=="B2D2H" && isapplypromotioncode==false)
+            DataTable code = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow i in code.Rows)
             {
-                isapplypromotioncode = true;
-               foreach(Food i in Cart.Instance.getListFood())
+                if (tbPromotioncode.Text == i["code"].ToString())
                 {
-                    i.discount += 50;
-                    if (i.discount > 100) i.discount = 100;
+                    //bool valid = false;
+                    int day = int.Parse(i["dayend"].ToString()) - DateTime.Today.Day;
+                    int month = int.Parse(i["monthend"].ToString()) - DateTime.Today.Month;
+                    int year = int.Parse(i["yearend"].ToString()) - DateTime.Today.Year ;
+                    if (year <0)
+                    {
+                        Alert("Invalid code", FAlert.emType.error);
+                        return;
+                        
+                    }
+                    if (year == 0)
+                    {
+                        if (month < 0)
+                        {
+                            Alert("Invalid code", FAlert.emType.error);
+                            return;
+
+                        }
+                        if (month == 0)
+                        {
+                            if (day < 0)
+                            {
+                                Alert("Invalid code", FAlert.emType.error);
+                                return;
+                            }
+                        }
+                    }
+
+                     
                 }
-                LoadCart();
+                 
+                if (tbPromotioncode.Text.Length != 0 && tbPromotioncode.Text == i["code"].ToString() && isapplypromotioncode == false)
+                {
+                    isapplypromotioncode = true;
+                    foreach (Food ii in Cart.Instance.getListFood())
+                    {
+                        ii.discount += int.Parse(i["discount"].ToString());
+                        if (ii.discount > 100) ii.discount = 100;
+                    }
+                    LoadCart();
+                    Alert("Valid code", FAlert.emType.success);
+                    return;
+                }
+                
             }
-            else
-            {
-                Alert("Wrong code", FAlert.emType.error);
-                tbPromotioncode.Clear();
-            }
+            tbPromotioncode.Clear();
+            Alert("Invalid code", FAlert.emType.error);
         }
     }
 }

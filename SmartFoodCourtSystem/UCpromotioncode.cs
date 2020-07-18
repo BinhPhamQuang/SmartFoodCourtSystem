@@ -135,7 +135,7 @@ namespace SmartFoodCourtSystem
 
                 lv.SubItems.Add(i.code);
                 string datestart = $"{i.daystart}-{getmonth(i.monthstart)}-{i.yeastart}";
-                string dateend = $"{i.duedate}-{getmonth(i.duedate)}-{i.dueyear}";
+                string dateend = $"{i.duedate}-{getmonth(i.duemonth)}-{i.dueyear}";
                                   
                 lv.SubItems.Add(datestart);
                 lv.SubItems.Add(dateend);
@@ -249,8 +249,9 @@ namespace SmartFoodCourtSystem
             {
                 Alert("Can't insert", FAlert.emType.error);
             }
-
+            Alert("Successfully", FAlert.emType.success);
             loadcode();
+            clear();
             tbnamecode.ReadOnly = false;
         }
 
