@@ -22,7 +22,8 @@ namespace SmartFoodCourtSystem.DTO
             this.month = time.Month;
             this.year = time.Year;
             status = 0;
-            this.idbill = (year % 100) * (100000) + month * 1000 + day * 100 + time.Minute + time.Second;
+            this.idbill = (year % 100) * (1000000) + month * 10000 + day * 100 + time.Hour+ time.Minute + time.Second;
+            
         }
         
     }
