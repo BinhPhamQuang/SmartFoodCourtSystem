@@ -1,7 +1,6 @@
-# SmartFoodCourtSystem
-SOFTWARE ENGINEERING 2019-2020
+# SmartFoodCourtSystem - SOFTWARE ENGINEERING 2019-2020
 
-List member: 
+## List member: 
 
 Phạm Quang Bình - 1811578 
 
@@ -12,3 +11,11 @@ Võ Quốc Bảo - 1811553
 Bùi Lê Quốc Hùng - 1812455 
 
 Nguyễn Trọng Khánh Duy - 1811732 
+## Account
+Manager account:      
++Username: Manager     
++Password: 1 
+
+Cook account:    
++Username: Cook    
++Password: 1   
