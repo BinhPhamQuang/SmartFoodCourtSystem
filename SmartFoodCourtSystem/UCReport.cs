@@ -85,7 +85,7 @@ namespace SmartFoodCourtSystem
         }
         public UCReport()
         {
-            InitializeComponent();
+           InitializeComponent();
             loaditemyear();
            Loadbill("");
 

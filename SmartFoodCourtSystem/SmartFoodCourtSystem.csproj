@@ -208,6 +208,12 @@
     <Compile Include="UCMomo.Designer.cs">
       <DependentUpon>UCMomo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCpromotioncode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCpromotioncode.Designer.cs">
+      <DependentUpon>UCpromotioncode.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCMomo.resx">
       <DependentUpon>UCMomo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCpromotioncode.resx">
+      <DependentUpon>UCpromotioncode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCReport.resx">
       <DependentUpon>UCReport.cs</DependentUpon>

@@ -111,6 +111,11 @@ namespace SmartFoodCourtSystem
 
         }
 
-        
+        private void btnpromotioncode_Click(object sender, EventArgs e)
+        {
+            uCpromotioncode1.BringToFront();
+            panel2.Height = btnViewReport.Height;
+            panel2.Top = btnViewReport.Top;
+        }
     }
 }

@@ -30,42 +30,43 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FManMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnpromotioncode = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnViewReport = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnManHome = new System.Windows.Forms.Button();
             this.btnEditStaff = new System.Windows.Forms.Button();
             this.btnEditMenu = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ucManMain1 = new SmartFoodCourtSystem.UCManMain();
+            this.ucReport1 = new SmartFoodCourtSystem.UCReport();
             this.ucManStaff1 = new SmartFoodCourtSystem.UCManStaff();
             this.ucManMenu1 = new SmartFoodCourtSystem.UCManMenu();
-            this.ucReport1 = new SmartFoodCourtSystem.UCReport();
-            this.ucManMain1 = new SmartFoodCourtSystem.UCManMain();
+            this.uCpromotioncode1 = new SmartFoodCourtSystem.UCpromotioncode();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.btnpromotioncode);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnViewReport);
-            this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnManHome);
             this.panel1.Controls.Add(this.btnEditStaff);
             this.panel1.Controls.Add(this.btnEditMenu);
@@ -76,6 +77,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 640);
             this.panel1.TabIndex = 13;
+            // 
+            // btnpromotioncode
+            // 
+            this.btnpromotioncode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnpromotioncode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpromotioncode.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpromotioncode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnpromotioncode.Location = new System.Drawing.Point(0, 456);
+            this.btnpromotioncode.Name = "btnpromotioncode";
+            this.btnpromotioncode.Size = new System.Drawing.Size(200, 90);
+            this.btnpromotioncode.TabIndex = 25;
+            this.btnpromotioncode.Text = "Promotion code";
+            this.btnpromotioncode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnpromotioncode.UseVisualStyleBackColor = false;
+            this.btnpromotioncode.Click += new System.EventHandler(this.btnpromotioncode_Click);
             // 
             // pictureBox1
             // 
@@ -95,17 +111,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(11, 90);
             this.panel2.TabIndex = 18;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(27, 479);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 22;
-            this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -154,21 +159,6 @@
             this.btnViewReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnViewReport.UseVisualStyleBackColor = false;
             this.btnViewReport.Click += new System.EventHandler(this.btnViewReport_Click);
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnLogOut.Location = new System.Drawing.Point(0, 455);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(200, 90);
-            this.btnLogOut.TabIndex = 13;
-            this.btnLogOut.Text = "Log out";
-            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_1);
             // 
             // btnManHome
             // 
@@ -225,6 +215,47 @@
             this.pictureBox6.TabIndex = 23;
             this.pictureBox6.TabStop = false;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.Location = new System.Drawing.Point(811, 0);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(29, 40);
+            this.btnLogOut.TabIndex = 13;
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_1);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.panel3.Controls.Add(this.btnLogOut);
+            this.panel3.Location = new System.Drawing.Point(200, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(840, 40);
+            this.panel3.TabIndex = 18;
+            // 
+            // ucManMain1
+            // 
+            this.ucManMain1.BackColor = System.Drawing.Color.White;
+            this.ucManMain1.Location = new System.Drawing.Point(200, 46);
+            this.ucManMain1.Name = "ucManMain1";
+            this.ucManMain1.Size = new System.Drawing.Size(840, 594);
+            this.ucManMain1.TabIndex = 14;
+            // 
+            // ucReport1
+            // 
+            this.ucReport1.BackColor = System.Drawing.Color.White;
+            this.ucReport1.Location = new System.Drawing.Point(200, 46);
+            this.ucReport1.Name = "ucReport1";
+            this.ucReport1.Size = new System.Drawing.Size(840, 543);
+            this.ucReport1.TabIndex = 17;
+            // 
             // ucManStaff1
             // 
             this.ucManStaff1.AutoScroll = true;
@@ -243,32 +274,25 @@
             this.ucManMenu1.Size = new System.Drawing.Size(840, 540);
             this.ucManMenu1.TabIndex = 15;
             // 
-            // ucReport1
+            // uCpromotioncode1
             // 
-            this.ucReport1.BackColor = System.Drawing.Color.White;
-            this.ucReport1.Location = new System.Drawing.Point(200, 49);
-            this.ucReport1.Name = "ucReport1";
-            this.ucReport1.Size = new System.Drawing.Size(840, 540);
-            this.ucReport1.TabIndex = 17;
-            // 
-            // ucManMain1
-            // 
-            this.ucManMain1.BackColor = System.Drawing.Color.White;
-            this.ucManMain1.Location = new System.Drawing.Point(200, 0);
-            this.ucManMain1.Name = "ucManMain1";
-            this.ucManMain1.Size = new System.Drawing.Size(840, 640);
-            this.ucManMain1.TabIndex = 14;
+            this.uCpromotioncode1.Location = new System.Drawing.Point(200, 46);
+            this.uCpromotioncode1.Name = "uCpromotioncode1";
+            this.uCpromotioncode1.Size = new System.Drawing.Size(840, 540);
+            this.uCpromotioncode1.TabIndex = 19;
             // 
             // FManMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 640);
+            this.ClientSize = new System.Drawing.Size(1041, 640);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ucManMain1);
             this.Controls.Add(this.ucReport1);
             this.Controls.Add(this.ucManStaff1);
             this.Controls.Add(this.ucManMenu1);
+            this.Controls.Add(this.uCpromotioncode1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FManMain";
@@ -277,11 +301,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -294,7 +318,6 @@
         private System.Windows.Forms.Button btnManHome;
         private System.Windows.Forms.Button btnEditStaff;
         private System.Windows.Forms.Button btnEditMenu;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -305,5 +328,8 @@
         private UCReport ucReport1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnpromotioncode;
+        private UCpromotioncode uCpromotioncode1;
     }
 }

@@ -24,7 +24,6 @@ C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\obj\Debu
 C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.exe
 C:\Users\Admin\Desktop\SmartFoodCourtSystem - Copy\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.pdb
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csprojAssemblyReference.cache
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\EntityFramework.dll
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\System.Data.SQLite.dll
@@ -491,7 +490,6 @@ C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartF
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.FormPayMethod.aa-DJ.resources
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
 C:\Users\Dell\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\aa-DJ\SmartFoodCourtSystem.resources.dll
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\test23-6-3\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe.config
 D:\test23-6-3\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.exe
 D:\test23-6-3\SmartFoodCourtSystem\SmartFoodCourtSystem\bin\Debug\SmartFoodCourtSystem.pdb
@@ -850,3 +848,5 @@ D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.F
 D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCMomo.resources
 D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrder.resources
 D:\SE\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.ViewOrderList.resources
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Debug\SmartFoodCourtSystem.UCpromotioncode.resources

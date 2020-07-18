@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using SmartFoodCourtSystem.DTO;
 using SmartFoodCourtSystem.Properties;
 using System.Globalization;
-
+using SmartFoodCourtSystem.DAO;
 namespace SmartFoodCourtSystem
 {
     
@@ -278,6 +278,8 @@ namespace SmartFoodCourtSystem
 
         private void btnApplyPromotioncode_Click(object sender, EventArgs e)
         {
+            string query = "SELECT * FROM Promotioncode";
+            //DataTable code= DataPr
             if(tbPromotioncode.Text.Length!=0&& tbPromotioncode.Text=="B2D2H" && isapplypromotioncode==false)
             {
                 isapplypromotioncode = true;
