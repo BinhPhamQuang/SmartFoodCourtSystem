@@ -43,6 +43,7 @@
             this.buttonMinimize = new System.Windows.Forms.PictureBox();
             this.buttonExit = new System.Windows.Forms.PictureBox();
             this.lbErrorMessage = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonMinimize)).BeginInit();
@@ -52,6 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnLoadOrder);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -72,6 +74,8 @@
             this.btnLoadOrder.TabIndex = 19;
             this.btnLoadOrder.UseVisualStyleBackColor = true;
             this.btnLoadOrder.Click += new System.EventHandler(this.btnLoadOrder_Click);
+            this.btnLoadOrder.MouseLeave += new System.EventHandler(this.btnLoadOrder_MouseLeave);
+            this.btnLoadOrder.MouseHover += new System.EventHandler(this.btnLoadOrder_MouseHover);
             // 
             // pictureBox1
             // 
@@ -223,6 +227,18 @@
             this.lbErrorMessage.TabIndex = 18;
             this.lbErrorMessage.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Location = new System.Drawing.Point(69, 242);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 21);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Click to order ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FLogin
             // 
             this.AcceptButton = this.btnLogin;
@@ -249,6 +265,7 @@
             this.Load += new System.EventHandler(this.FLogin_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FLogin_MouseDown);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
@@ -273,5 +290,6 @@
         private System.Windows.Forms.PictureBox buttonExit;
         private System.Windows.Forms.Label lbErrorMessage;
         private System.Windows.Forms.Button btnLoadOrder;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -205,5 +205,20 @@ namespace SmartFoodCourtSystem
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            btnLoadOrder_Click(sender, e);
+        }
+
+        private void btnLoadOrder_MouseHover(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+        }
+
+        private void btnLoadOrder_MouseLeave(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+        }
     }
 }
