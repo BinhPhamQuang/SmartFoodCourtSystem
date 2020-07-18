@@ -332,5 +332,10 @@ namespace SmartFoodCourtSystem
             tbPromotioncode.Clear();
             Alert("Invalid code", FAlert.emType.error);
         }
+
+        private void tbPromotioncode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

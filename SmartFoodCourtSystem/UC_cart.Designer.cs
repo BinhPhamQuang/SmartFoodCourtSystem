@@ -43,8 +43,8 @@
             this.btnApplyPromotioncode = new System.Windows.Forms.Button();
             this.flp_cart = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
             this.flp_cart.SuspendLayout();
@@ -162,6 +162,7 @@
             this.tbPromotioncode.Name = "tbPromotioncode";
             this.tbPromotioncode.Size = new System.Drawing.Size(185, 20);
             this.tbPromotioncode.TabIndex = 21;
+            this.tbPromotioncode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPromotioncode_KeyPress);
             // 
             // panel9
             // 
@@ -219,15 +220,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(149, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -237,6 +229,15 @@
             this.label3.Size = new System.Drawing.Size(32, 22);
             this.label3.TabIndex = 1;
             this.label3.Text = "50";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(149, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
             // 
             // UC_cart
             // 

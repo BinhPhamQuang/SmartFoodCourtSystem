@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.gBdetail = new System.Windows.Forms.GroupBox();
-            this.btncancel = new System.Windows.Forms.Button();
             this.btncreate = new System.Windows.Forms.Button();
+            this.btncancel = new System.Windows.Forms.Button();
+            this.numTimes = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             this.numericdiscount = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.duedate = new System.Windows.Forms.DateTimePicker();
@@ -48,11 +50,9 @@
             this.enddate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.discount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvcode = new System.Windows.Forms.ListView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numTimes = new System.Windows.Forms.NumericUpDown();
             this.gBdetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericdiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTimes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericdiscount)).BeginInit();
             this.SuspendLayout();
             // 
             // gBdetail
@@ -75,6 +75,21 @@
             this.gBdetail.TabIndex = 42;
             this.gBdetail.TabStop = false;
             // 
+            // btncreate
+            // 
+            this.btncreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btncreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncreate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btncreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btncreate.Location = new System.Drawing.Point(13, 184);
+            this.btncreate.Name = "btncreate";
+            this.btncreate.Size = new System.Drawing.Size(180, 30);
+            this.btncreate.TabIndex = 43;
+            this.btncreate.Text = "Confirm";
+            this.btncreate.UseVisualStyleBackColor = false;
+            this.btncreate.Visible = false;
+            this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
+            // 
             // btncancel
             // 
             this.btncancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -90,20 +105,36 @@
             this.btncancel.Visible = false;
             this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
-            // btncreate
+            // numTimes
             // 
-            this.btncreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btncreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncreate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btncreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btncreate.Location = new System.Drawing.Point(13, 184);
-            this.btncreate.Name = "btncreate";
-            this.btncreate.Size = new System.Drawing.Size(180, 30);
-            this.btncreate.TabIndex = 43;
-            this.btncreate.Text = "Confirm";
-            this.btncreate.UseVisualStyleBackColor = false;
-            this.btncreate.Visible = false;
-            this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
+            this.numTimes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numTimes.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numTimes.Location = new System.Drawing.Point(146, 175);
+            this.numTimes.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numTimes.Name = "numTimes";
+            this.numTimes.Size = new System.Drawing.Size(260, 26);
+            this.numTimes.TabIndex = 46;
+            this.numTimes.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.label5.Location = new System.Drawing.Point(9, 177);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 20);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Number of times:";
+            this.label5.Visible = false;
             // 
             // numericdiscount
             // 
@@ -178,6 +209,7 @@
             this.tbnamecode.Name = "tbnamecode";
             this.tbnamecode.Size = new System.Drawing.Size(260, 26);
             this.tbnamecode.TabIndex = 1;
+            this.tbnamecode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbnamecode_KeyPress);
             // 
             // label1
             // 
@@ -282,37 +314,6 @@
             this.lvcode.View = System.Windows.Forms.View.Details;
             this.lvcode.SelectedIndexChanged += new System.EventHandler(this.lvcode_SelectedIndexChanged);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.label5.Location = new System.Drawing.Point(9, 177);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 20);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Number of times:";
-            this.label5.Visible = false;
-            // 
-            // numTimes
-            // 
-            this.numTimes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numTimes.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numTimes.Location = new System.Drawing.Point(146, 175);
-            this.numTimes.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.numTimes.Name = "numTimes";
-            this.numTimes.Size = new System.Drawing.Size(260, 26);
-            this.numTimes.TabIndex = 46;
-            this.numTimes.Visible = false;
-            // 
             // UCpromotioncode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,8 +327,8 @@
             this.Size = new System.Drawing.Size(840, 540);
             this.gBdetail.ResumeLayout(false);
             this.gBdetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericdiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTimes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericdiscount)).EndInit();
             this.ResumeLayout(false);
 
         }
