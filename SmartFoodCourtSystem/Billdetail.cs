@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,7 +25,8 @@ namespace SmartFoodCourtSystem
         {
             this.Close();
         }
-       public int totalprice;
+       public string totalprice;
+        public string date;
         private void Billdetail_Load(object sender, EventArgs e)
         {
            // this.ShowInTaskbar = false;
@@ -51,12 +53,22 @@ namespace SmartFoodCourtSystem
                     stt++;
                     lV.Items.Add(x);
                 }
-                 
+                lbdate.Text = date;
+                lbprice.Text = totalprice;
             }
             catch(Exception a)
             {
                 MessageBox.Show(a.ToString());
             }
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private void Billdetail_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

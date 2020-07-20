@@ -37,6 +37,9 @@
             this.date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.money = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbprocessing = new System.Windows.Forms.Label();
+            this.ptbprocessing = new System.Windows.Forms.PictureBox();
+            this.btnExport = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -47,7 +50,6 @@
             this.cb2 = new System.Windows.Forms.ComboBox();
             this.btnMakeReport = new System.Windows.Forms.Button();
             this.grBox = new System.Windows.Forms.GroupBox();
-            this.lbprocessing = new System.Windows.Forms.Label();
             this.lV2 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,15 +64,13 @@
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.ptbprocessing = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbprocessing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.grBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbprocessing)).BeginInit();
             this.SuspendLayout();
             // 
             // lV
@@ -97,6 +97,7 @@
             this.lV.UseCompatibleStateImageBehavior = false;
             this.lV.View = System.Windows.Forms.View.Details;
             this.lV.SelectedIndexChanged += new System.EventHandler(this.lV_SelectedIndexChanged);
+            this.lV.DoubleClick += new System.EventHandler(this.lV_DoubleClick);
             // 
             // Number
             // 
@@ -147,6 +148,47 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "All Bills";
+            // 
+            // lbprocessing
+            // 
+            this.lbprocessing.AutoSize = true;
+            this.lbprocessing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(72)))), ((int)(((byte)(230)))));
+            this.lbprocessing.Location = new System.Drawing.Point(315, 208);
+            this.lbprocessing.Name = "lbprocessing";
+            this.lbprocessing.Size = new System.Drawing.Size(118, 25);
+            this.lbprocessing.TabIndex = 13;
+            this.lbprocessing.Text = "Processing...";
+            this.lbprocessing.Visible = false;
+            // 
+            // ptbprocessing
+            // 
+            this.ptbprocessing.Image = ((System.Drawing.Image)(resources.GetObject("ptbprocessing.Image")));
+            this.ptbprocessing.Location = new System.Drawing.Point(401, 1);
+            this.ptbprocessing.Name = "ptbprocessing";
+            this.ptbprocessing.Size = new System.Drawing.Size(32, 29);
+            this.ptbprocessing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbprocessing.TabIndex = 12;
+            this.ptbprocessing.TabStop = false;
+            this.ptbprocessing.Visible = false;
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.Transparent;
+            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Location = new System.Drawing.Point(670, 0);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(144, 29);
+            this.btnExport.TabIndex = 10;
+            this.btnExport.Text = "Export to csv";
+            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // pictureBox2
             // 
@@ -296,17 +338,6 @@
             this.grBox.Text = "REVENUE REPORT";
             this.grBox.Visible = false;
             // 
-            // lbprocessing
-            // 
-            this.lbprocessing.AutoSize = true;
-            this.lbprocessing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(72)))), ((int)(((byte)(230)))));
-            this.lbprocessing.Location = new System.Drawing.Point(315, 208);
-            this.lbprocessing.Name = "lbprocessing";
-            this.lbprocessing.Size = new System.Drawing.Size(118, 25);
-            this.lbprocessing.TabIndex = 13;
-            this.lbprocessing.Text = "Processing...";
-            this.lbprocessing.Visible = false;
-            // 
             // lV2
             // 
             this.lV2.BackColor = System.Drawing.Color.White;
@@ -440,36 +471,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.Transparent;
-            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(670, 0);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(144, 29);
-            this.btnExport.TabIndex = 10;
-            this.btnExport.Text = "Export to csv";
-            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // ptbprocessing
-            // 
-            this.ptbprocessing.Image = ((System.Drawing.Image)(resources.GetObject("ptbprocessing.Image")));
-            this.ptbprocessing.Location = new System.Drawing.Point(401, 1);
-            this.ptbprocessing.Name = "ptbprocessing";
-            this.ptbprocessing.Size = new System.Drawing.Size(32, 29);
-            this.ptbprocessing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbprocessing.TabIndex = 12;
-            this.ptbprocessing.TabStop = false;
-            this.ptbprocessing.Visible = false;
-            // 
             // UCReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,13 +484,13 @@
             this.Size = new System.Drawing.Size(840, 540);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbprocessing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbprocessing)).EndInit();
             this.ResumeLayout(false);
 
         }

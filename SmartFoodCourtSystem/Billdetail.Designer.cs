@@ -37,6 +37,10 @@
             this.das = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.lbID = new System.Windows.Forms.Label();
+            this.lbdate = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbprice = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,16 +91,17 @@
             // das
             // 
             this.das.AutoSize = true;
+            this.das.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.das.Location = new System.Drawing.Point(14, 13);
             this.das.Name = "das";
-            this.das.Size = new System.Drawing.Size(57, 21);
+            this.das.Size = new System.Drawing.Size(57, 19);
             this.das.TabIndex = 7;
             this.das.Text = "Bill ID: ";
             // 
             // btnExit
             // 
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(394, 3);
+            this.btnExit.Location = new System.Drawing.Point(399, 1);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(24, 31);
@@ -109,16 +114,58 @@
             // 
             this.lbID.Location = new System.Drawing.Point(67, 13);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(219, 21);
+            this.lbID.Size = new System.Drawing.Size(113, 21);
             this.lbID.TabIndex = 11;
             this.lbID.Text = "12313901239";
+            // 
+            // lbdate
+            // 
+            this.lbdate.Font = new System.Drawing.Font("Letter Gothic Std", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbdate.Location = new System.Drawing.Point(186, 13);
+            this.lbdate.Name = "lbdate";
+            this.lbdate.Size = new System.Drawing.Size(203, 21);
+            this.lbdate.TabIndex = 12;
+            this.lbdate.Text = "12313901239 - 1/7/8";
+            this.lbdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 455);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 21);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Total price:";
+            // 
+            // lbprice
+            // 
+            this.lbprice.Font = new System.Drawing.Font("Dungeon", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbprice.ForeColor = System.Drawing.Color.Crimson;
+            this.lbprice.Location = new System.Drawing.Point(100, 455);
+            this.lbprice.Name = "lbprice";
+            this.lbprice.Size = new System.Drawing.Size(318, 21);
+            this.lbprice.TabIndex = 14;
+            this.lbprice.Text = "99999999999999";
+            this.lbprice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Location = new System.Drawing.Point(103, 475);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(315, 2);
+            this.panel1.TabIndex = 15;
             // 
             // Billdetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(424, 461);
+            this.ClientSize = new System.Drawing.Size(424, 487);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lbprice);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbdate);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.das);
@@ -127,11 +174,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Billdetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bill detail";
             this.Load += new System.EventHandler(this.Billdetail_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Billdetail_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,5 +196,9 @@
         private System.Windows.Forms.Label das;
         private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Label lbdate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbprice;
+        private System.Windows.Forms.Panel panel1;
     }
 }

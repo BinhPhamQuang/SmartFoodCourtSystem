@@ -280,5 +280,10 @@ namespace SmartFoodCourtSystem
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void datestart_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

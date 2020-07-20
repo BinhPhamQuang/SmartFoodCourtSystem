@@ -13,6 +13,7 @@ using SmartFoodCourtSystem.Properties;
 using System.Text.RegularExpressions;
 using Microsoft.Office.Interop.Excel;
 using System.Threading;
+//using System.Runtime.InteropServices;
 
 namespace SmartFoodCourtSystem
 {
@@ -469,18 +470,25 @@ namespace SmartFoodCourtSystem
 
         private void lV_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+
+        }
+       
+        private void lV_DoubleClick(object sender, EventArgs e)
+        {
             if (lV.SelectedItems.Count == 0)
             {
                 return;
             }
-            
+
             ListViewItem item = lV.SelectedItems[0];
-             
+
             Billdetail b = new Billdetail();
             b.id = int.Parse(item.SubItems[1].Text);
-           // b.totalprice = int.Parse(item.SubItems[5].Text);
+            b.date = item.SubItems[4].Text;
+            b.totalprice = item.SubItems[5].Text;
+            // b.totalprice = int.Parse(item.SubItems[5].Text);
             b.ShowDialog();
-
         }
     }
 }
