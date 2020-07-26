@@ -57,9 +57,9 @@
             // 
             this.lbmsg.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmsg.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbmsg.Location = new System.Drawing.Point(50, 25);
+            this.lbmsg.Location = new System.Drawing.Point(50, 22);
             this.lbmsg.Name = "lbmsg";
-            this.lbmsg.Size = new System.Drawing.Size(223, 33);
+            this.lbmsg.Size = new System.Drawing.Size(246, 33);
             this.lbmsg.TabIndex = 1;
             this.lbmsg.Text = "Successfully";
             this.lbmsg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -81,7 +81,7 @@
             this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexit.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnexit.Image = ((System.Drawing.Image)(resources.GetObject("btnexit.Image")));
-            this.btnexit.Location = new System.Drawing.Point(268, 18);
+            this.btnexit.Location = new System.Drawing.Point(289, 18);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(40, 40);
             this.btnexit.TabIndex = 2;
@@ -116,9 +116,8 @@
             // FAlert
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(311, 74);
+            this.ClientSize = new System.Drawing.Size(332, 74);
             this.Controls.Add(this.ptbexclamation);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.lbmsg);
