@@ -55,7 +55,6 @@
             this.tb_searchfood.Name = "tb_searchfood";
             this.tb_searchfood.Size = new System.Drawing.Size(176, 20);
             this.tb_searchfood.TabIndex = 14;
-            this.tb_searchfood.Text = "Seach food or drink";
             this.tb_searchfood.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tb_searchfood_MouseClick);
             this.tb_searchfood.TextChanged += new System.EventHandler(this.tb_searchfood_TextChanged);
             this.tb_searchfood.Enter += new System.EventHandler(this.tb_searchfood_Enter);

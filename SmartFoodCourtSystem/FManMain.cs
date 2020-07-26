@@ -12,21 +12,47 @@ namespace SmartFoodCourtSystem
 {
     public partial class FManMain : Form
     {
+        UCManMain ucManMain2;
+        UCManMenu ucManMenu2;
+        UCManStaff ucManStaff1;
+        UCReport ucReport1;
+        UCpromotioncode uCpromotioncode1;
         public FManMain()
         {
             InitializeComponent();
+            timer1.Start();
+            lbday.Text = DateTime.Now.ToString("D");
+            ucManMain2 = new UCManMain();
+           // ucManMain2.Location = new Point(200, 46);
+           // ucManMain2.Size = new Size(840, 594);
+
+            ucManMenu2 = new UCManMenu();
+
+
+            ucManStaff1 = new UCManStaff();
+
+
+            ucReport1 = new UCReport();
+
+            uCpromotioncode1 = new UCpromotioncode();
+
+            pnuc.Controls.Add(ucManMain2);
+            pnuc.Controls.Add(ucManMenu2);
+            pnuc.Controls.Add(ucManStaff1);
+            pnuc.Controls.Add(ucReport1);
+            pnuc.Controls.Add(uCpromotioncode1);
+            ucManMain2.BringToFront();
+
         }
 
         private void btnEditMenu_Click(object sender, EventArgs e)
         {
-            FManMenu f = new FManMenu();
-            f.ShowDialog();
+            
         }
 
         private void btnEditStaff_Click(object sender, EventArgs e)
         {
-            FManStaff f = new FManStaff();
-            f.ShowDialog();
+            
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -52,15 +78,15 @@ namespace SmartFoodCourtSystem
         }
 
         private void btnManHome_Click(object sender, EventArgs e)
-        {    
-           ucManMain1.BringToFront();
+        {
+            ucManMain2.BringToFront();
            panel2.Height = btnManHome.Height;
             panel2.Top = btnManHome.Top;
         }
 
         private void btnEditMenu_Click_1(object sender, EventArgs e)
         {
-            ucManMenu1.BringToFront();
+            ucManMenu2.BringToFront();
             panel2.Height = btnEditMenu.Height;
             panel2.Top = btnEditMenu.Top;
         }
@@ -118,6 +144,16 @@ namespace SmartFoodCourtSystem
             panel2.Top = btnpromotioncode.Top;
             uCpromotioncode1.BringToFront();
             panel2.BringToFront();
+        }
+
+        private void FManMain_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbtoday.Text = DateTime.Now.ToString("t");
         }
     }
 }

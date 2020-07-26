@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -50,14 +51,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbwarningpayment = new System.Windows.Forms.Label();
-            this.userControl_Home1 = new SmartFoodCourtSystem.UserControl_Home();
-            this.uC_cart1 = new SmartFoodCourtSystem.UC_cart();
-            this.uC_payment1 = new SmartFoodCourtSystem.UC_payment();
-            this.userControl1_Menu1 = new SmartFoodCourtSystem.UserControl1_Menu();
+            this.lbtoday = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pn_uc.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +63,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(59)))));
+            this.panel1.Controls.Add(this.lbtoday);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.btnDelivery);
@@ -242,10 +241,6 @@
             // 
             // pn_uc
             // 
-            this.pn_uc.Controls.Add(this.userControl_Home1);
-            this.pn_uc.Controls.Add(this.uC_cart1);
-            this.pn_uc.Controls.Add(this.uC_payment1);
-            this.pn_uc.Controls.Add(this.userControl1_Menu1);
             this.pn_uc.Location = new System.Drawing.Point(219, 177);
             this.pn_uc.Name = "pn_uc";
             this.pn_uc.Size = new System.Drawing.Size(1020, 490);
@@ -335,39 +330,21 @@
             this.lbwarningpayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbwarningpayment.Visible = false;
             // 
-            // userControl_Home1
+            // lbtoday
             // 
-            this.userControl_Home1.BackColor = System.Drawing.Color.White;
-            this.userControl_Home1.Location = new System.Drawing.Point(0, 0);
-            this.userControl_Home1.Margin = new System.Windows.Forms.Padding(4);
-            this.userControl_Home1.Name = "userControl_Home1";
-            this.userControl_Home1.Size = new System.Drawing.Size(1016, 490);
-            this.userControl_Home1.TabIndex = 3;
-            this.userControl_Home1.Load += new System.EventHandler(this.userControl_Home1_Load);
+            this.lbtoday.AutoSize = true;
+            this.lbtoday.Font = new System.Drawing.Font("LCDMono2", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtoday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbtoday.Location = new System.Drawing.Point(43, 19);
+            this.lbtoday.Name = "lbtoday";
+            this.lbtoday.Size = new System.Drawing.Size(130, 19);
+            this.lbtoday.TabIndex = 15;
+            this.lbtoday.Text = "00:00:00 AM";
             // 
-            // uC_cart1
+            // timer1
             // 
-            this.uC_cart1.BackColor = System.Drawing.Color.White;
-            this.uC_cart1.Location = new System.Drawing.Point(0, 0);
-            this.uC_cart1.Margin = new System.Windows.Forms.Padding(4);
-            this.uC_cart1.Name = "uC_cart1";
-            this.uC_cart1.Size = new System.Drawing.Size(1020, 490);
-            this.uC_cart1.TabIndex = 2;
-            // 
-            // uC_payment1
-            // 
-            this.uC_payment1.Location = new System.Drawing.Point(0, 0);
-            this.uC_payment1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_payment1.Name = "uC_payment1";
-            this.uC_payment1.Size = new System.Drawing.Size(1020, 490);
-            this.uC_payment1.TabIndex = 4;
-            // 
-            // userControl1_Menu1
-            // 
-            this.userControl1_Menu1.Location = new System.Drawing.Point(0, 0);
-            this.userControl1_Menu1.Name = "userControl1_Menu1";
-            this.userControl1_Menu1.Size = new System.Drawing.Size(1020, 490);
-            this.userControl1_Menu1.TabIndex = 5;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -395,7 +372,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pn_uc.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -423,14 +399,12 @@
         private System.Windows.Forms.Button btnMail;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
-        private UC_cart uC_cart1;
-         
-        private UC_payment uC_payment1;
-        private UserControl1_Menu userControl1_Menu1;
-        private UserControl_Home userControl_Home1;
+       
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lbwarningpayment;
+        private System.Windows.Forms.Label lbtoday;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

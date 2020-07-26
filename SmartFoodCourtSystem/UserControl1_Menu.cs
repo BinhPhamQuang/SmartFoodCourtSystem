@@ -152,12 +152,7 @@ namespace SmartFoodCourtSystem
 
         private void tb_searchfood_Leave(object sender, EventArgs e)
         {
-            if (tb_searchfood.Text.Length==0)
-            {
-                tb_searchfood.Text = "Search food";
-                tb_searchfood.ForeColor = Color.Gray;
-                btnclear.Visible = false;
-            }
+            
         }
 
         
@@ -189,7 +184,7 @@ namespace SmartFoodCourtSystem
             {
                  
                 
-                Alert("name does not exist!", FAlert.emType.error);
+                Alert("Name does not exist!", FAlert.emType.error);
             }
             else
             {
@@ -221,7 +216,8 @@ namespace SmartFoodCourtSystem
         private void btnclear_Click(object sender, EventArgs e)
         {
            tb_searchfood.Text = "";
-            tb_searchfood_Leave(sender, e);
+           // btnclear.Visible = false;
+          //  tb_searchfood_Leave(sender, e);
             
         }
 

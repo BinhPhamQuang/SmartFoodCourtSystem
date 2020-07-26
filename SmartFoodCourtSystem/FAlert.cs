@@ -52,7 +52,7 @@ namespace SmartFoodCourtSystem
             switch(this.action)
             {
                 case emAction.wait:
-                    timer1.Interval = 5000;
+                    timer1.Interval = 1000;
                     action = emAction.close;
                     break;
                 case emAction.start:

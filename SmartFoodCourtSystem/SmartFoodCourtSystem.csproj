@@ -126,35 +126,11 @@
     <Compile Include="Fcomment.Designer.cs">
       <DependentUpon>Fcomment.cs</DependentUpon>
     </Compile>
-    <Compile Include="FManAddDish.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FManAddDish.Designer.cs">
-      <DependentUpon>FManAddDish.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FManAddStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FManAddStaff.Designer.cs">
-      <DependentUpon>FManAddStaff.cs</DependentUpon>
-    </Compile>
     <Compile Include="FManMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FManMain.Designer.cs">
       <DependentUpon>FManMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FManMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FManMenu.Designer.cs">
-      <DependentUpon>FManMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FManStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FManStaff.Designer.cs">
-      <DependentUpon>FManStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -274,20 +250,8 @@
     <EmbeddedResource Include="Fcomment.resx">
       <DependentUpon>Fcomment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FManAddDish.resx">
-      <DependentUpon>FManAddDish.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FManAddStaff.resx">
-      <DependentUpon>FManAddStaff.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FManMain.resx">
       <DependentUpon>FManMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FManMenu.resx">
-      <DependentUpon>FManMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FManStaff.resx">
-      <DependentUpon>FManStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

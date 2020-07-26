@@ -17,6 +17,22 @@ namespace SmartFoodCourtSystem
         public Form1()
         {
             InitializeComponent();
+            timer1.Start();
+            uC_cart1 = new UC_cart();
+            uC_payment1 = new UC_payment();
+            userControl_Home1 = new UserControl_Home();
+            userControl1_Menu1 = new UserControl1_Menu();
+            pn_uc.Controls.Add(userControl_Home1);
+            pn_uc.Controls.Add(uC_payment1);
+            pn_uc.Controls.Add(uC_cart1);
+            pn_uc.Controls.Add(userControl1_Menu1);
+
+            userControl_Home1.BringToFront();
+           
+
+
+
+
             uC_cart1.ButtonClick += new EventHandler(UserControl_ButtonClick);
             
             uC_payment1.ButtonClick += new EventHandler(UC_Momo_ButtonClick);
@@ -25,7 +41,7 @@ namespace SmartFoodCourtSystem
            
 
         }
-
+        
         private void UCpayment_cancelClick(object sender, EventArgs e)
         {
             btnHome_Click(sender, e);
@@ -71,10 +87,13 @@ namespace SmartFoodCourtSystem
                 Alert("Your cart is empty!", FAlert.emType.warning); 
             }
         }
-
+        UC_cart uC_cart1;
+        UserControl_Home userControl_Home1;
+        UC_payment uC_payment1;
+        UserControl1_Menu userControl1_Menu1;
         private void Form1_Load(object sender, EventArgs e)
         {
-             
+            
         }
         #region button
         private void btnExit_Click(object sender, EventArgs e)
@@ -84,6 +103,7 @@ namespace SmartFoodCourtSystem
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
+            lbwarningpayment.Visible = false;
             SidePanel.Height = btnHome.Height;
             SidePanel.Top = btnHome.Top;
             userControl_Home1.BringToFront();
@@ -95,7 +115,7 @@ namespace SmartFoodCourtSystem
         }
         private void bntMenu_Click(object sender, EventArgs e)
         {
-            
+            lbwarningpayment.Visible = false;
             SidePanel.Height = bntMenu.Height;
             SidePanel.Top = bntMenu.Top;
             userControl1_Menu1.BringToFront();
@@ -109,9 +129,9 @@ namespace SmartFoodCourtSystem
 
         private void btnCart_Click(object sender, EventArgs e)
         {
+            lbwarningpayment.Visible = false;
 
-           
-           if (Cart.Instance.getListFood().Count != 0)
+            if (Cart.Instance.getListFood().Count != 0)
             {
                 uC_cart1.LoadCart();
                 SidePanel.Height = btnCart.Height;
@@ -138,8 +158,8 @@ namespace SmartFoodCourtSystem
         
         public void bntPaymentMethod_Click(object sender, EventArgs e)
         {
-            
-          if (Cart.Instance.getListFood().Count != 0)
+            lbwarningpayment.Visible = false;
+            if (Cart.Instance.getListFood().Count != 0)
             {
                 SidePanel.Height = bntPaymentMethod.Height;
                 SidePanel.Top = bntPaymentMethod.Top;
@@ -177,6 +197,10 @@ namespace SmartFoodCourtSystem
             Fcomment fcomment = new Fcomment();
             fcomment.ShowDialog();
         }
-         
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbtoday.Text = DateTime.Now.ToString("T");
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FManMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnpromotioncode = new System.Windows.Forms.Button();
@@ -43,11 +44,12 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.ucManMain1 = new SmartFoodCourtSystem.UCManMain();
-            this.ucReport1 = new SmartFoodCourtSystem.UCReport();
-            this.ucManStaff1 = new SmartFoodCourtSystem.UCManStaff();
-            this.ucManMenu1 = new SmartFoodCourtSystem.UCManMenu();
-            this.uCpromotioncode1 = new SmartFoodCourtSystem.UCpromotioncode();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnuc = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbtoday = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbday = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -81,10 +83,11 @@
             // btnpromotioncode
             // 
             this.btnpromotioncode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnpromotioncode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnpromotioncode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnpromotioncode.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpromotioncode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnpromotioncode.Location = new System.Drawing.Point(0, 456);
+            this.btnpromotioncode.Location = new System.Drawing.Point(0, 511);
             this.btnpromotioncode.Name = "btnpromotioncode";
             this.btnpromotioncode.Size = new System.Drawing.Size(200, 90);
             this.btnpromotioncode.TabIndex = 25;
@@ -97,7 +100,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 123);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 178);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -107,7 +110,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.panel2.Location = new System.Drawing.Point(0, 95);
+            this.panel2.Location = new System.Drawing.Point(0, 150);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(11, 90);
             this.panel2.TabIndex = 18;
@@ -116,7 +119,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(27, 392);
+            this.pictureBox4.Location = new System.Drawing.Point(27, 447);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -127,7 +130,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(27, 301);
+            this.pictureBox3.Location = new System.Drawing.Point(27, 356);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -138,7 +141,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(29, 215);
+            this.pictureBox2.Location = new System.Drawing.Point(29, 270);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -148,10 +151,11 @@
             // btnViewReport
             // 
             this.btnViewReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnViewReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnViewReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewReport.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnViewReport.Location = new System.Drawing.Point(0, 365);
+            this.btnViewReport.Location = new System.Drawing.Point(0, 420);
             this.btnViewReport.Name = "btnViewReport";
             this.btnViewReport.Size = new System.Drawing.Size(200, 90);
             this.btnViewReport.TabIndex = 14;
@@ -163,10 +167,11 @@
             // btnManHome
             // 
             this.btnManHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnManHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnManHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManHome.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnManHome.Location = new System.Drawing.Point(0, 95);
+            this.btnManHome.Location = new System.Drawing.Point(0, 150);
             this.btnManHome.Name = "btnManHome";
             this.btnManHome.Size = new System.Drawing.Size(200, 90);
             this.btnManHome.TabIndex = 12;
@@ -178,10 +183,11 @@
             // btnEditStaff
             // 
             this.btnEditStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEditStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnEditStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditStaff.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnEditStaff.Location = new System.Drawing.Point(0, 275);
+            this.btnEditStaff.Location = new System.Drawing.Point(0, 330);
             this.btnEditStaff.Name = "btnEditStaff";
             this.btnEditStaff.Size = new System.Drawing.Size(200, 90);
             this.btnEditStaff.TabIndex = 11;
@@ -193,10 +199,11 @@
             // btnEditMenu
             // 
             this.btnEditMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEditMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnEditMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditMenu.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnEditMenu.Location = new System.Drawing.Point(0, 185);
+            this.btnEditMenu.Location = new System.Drawing.Point(0, 240);
             this.btnEditMenu.Name = "btnEditMenu";
             this.btnEditMenu.Size = new System.Drawing.Size(200, 90);
             this.btnEditMenu.TabIndex = 9;
@@ -208,24 +215,25 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(44, 3);
+            this.pictureBox6.Location = new System.Drawing.Point(38, 16);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(108, 100);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox6.TabIndex = 23;
             this.pictureBox6.TabStop = false;
             // 
             // btnLogOut
             // 
-            this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
             this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.Location = new System.Drawing.Point(811, 0);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(29, 40);
+            this.btnLogOut.Size = new System.Drawing.Size(41, 40);
             this.btnLogOut.TabIndex = 13;
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -234,70 +242,81 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.panel3.Controls.Add(this.lbday);
+            this.panel3.Controls.Add(this.lbtoday);
             this.panel3.Controls.Add(this.btnLogOut);
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(840, 40);
+            this.panel3.Size = new System.Drawing.Size(849, 40);
             this.panel3.TabIndex = 18;
             // 
-            // ucManMain1
+            // panel4
             // 
-            this.ucManMain1.BackColor = System.Drawing.Color.White;
-            this.ucManMain1.Location = new System.Drawing.Point(200, 46);
-            this.ucManMain1.Name = "ucManMain1";
-            this.ucManMain1.Size = new System.Drawing.Size(840, 594);
-            this.ucManMain1.TabIndex = 14;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1045, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(7, 640);
+            this.panel4.TabIndex = 19;
             // 
-            // ucReport1
+            // pnuc
             // 
-            this.ucReport1.BackColor = System.Drawing.Color.White;
-            this.ucReport1.Location = new System.Drawing.Point(200, 46);
-            this.ucReport1.Name = "ucReport1";
-            this.ucReport1.Size = new System.Drawing.Size(840, 543);
-            this.ucReport1.TabIndex = 17;
+            this.pnuc.Location = new System.Drawing.Point(200, 41);
+            this.pnuc.Name = "pnuc";
+            this.pnuc.Size = new System.Drawing.Size(840, 555);
+            this.pnuc.TabIndex = 20;
             // 
-            // ucManStaff1
+            // panel5
             // 
-            this.ucManStaff1.AutoScroll = true;
-            this.ucManStaff1.BackColor = System.Drawing.Color.White;
-            this.ucManStaff1.Location = new System.Drawing.Point(200, 49);
-            this.ucManStaff1.Name = "ucManStaff1";
-            this.ucManStaff1.Size = new System.Drawing.Size(840, 540);
-            this.ucManStaff1.TabIndex = 16;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
+            this.panel5.Location = new System.Drawing.Point(200, 600);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(849, 40);
+            this.panel5.TabIndex = 19;
             // 
-            // ucManMenu1
+            // lbtoday
             // 
-            this.ucManMenu1.AutoScroll = true;
-            this.ucManMenu1.BackColor = System.Drawing.Color.White;
-            this.ucManMenu1.Location = new System.Drawing.Point(200, 49);
-            this.ucManMenu1.Name = "ucManMenu1";
-            this.ucManMenu1.Size = new System.Drawing.Size(840, 540);
-            this.ucManMenu1.TabIndex = 15;
+            this.lbtoday.Font = new System.Drawing.Font("LCDMono2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtoday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbtoday.Location = new System.Drawing.Point(578, 11);
+            this.lbtoday.Name = "lbtoday";
+            this.lbtoday.Size = new System.Drawing.Size(227, 23);
+            this.lbtoday.TabIndex = 14;
+            this.lbtoday.Text = "0............";
+            this.lbtoday.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // uCpromotioncode1
+            // timer1
             // 
-            this.uCpromotioncode1.Location = new System.Drawing.Point(200, 46);
-            this.uCpromotioncode1.Name = "uCpromotioncode1";
-            this.uCpromotioncode1.Size = new System.Drawing.Size(840, 540);
-            this.uCpromotioncode1.TabIndex = 19;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbday
+            // 
+            this.lbday.AutoSize = true;
+            this.lbday.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbday.Location = new System.Drawing.Point(6, 12);
+            this.lbday.Name = "lbday";
+            this.lbday.Size = new System.Drawing.Size(65, 19);
+            this.lbday.TabIndex = 15;
+            this.lbday.Text = "Sunday";
             // 
             // FManMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1041, 640);
+            this.ClientSize = new System.Drawing.Size(1052, 640);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pnuc);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ucManMain1);
-            this.Controls.Add(this.ucReport1);
-            this.Controls.Add(this.ucManStaff1);
-            this.Controls.Add(this.ucManMenu1);
-            this.Controls.Add(this.uCpromotioncode1);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FManMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FManMain";
+            this.Load += new System.EventHandler(this.FManMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -306,6 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -322,14 +342,16 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private UCManMain ucManMain1;
-        private UCManMenu ucManMenu1;
-        private UCManStaff ucManStaff1;
-        private UCReport ucReport1;
+       
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnpromotioncode;
-        private UCpromotioncode uCpromotioncode1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnuc;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lbtoday;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbday;
     }
 }

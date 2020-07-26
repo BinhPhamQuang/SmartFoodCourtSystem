@@ -95,7 +95,7 @@
             this.picturebox1.Image = ((System.Drawing.Image)(resources.GetObject("picturebox1.Image")));
             this.picturebox1.Location = new System.Drawing.Point(511, 70);
             this.picturebox1.Name = "picturebox1";
-            this.picturebox1.Size = new System.Drawing.Size(446, 318);
+            this.picturebox1.Size = new System.Drawing.Size(483, 350);
             this.picturebox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox1.TabIndex = 8;
             this.picturebox1.TabStop = false;
@@ -147,7 +147,7 @@
             this.Controls.Add(this.picturebox1);
             this.Controls.Add(this.lb_price);
             this.Name = "UserControl_Home";
-            this.Size = new System.Drawing.Size(960, 459);
+            this.Size = new System.Drawing.Size(1011, 506);
             this.Load += new System.EventHandler(this.UserControl_Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picturebox1)).EndInit();
             this.ResumeLayout(false);

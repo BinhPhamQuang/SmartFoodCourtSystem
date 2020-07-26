@@ -1,11 +1,7 @@
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.Cook.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.FAlert.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.Fcomment.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.FManAddDish.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.FManAddStaff.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.FManMain.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.FManMenu.resources
-C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.FManStaff.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.Form1.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.FLogin.resources
 C:\Users\Admin\Desktop\SmartFoodCourtSystem\SmartFoodCourtSystem\obj\Release\SmartFoodCourtSystem.FormPayMethod.resources

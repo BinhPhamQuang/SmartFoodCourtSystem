@@ -60,7 +60,7 @@
             // 
             this.dtgListFood.AllowUserToAddRows = false;
             this.dtgListFood.AllowUserToDeleteRows = false;
-            this.dtgListFood.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dtgListFood.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dtgListFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgListFood.Location = new System.Drawing.Point(54, 15);
             this.dtgListFood.Name = "dtgListFood";
@@ -99,9 +99,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.btnAddImage);
             this.panel1.Controls.Add(this.pBfood);
-            this.panel1.Location = new System.Drawing.Point(10, 28);
+            this.panel1.Location = new System.Drawing.Point(11, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 188);
+            this.panel1.Size = new System.Drawing.Size(190, 208);
             this.panel1.TabIndex = 29;
             // 
             // btnAddImage
@@ -110,7 +110,7 @@
             this.btnAddImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddImage.BackgroundImage")));
             this.btnAddImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddImage.Location = new System.Drawing.Point(153, 152);
+            this.btnAddImage.Location = new System.Drawing.Point(150, 169);
             this.btnAddImage.Name = "btnAddImage";
             this.btnAddImage.Size = new System.Drawing.Size(25, 25);
             this.btnAddImage.TabIndex = 21;
@@ -121,9 +121,9 @@
             // 
             this.pBfood.BackColor = System.Drawing.Color.White;
             this.pBfood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBfood.Location = new System.Drawing.Point(13, 12);
+            this.pBfood.Location = new System.Drawing.Point(15, 15);
             this.pBfood.Name = "pBfood";
-            this.pBfood.Size = new System.Drawing.Size(165, 165);
+            this.pBfood.Size = new System.Drawing.Size(160, 179);
             this.pBfood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBfood.TabIndex = 19;
             this.pBfood.TabStop = false;
@@ -131,6 +131,7 @@
             // btnNew
             // 
             this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
@@ -160,6 +161,7 @@
             // btnDel
             // 
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
@@ -174,10 +176,11 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
-            this.btnUpdate.Location = new System.Drawing.Point(675, 119);
+            this.btnUpdate.Location = new System.Drawing.Point(675, 122);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(86, 59);
             this.btnUpdate.TabIndex = 16;
@@ -189,6 +192,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAdd.Enabled = false;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(94)))));
@@ -247,7 +251,7 @@
             this.tBdescript.Multiline = true;
             this.tBdescript.Name = "tBdescript";
             this.tBdescript.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tBdescript.Size = new System.Drawing.Size(459, 87);
+            this.tBdescript.Size = new System.Drawing.Size(459, 101);
             this.tBdescript.TabIndex = 7;
             // 
             // label5

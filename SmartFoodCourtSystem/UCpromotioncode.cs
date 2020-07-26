@@ -83,7 +83,7 @@ namespace SmartFoodCourtSystem
                 case 3:
                      
                    return "March";
-                    break;
+                    
                 case 4:
                      
                    return "April";
@@ -242,6 +242,10 @@ namespace SmartFoodCourtSystem
             }
             try
             {
+                if(tbnamecode.Text.Length==0)
+                {
+                    return;
+                }
                 string query = $"INSERT INTO Promotioncode(code,daystart,dayend,monthstart,monthend,yearstart,yearend,discount,count) VALUES('{tbnamecode.Text}',{datestart.Value.Day},{duedate.Value.Day},{datestart.Value.Month},{duedate.Value.Month},{datestart.Value.Year},{duedate.Value.Year},{numericdiscount.Value},{numTimes.Value})";
                 DataProvider.Instance.ExecuteNonQuery(query);
             }

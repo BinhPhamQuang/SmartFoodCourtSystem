@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btncancel = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -51,7 +52,6 @@
             this.lbtotalprice = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -86,6 +86,14 @@
             this.panel1.Size = new System.Drawing.Size(1022, 490);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel3.Location = new System.Drawing.Point(179, 470);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(319, 3);
+            this.panel3.TabIndex = 42;
             // 
             // btncancel
             // 
@@ -328,12 +336,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(6, 10);
+            this.label5.Location = new System.Drawing.Point(15, 13);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(239, 32);
+            this.label5.Size = new System.Drawing.Size(283, 38);
             this.label5.TabIndex = 30;
             this.label5.Text = "Payment method";
             // 
@@ -371,14 +379,6 @@
             this.label2.Size = new System.Drawing.Size(68, 19);
             this.label2.TabIndex = 24;
             this.label2.Text = "Product";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel3.Location = new System.Drawing.Point(179, 470);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(319, 3);
-            this.panel3.TabIndex = 42;
             // 
             // UC_payment
             // 

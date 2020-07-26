@@ -61,9 +61,9 @@
             this.ManAva.BackColor = System.Drawing.Color.White;
             this.ManAva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ManAva.Image = ((System.Drawing.Image)(resources.GetObject("ManAva.Image")));
-            this.ManAva.Location = new System.Drawing.Point(377, 199);
+            this.ManAva.Location = new System.Drawing.Point(375, 199);
             this.ManAva.Name = "ManAva";
-            this.ManAva.Size = new System.Drawing.Size(100, 100);
+            this.ManAva.Size = new System.Drawing.Size(105, 100);
             this.ManAva.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ManAva.TabIndex = 13;
             this.ManAva.TabStop = false;
